@@ -18,3 +18,25 @@ let dummyData: [String] = [
     "Tincture of Dexterity",        // 14 Alchemist      ALC
     "Lemonade"                      // 15 Culinarian     CUL
 ]
+
+// UNUSED: for retrieving job acronyms by job ID number
+func getJobAcronym(id: Int) -> (String, String) {
+    switch id {
+    case 8:
+        return ("CRP", "Carpenter")
+    case 9:
+        return ("BSM", "Blacksmith")
+    case 10:
+        return ("ARM", "Armorer")
+    case 11:
+        return ("GSM", "Goldsmith")
+    case 12:
+        return ("LTW", "Leatherworker")
+    case 13:
+        return ("WVR", "Weaver")
+    case 14:
+        return ("ALC", "Alchemist")
+    default:
+        return ("CUL", "Culinarian")
+    }
+}

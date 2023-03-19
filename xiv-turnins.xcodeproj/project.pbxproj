@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F6DBE7D29C6C97A0023503A /* GetJobAcronyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE7C29C6C97A0023503A /* GetJobAcronyms.swift */; };
 		7F6DBE7F29C783070023503A /* ScanText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE7E29C783070023503A /* ScanText.swift */; };
 		7F6DBE8229C797A20023503A /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE8129C797A20023503A /* InfoScreen.swift */; };
 		7F6DBE8429C7A5150023503A /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE8329C7A5150023503A /* CountdownView.swift */; };
@@ -21,9 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F6DBE7C29C6C97A0023503A /* GetJobAcronyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJobAcronyms.swift; sourceTree = "<group>"; };
 		7F6DBE7E29C783070023503A /* ScanText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanText.swift; sourceTree = "<group>"; };
-		7F6DBE8029C786830023503A /* XIVHelperPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = XIVHelperPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7F6DBE8029C786830023503A /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7F6DBE8129C797A20023503A /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		7F6DBE8329C7A5150023503A /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		7FA1186929BFA49F00100E0D /* Deliverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliverable.swift; sourceTree = "<group>"; };
@@ -69,13 +67,12 @@
 				7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */,
 				7FF52B1829BFA21C00B7BF58 /* ContentView.swift */,
 				7F6DBE8329C7A5150023503A /* CountdownView.swift */,
-				7FE0088329C168570098C5E1 /* ItemView.swift */,
-				7FA1186C29BFA60900100E0D /* DummyData.swift */,
-				7F6DBE7E29C783070023503A /* ScanText.swift */,
 				7FA1186929BFA49F00100E0D /* Deliverable.swift */,
+				7FA1186C29BFA60900100E0D /* DummyData.swift */,
 				7F6DBE8129C797A20023503A /* InfoScreen.swift */,
-				7F6DBE7C29C6C97A0023503A /* GetJobAcronyms.swift */,
-				7F6DBE8029C786830023503A /* XIVHelperPlayground.playground */,
+				7FE0088329C168570098C5E1 /* ItemView.swift */,
+				7F6DBE7E29C783070023503A /* ScanText.swift */,
+				7F6DBE8029C786830023503A /* Playground.playground */,
 				7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */,
 				7FF52B1C29BFA21D00B7BF58 /* Preview Content */,
 			);
@@ -162,7 +159,6 @@
 			files = (
 				7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */,
 				7F6DBE7F29C783070023503A /* ScanText.swift in Sources */,
-				7F6DBE7D29C6C97A0023503A /* GetJobAcronyms.swift in Sources */,
 				7FE0088429C168570098C5E1 /* ItemView.swift in Sources */,
 				7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */,
 				7F6DBE8429C7A5150023503A /* CountdownView.swift in Sources */,

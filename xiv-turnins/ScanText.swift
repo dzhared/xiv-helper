@@ -9,7 +9,6 @@ import SwiftUI
 import Vision
 
 func scanText(imageName: String) -> [String] {
-    
     // Create text recognition request
     let request = VNRecognizeTextRequest()
     
@@ -18,22 +17,27 @@ func scanText(imageName: String) -> [String] {
     request.usesLanguageCorrection = false
     
     // Create an image request handler
-    let image = UIImage(named: imageName)!
-    let handler = VNImageRequestHandler(cgImage: image.cgImage!)
+    guard let image = UIImage(named: imageName),
+          let cgImage = image.cgImage else {
+        return []
+    }
+    let handler = VNImageRequestHandler(cgImage: cgImage)
     
     // Perform recognition request
     try? handler.perform([request])
     
     // Extract recognized text
-    var recognizedText = ""
-    guard let observations = request.results else { return [String]() }
-    for observation in observations {
-        guard let topCandidate = observation.topCandidates(1).first else { continue } // Why (1) and not (0)?
-        recognizedText += (topCandidate.string + "\n")
+    guard let observations = request.results else {
+        return []
     }
+    let recognizedText = observations
+        .compactMap { observation in
+            return observation.topCandidates(1).first?.string
+        }
+        .joined(separator: "\n")
     
     // Split recognized text into array of strings
-    let lines = recognizedText.components(separatedBy: .newlines)
-    let nonEmptyLines = lines.filter { !$0.isEmpty }
-    return nonEmptyLines
+    let lines = recognizedText.components(separatedBy: .newlines).filter { !$0.isEmpty }
+    return lines
 }
+

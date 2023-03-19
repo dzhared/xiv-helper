@@ -10,15 +10,20 @@ import SafariServices
 
 struct ItemView: View {
     
+    let item: Deliverable
+    
     @Environment(\.openURL) var openURL
     @State private var isShowingSafariView = false
-    
-    let item: Deliverable
+
+    var iconURL: URL? {
+        let urlString = "https://xivapi.com\(item.icon.replacingOccurrences(of: ".png", with: "_hr1.png"))"
+        return URL(string: urlString)
+    }
     
     var body: some View {
         Section {
             HStack {
-                AsyncImage(url: URL(string:"https://xivapi.com\(item.icon.replacingOccurrences(of: ".png", with: "_hr1.png"))")) { image in
+                AsyncImage(url: iconURL) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
@@ -31,16 +36,7 @@ struct ItemView: View {
                     Text(item.name)
                         .font(.title3)
                         .foregroundColor(.primary)
-                    Button(action: {
-                        isShowingSafariView = true
-                    }, label: {
-                        Text("See recipe on Teamcraft")
-                        Image(systemName: "arrow.up.right.square")
-                    })
-                    .sheet(isPresented: $isShowingSafariView) {
-                        SafariView(url: URL(string: item.recipeURL)!)
-                    }
-                    
+                    RecipeButtonView(url: URL(string: item.recipeURL)!)
                 }
                 .padding([.leading])
                 Spacer()
@@ -49,6 +45,25 @@ struct ItemView: View {
             .background(.ultraThickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding([.horizontal])
+        }
+    }
+    
+    struct RecipeButtonView: View {
+        let url: URL
+        
+        @State private var isShowingSafariView = false
+        @Environment(\.openURL) var openURL
+        
+        var body: some View {
+            Button(action: {
+                isShowingSafariView = true
+            }, label: {
+                Text("See recipe on Teamcraft")
+                Image(systemName: "arrow.up.right.square")
+            })
+            .sheet(isPresented: $isShowingSafariView) {
+                SafariView(url: url)
+            }
         }
     }
 }

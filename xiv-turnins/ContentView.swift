@@ -6,24 +6,18 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct ContentView: View {
     
-    @State private var showingInfo: Bool = false
-    
+    @State private var showingInfoScreen: Bool = false
     @State private var scannedItems = scanText(imageName: "exampleImage")
     @State private var deliverables: [Deliverable] = []
-    
-    
-    // TODO: Add checklist functionality
-    @State private var checked = false
     
     var body: some View {
         NavigationView {
             ScrollView {
                 TimerView()
-                ForEach(deliverables) { item in
+                ForEach(deliverables, id: \.id) { item in
                     ItemView(item: item)
                 }
             }
@@ -31,7 +25,7 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar() {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { showingInfo = true }) {
+                    Button(action: { showingInfoScreen = true }) {
                         Image(systemName: "info.circle")
                     }
                 }
@@ -54,9 +48,9 @@ struct ContentView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingInfo) {
+        .sheet(isPresented: $showingInfoScreen) {
             InfoScreen()
-                .presentationDetents([.medium])
+                .presentationDetents([.fraction(0.65)])
         }
     }
 }

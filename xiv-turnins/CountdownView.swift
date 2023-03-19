@@ -2,7 +2,7 @@
 //  Countdown.swift
 //  xiv-turnins
 //
-//  Created by Jared on 3/19/23.
+//  Created by Jared on 3/17/23.
 //
 
 import SwiftUI
@@ -14,6 +14,10 @@ struct TimerView: View {
     
     var body: some View {
         Text("Daily Reset in \(timeString(time: timeRemaining))")
+            .padding()
+            .background(.thickMaterial)
+            .foregroundColor(timeRemaining > 3600 ? .primary : .red)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
             .onReceive(timer) { _ in
                 if self.timeRemaining > 0 {
                     self.timeRemaining -= 1
@@ -29,28 +33,28 @@ struct TimerView: View {
         return String(format: "%02ih %02im", hours, minutes)
     }
     
-    func getTimeRemaining() -> Int {
-        let now = Date()
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = TimeZone(identifier: "UTC")!
-        let resetTime = calendar
-            .date(
-                bySettingHour: 20,
-                minute: 0,
-                second: 0,
-                of: now)!
-        
-        let timeDifference = resetTime.timeIntervalSinceNow
-        
-        if timeDifference > 0 {
-            return Int(timeDifference)
-        } else {
-            return Int(timeDifference + 86400)
-        }
-    }
-    
     init() {
         _timeRemaining = State(wrappedValue: getTimeRemaining())
+    }
+}
+
+func getTimeRemaining() -> Int {
+    let now = Date()
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.timeZone = TimeZone(identifier: "UTC")!
+    let resetTime = calendar
+        .date(
+            bySettingHour: 20,
+            minute: 0,
+            second: 0,
+            of: now)!
+    
+    let timeDifference = resetTime.timeIntervalSinceNow
+    
+    if timeDifference > 0 {
+        return Int(timeDifference)
+    } else {
+        return Int(timeDifference + 86400)
     }
 }
 
