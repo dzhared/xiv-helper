@@ -11,7 +11,7 @@ import SwiftUI
 struct xiv_turninsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }

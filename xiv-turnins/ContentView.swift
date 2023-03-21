@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ContentView: View {
+    
+    @State var showStartScreen = false
     
     @State private var showingInfoScreen: Bool = false
     @State private var scannedItems = scanText(imageName: "exampleImage")
     @State private var deliverables: [Deliverable] = []
+    
+    @State private var selectedPhotosPickerItem: PhotosPickerItem?
     
     var body: some View {
         NavigationView {
@@ -30,7 +35,7 @@ struct ContentView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { }) {
+                    PhotosPicker(selection: $selectedPhotosPickerItem) {
                         Image(systemName: "camera")
                     }
                 }
@@ -50,7 +55,7 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingInfoScreen) {
             InfoScreen()
-                .presentationDetents([.fraction(0.65)])
+                .presentationDetents([.medium])
         }
     }
 }
