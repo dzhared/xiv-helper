@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct TimerView: View {
+    
+    // MARK: - Properties
+    
     @State var timeRemaining: Int = 0
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    // MARK: - View
     
     var body: some View {
         Text("Daily Reset in \(timeString(time: timeRemaining))")
@@ -27,14 +32,16 @@ struct TimerView: View {
             }
     }
     
+    init() {
+        _timeRemaining = State(wrappedValue: getTimeRemaining())
+    }
+    
+    // MARK: - Functions
+    
     func timeString(time: Int) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         return String(format: "%02ih %02im", hours, minutes)
-    }
-    
-    init() {
-        _timeRemaining = State(wrappedValue: getTimeRemaining())
     }
 }
 

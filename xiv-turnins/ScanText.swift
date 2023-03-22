@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import PhotosUI
 import Vision
 
-func scanText(imageName: String) -> [String] {
+func scanText(image: UIImage) -> [String] {
     // Create text recognition request
     let request = VNRecognizeTextRequest()
     
@@ -16,9 +17,8 @@ func scanText(imageName: String) -> [String] {
     request.recognitionLevel = .accurate
     request.usesLanguageCorrection = false
     
-    // Create an image request handler
-    guard let image = UIImage(named: imageName),
-          let cgImage = image.cgImage else {
+    // Create an image request handler and ensure UIImage can convert to CGImage
+    guard let cgImage = image.cgImage else {
         return []
     }
     let handler = VNImageRequestHandler(cgImage: cgImage)
@@ -38,6 +38,10 @@ func scanText(imageName: String) -> [String] {
     
     // Split recognized text into array of strings
     let lines = recognizedText.components(separatedBy: .newlines).filter { !$0.isEmpty }
-    return lines
+    print(lines)
+    let filteredArray = lines
+        .map { $0.replacingOccurrences(of: "• ", with: "").replacingOccurrences(of: ", ", with: "") }
+        .filter { allItems.contains($0) }
+    return filteredArray
 }
 

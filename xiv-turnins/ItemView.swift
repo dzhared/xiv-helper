@@ -10,6 +10,8 @@ import SafariServices
 
 struct ItemView: View {
     
+    // MARK: - Properties
+    
     let item: Deliverable
     
     @Environment(\.openURL) var openURL
@@ -19,6 +21,8 @@ struct ItemView: View {
         let urlString = "https://xivapi.com\(item.icon.replacingOccurrences(of: ".png", with: "_hr1.png"))"
         return URL(string: urlString)
     }
+    
+    // MARK: - View
     
     var body: some View {
         Section {
@@ -47,6 +51,8 @@ struct ItemView: View {
             .padding([.horizontal])
         }
     }
+    
+    // MARK: - Structs
     
     struct RecipeButtonView: View {
         let url: URL
