@@ -42,7 +42,7 @@ struct ItemView: View {
                         .foregroundColor(.primary)
                     RecipeButtonView(url: URL(string: item.recipeURL)!)
                 }
-                .padding([.leading])
+                .padding([.leading],7)
                 Spacer()
             }
             .padding()
@@ -64,8 +64,8 @@ struct ItemView: View {
             Button(action: {
                 isShowingSafariView = true
             }, label: {
-                Text("See recipe on Teamcraft")
-                Image(systemName: "arrow.up.right.square")
+                Text("See recipe on Teamcraft ") +
+                Text(Image(systemName: "arrow.up.right.square"))
             })
             .sheet(isPresented: $isShowingSafariView) {
                 SafariView(url: url)

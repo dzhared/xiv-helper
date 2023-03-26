@@ -25,6 +25,16 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 TimerView()
+                if deliverables.isEmpty {
+                    PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
+                        Text("No items added. Tap to begin:")
+                        Image(systemName: "camera")
+                    }
+                    .padding()
+                    .background(.ultraThickMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding()
+                }
                 ForEach(deliverables, id: \.id) { item in
                     ItemView(item: item)
                 }
@@ -35,11 +45,13 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { showingInfoScreen = true }) {
                         Image(systemName: "info.circle")
+                            .accessibilityLabel("App information")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
                         Image(systemName: "camera")
+                            .accessibilityLabel("Select screenshot")
                     }
                 }
             }
@@ -79,7 +91,7 @@ struct ContentView: View {
     }
     
     func populateItems() {
-        for itemName in scannedItems.sorted() {
+        for itemName in scannedItems.0.sorted() {
             getDeliverable(itemName: itemName) { deliverable in
                 if let deliverable = deliverable {
                     DispatchQueue.main.async {
