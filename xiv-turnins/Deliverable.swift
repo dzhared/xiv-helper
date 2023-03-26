@@ -14,7 +14,7 @@ class Deliverable: ObservableObject, Identifiable {
     @Published var recipe: Int
     
     var recipeURL: String {
-        "https://ffxivteamcraft.com/db/en/item/\(id)/\(name.replacingOccurrences(of: " ", with: "-"))"
+        "https://ffxivteamcraft.com/db/en/item/\(id)/\(name.replacingOccurrences(of: " ", with: "%20"))"
     }
     
     init(name: String, id: Int, icon: String, recipe: Int) {
@@ -53,7 +53,6 @@ func getDeliverable(itemName: String, completion: @escaping (Deliverable?) -> Vo
         
         do {
             let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-//            print(json) // Uncomment for debugging
             if let results = json["Results"] as? [[String: Any]],
                let itemID = results[0]["ID"] as? Int,
                let itemName = results[0]["Name"] as? String,

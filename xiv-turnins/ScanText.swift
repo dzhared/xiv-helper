@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 import Vision
 
-func scanText(image: UIImage) -> [String] {
+func scanText(image: UIImage) -> ([String], [String]) {
     // Create text recognition request
     let request = VNRecognizeTextRequest()
     
@@ -19,7 +19,7 @@ func scanText(image: UIImage) -> [String] {
     
     // Create an image request handler and ensure UIImage can convert to CGImage
     guard let cgImage = image.cgImage else {
-        return []
+        return ([], [])
     }
     let handler = VNImageRequestHandler(cgImage: cgImage)
     
@@ -28,7 +28,7 @@ func scanText(image: UIImage) -> [String] {
     
     // Extract recognized text
     guard let observations = request.results else {
-        return []
+        return ([], [])
     }
     let recognizedText = observations
         .compactMap { observation in
@@ -37,11 +37,32 @@ func scanText(image: UIImage) -> [String] {
         .joined(separator: "\n")
     
     // Split recognized text into array of strings
-    let lines = recognizedText.components(separatedBy: .newlines).filter { !$0.isEmpty }
-    print(lines)
-    let filteredArray = lines
-        .map { $0.replacingOccurrences(of: "• ", with: "").replacingOccurrences(of: ", ", with: "") }
-        .filter { allItems.contains($0) }
-    return filteredArray
+    let allLines = recognizedText.components(separatedBy: .newlines).filter { !$0.isEmpty }
+    let lines = filterLines(unfilteredLines: allLines)
+    
+    return lines
+}
+    
+func filterLines(unfilteredLines: [String]) -> ([String], [String]) {
+    // Define possible extraneous characters to be filtered
+    let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& "]
+    
+    // Filter out extraneous characters
+    var filteredLines: [String] = []
+    var unmatchedLines: [String] = []
+    
+    for line in unfilteredLines {
+        var filteredLine = line
+        for pattern in patterns {
+            filteredLine = filteredLine.replacingOccurrences(of: pattern, with: "")
+        }
+        if allItems.contains(filteredLine) {
+            filteredLines.append(filteredLine)
+        } else {
+            unmatchedLines.append(filteredLine)
+        }
+    }
+    
+    return (filteredLines, unmatchedLines)
 }
 
