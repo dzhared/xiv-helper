@@ -61,6 +61,7 @@ struct LodestoneNewsView: View {
                                 .aspectRatio(contentMode: .fit)
                         } placeholder: {
                             ProgressView()
+                                .frame(width: 188, height: 720)
                         }
                         VStack(alignment: .leading) {
                             Text(article.title)
@@ -80,10 +81,11 @@ struct LodestoneNewsView: View {
                     }
                     .background(.thinMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(radius: 3)
                     .multilineTextAlignment(.leading)
                 }
             }
-            .padding()
+            .padding(.horizontal)
             .navigationTitle("News")
             .navigationBarTitleDisplayMode(.inline)
         }

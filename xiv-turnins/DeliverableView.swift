@@ -12,7 +12,6 @@ struct DeliverableView: View {
     
     // MARK: - Properties
     
-//    @State private var scannedItems = scanText(image: UIImage(named: "exampleImageFull")!)
     @State private var scannedItems = ([String](), [String]())
     @State private var deliverables: [Deliverable] = []
     
@@ -51,11 +50,13 @@ struct DeliverableView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        showingDeleteConfirmation = true
-                    }) {
-                        Image(systemName: "trash")
-                            .accessibilityLabel("Delete items")
+                    if !deliverables.isEmpty {
+                        Button(action: {
+                            showingDeleteConfirmation = true
+                        }) {
+                            Image(systemName: "trash")
+                                .accessibilityLabel("Delete items")
+                        }
                     }
                 }
             }
