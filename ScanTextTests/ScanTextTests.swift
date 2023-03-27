@@ -10,6 +10,13 @@ import XCTest
 
 final class ScanTextTests: XCTestCase {
 
+    func testSampleImage() throws {
+        let testImage = UIImage(named: "exampleImageFull")!
+        let testText = scanText(image: testImage)
+        
+        XCTAssertTrue(!testText.1.isEmpty, "Failed to extract the following items: \(testText.1)")
+    }
+    
     func testRemovingCharacters() throws {
         // Simulate potential unusual text inputs
         let testInputs: [String] = [
