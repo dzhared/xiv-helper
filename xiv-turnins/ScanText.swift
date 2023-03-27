@@ -66,3 +66,17 @@ func filterLines(unfilteredLines: [String]) -> ([String], [String]) {
     return (filteredLines, unmatchedLines)
 }
 
+func matchTruncatedString(_ truncatedString: String) -> String {
+    if allItems.contains(truncatedString) {
+        return truncatedString
+    }
+    
+    for item in allItems {
+        if item.contains(truncatedString.replacingOccurrences(of: "...", with: "")) {
+            return item
+        }
+    }
+    
+    // TODO: Throw an error?
+    return truncatedString
+}

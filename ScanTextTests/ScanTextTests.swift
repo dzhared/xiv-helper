@@ -10,9 +10,18 @@ import XCTest
 
 final class ScanTextTests: XCTestCase {
 
+    func testMatchTruncatedString() throws {
+        let truncatedString = "Dwarven Mythril Chainmail of Mai..."
+        let expectedString = "Dwarven Mythril Chainmail of Maiming"
+        
+        XCTAssertEqual(expectedString, matchTruncatedString(truncatedString))
+    }
+    
     func testSampleImage() throws {
-        let testImage = UIImage(named: "exampleImageFull")!
+        let testImage = UIImage(named: "exampleImageTruncatedText")!
         let testText = scanText(image: testImage)
+        print(testText.0)
+        print(testText.1)
         
         XCTAssertTrue(!testText.1.isEmpty, "Failed to extract the following items: \(testText.1)")
     }
