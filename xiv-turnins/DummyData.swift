@@ -5,8 +5,6 @@
 //  Created by Jared on 3/13/23.
 //
 
-// TODO: Create array of strings from photo of turnin menu using Vision
-
 // Use for testing without populating items list from scanText
 let dummyData: [String] = [
     "Lignum Vitae Fishing Rod",     // 8  Carpenter      CRP

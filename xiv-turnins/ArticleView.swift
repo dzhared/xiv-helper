@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ArticleView: View {
     let article: LodestoneNews
+    var url: URL {
+        URL(string: article.url)!
+    }
     
     var body: some View {
         NavigationView {
@@ -31,6 +34,18 @@ struct ArticleView: View {
                 }
                 .padding(.horizontal)
             }
+            .toolbar() {
+                ToolbarItem(placement: .bottomBar) {
+                    Link(destination: url) {
+                        Label("Open in Web Browser", systemImage: "globe")
+                    }
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    ShareLink(item: URL(string: article.url)!) {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+                }
+            }
         }
     }
 }
@@ -42,7 +57,7 @@ struct ArticleView_Previews: PreviewProvider {
             url: "https://na.finalfantasyxiv.com/lodestone/topics/detail/0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c",
             title: "Letter from the Producer LIVE Part LXIV Digest Released",
             image: "https://img.finalfantasyxiv.com/t/0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c.png?1622102284",
-            description: "We’re pleased to announce that the Letter from the Producer LIVE Part LXIV event digest has been released!\\n\\nIf you weren’t able to watch the live stream, or if you just want to watch it again, be sure to check it out!\\n\\nProceed to the thread.",
+            description: "We’re pleased to announce that the Letter from the Producer LIVE Part LXIV event digest has been released!\n\nIf you weren’t able to watch the live stream, or if you just want to watch it again, be sure to check it out!",
             time: Date(timeIntervalSince1970: 1622102400)))
     }
 }

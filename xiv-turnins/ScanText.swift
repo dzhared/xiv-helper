@@ -45,32 +45,42 @@ func scanText(image: UIImage) -> ([String], [String]) {
     
 func filterLines(unfilteredLines: [String]) -> ([String], [String]) {
     // Define possible extraneous characters to be filtered
-    let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& "]
+    let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& ", "! ", "@ ", "$ ", "% ", "( ", "+ ", "< ", "> ", "? ", "~ ", "› ", "7 ", "A ", "E ", "® ", "~ ", "À ", "B "]
     
     // Filter out extraneous characters
     var filteredLines: [String] = []
     var unmatchedLines: [String] = []
     
     for line in unfilteredLines {
+        print(line)
         var filteredLine = line
+        
         for pattern in patterns {
-            filteredLine = filteredLine.replacingOccurrences(of: pattern, with: "")
+            if filteredLine.hasPrefix(pattern) {
+                filteredLine = filteredLine.replacingOccurrences(of: pattern, with: "")
+            }
         }
-        if allItems.contains(filteredLine) {
+        
+        if filteredLine.contains("...") {
+            filteredLine = matchTruncatedString(filteredLine)
+        }
+        
+        if allItems.contains(filteredLine) && !filteredLines.contains(filteredLine) {
             filteredLines.append(filteredLine)
-        } else {
+        } else if !unmatchedLines.contains(filteredLine) {
             unmatchedLines.append(filteredLine)
         }
     }
-    
     return (filteredLines, unmatchedLines)
 }
 
 func matchTruncatedString(_ truncatedString: String) -> String {
+    // Filter out items with match
     if allItems.contains(truncatedString) {
         return truncatedString
     }
     
+    // Check if any strings in allItems set contain incomplete string
     for item in allItems {
         if item.contains(truncatedString.replacingOccurrences(of: "...", with: "")) {
             return item

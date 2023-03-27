@@ -11,10 +11,17 @@ import XCTest
 final class ScanTextTests: XCTestCase {
 
     func testMatchTruncatedString() throws {
-        let truncatedString = "Dwarven Mythril Chainmail of Mai..."
-        let expectedString = "Dwarven Mythril Chainmail of Maiming"
+        let expectedStrings: [String: String] = [
+            "Dwarven Mythril Chainmail of Mai...": "Dwarven Mythril Chainmail of Maiming",
+            "AR-Caean Velvet Culottes of Gathe...": "AR-Caean Velvet Culottes of Gathering",
+            "AR-Caean Velvet Work Cap of Cra...": "AR-Caean Velvet Work Cap of Crafting",
+            "Dwarven Cotton Gaskins of Scou...": "Dwarven Cotton Gaskins of Scouting"
+        ]
         
-        XCTAssertEqual(expectedString, matchTruncatedString(truncatedString))
+        for (key, value) in expectedStrings {
+            print("Key: \(key), Value: \(value)")
+            XCTAssertEqual(matchTruncatedString(key), value)
+        }
     }
     
     func testSampleImage() throws {
