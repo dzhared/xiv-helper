@@ -60,7 +60,6 @@ func getDeliverable(itemName: String, completion: @escaping (Deliverable?) -> Vo
                let itemRecipe = results[1]["ID"] as? Int
             {
                 let deliverable = Deliverable(name: itemName, id: itemID, icon: itemIcon, recipe: itemRecipe)
-                print("Successfully created deliverable for \(itemName).")
                 completion(deliverable)
             } else {
                 completion(nil)
@@ -71,6 +70,5 @@ func getDeliverable(itemName: String, completion: @escaping (Deliverable?) -> Vo
             return
         }
     }
-    print("Starting data task for \(itemName).")
     task.resume()
 }

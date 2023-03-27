@@ -70,6 +70,17 @@
                ReferencedContainer = "container:xiv-turnins.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F9F4BEB29D0B5D700F7371C"
+               BuildableName = "LodestoneNewsViewTests.xctest"
+               BlueprintName = "LodestoneNewsViewTests"
+               ReferencedContainer = "container:xiv-turnins.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

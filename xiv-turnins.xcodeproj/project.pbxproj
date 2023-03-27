@@ -14,6 +14,11 @@
 		7F6DBE8429C7A5150023503A /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE8329C7A5150023503A /* CountdownView.swift */; };
 		7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83927529C94CDB004A833E /* SplashScreenView.swift */; };
 		7F83927929CA6FC5004A833E /* AllItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83927829CA6FC5004A833E /* AllItems.swift */; };
+		7F96FA2229D0EC9100E3EAED /* DeliverableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */; };
+		7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */; };
+		7F9F4BEF29D0B5D700F7371C /* LodestoneNewsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BEE29D0B5D700F7371C /* LodestoneNewsViewTests.swift */; };
+		7F9F4BF629D0E55C00F7371C /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BF529D0E55C00F7371C /* ArticleView.swift */; };
+		7F9F4BF829D0E8D900F7371C /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BF729D0E8D900F7371C /* TabView.swift */; };
 		7FA1186A29BFA49F00100E0D /* Deliverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186929BFA49F00100E0D /* Deliverable.swift */; };
 		7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186C29BFA60900100E0D /* DummyData.swift */; };
 		7FE0088429C168570098C5E1 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0088329C168570098C5E1 /* ItemView.swift */; };
@@ -24,20 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7F57294C29CF918F004CBE7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7FF52B0B29BFA21C00B7BF58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7FF52B1229BFA21C00B7BF58;
-			remoteInfo = "xiv-turnins";
-		};
-		7F57295929CF92B8004CBE7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7FF52B0B29BFA21C00B7BF58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7FF52B1229BFA21C00B7BF58;
-			remoteInfo = "xiv-turnins";
-		};
 		7F57296729CF9B54004CBE7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7FF52B0B29BFA21C00B7BF58 /* Project object */;
@@ -52,11 +43,16 @@
 			remoteGlobalIDString = 7FF52B1229BFA21C00B7BF58;
 			remoteInfo = "xiv-turnins";
 		};
+		7F9F4BF029D0B5D700F7371C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FF52B0B29BFA21C00B7BF58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FF52B1229BFA21C00B7BF58;
+			remoteInfo = "xiv-turnins";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F57294829CF918F004CBE7A /* xiv-turninsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xiv-turninsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F57295529CF92B8004CBE7A /* ItemViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItemViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F57296329CF9B54004CBE7A /* DeliverableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliverableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F57296529CF9B54004CBE7A /* DeliverableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverableTests.swift; sourceTree = "<group>"; };
 		7F57297029CFAE1F004CBE7A /* ScanTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +63,12 @@
 		7F6DBE8329C7A5150023503A /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		7F83927529C94CDB004A833E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		7F83927829CA6FC5004A833E /* AllItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItems.swift; sourceTree = "<group>"; };
+		7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverableView.swift; sourceTree = "<group>"; };
+		7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsView.swift; sourceTree = "<group>"; };
+		7F9F4BEC29D0B5D700F7371C /* LodestoneNewsViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodestoneNewsViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9F4BEE29D0B5D700F7371C /* LodestoneNewsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsViewTests.swift; sourceTree = "<group>"; };
+		7F9F4BF529D0E55C00F7371C /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		7F9F4BF729D0E8D900F7371C /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		7FA1186929BFA49F00100E0D /* Deliverable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliverable.swift; sourceTree = "<group>"; };
 		7FA1186C29BFA60900100E0D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7FE0088329C168570098C5E1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -78,20 +80,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7F57294529CF918F004CBE7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F57295229CF92B8004CBE7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7F57296029CF9B54004CBE7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +88,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7F57296D29CFAE1F004CBE7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9F4BE929D0B5D700F7371C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,12 +127,21 @@
 			path = ScanTextTests;
 			sourceTree = "<group>";
 		};
+		7F9F4BED29D0B5D700F7371C /* LodestoneNewsViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F4BEE29D0B5D700F7371C /* LodestoneNewsViewTests.swift */,
+			);
+			path = LodestoneNewsViewTests;
+			sourceTree = "<group>";
+		};
 		7FF52B0A29BFA21C00B7BF58 = {
 			isa = PBXGroup;
 			children = (
 				7FF52B1529BFA21C00B7BF58 /* xiv-turnins */,
 				7F57296429CF9B54004CBE7A /* DeliverableTests */,
 				7F57297129CFAE1F004CBE7A /* ScanTextTests */,
+				7F9F4BED29D0B5D700F7371C /* LodestoneNewsViewTests */,
 				7FF52B1429BFA21C00B7BF58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,10 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				7FF52B1329BFA21C00B7BF58 /* xiv-turnins.app */,
-				7F57294829CF918F004CBE7A /* xiv-turninsTests.xctest */,
-				7F57295529CF92B8004CBE7A /* ItemViewTests.xctest */,
 				7F57296329CF9B54004CBE7A /* DeliverableTests.xctest */,
 				7F57297029CFAE1F004CBE7A /* ScanTextTests.xctest */,
+				7F9F4BEC29D0B5D700F7371C /* LodestoneNewsViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,13 +162,17 @@
 			children = (
 				7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */,
 				7FF52B1829BFA21C00B7BF58 /* ContentView.swift */,
+				7FA1186929BFA49F00100E0D /* Deliverable.swift */,
+				7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */,
+				7F9F4BF729D0E8D900F7371C /* TabView.swift */,
 				7F83927829CA6FC5004A833E /* AllItems.swift */,
 				7F83927529C94CDB004A833E /* SplashScreenView.swift */,
 				7F6DBE8329C7A5150023503A /* CountdownView.swift */,
-				7FA1186929BFA49F00100E0D /* Deliverable.swift */,
 				7FA1186C29BFA60900100E0D /* DummyData.swift */,
 				7F6DBE8129C797A20023503A /* InfoScreenView.swift */,
 				7FE0088329C168570098C5E1 /* ItemView.swift */,
+				7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */,
+				7F9F4BF529D0E55C00F7371C /* ArticleView.swift */,
 				7F6DBE7E29C783070023503A /* ScanText.swift */,
 				7F6DBE8029C786830023503A /* Playground.playground */,
 				7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */,
@@ -185,42 +192,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F57294729CF918F004CBE7A /* xiv-turninsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7F57294E29CF918F004CBE7A /* Build configuration list for PBXNativeTarget "xiv-turninsTests" */;
-			buildPhases = (
-				7F57294429CF918F004CBE7A /* Sources */,
-				7F57294529CF918F004CBE7A /* Frameworks */,
-				7F57294629CF918F004CBE7A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7F57294D29CF918F004CBE7A /* PBXTargetDependency */,
-			);
-			name = "xiv-turninsTests";
-			productName = "xiv-turninsTests";
-			productReference = 7F57294829CF918F004CBE7A /* xiv-turninsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7F57295429CF92B8004CBE7A /* ItemViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7F57295B29CF92B8004CBE7A /* Build configuration list for PBXNativeTarget "ItemViewTests" */;
-			buildPhases = (
-				7F57295129CF92B8004CBE7A /* Sources */,
-				7F57295229CF92B8004CBE7A /* Frameworks */,
-				7F57295329CF92B8004CBE7A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7F57295A29CF92B8004CBE7A /* PBXTargetDependency */,
-			);
-			name = ItemViewTests;
-			productName = ItemViewTests;
-			productReference = 7F57295529CF92B8004CBE7A /* ItemViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		7F57296229CF9B54004CBE7A /* DeliverableTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F57296929CF9B54004CBE7A /* Build configuration list for PBXNativeTarget "DeliverableTests" */;
@@ -257,6 +228,24 @@
 			productReference = 7F57297029CFAE1F004CBE7A /* ScanTextTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7F9F4BEB29D0B5D700F7371C /* LodestoneNewsViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F9F4BF229D0B5D700F7371C /* Build configuration list for PBXNativeTarget "LodestoneNewsViewTests" */;
+			buildPhases = (
+				7F9F4BE829D0B5D700F7371C /* Sources */,
+				7F9F4BE929D0B5D700F7371C /* Frameworks */,
+				7F9F4BEA29D0B5D700F7371C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F9F4BF129D0B5D700F7371C /* PBXTargetDependency */,
+			);
+			name = LodestoneNewsViewTests;
+			productName = LodestoneNewsViewTests;
+			productReference = 7F9F4BEC29D0B5D700F7371C /* LodestoneNewsViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7FF52B1229BFA21C00B7BF58 /* xiv-turnins */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FF52B2129BFA21D00B7BF58 /* Build configuration list for PBXNativeTarget "xiv-turnins" */;
@@ -284,19 +273,15 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					7F57294729CF918F004CBE7A = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 7FF52B1229BFA21C00B7BF58;
-					};
-					7F57295429CF92B8004CBE7A = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 7FF52B1229BFA21C00B7BF58;
-					};
 					7F57296229CF9B54004CBE7A = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 7FF52B1229BFA21C00B7BF58;
 					};
 					7F57296F29CFAE1F004CBE7A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7FF52B1229BFA21C00B7BF58;
+					};
+					7F9F4BEB29D0B5D700F7371C = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 7FF52B1229BFA21C00B7BF58;
 					};
@@ -319,29 +304,14 @@
 			projectRoot = "";
 			targets = (
 				7FF52B1229BFA21C00B7BF58 /* xiv-turnins */,
-				7F57294729CF918F004CBE7A /* xiv-turninsTests */,
-				7F57295429CF92B8004CBE7A /* ItemViewTests */,
 				7F57296229CF9B54004CBE7A /* DeliverableTests */,
 				7F57296F29CFAE1F004CBE7A /* ScanTextTests */,
+				7F9F4BEB29D0B5D700F7371C /* LodestoneNewsViewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7F57294629CF918F004CBE7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F57295329CF92B8004CBE7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7F57296129CF9B54004CBE7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7F57296E29CFAE1F004CBE7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9F4BEA29D0B5D700F7371C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,20 +345,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7F57294429CF918F004CBE7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F57295129CF92B8004CBE7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7F57295F29CF9B54004CBE7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,16 +361,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F9F4BE829D0B5D700F7371C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F9F4BEF29D0B5D700F7371C /* LodestoneNewsViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7FF52B0F29BFA21C00B7BF58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7F83927929CA6FC5004A833E /* AllItems.swift in Sources */,
+				7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */,
+				7F96FA2229D0EC9100E3EAED /* DeliverableView.swift in Sources */,
+				7F9F4BF829D0E8D900F7371C /* TabView.swift in Sources */,
 				7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */,
 				7F6DBE7F29C783070023503A /* ScanText.swift in Sources */,
 				7FE0088429C168570098C5E1 /* ItemView.swift in Sources */,
 				7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */,
 				7F6DBE8429C7A5150023503A /* CountdownView.swift in Sources */,
+				7F9F4BF629D0E55C00F7371C /* ArticleView.swift in Sources */,
 				7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */,
 				7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */,
 				7FA1186A29BFA49F00100E0D /* Deliverable.swift in Sources */,
@@ -418,16 +393,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7F57294D29CF918F004CBE7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7FF52B1229BFA21C00B7BF58 /* xiv-turnins */;
-			targetProxy = 7F57294C29CF918F004CBE7A /* PBXContainerItemProxy */;
-		};
-		7F57295A29CF92B8004CBE7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7FF52B1229BFA21C00B7BF58 /* xiv-turnins */;
-			targetProxy = 7F57295929CF92B8004CBE7A /* PBXContainerItemProxy */;
-		};
 		7F57296829CF9B54004CBE7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7FF52B1229BFA21C00B7BF58 /* xiv-turnins */;
@@ -438,81 +403,14 @@
 			target = 7FF52B1229BFA21C00B7BF58 /* xiv-turnins */;
 			targetProxy = 7F57297429CFAE1F004CBE7A /* PBXContainerItemProxy */;
 		};
+		7F9F4BF129D0B5D700F7371C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FF52B1229BFA21C00B7BF58 /* xiv-turnins */;
+			targetProxy = 7F9F4BF029D0B5D700F7371C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7F57294F29CF918F004CBE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N33Z6K7M73;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-turninsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
-			};
-			name = Debug;
-		};
-		7F57295029CF918F004CBE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N33Z6K7M73;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-turninsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
-			};
-			name = Release;
-		};
-		7F57295C29CF92B8004CBE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N33Z6K7M73;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.ItemViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
-			};
-			name = Debug;
-		};
-		7F57295D29CF92B8004CBE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N33Z6K7M73;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.ItemViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
-			};
-			name = Release;
-		};
 		7F57296A29CF9B54004CBE7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -585,6 +483,42 @@
 			};
 			name = Release;
 		};
+		7F9F4BF329D0B5D700F7371C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N33Z6K7M73;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.LodestoneNewsViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
+			};
+			name = Debug;
+		};
+		7F9F4BF429D0B5D700F7371C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N33Z6K7M73;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hoerr.jared.LodestoneNewsViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiv-turnins.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiv-turnins";
+			};
+			name = Release;
+		};
 		7FF52B1F29BFA21D00B7BF58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -689,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -722,7 +656,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-turnins";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -753,7 +687,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-turnins";
+				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -764,24 +698,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F57294E29CF918F004CBE7A /* Build configuration list for PBXNativeTarget "xiv-turninsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F57294F29CF918F004CBE7A /* Debug */,
-				7F57295029CF918F004CBE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7F57295B29CF92B8004CBE7A /* Build configuration list for PBXNativeTarget "ItemViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7F57295C29CF92B8004CBE7A /* Debug */,
-				7F57295D29CF92B8004CBE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7F57296929CF9B54004CBE7A /* Build configuration list for PBXNativeTarget "DeliverableTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -796,6 +712,15 @@
 			buildConfigurations = (
 				7F57297629CFAE1F004CBE7A /* Debug */,
 				7F57297729CFAE1F004CBE7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F9F4BF229D0B5D700F7371C /* Build configuration list for PBXNativeTarget "LodestoneNewsViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F9F4BF329D0B5D700F7371C /* Debug */,
+				7F9F4BF429D0B5D700F7371C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
