@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoScreen: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 LinearGradient(colors: [.pink, .blue], startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.top)
