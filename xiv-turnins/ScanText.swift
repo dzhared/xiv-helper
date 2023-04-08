@@ -45,7 +45,7 @@ func scanText(image: UIImage) -> ([String], [String]) {
     
 func filterLines(unfilteredLines: [String]) -> ([String], [String]) {
     // Define possible extraneous characters to be filtered
-    let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& ", "! ", "@ ", "$ ", "% ", "( ", "+ ", "< ", "> ", "? ", "~ ", "› ", "7 ", "A ", "E ", "® ", "~ ", "À ", "B "]
+    let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& ", "! ", "@ ", "$ ", "% ", "( ", "+ ", "< ", "> ", "? ", "~ ", "› ", "7 ", "A ", "E ", "® ", "~ ", "À ", "B ", "FF "]
     
     // Filter out extraneous characters
     var filteredLines: [String] = []
