@@ -12,13 +12,14 @@ struct ItemView: View {
     
     // MARK: - Properties
     
-    let item: Deliverable
+//    let deliverable: Deliverable
+    let item: Item
     
     @Environment(\.openURL) var openURL
     @State private var isShowingSafariView = false
-
+    
     var iconURL: URL? {
-        let urlString = "https://xivapi.com\(item.icon.replacingOccurrences(of: ".png", with: "_hr1.png"))"
+        let urlString = "https://xivapi.com\(item.icon)"
         return URL(string: urlString)
     }
     
@@ -26,29 +27,31 @@ struct ItemView: View {
     
     var body: some View {
         Section {
-            HStack {
-                AsyncImage(url: iconURL) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
+            NavigationLink(destination: ItemDetailView(item: item)) {
+                HStack {
+                    AsyncImage(url: iconURL) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 60, height: 60)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 10)
+                    
+                    VStack(alignment: .leading) {
+                        Text(item.name)
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding([.leading],7)
+                    Spacer()
                 }
-                .frame(width: 60, height: 60)
+                .padding()
+                .background(.ultraThickMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(radius: 10)
-                
-                VStack(alignment: .leading) {
-                    Text(item.name)
-                        .font(.title3)
-                        .foregroundColor(.primary)
-                    RecipeButtonView(url: URL(string: item.recipeURL)!)
-                }
-                .padding([.leading],7)
-                Spacer()
+                .padding([.horizontal])
             }
-            .padding()
-            .background(.ultraThickMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding([.horizontal])
         }
     }
     
@@ -87,11 +90,15 @@ struct SafariView: UIViewControllerRepresentable {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(item: Deliverable(
-            name: "Lignum Vitae Fishing Rod",
-            id: 27150,
-            icon: "/i/038000/038236.png",
-            recipe: 4386
-        ))
+        let item = Item(
+            classJobCategory: Item.ClassJobCategory(equipClass: "All Classes"),
+            id: 2747,
+            icon: "/i/046000/046540_hr1.png",
+            levelEquip: 53,
+            levelItem: 80,
+            name: "Holy Rainbow Shoes",
+            itemRecipeInfo: [Item.ItemRecipeInfo(classJobID: 13, id: 2747, level: 54)])
+        
+        ItemView(item: item)
     }
 }

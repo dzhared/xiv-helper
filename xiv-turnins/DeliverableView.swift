@@ -13,7 +13,7 @@ struct DeliverableView: View {
     // MARK: - Properties
     
     @State private var scannedItems = ([String](), [String]())
-    @State private var deliverables: [Deliverable] = []
+    @State private var items: [Item] = []
     
     @State private var selectedPhotosPickerItem: PhotosPickerItem?
     @State private var selectedPhotosPickerItemData: Data?
@@ -23,10 +23,10 @@ struct DeliverableView: View {
     // MARK: - View
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 TimerView()
-                if deliverables.isEmpty {
+                if items.isEmpty {
                     PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
                         Text("No items added. Tap to begin:")
                         Image(systemName: "camera")
@@ -36,7 +36,7 @@ struct DeliverableView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding()
                 }
-                ForEach(deliverables, id: \.id) { item in
+                ForEach(items, id: \.id) { item in
                     ItemView(item: item)
                 }
             }
@@ -50,7 +50,7 @@ struct DeliverableView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    if !deliverables.isEmpty {
+                    if !items.isEmpty {
                         Button(action: {
                             showingDeleteConfirmation = true
                         }) {
@@ -62,8 +62,8 @@ struct DeliverableView: View {
             }
         }
         .onAppear {
-            if deliverables.isEmpty {
-                populateItems()
+            if items.isEmpty {
+                getItems()
             }
         }
         .onChange(of: selectedPhotosPickerItem) { selectedPhotosPickerItem in
@@ -77,15 +77,15 @@ struct DeliverableView: View {
                     return
                 }
                 // Regenerate item list
-                deliverables = []
+                items = []
                 scannedItems = scanText(image: UIImage(data: data)!)
-                populateItems()
+                getItems()
             }
         }
         .alert("Delete items?", isPresented: $showingDeleteConfirmation) {
             Button("Cancel", role: .cancel) {  }
             Button("Delete", role: .destructive) {
-                deliverables = []
+                items = []
             }
         } message: {
             Text("This cannot be undone.")
@@ -101,12 +101,14 @@ struct DeliverableView: View {
         }
     }
     
-    func populateItems() {
+    func getItems() {
         for itemName in scannedItems.0.sorted() {
-            getDeliverable(itemName: itemName) { deliverable in
-                if let deliverable = deliverable {
-                    DispatchQueue.main.async {
-                        self.deliverables.append(deliverable)
+            getItemIDFromName(itemName: itemName) { itemID in
+                if let itemID = itemID {
+                    getItemFromID(itemID: itemID) { item in
+                        if let item = item {
+                            self.items.append(item)
+                        }
                     }
                 }
             }

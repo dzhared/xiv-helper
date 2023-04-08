@@ -14,20 +14,27 @@ final class DeliverableTests: XCTestCase {
         // Test whether XIVAPI returns expected deliverable
         let expectedName = "Holy Rainbow Shoes"
         let expectedID = 11979
-        let expectedIcon = "/i/046000/046540.png"
+        let expectedIcon = "/i/046000/046540_hr1.png"
         let expectedRecipe = 2747
         
         let expectation = XCTestExpectation(description: "Completion handler called")
         
-        getDeliverable(itemName: "Holy Rainbow Shoes") { deliverable in
-            XCTAssertNotNil(deliverable)
-            XCTAssertEqual(deliverable?.name, expectedName)
-            XCTAssertEqual(deliverable?.id, expectedID)
-            XCTAssertEqual(deliverable?.icon, expectedIcon)
-            XCTAssertEqual(deliverable?.recipe, expectedRecipe)
-            expectation.fulfill()
+        getItemIDFromName(itemName: "Holy Rainbow Shoes") { itemID in
+            if let itemID = itemID {
+                getItemFromID(itemID: itemID) { item in
+                    if let item = item {
+                        XCTAssertEqual(item.name, expectedName)
+                        XCTAssertEqual(item.id, expectedID)
+                        XCTAssertEqual(item.icon, expectedIcon)
+                        XCTAssertEqual(item.itemRecipeInfo[0].id, expectedRecipe)
+                        expectation.fulfill()
+                    } else {
+                        XCTFail("Failed to retrieve item.")
+                    }
+                }
+            }
         }
-        wait(for: [expectation], timeout: 5.0)
+        wait(for: [expectation], timeout: 3.0)
     }
     
     func testGetDeliverablePerformance() {
@@ -48,23 +55,22 @@ final class DeliverableTests: XCTestCase {
         let startTime = DispatchTime.now()
         var itemsRetrieved = 0
         
-        for item in sampleItems {
-            getDeliverable(itemName: item) { item in
-                let endTime = DispatchTime.now()
-                let timeDelta = endTime.uptimeNanoseconds - startTime.uptimeNanoseconds
-                print("Time to retrieve \(item?.name ?? "item"): \(Double(timeDelta) / Double(1_000_000)) ms")
-                
-                itemsRetrieved += 1
-                if itemsRetrieved == sampleItems.count {
-                    expectation.fulfill()
+        for sampleItemName in sampleItems {
+            getItemIDFromName(itemName: sampleItemName) { itemID in
+                if let itemID = itemID {
+                    getItemFromID(itemID: itemID) { item in
+                        let endTime = DispatchTime.now()
+                        let timeDelta = endTime.uptimeNanoseconds - startTime.uptimeNanoseconds
+                        print("Time to retrieve \(item?.name ?? "item"): \(Double(timeDelta) / 1_000_000) ms")
+                        
+                        itemsRetrieved += 1
+                        if itemsRetrieved == sampleItems.count {
+                            expectation.fulfill()
+                        }
+                    }
                 }
             }
         }
-        
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 3.0)
     }
-
-
-
-    
 }
