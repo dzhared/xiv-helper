@@ -14,11 +14,10 @@ struct InfoScreen: View {
                 LinearGradient(colors: [.pink, .blue], startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.top)
                 List {
-                    Text("This app is designed to help find information on Grand Company Supply missions in Final Fantasy XIV. These items can be found by talking to the Personnel Officer in Gridania, Ul'dah or Limsa Lominsa, as well as in the Timers menu.\n\nTap the camera icon in the Deliverables screen to select an image of the item list from your Photos library. The main screen will be populated with the items and links to their respective Teamcraft pages automatically.")
+                    Text(text)
                     Section {
                         NavigationLink(destination: List {
-                            Text("Item photos and IDs retrieved from XIVAPI:\nhttps://xivapi.com/")
-                            Text("All crafting information can be found at FFXIV Teamcraft:\nhttps://ffxivteamcraft.com/")
+                            Text("Item info and recipes retrieved using XIVAPI:\nhttps://xivapi.com/")
                             Text("News retrieved from Lodestone News API:\nhttps://lodestonenews.com/")
                         }.navigationTitle("Credits")) {
                             Text("Credits")
@@ -39,6 +38,10 @@ struct InfoScreen: View {
         }
     }
 }
+
+let text = """
+This app helps find and organize crafting recipes in Final Fantasy XIV. To find and add a recipe, tap the search icon on the Recipes screen and type the item's name.\n\nAdditionally, to help with Grand Company Supply Missions, you can input a screenshot of the Supply Mission menu, found in the Timers menu. Tap the camera icon, then select an image containing the Supply Mission menu, and it will automatically populate the Recipes list.
+"""
 
 struct InfoScreen_Previews: PreviewProvider {
     static var previews: some View {

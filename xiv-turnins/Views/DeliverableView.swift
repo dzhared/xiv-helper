@@ -19,30 +19,48 @@ struct DeliverableView: View {
     @State private var selectedPhotosPickerItemData: Data?
     
     @State private var showingDeleteConfirmation = false
+    @State private var showingSearchView = false
     
     // MARK: - View
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                TimerView()
                 if items.isEmpty {
-                    PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
-                        Text("No items added. Tap to begin:")
-                        Image(systemName: "camera")
-                    }
-                    .padding()
-                    .background(.ultraThickMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding()
+                    Button("No items added. Tap to search.") { showingSearchView = true }
+                    .padding(10)
+                    .background(.regularMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .padding(10)
                 }
                 ForEach(items, id: \.id) { item in
                     ItemView(item: item)
                 }
             }
+            .sheet(isPresented: $showingSearchView) {
+                ItemSearchView(onItemSelected: { item in
+                    if let selectedItem = item {
+                        if !items.contains(where: { $0.name == selectedItem.name }) {
+                            self.items.append(selectedItem)
+                            showingSearchView = false
+                        }
+                    }
+                })
+            }
             .navigationTitle("XIV Helper")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar() {
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    TimerView()
+                        .padding(.bottom, 3)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showingSearchView = true
+                    }, label: {
+                        Image(systemName: "magnifyingglass")
+                    })
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
                         Image(systemName: "camera")
@@ -86,6 +104,7 @@ struct DeliverableView: View {
             Button("Cancel", role: .cancel) {  }
             Button("Delete", role: .destructive) {
                 items = []
+                scannedItems = ([], [])
             }
         } message: {
             Text("This cannot be undone.")

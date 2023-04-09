@@ -17,6 +17,10 @@ struct Item: Codable, Identifiable {
     let name: String
     let itemRecipeInfo: [ItemRecipeInfo]
     
+    var classJob: (String, String) {
+        getJobAcronym(id: itemRecipeInfo[0].classJobID)
+    }
+    
     var identifier: Int {
         return id
     }
@@ -50,20 +54,16 @@ struct Item: Codable, Identifiable {
     }
 }
 
-func getItemFromString(_ string: String) -> Item? {
-    var item: Item? = nil
-    
+func getItemFromString(_ string: String, completion: @escaping (Item?) -> Void) {
     getItemIDFromName(itemName: string) { itemID in
         if let itemID = itemID {
             getItemFromID(itemID: itemID) { retrievedItem in
-                if let retrievedItem = retrievedItem {
-                    item = retrievedItem
-                }
+                completion(retrievedItem)
             }
+        } else {
+            completion(nil)
         }
     }
-    
-    return item
 }
 
 func getItemIDFromName(itemName: String, completion: @escaping (Int?) -> Void) {

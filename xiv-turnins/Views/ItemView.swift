@@ -6,18 +6,12 @@
 //
 
 import SwiftUI
-import SafariServices
 
 struct ItemView: View {
     
     // MARK: - Properties
     
-//    let deliverable: Deliverable
     let item: Item
-    
-    @Environment(\.openURL) var openURL
-    @State private var isShowingSafariView = false
-    
     var iconURL: URL? {
         let urlString = "https://xivapi.com\(item.icon)"
         return URL(string: urlString)
@@ -34,8 +28,8 @@ struct ItemView: View {
                     } placeholder: {
                         ProgressView()
                     }
-                    .frame(width: 60, height: 60)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
                     .shadow(radius: 10)
                     
                     VStack(alignment: .leading) {
@@ -47,44 +41,12 @@ struct ItemView: View {
                     .padding([.leading],7)
                     Spacer()
                 }
-                .padding()
+                .padding(10)
                 .background(.ultraThickMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding([.horizontal])
+                .padding([.horizontal], 5)
             }
         }
-    }
-    
-    // MARK: - Structs
-    
-    struct RecipeButtonView: View {
-        let url: URL
-        
-        @State private var isShowingSafariView = false
-        @Environment(\.openURL) var openURL
-        
-        var body: some View {
-            Button(action: {
-                isShowingSafariView = true
-            }, label: {
-                Text("See recipe on Teamcraft ") +
-                Text(Image(systemName: "arrow.up.right.square"))
-            })
-            .sheet(isPresented: $isShowingSafariView) {
-                SafariView(url: url)
-            }
-        }
-    }
-}
-
-struct SafariView: UIViewControllerRepresentable {
-    let url: URL
-    
-    func makeUIViewController(context: Context) -> some SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        // No-op
     }
 }
 

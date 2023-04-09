@@ -19,11 +19,7 @@ struct TimerView: View {
     
     var body: some View {
         Text("Daily Reset in \(timeString(time: timeRemaining))")
-            .padding()
-            .multilineTextAlignment(.center)
-            .background(.thickMaterial)
             .foregroundColor(timeRemaining > 3600 ? .primary : .red)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
             .onReceive(timer) { _ in
                 if self.timeRemaining > 0 {
                     self.timeRemaining -= 1

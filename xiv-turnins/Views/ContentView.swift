@@ -10,17 +10,13 @@ import PhotosUI
 
 struct ContentView: View {
     
-    init() {
-        UITabBar.appearance().tintColor = .red
-    }
-    
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
             DeliverableView()
                 .tabItem {
-                    Label("Deliverables", systemImage: "star")
+                    Label("Recipes", systemImage: "hammer")
                 }
                 .tag(0)
             LodestoneNewsView()
