@@ -28,6 +28,7 @@
 		7FA1186A29BFA49F00100E0D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186929BFA49F00100E0D /* Item.swift */; };
 		7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186C29BFA60900100E0D /* DummyData.swift */; };
 		7FE0088429C168570098C5E1 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0088329C168570098C5E1 /* ItemView.swift */; };
+		7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */; };
 		7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1829BFA21C00B7BF58 /* ContentView.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		7FA1186929BFA49F00100E0D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7FA1186C29BFA60900100E0D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7FE0088329C168570098C5E1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* xiv-turnins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xiv-turnins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xiv_turninsApp.swift; sourceTree = "<group>"; };
 		7FF52B1829BFA21C00B7BF58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				7F6DBE8129C797A20023503A /* InfoScreenView.swift */,
 				7FE0088329C168570098C5E1 /* ItemView.swift */,
 				7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */,
+				7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */,
 				7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */,
 				7F83927529C94CDB004A833E /* SplashScreenView.swift */,
 				7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */,
@@ -422,6 +425,7 @@
 				7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */,
 				7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */,
 				7FA1186A29BFA49F00100E0D /* Item.swift in Sources */,
+				7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */,
 				7F7374BC29E1D39200FED6DB /* Recipe.swift in Sources */,
 				7F6DBE8229C797A20023503A /* InfoScreenView.swift in Sources */,
 				7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */,

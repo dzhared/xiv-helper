@@ -52,13 +52,6 @@ struct ItemDetailView: View {
 
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetailView(item: Item(
-            classJobCategory: Item.ClassJobCategory(equipClass: "All Classes"),
-            id: 11979,
-            icon: "/i/046000/046540_hr1.png",
-            levelEquip: 53,
-            levelItem: 80,
-            name: "Holy Rainbow Shoes",
-            itemRecipeInfo: [Item.ItemRecipeInfo(classJobID: 13, id: 2747, level: 54)]))
+        ItemDetailView(item: Item.example)
     }
 }

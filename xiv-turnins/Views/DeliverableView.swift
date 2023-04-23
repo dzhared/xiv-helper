@@ -21,20 +21,28 @@ struct DeliverableView: View {
     @State private var showingDeleteConfirmation = false
     @State private var showingSearchView = false
     
+    let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedItems")
+    
     // MARK: - View
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 if items.isEmpty {
                     Button("No items added. Tap to search.") { showingSearchView = true }
-                    .padding(10)
-                    .background(.regularMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .padding(10)
                 }
                 ForEach(items, id: \.id) { item in
                     ItemView(item: item)
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                if let index = items.firstIndex(where: {$0.id == item.id}) {
+                                    items.remove(at: index)
+                                    save()
+                                }
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                 }
             }
             .sheet(isPresented: $showingSearchView) {
@@ -42,6 +50,7 @@ struct DeliverableView: View {
                     if let selectedItem = item {
                         if !items.contains(where: { $0.name == selectedItem.name }) {
                             self.items.append(selectedItem)
+                            save()
                             showingSearchView = false
                         }
                     }
@@ -52,13 +61,13 @@ struct DeliverableView: View {
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     TimerView()
-                        .padding(.bottom, 3)
+                        .padding(.bottom, 4)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         showingSearchView = true
                     }, label: {
-                        Image(systemName: "magnifyingglass")
+                        Label("Search item", systemImage: "magnifyingglass")
                     })
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,11 +88,6 @@ struct DeliverableView: View {
                 }
             }
         }
-        .onAppear {
-            if items.isEmpty {
-                getItems()
-            }
-        }
         .onChange(of: selectedPhotosPickerItem) { selectedPhotosPickerItem in
             guard let selectedPhotosPickerItem else {
                 return
@@ -95,16 +99,21 @@ struct DeliverableView: View {
                     return
                 }
                 // Regenerate item list
+                // Make it so it appends, not deletes?
                 items = []
                 scannedItems = scanText(image: UIImage(data: data)!)
                 getItems()
             }
+        }
+        .onAppear {
+            load()
         }
         .alert("Delete items?", isPresented: $showingDeleteConfirmation) {
             Button("Cancel", role: .cancel) {  }
             Button("Delete", role: .destructive) {
                 items = []
                 scannedItems = ([], [])
+                save()
             }
         } message: {
             Text("This cannot be undone.")
@@ -112,6 +121,10 @@ struct DeliverableView: View {
     }
     
     // MARK: - Functions
+    
+    init() {
+        load()
+    }
     
     func updatePhotosPickerItem(with item: PhotosPickerItem) async {
         selectedPhotosPickerItem = item
@@ -127,10 +140,29 @@ struct DeliverableView: View {
                     getItemFromID(itemID: itemID) { item in
                         if let item = item {
                             self.items.append(item)
+                            save()
                         }
                     }
                 }
             }
+        }
+    }
+    
+    func load() {
+        do {
+            let data = try Data(contentsOf: savePath)
+            items = try JSONDecoder().decode([Item].self, from: data)
+        } catch {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+    }
+    
+    func save() {
+        do {
+            let data = try JSONEncoder().encode(items)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save items: \(error.localizedDescription)")
         }
     }
 }

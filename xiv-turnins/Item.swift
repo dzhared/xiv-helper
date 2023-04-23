@@ -52,6 +52,8 @@ struct Item: Codable, Identifiable {
             case level = "Level"
         }
     }
+    
+    static let example = Item(classJobCategory: Item.ClassJobCategory(equipClass: "All Classes"), id: 2747, icon: "/i/046000/046540_hr1.png", levelEquip: 53, levelItem: 80, name: "Holy Rainbow Shoes", itemRecipeInfo: [Item.ItemRecipeInfo(classJobID: 13, id: 2747, level: 54)])
 }
 
 func getItemFromString(_ string: String, completion: @escaping (Item?) -> Void) {

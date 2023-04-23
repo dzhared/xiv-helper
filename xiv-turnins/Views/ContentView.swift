@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PhotosUI
 
 struct ContentView: View {
     
@@ -16,7 +15,7 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             DeliverableView()
                 .tabItem {
-                    Label("Recipes", systemImage: "hammer")
+                    Label("Crafting", systemImage: "hammer")
                 }
                 .tag(0)
             LodestoneNewsView()
