@@ -51,7 +51,7 @@ struct LodestoneNewsView: View {
     @State private var allArticles = [LodestoneNews]()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 ForEach(allArticles, id: \.id) { article in
                     LazyVStack {
