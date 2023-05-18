@@ -133,12 +133,7 @@ struct DeliverableView: View {
             Task {
                 // Run ML asynchronously upon picking photo
                 await updatePhotosPickerItem(with: selectedPhotosPickerItem)
-                guard let data = selectedPhotosPickerItemData else {
-                    return
-                }
-                // Regenerate item list
-                // Make it so it appends, not deletes?
-                items = []
+                guard let data = selectedPhotosPickerItemData else { return }
                 scannedItems = scanText(image: UIImage(data: data)!)
                 getItems()
             }
@@ -185,6 +180,7 @@ struct DeliverableView: View {
                 if let itemID = itemID {
                     getItemFromID(itemID: itemID) { item in
                         if let item = item {
+                            guard !items.contains(item) else { return }
                             self.items.append(item)
                             save()
                         }
