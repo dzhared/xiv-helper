@@ -17,7 +17,6 @@ let dummyData: [String] = [
     "Lemonade"                      // 15 Culinarian     CUL
 ]
 
-// UNUSED: for retrieving job acronyms by job ID number
 func getJobAcronym(id: Int) -> (String, String) {
     switch id {
     case 8:
@@ -34,7 +33,15 @@ func getJobAcronym(id: Int) -> (String, String) {
         return ("WVR", "Weaver")
     case 14:
         return ("ALC", "Alchemist")
-    default:
+    case 15:
         return ("CUL", "Culinarian")
+    case 16:
+        return ("MIN", "Miner")
+    case 17:
+        return ("BTN", "Botanist")
+    case 18:
+        return ("FSH", "Fisher")
+    default:
+        return ("ADV", "Adventurer")
     }
 }
