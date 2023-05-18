@@ -30,6 +30,20 @@ struct Recipe: Codable {
     let itemIngredient8: ItemIngredient
     let itemIngredient9: ItemIngredient
     
+    let recipeLevelTable: [String: Int]
+    var difficulty: Int {
+        recipeLevelTable["Difficulty"] ?? 0
+    }
+    var durability: Int {
+        recipeLevelTable["Durability"] ?? 0
+    }
+    var suggestedControl: Int {
+        recipeLevelTable["SuggestedControl"] ?? 0
+    }
+    var suggestedCraftsmanship: Int {
+        recipeLevelTable["SuggestedCraftsmanship"] ?? 0
+    }
+    
     var ingredients: [Ingredient] {
         var ingredients = [Ingredient]()
         
@@ -129,6 +143,8 @@ struct Recipe: Codable {
         case itemIngredient7 = "ItemIngredient7"
         case itemIngredient8 = "ItemIngredient8"
         case itemIngredient9 = "ItemIngredient9"
+        
+        case recipeLevelTable = "RecipeLevelTable"
     }
     
     struct ItemIngredient: Codable {
@@ -161,7 +177,7 @@ struct Ingredient: Identifiable {
 }
 
 func getRecipe(recipeID: Int, completion: @escaping (Recipe?) -> Void) {
-    let url: URL = URL(string: "https://xivapi.com/recipe/\(recipeID)?columns=AmountIngredient0,ItemIngredient0.IconHD,ItemIngredient0.Name,AmountIngredient1,ItemIngredient1.IconHD,ItemIngredient1.Name,AmountIngredient2,ItemIngredient2.IconHD,ItemIngredient2.Name,AmountIngredient3,ItemIngredient3.IconHD,ItemIngredient3.Name,AmountIngredient4,ItemIngredient4.IconHD,ItemIngredient4.Name,AmountIngredient5,ItemIngredient5.IconHD,ItemIngredient5.Name,AmountIngredient6,ItemIngredient6.IconHD,ItemIngredient6.Name,AmountIngredient7,ItemIngredient7.IconHD,ItemIngredient7.Name,AmountIngredient8,ItemIngredient8.IconHD,ItemIngredient8.Name,AmountIngredient9,ItemIngredient9.IconHD,ItemIngredient9.Name")!
+    let url: URL = URL(string: "https://xivapi.com/recipe/\(recipeID)?columns=RecipeLevelTable.Difficulty,RecipeLevelTable.Durability,RecipeLevelTable.SuggestedControl,RecipeLevelTable.SuggestedCraftsmanship,AmountIngredient0,ItemIngredient0.IconHD,ItemIngredient0.Name,AmountIngredient1,ItemIngredient1.IconHD,ItemIngredient1.Name,AmountIngredient2,ItemIngredient2.IconHD,ItemIngredient2.Name,AmountIngredient3,ItemIngredient3.IconHD,ItemIngredient3.Name,AmountIngredient4,ItemIngredient4.IconHD,ItemIngredient4.Name,AmountIngredient5,ItemIngredient5.IconHD,ItemIngredient5.Name,AmountIngredient6,ItemIngredient6.IconHD,ItemIngredient6.Name,AmountIngredient7,ItemIngredient7.IconHD,ItemIngredient7.Name,AmountIngredient8,ItemIngredient8.IconHD,ItemIngredient8.Name,AmountIngredient9,ItemIngredient9.IconHD,ItemIngredient9.Name")!
     
     var request = URLRequest(url: url)
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")

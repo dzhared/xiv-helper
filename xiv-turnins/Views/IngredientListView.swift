@@ -13,8 +13,15 @@ struct IngredientListView: View {
     let recipeID: Int
     
     var body: some View {
-        NavigationStack {
-            VStack {
+        Section("Stats") {
+            Text("Difficulty: ") + Text(String(recipe?.difficulty ?? 0)).font(.headline)
+            Text("Durability: ") + Text(String(recipe?.durability ?? 0)).font(.headline)
+            Text("Suggested Craftsmanship: ") + Text(String(recipe?.suggestedCraftsmanship ?? 0)).font(.headline)
+            Text("Suggested Control: ") + Text(String(recipe?.suggestedControl ?? 0)).font(.headline)
+        }
+        
+        Section("Recipe") {
+            VStack(alignment: .leading) {
                 ForEach(recipe?.ingredients ?? [], id: \.id) { ingredient in
                     IngredientBadge(ingredient: ingredient)
                 }
@@ -33,9 +40,7 @@ struct IngredientListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             List {
-                Section("Recipe") {
-                    IngredientListView(recipeID: 2394)
-                }
+                IngredientListView(recipeID: 2394)
             }
         }
     }

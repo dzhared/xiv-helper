@@ -31,8 +31,7 @@ struct ItemDetailView: View {
                             }
                         }
                     }
-                    
-                    Section("Recipe") {
+                    Section {
                         HStack {
                             Image(item.classJob.1)
                                 .resizable()
@@ -42,8 +41,8 @@ struct ItemDetailView: View {
                                     .font(.title3)
                             }
                         }
-                        IngredientListView(recipeID: item.itemRecipeInfo[0].id)
                     }
+                    IngredientListView(recipeID: item.itemRecipeInfo[0].id)
                 }
             }
         }
