@@ -40,7 +40,7 @@ struct InfoScreen: View {
 }
 
 let text = """
-This app helps find and organize crafting recipes in Final Fantasy XIV. To find and add a recipe, tap the search icon on the Recipes screen and type the item's name.\n\nAdditionally, to help with Grand Company Supply Missions, you can input a screenshot of the Supply Mission menu, found in the Timers menu. Tap the camera icon, then select an image containing the Supply Mission menu, and it will automatically populate the Recipes list.
+This app helps find and organize crafting recipes in Final Fantasy XIV. To find and add a recipe, tap the search icon on the Crafting screen and type the item's name.\n\nAdditionally, to help with Grand Company Supply Missions, you can input a screenshot of the Supply Mission menu, found in the in-game Timers menu. Tap the camera icon, then select an image containing the Supply Mission menu from the Camera Roll, and it will automatically populate the Recipes list.
 """
 
 struct InfoScreen_Previews: PreviewProvider {

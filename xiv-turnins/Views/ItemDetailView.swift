@@ -15,8 +15,13 @@ struct ItemDetailView: View {
             VStack {
                 List {
                     HStack(alignment: .center) {
-                        AsyncImage(url: URL(string: "https://xivapi.com\(item.icon)"), scale: 1.5)
-                            .padding(.trailing, 5)
+                        AsyncImage(url: URL(string: "https://xivapi.com\(item.icon)"), scale: 1.5) { image in
+                            image
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .padding(.trailing, 5)
+                        
                         VStack(alignment: .leading) {
                             Text(item.name)
                                 .foregroundColor(.primary)
