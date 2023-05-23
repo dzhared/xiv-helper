@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F0E373C29D3B672008D51A3 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E373B29D3B672008D51A3 /* HelpView.swift */; };
 		7F0E373E29D3BAD9008D51A3 /* IngredientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */; };
 		7F23342329E0ABCD006EAF6F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */; };
 		7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */; };
 		7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F43560C29E1EBCF00E54A64 /* Search.swift */; };
 		7F57296629CF9B54004CBE7A /* DeliverableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F57296529CF9B54004CBE7A /* DeliverableTests.swift */; };
 		7F57297329CFAE1F004CBE7A /* ScanTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F57297229CFAE1F004CBE7A /* ScanTextTests.swift */; };
+		7F576BAA2A1C111400169C2B /* Leve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BA92A1C111400169C2B /* Leve.swift */; };
+		7F576BAC2A1C11C200169C2B /* ClassJobCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BAB2A1C11C200169C2B /* ClassJobCategory.swift */; };
+		7F576BAE2A1C1A7D00169C2B /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BAD2A1C1A7D00169C2B /* Town.swift */; };
+		7F576BB12A1C1D0800169C2B /* LeveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */; };
+		7F576BB42A1C219F00169C2B /* ClassJobBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */; };
+		7F576BB62A1C489100169C2B /* LeveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB52A1C489100169C2B /* LeveListView.swift */; };
+		7F576BB92A1C4E4E00169C2B /* ItemTitleBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */; };
 		7F6DBE7F29C783070023503A /* ScanText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE7E29C783070023503A /* ScanText.swift */; };
 		7F6DBE8229C797A20023503A /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE8129C797A20023503A /* InfoScreenView.swift */; };
 		7F6DBE8429C7A5150023503A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE8329C7A5150023503A /* TimerView.swift */; };
@@ -21,7 +27,7 @@
 		7F7374BE29E1D94A00FED6DB /* ItemSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */; };
 		7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83927529C94CDB004A833E /* SplashScreenView.swift */; };
 		7F83927929CA6FC5004A833E /* AllItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83927829CA6FC5004A833E /* AllItems.swift */; };
-		7F96FA2229D0EC9100E3EAED /* DeliverableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */; };
+		7F96FA2229D0EC9100E3EAED /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96FA2129D0EC9100E3EAED /* ItemListView.swift */; };
 		7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */; };
 		7F9F4BEF29D0B5D700F7371C /* LodestoneNewsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BEE29D0B5D700F7371C /* LodestoneNewsViewTests.swift */; };
 		7F9F4BF629D0E55C00F7371C /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BF529D0E55C00F7371C /* ArticleView.swift */; };
@@ -60,7 +66,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F0E373B29D3B672008D51A3 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListView.swift; sourceTree = "<group>"; };
 		7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBadge.swift; sourceTree = "<group>"; };
@@ -69,15 +74,21 @@
 		7F57296529CF9B54004CBE7A /* DeliverableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverableTests.swift; sourceTree = "<group>"; };
 		7F57297029CFAE1F004CBE7A /* ScanTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScanTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F57297229CFAE1F004CBE7A /* ScanTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTextTests.swift; sourceTree = "<group>"; };
+		7F576BA92A1C111400169C2B /* Leve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leve.swift; sourceTree = "<group>"; };
+		7F576BAB2A1C11C200169C2B /* ClassJobCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassJobCategory.swift; sourceTree = "<group>"; };
+		7F576BAD2A1C1A7D00169C2B /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveDetailView.swift; sourceTree = "<group>"; };
+		7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassJobBadge.swift; path = "xiv-turnins/Views/Items/ClassJobBadge.swift"; sourceTree = SOURCE_ROOT; };
+		7F576BB52A1C489100169C2B /* LeveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveListView.swift; sourceTree = "<group>"; };
+		7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemTitleBadge.swift; path = "xiv-turnins/Views/Badges/ItemTitleBadge.swift"; sourceTree = SOURCE_ROOT; };
 		7F6DBE7E29C783070023503A /* ScanText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanText.swift; sourceTree = "<group>"; };
-		7F6DBE8029C786830023503A /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7F6DBE8129C797A20023503A /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
 		7F6DBE8329C7A5150023503A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7F7374BB29E1D39200FED6DB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchView.swift; sourceTree = "<group>"; };
 		7F83927529C94CDB004A833E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		7F83927829CA6FC5004A833E /* AllItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItems.swift; sourceTree = "<group>"; };
-		7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverableView.swift; sourceTree = "<group>"; };
+		7F96FA2129D0EC9100E3EAED /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsView.swift; sourceTree = "<group>"; };
 		7F9F4BEC29D0B5D700F7371C /* LodestoneNewsViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodestoneNewsViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F4BEE29D0B5D700F7371C /* LodestoneNewsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsViewTests.swift; sourceTree = "<group>"; };
@@ -137,17 +148,11 @@
 		7F43560E29E2548B00E54A64 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7F0E373B29D3B672008D51A3 /* HelpView.swift */,
-				7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */,
-				7F6DBE8129C797A20023503A /* InfoScreenView.swift */,
-				7FE0088329C168570098C5E1 /* ItemView.swift */,
-				7F96FA2129D0EC9100E3EAED /* DeliverableView.swift */,
-				7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */,
-				7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */,
-				7F83927529C94CDB004A833E /* SplashScreenView.swift */,
-				7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */,
-				7FF52B1829BFA21C00B7BF58 /* ContentView.swift */,
-				7F6DBE8329C7A5150023503A /* TimerView.swift */,
+				7F576BB72A1C4DF200169C2B /* Badges */,
+				7F576BB22A1C1FD400169C2B /* Items */,
+				7F23342629E11468006EAF6F /* LodestoneNews */,
+				7F576BAF2A1C1CFD00169C2B /* Leves */,
+				7F576BBA2A1C50CB00169C2B /* Utility */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +171,64 @@
 				7F57297229CFAE1F004CBE7A /* ScanTextTests.swift */,
 			);
 			path = ScanTextTests;
+			sourceTree = "<group>";
+		};
+		7F576BA82A1C110900169C2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F83927829CA6FC5004A833E /* AllItems.swift */,
+				7F576BAB2A1C11C200169C2B /* ClassJobCategory.swift */,
+				7FA1186C29BFA60900100E0D /* DummyData.swift */,
+				7F43560C29E1EBCF00E54A64 /* Search.swift */,
+				7F7374BB29E1D39200FED6DB /* Recipe.swift */,
+				7F6DBE7E29C783070023503A /* ScanText.swift */,
+				7FA1186929BFA49F00100E0D /* Item.swift */,
+				7F576BA92A1C111400169C2B /* Leve.swift */,
+				7F576BAD2A1C1A7D00169C2B /* Town.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F576BAF2A1C1CFD00169C2B /* Leves */ = {
+			isa = PBXGroup;
+			children = (
+				7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */,
+				7F576BB52A1C489100169C2B /* LeveListView.swift */,
+			);
+			path = Leves;
+			sourceTree = "<group>";
+		};
+		7F576BB22A1C1FD400169C2B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */,
+				7F96FA2129D0EC9100E3EAED /* ItemListView.swift */,
+				7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */,
+				7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */,
+				7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */,
+				7FE0088329C168570098C5E1 /* ItemView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		7F576BB72A1C4DF200169C2B /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */,
+				7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+		7F576BBA2A1C50CB00169C2B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7F6DBE8329C7A5150023503A /* TimerView.swift */,
+				7F6DBE8129C797A20023503A /* InfoScreenView.swift */,
+				7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */,
+				7F83927529C94CDB004A833E /* SplashScreenView.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		7F9F4BED29D0B5D700F7371C /* LodestoneNewsViewTests */ = {
@@ -202,16 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */,
-				7F83927829CA6FC5004A833E /* AllItems.swift */,
-				7F23342629E11468006EAF6F /* LodestoneNews */,
-				7FA1186929BFA49F00100E0D /* Item.swift */,
-				7F7374BB29E1D39200FED6DB /* Recipe.swift */,
+				7FF52B1829BFA21C00B7BF58 /* ContentView.swift */,
+				7F576BA82A1C110900169C2B /* Models */,
 				7F43560E29E2548B00E54A64 /* Views */,
-				7F43560C29E1EBCF00E54A64 /* Search.swift */,
-				7FA1186C29BFA60900100E0D /* DummyData.swift */,
-				7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */,
-				7F6DBE7E29C783070023503A /* ScanText.swift */,
-				7F6DBE8029C786830023503A /* Playground.playground */,
 				7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */,
 				7FF52B1C29BFA21D00B7BF58 /* Preview Content */,
 			);
@@ -410,11 +466,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F576BAC2A1C11C200169C2B /* ClassJobCategory.swift in Sources */,
+				7F576BB42A1C219F00169C2B /* ClassJobBadge.swift in Sources */,
 				7F83927929CA6FC5004A833E /* AllItems.swift in Sources */,
 				7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */,
-				7F96FA2229D0EC9100E3EAED /* DeliverableView.swift in Sources */,
-				7F0E373C29D3B672008D51A3 /* HelpView.swift in Sources */,
+				7F576BB12A1C1D0800169C2B /* LeveDetailView.swift in Sources */,
+				7F96FA2229D0EC9100E3EAED /* ItemListView.swift in Sources */,
 				7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */,
+				7F576BAA2A1C111400169C2B /* Leve.swift in Sources */,
 				7F6DBE7F29C783070023503A /* ScanText.swift in Sources */,
 				7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */,
 				7FE0088429C168570098C5E1 /* ItemView.swift in Sources */,
@@ -425,11 +484,14 @@
 				7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */,
 				7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */,
 				7FA1186A29BFA49F00100E0D /* Item.swift in Sources */,
+				7F576BB92A1C4E4E00169C2B /* ItemTitleBadge.swift in Sources */,
 				7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */,
 				7F7374BC29E1D39200FED6DB /* Recipe.swift in Sources */,
 				7F6DBE8229C797A20023503A /* InfoScreenView.swift in Sources */,
 				7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */,
+				7F576BAE2A1C1A7D00169C2B /* Town.swift in Sources */,
 				7F23342329E0ABCD006EAF6F /* ItemDetailView.swift in Sources */,
+				7F576BB62A1C489100169C2B /* LeveListView.swift in Sources */,
 				7F7374BE29E1D94A00FED6DB /* ItemSearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,13 +745,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"xiv-turnins/Preview Content\"";
 				DEVELOPMENT_TEAM = N33Z6K7M73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "XIV Helper";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -701,7 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -719,13 +781,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"xiv-turnins/Preview Content\"";
 				DEVELOPMENT_TEAM = N33Z6K7M73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "XIV Helper";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -737,7 +799,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
