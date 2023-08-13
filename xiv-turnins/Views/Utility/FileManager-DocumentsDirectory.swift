@@ -1,11 +1,6 @@
-//
-//  FileManager-DocumentsDirectory.swift
-//  xiv-turnins
-//
-//  Created by Jared on 4/23/23.
-//
-
 import Foundation
+
+// MARK: - FileManager
 
 extension FileManager {
     static var documentsDirectory: URL {

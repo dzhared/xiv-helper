@@ -1,16 +1,11 @@
-//
-//  LodestoneNewsViewTests.swift
-//  LodestoneNewsViewTests
-//
-//  Created by Jared on 3/26/23.
-//
-
 import XCTest
 @testable import xiv_turnins
 
+// MARK: LodestoneNewsViewTests
+
 final class LodestoneNewsViewTests: XCTestCase {
     
-    // Test ability to decode JSON from API
+    /// The JSON is correctly decoded from the API call.
     func testDecodingLodestoneNews() throws {
         let sampleJSON = """
         {
@@ -32,11 +27,11 @@ final class LodestoneNewsViewTests: XCTestCase {
         let article = try decoder.decode(LodestoneNews.self, from: sampleJSON)
         
         XCTAssertEqual(article.id, "0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c")
-        XCTAssertEqual(article.url, "https://na.finalfantasyxiv.com/lodestone/topics/detail/0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c")
+        XCTAssertEqual(article.formattedURL, URL(string: "https://na.finalfantasyxiv.com/lodestone/topics/detail/0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c")!)
         XCTAssertEqual(article.title, "Letter from the Producer LIVE Part LXIV Digest Released")
         XCTAssertEqual(article.image, "https://img.finalfantasyxiv.com/t/0bb6b9ddf074dcf3738acddd4391b9d9b3b0c54c.png?1622102284")
         XCTAssertEqual(article.description, "We’re pleased to announce that the Letter from the Producer LIVE Part LXIV event digest has been released!\n\nIf you weren’t able to watch the live stream, or if you just want to watch it again, be sure to check it out!\n\nProceed to the thread.")
-        XCTAssertEqual(article.time, Date(timeIntervalSince1970: 1622102400))
+        XCTAssertEqual(article.formattedTime, "May 27, 2021")
     }
     
 }

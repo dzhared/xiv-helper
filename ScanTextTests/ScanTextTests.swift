@@ -1,15 +1,10 @@
-//
-//  ScanTextTests.swift
-//  ScanTextTests
-//
-//  Created by Jared on 3/25/23.
-//
-
 import XCTest
 @testable import xiv_turnins
 
-final class ScanTextTests: XCTestCase {
+// MARK: - ScanTextTests
 
+final class ScanTextTests: XCTestCase {
+    
     func testMatchTruncatedString() throws {
         let expectedStrings: [String: String] = [
             "Dwarven Mythril Chainmail of Mai...": "Dwarven Mythril Chainmail of Maiming",

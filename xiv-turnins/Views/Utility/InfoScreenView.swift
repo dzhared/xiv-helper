@@ -1,18 +1,22 @@
-//
-//  InfoScreen.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/19/23.
-//
-
 import SwiftUI
 
+// MARK: - InfoScreen
+
 struct InfoScreen: View {
+    
+    // MARK: Properties
+    
+    /// The information to be displayed.
+    let text =
+    """
+    This app helps find and organize crafting recipes in Final Fantasy XIV. To find and add a recipe, tap the search icon on the Crafting screen and type the item's name.\n\nAdditionally, to help with Grand Company Supply Missions, you can input a screenshot of the Supply Mission menu, found in the in-game Timers menu. Tap the camera icon, then select an image containing the Supply Mission menu from the Camera Roll, and it will automatically populate the Recipes list.
+    """
+    
+    // MARK: Body
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [.pink, .blue], startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.top)
                 List {
                     Text(text)
                     Section {
@@ -39,9 +43,7 @@ struct InfoScreen: View {
     }
 }
 
-let text = """
-This app helps find and organize crafting recipes in Final Fantasy XIV. To find and add a recipe, tap the search icon on the Crafting screen and type the item's name.\n\nAdditionally, to help with Grand Company Supply Missions, you can input a screenshot of the Supply Mission menu, found in the in-game Timers menu. Tap the camera icon, then select an image containing the Supply Mission menu from the Camera Roll, and it will automatically populate the Recipes list.
-"""
+// MARK: - PreviewProvider
 
 struct InfoScreen_Previews: PreviewProvider {
     static var previews: some View {

@@ -1,15 +1,15 @@
-//
-//  LeveDetailView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 5/22/23.
-//
-
 import SwiftUI
+
+// MARK: - LeveDetailView
 
 struct LeveDetailView: View {
     
+    // MARK: Properties
+    
+    /// The `Leve` to be displayed.
     let leve: Leve
+    
+    // MARK: Body
     
     var body: some View {
         NavigationStack {
@@ -38,6 +38,8 @@ struct LeveDetailView: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
 
 struct LeveDetailView_Previews: PreviewProvider {
     static var previews: some View {

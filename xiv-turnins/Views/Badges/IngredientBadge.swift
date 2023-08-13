@@ -1,18 +1,17 @@
-//
-//  IngredientBadge.swift
-//  xiv-turnins
-//
-//  Created by Jared on 4/7/23.
-//
-
 import SwiftUI
 
+// MARK: - IngredientBadge
+
 struct IngredientBadge: View {
+    
+    // MARK: Properties
     
     let ingredient: Ingredient
     var imageURL: URL {
         URL(string: "https://xivapi.com\(ingredient.icon)")!
     }
+    
+    // MARK: Body
     
     var body: some View {
         HStack {

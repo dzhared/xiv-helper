@@ -1,26 +1,20 @@
 import SwiftUI
 
-// MARK: - ItemView
+// MARK: - LeveView
 
-struct ItemView: View {
+struct LeveView: View {
     
     // MARK: Properties
     
-    /// The `Item` to be displayed.
-    let item: Item
-    
-    /// The formatted URL of the `item` icon.
-    var iconURL: URL? {
-        let urlString = "https://xivapi.com\(item.icon)"
-        return URL(string: urlString)
-    }
+    /// The `Leve` to be displayed.
+    let leve: Leve
     
     // MARK: Body
     
     var body: some View {
-        NavigationLink(destination: ItemDetailView(item: item)) {
+        NavigationLink(destination: LeveDetailView(leve: leve)) {
             HStack {
-                AsyncImage(url: iconURL) { image in
+                AsyncImage(url: leve.iconURL) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
@@ -30,12 +24,12 @@ struct ItemView: View {
                 .shadow(radius: 10)
                 
                 VStack(alignment: .leading) {
-                    Text(item.name)
+                    Text(leve.name)
                         .font(.title3)
                         .foregroundColor(.primary)
                         .multilineTextAlignment(.leading)
                 }
-                .padding([.leading],7)
+                .padding(.leading, 7)
                 Spacer()
             }
         }
@@ -44,11 +38,11 @@ struct ItemView: View {
 
 // MARK: - PreviewProvider
 
-struct ItemView_Previews: PreviewProvider {
+struct LeveView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             List {
-                ItemView(item: Item.example)
+                LeveView(leve: Leve.example)
             }
         }
     }

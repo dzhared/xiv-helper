@@ -1,13 +1,8 @@
-//
-//  Recipe.swift
-//  xiv-turnins
-//
-//  Created by Jared on 4/8/23.
-//
-
 import SwiftUI
 
-struct Recipe: Codable {
+// MARK: - Recipe
+
+struct Recipe {
     let amountIngredient0: Int
     let amountIngredient1: Int
     let amountIngredient2: Int
@@ -120,7 +115,11 @@ struct Recipe: Codable {
         
         return ingredients
     }
-    
+}
+
+// MARK: Codable
+
+extension Recipe: Codable {
     enum CodingKeys: String, CodingKey {
         case amountIngredient0 = "AmountIngredient0"
         case amountIngredient1 = "AmountIngredient1"
@@ -146,7 +145,12 @@ struct Recipe: Codable {
         
         case recipeLevelTable = "RecipeLevelTable"
     }
-    
+}
+
+// MARK: - ItemIngredient
+
+extension Recipe {
+    /// Ingredients specifically for use in a `Recipe`.
     struct ItemIngredient: Codable {
         let wrappedIcon: String?
         let wrappedName: String?
@@ -165,16 +169,23 @@ struct Recipe: Codable {
     }
 }
 
-struct Ingredient: Identifiable {
+// MARK: - Ingredient
+
+/// The type and quantity of an ingredient.
+struct Ingredient {
     let icon: String
     let name: String
     let quantity: Int
     let identifier: Int
-    
+}
+
+extension Ingredient: Identifiable {
     var id: Int {
         identifier
     }
 }
+
+// MARK: - Functions
 
 func getRecipe(recipeID: Int, completion: @escaping (Recipe?) -> Void) {
     let url: URL = URL(string: "https://xivapi.com/recipe/\(recipeID)?columns=RecipeLevelTable.Difficulty,RecipeLevelTable.Durability,RecipeLevelTable.SuggestedControl,RecipeLevelTable.SuggestedCraftsmanship,AmountIngredient0,ItemIngredient0.IconHD,ItemIngredient0.Name,AmountIngredient1,ItemIngredient1.IconHD,ItemIngredient1.Name,AmountIngredient2,ItemIngredient2.IconHD,ItemIngredient2.Name,AmountIngredient3,ItemIngredient3.IconHD,ItemIngredient3.Name,AmountIngredient4,ItemIngredient4.IconHD,ItemIngredient4.Name,AmountIngredient5,ItemIngredient5.IconHD,ItemIngredient5.Name,AmountIngredient6,ItemIngredient6.IconHD,ItemIngredient6.Name,AmountIngredient7,ItemIngredient7.IconHD,ItemIngredient7.Name,AmountIngredient8,ItemIngredient8.IconHD,ItemIngredient8.Name,AmountIngredient9,ItemIngredient9.IconHD,ItemIngredient9.Name")!

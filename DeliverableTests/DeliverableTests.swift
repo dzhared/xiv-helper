@@ -1,17 +1,12 @@
-//
-//  DeliverableTests.swift
-//  DeliverableTests
-//
-//  Created by Jared on 3/25/23.
-//
-
 import XCTest
 @testable import xiv_turnins
 
+// MARK: - DeliverableTests
+
 final class DeliverableTests: XCTestCase {
     
+    /// XIVAPI returns the expected deliverable.
     func testGetDeliverable() throws {
-        // Test whether XIVAPI returns expected deliverable
         let expectedName = "Holy Rainbow Shoes"
         let expectedID = 11979
         let expectedIcon = "/i/046000/046540_hr1.png"
@@ -37,8 +32,8 @@ final class DeliverableTests: XCTestCase {
         wait(for: [expectation], timeout: 3.0)
     }
     
+    /// The time taken to retrieve item data from XIVAPI is under 3 seconds.
     func testGetDeliverablePerformance() {
-        // Measure time taken to retrieve item data from XIVAPI
         let sampleItems: [String] = [
             "Lignum Vitae Fishing Rod",
             "Dwarven Mythril Pickaxe",

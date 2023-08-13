@@ -1,10 +1,3 @@
-//
-//  ImageHandler.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/13/23.
-//
-
 // Use for testing without populating items list from scanText
 let dummyData: [String] = [
     "Lignum Vitae Fishing Rod",     // 8  Carpenter      CRP

@@ -1,21 +1,22 @@
-//
-//  ItemListView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/26/23.
-//
-
 import PhotosUI
 import SwiftUI
 
+// MARK: - ItemListView
+
 struct ItemListView: View {
     
-    // MARK: - Properties
+    // MARK: Properties
     
+    /// The items retrieved from the `PhotosPicker`.
     @State private var scannedItems = ([String](), [String]())
+    
+    /// The items currently displayed.
     @State private var items: [Item] = []
     
+    /// The currently selected method used to sort the items list.
     @State private var sortMethod: SortMethod = .nameAscending
+    
+    /// Returns the array of items sorted by `sortMethod`.
     private var sortedItems: [Item] {
         switch sortMethod {
         case .nameDescending:
@@ -42,17 +43,25 @@ struct ItemListView: View {
         case equipLevelDescending = "Equip Level (descending)"
     }
     
+    /// The currently selected photo from `PhotosPicker`.
     @State private var selectedPhotosPickerItem: PhotosPickerItem?
+    
+    /// The data retrieved from `PhotosPicker`.
     @State private var selectedPhotosPickerItemData: Data?
     
+    /// Displays the confirmation dialog to delete all shown items.
     @State private var showingDeleteConfirmation = false
+    
+    /// Determines if the search view is shown.
     @State private var showingSearchView = false
     
+    /// Determines if the sort menu is shown.
     @State private var showingSort = false
     
+    /// The file location to save `items` to for persistent storage.
     let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedItems")
     
-    // MARK: - View
+    // MARK: Body
     
     var body: some View {
         NavigationStack {
@@ -93,11 +102,12 @@ struct ItemListView: View {
                         .padding(.bottom, 4)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
+                    Button {
                         showingSearchView = true
-                    }, label: {
+                    } label: {
                         Label("Search item", systemImage: "magnifyingglass")
-                    })
+                    }
+                    
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     PhotosPicker(selection: $selectedPhotosPickerItem, matching: .images) {
@@ -161,7 +171,7 @@ struct ItemListView: View {
         }
     }
     
-    // MARK: - Functions
+    // MARK: Functions
     
     init() {
         load()
@@ -208,6 +218,8 @@ struct ItemListView: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
 
 struct ItemListView_Previews: PreviewProvider {
     static var previews: some View {

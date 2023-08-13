@@ -1,12 +1,4 @@
-//
-//  AllItems.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/21/23.
-//
-
-// List of possible items, current as of Patch 6.38
-
+/// List of possible items, current as of Patch 6.38
 let allItems: Set<String> = [
     "Bronze Bastard Sword",
     "Viking Sword",

@@ -1,36 +1,27 @@
-//
-//  Search.swift
-//  xiv-turnins
-//
-//  Created by Jared on 4/8/23.
-//
+import Foundation
 
-import SwiftUI
+// MARK: - Response
 
 struct Response: Codable {
     let results: [Result]
-    
-    enum CodingKeys: String, CodingKey {
-        case results = "Results"
-    }
 }
+
+// MARK: - Result
 
 struct Result: Codable {
     let id: Int
     let icon: String
     let name: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "ID"
-        case icon = "Icon"
-        case name = "Name"
-    }
 }
+
+// MARK: - QueryType
 
 enum QueryType: String {
     case recipe = "Recipe"
     case leve = "Leve"
 }
+
+// MARK: - Functions
 
 func searchItems(for query: String, queryType: QueryType, completion: @escaping ([Result]) -> Void) {
     let baseURL = "https://xivapi.com"

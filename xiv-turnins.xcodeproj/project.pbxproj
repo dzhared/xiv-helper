@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F0E373E29D3BAD9008D51A3 /* IngredientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */; };
+		7F0626982A898B54005C01FD /* LodestoneNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0626972A898B54005C01FD /* LodestoneNews.swift */; };
+		7F0CA1232A8855CC00F6D84B /* ItemRecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */; };
+		7F0E373E29D3BAD9008D51A3 /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */; };
 		7F23342329E0ABCD006EAF6F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */; };
 		7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */; };
 		7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F43560C29E1EBCF00E54A64 /* Search.swift */; };
@@ -17,7 +19,6 @@
 		7F576BAC2A1C11C200169C2B /* ClassJobCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BAB2A1C11C200169C2B /* ClassJobCategory.swift */; };
 		7F576BAE2A1C1A7D00169C2B /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BAD2A1C1A7D00169C2B /* Town.swift */; };
 		7F576BB12A1C1D0800169C2B /* LeveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */; };
-		7F576BB42A1C219F00169C2B /* ClassJobBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */; };
 		7F576BB62A1C489100169C2B /* LeveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB52A1C489100169C2B /* LeveListView.swift */; };
 		7F576BB92A1C4E4E00169C2B /* ItemTitleBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */; };
 		7F6DBE7F29C783070023503A /* ScanText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBE7E29C783070023503A /* ScanText.swift */; };
@@ -33,6 +34,8 @@
 		7F9F4BF629D0E55C00F7371C /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F4BF529D0E55C00F7371C /* ArticleView.swift */; };
 		7FA1186A29BFA49F00100E0D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186929BFA49F00100E0D /* Item.swift */; };
 		7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186C29BFA60900100E0D /* DummyData.swift */; };
+		7FB1319B2A7B1B9300C6999A /* LeveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1319A2A7B1B9300C6999A /* LeveType.swift */; };
+		7FB1319D2A7B21D300C6999A /* LeveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1319C2A7B21D300C6999A /* LeveView.swift */; };
 		7FE0088429C168570098C5E1 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0088329C168570098C5E1 /* ItemView.swift */; };
 		7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */; };
@@ -66,7 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListView.swift; sourceTree = "<group>"; };
+		7F0626972A898B54005C01FD /* LodestoneNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNews.swift; sourceTree = "<group>"; };
+		7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRecipeInfo.swift; sourceTree = "<group>"; };
+		7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
 		7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBadge.swift; sourceTree = "<group>"; };
 		7F43560C29E1EBCF00E54A64 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -78,7 +83,6 @@
 		7F576BAB2A1C11C200169C2B /* ClassJobCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassJobCategory.swift; sourceTree = "<group>"; };
 		7F576BAD2A1C1A7D00169C2B /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveDetailView.swift; sourceTree = "<group>"; };
-		7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassJobBadge.swift; path = "xiv-turnins/Views/Items/ClassJobBadge.swift"; sourceTree = SOURCE_ROOT; };
 		7F576BB52A1C489100169C2B /* LeveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveListView.swift; sourceTree = "<group>"; };
 		7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemTitleBadge.swift; path = "xiv-turnins/Views/Badges/ItemTitleBadge.swift"; sourceTree = SOURCE_ROOT; };
 		7F6DBE7E29C783070023503A /* ScanText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanText.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		7F9F4BF529D0E55C00F7371C /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		7FA1186929BFA49F00100E0D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7FA1186C29BFA60900100E0D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		7FB1319A2A7B1B9300C6999A /* LeveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveType.swift; sourceTree = "<group>"; };
+		7FB1319C2A7B21D300C6999A /* LeveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveView.swift; sourceTree = "<group>"; };
 		7FE0088329C168570098C5E1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* xiv-turnins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xiv-turnins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,7 @@
 			children = (
 				7F9F4BF529D0E55C00F7371C /* ArticleView.swift */,
 				7F9F4BE629D0B5BB00F7371C /* LodestoneNewsView.swift */,
+				7F0626972A898B54005C01FD /* LodestoneNews.swift */,
 			);
 			path = LodestoneNews;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 				7F7374BB29E1D39200FED6DB /* Recipe.swift */,
 				7F6DBE7E29C783070023503A /* ScanText.swift */,
 				7FA1186929BFA49F00100E0D /* Item.swift */,
+				7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */,
 				7F576BA92A1C111400169C2B /* Leve.swift */,
 				7F576BAD2A1C1A7D00169C2B /* Town.swift */,
 			);
@@ -193,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				7F576BB02A1C1D0800169C2B /* LeveDetailView.swift */,
+				7FB1319C2A7B21D300C6999A /* LeveView.swift */,
+				7FB1319A2A7B1B9300C6999A /* LeveType.swift */,
 				7F576BB52A1C489100169C2B /* LeveListView.swift */,
 			);
 			path = Leves;
@@ -201,10 +211,9 @@
 		7F576BB22A1C1FD400169C2B /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				7F0E373D29D3BAD9008D51A3 /* IngredientListView.swift */,
+				7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */,
 				7F96FA2129D0EC9100E3EAED /* ItemListView.swift */,
 				7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */,
-				7F576BB32A1C219F00169C2B /* ClassJobBadge.swift */,
 				7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */,
 				7FE0088329C168570098C5E1 /* ItemView.swift */,
 			);
@@ -467,19 +476,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F576BAC2A1C11C200169C2B /* ClassJobCategory.swift in Sources */,
-				7F576BB42A1C219F00169C2B /* ClassJobBadge.swift in Sources */,
 				7F83927929CA6FC5004A833E /* AllItems.swift in Sources */,
+				7FB1319B2A7B1B9300C6999A /* LeveType.swift in Sources */,
 				7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */,
 				7F576BB12A1C1D0800169C2B /* LeveDetailView.swift in Sources */,
 				7F96FA2229D0EC9100E3EAED /* ItemListView.swift in Sources */,
 				7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */,
 				7F576BAA2A1C111400169C2B /* Leve.swift in Sources */,
+				7F0626982A898B54005C01FD /* LodestoneNews.swift in Sources */,
 				7F6DBE7F29C783070023503A /* ScanText.swift in Sources */,
 				7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */,
 				7FE0088429C168570098C5E1 /* ItemView.swift in Sources */,
 				7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */,
 				7F6DBE8429C7A5150023503A /* TimerView.swift in Sources */,
-				7F0E373E29D3BAD9008D51A3 /* IngredientListView.swift in Sources */,
+				7F0E373E29D3BAD9008D51A3 /* IngredientList.swift in Sources */,
 				7F9F4BF629D0E55C00F7371C /* ArticleView.swift in Sources */,
 				7F83927629C94CDB004A833E /* SplashScreenView.swift in Sources */,
 				7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */,
@@ -487,8 +497,10 @@
 				7F576BB92A1C4E4E00169C2B /* ItemTitleBadge.swift in Sources */,
 				7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */,
 				7F7374BC29E1D39200FED6DB /* Recipe.swift in Sources */,
+				7FB1319D2A7B21D300C6999A /* LeveView.swift in Sources */,
 				7F6DBE8229C797A20023503A /* InfoScreenView.swift in Sources */,
 				7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */,
+				7F0CA1232A8855CC00F6D84B /* ItemRecipeInfo.swift in Sources */,
 				7F576BAE2A1C1A7D00169C2B /* Town.swift in Sources */,
 				7F23342329E0ABCD006EAF6F /* ItemDetailView.swift in Sources */,
 				7F576BB62A1C489100169C2B /* LeveListView.swift in Sources */,

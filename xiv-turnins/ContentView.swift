@@ -1,14 +1,12 @@
-//
-//  ContentView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/13/23.
-//
-
 import SwiftUI
+
+// MARK: - ContentView
 
 struct ContentView: View {
     
+    // MARK: Properties
+    
+    /// The currently selected tab.
     @State private var selectedTab = 0
     
     var body: some View {
@@ -40,6 +38,7 @@ struct ContentView: View {
     }
 }
 
+// MARK: - PreviewProvider
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

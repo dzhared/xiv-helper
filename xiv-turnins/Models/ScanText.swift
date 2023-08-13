@@ -1,13 +1,8 @@
-//
-//  TextIdentifier.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/13/23.
-//
-
 import SwiftUI
 import PhotosUI
 import Vision
+
+// MARK: - Functions
 
 func scanText(image: UIImage) -> ([String], [String]) {
     // Create text recognition request
@@ -42,7 +37,7 @@ func scanText(image: UIImage) -> ([String], [String]) {
     
     return lines
 }
-    
+
 func filterLines(unfilteredLines: [String]) -> ([String], [String]) {
     // Define possible extraneous characters to be filtered
     let patterns = ["• ", ", ", "* ", "# ", ") ", "^ ", "& ", "! ", "@ ", "$ ", "% ", "( ", "+ ", "< ", "> ", "? ", "~ ", "› ", "7 ", "A ", "E ", "® ", "~ ", "À ", "B ", "FF ", "F "]

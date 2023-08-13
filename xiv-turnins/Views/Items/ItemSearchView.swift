@@ -1,20 +1,25 @@
-//
-//  ItemSearchView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 4/8/23.
-//
-
 import SwiftUI
+
+// MARK: - ItemSearchView
 
 struct ItemSearchView: View {
     
-    @Environment(\.dismiss) var dismiss
-    @State private var searchText: String = ""
-    @State private var searchResults: [Result] = []
-    @State var selectedItem: Item? = nil
+    // MARK: Properties
     
+    /// Dismiss the view.
+    @Environment(\.dismiss) var dismiss
+    
+    /// The currently entered text in the search field.
+    @State private var searchText: String = ""
+    
+    /// The results for the search query.
+    @State private var searchResults: [Result] = []
+    
+    /// The item selected in the search.
+    @State var selectedItem: Item? = nil
     var onItemSelected: ((Item?) -> Void)
+    
+    // MARK: Body
     
     var body: some View {
         NavigationStack {
@@ -50,6 +55,8 @@ struct ItemSearchView: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
 
 struct ItemSearchView_Previews: PreviewProvider {
     static var previews: some View {

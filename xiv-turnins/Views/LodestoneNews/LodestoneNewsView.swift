@@ -1,18 +1,68 @@
-//
-//  LodestoneNewsView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/26/23.
-//
-
 import SwiftUI
 
-struct LodestoneNews: Codable {
-    let id, url, title, image, description: String
-    let time: Date
+// MARK: - LodestoneNewsView
+
+struct LodestoneNewsView: View {
+    
+    // MARK: Properties
+    
+    /// All articles to be displayed.
+    @State private var allArticles = [LodestoneNews]()
+    
+    // MARK: Body
+    
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                ForEach(allArticles, id: \.id) { article in
+                    LazyVStack {
+                        AsyncImage(url: article.formattedURL) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                                .frame(width: 188, height: 720)
+                        }
+                        VStack(alignment: .leading) {
+                            Text(article.title)
+                                .font(.headline)
+                            Text(article.formattedTime)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Divider()
+                            Text(article.description)
+                                .lineLimit(3)
+                            Divider()
+                            NavigationLink(destination: ArticleView(article: article)) {
+                                Text("Keep Reading")
+                            }
+                        }
+                        .padding([.horizontal, .bottom])
+                    }
+                    .background(.thinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(radius: 3)
+                    .multilineTextAlignment(.leading)
+                }
+            }
+            .padding(.horizontal)
+            .navigationTitle("News")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .onAppear {
+            if allArticles.isEmpty {
+                getLodestoneNews { articles in
+                    allArticles = articles
+                }
+            }
+        }
+    }
 }
 
-func getLodestoneNews(completion: @escaping ([LodestoneNews]) -> Void) {
+// MARK: Functions
+
+private func getLodestoneNews(completion: @escaping ([LodestoneNews]) -> Void) {
     var articles: [LodestoneNews] = []
     
     let url = URL(string: "https://na.lodestonenews.com/news/topics")!
@@ -46,58 +96,7 @@ func getLodestoneNews(completion: @escaping ([LodestoneNews]) -> Void) {
     task.resume()
 }
 
-struct LodestoneNewsView: View {
-    
-    @State private var allArticles = [LodestoneNews]()
-    
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                ForEach(allArticles, id: \.id) { article in
-                    LazyVStack {
-                        AsyncImage(url: URL(string: article.image)) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            ProgressView()
-                                .frame(width: 188, height: 720)
-                        }
-                        VStack(alignment: .leading) {
-                            Text(article.title)
-                                .font(.headline)
-                            Text("\(article.time.formatted(date: .abbreviated, time: .omitted))")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Divider()
-                            Text(article.description)
-                                .lineLimit(3)
-                            Divider()
-                            NavigationLink(destination: ArticleView(article: article)) {
-                                Text("Keep Reading")
-                            }
-                        }
-                        .padding([.horizontal, .bottom])
-                    }
-                    .background(.thinMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(radius: 3)
-                    .multilineTextAlignment(.leading)
-                }
-            }
-            .padding(.horizontal)
-            .navigationTitle("News")
-            .navigationBarTitleDisplayMode(.inline)
-        }
-        .onAppear {
-            if allArticles.isEmpty {
-                getLodestoneNews { articles in
-                    allArticles = articles
-                }
-            }
-        }
-    }
-}
+// MARK: - PreviewProvider
 
 struct LodestoneNewsView_Previews: PreviewProvider {
     static var previews: some View {

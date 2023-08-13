@@ -1,15 +1,11 @@
-//
-//  Item.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/13/23.
-//
-
-// TODO: Refactor, clean up
-
 import SwiftUI
 
-struct Item: Codable, Identifiable, Equatable {
+// MARK: - Item
+
+struct Item {
+    
+    // MARK: Properties
+    
     let classJobCategory: ClassJobCategory
     let id: Int
     let icon: String
@@ -21,10 +17,38 @@ struct Item: Codable, Identifiable, Equatable {
         getJobAcronym(id: itemRecipeInfo[0].classJobID)
     }
     
+    // MARK: Example
+    
+    static let example = Item(
+        classJobCategory: ClassJobCategory(equipClass: "All Classes"),
+        id: 2747,
+        icon: "/i/046000/046540_hr1.png",
+        levelEquip: 53,
+        levelItem: 80,
+        name: "Holy Rainbow Shoes",
+        itemRecipeInfo: [ItemRecipeInfo(classJobID: 13, id: 2747, level: 54)]
+    )
+}
+
+// MARK: Equatable
+
+extension Item: Equatable {
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+// MARK: Identifiable
+
+extension Item: Identifiable {
     var identifier: Int {
         return id
     }
-    
+}
+
+// MARK: Codable
+
+extension Item: Codable {
     enum CodingKeys: String, CodingKey {
         case classJobCategory = "ClassJobCategory"
         case id = "ID"
@@ -34,23 +58,9 @@ struct Item: Codable, Identifiable, Equatable {
         case name = "Name"
         case itemRecipeInfo = "Recipes"
     }
-    
-    struct ItemRecipeInfo: Codable {
-        let classJobID, id, level: Int
-        
-        enum CodingKeys: String, CodingKey {
-            case classJobID = "ClassJobID"
-            case id = "ID"
-            case level = "Level"
-        }
-    }
-    
-    static func == (lhs: Item, rhs: Item) -> Bool {
-        return lhs.id == rhs.id
-    }
-    
-    static let example = Item(classJobCategory: ClassJobCategory(equipClass: "All Classes"), id: 2747, icon: "/i/046000/046540_hr1.png", levelEquip: 53, levelItem: 80, name: "Holy Rainbow Shoes", itemRecipeInfo: [Item.ItemRecipeInfo(classJobID: 13, id: 2747, level: 54)])
 }
+
+// MARK: - Functions
 
 func getItemFromString(_ string: String, completion: @escaping (Item?) -> Void) {
     getItemIDFromName(itemName: string) { itemID in

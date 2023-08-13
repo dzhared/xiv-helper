@@ -1,40 +1,47 @@
-//
-//  LeveListView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 5/22/23.
-//
-
 import SwiftUI
+
+// MARK: - LeveListView
 
 struct LeveListView: View {
     
-    @State private var leveType: LeveType = .crafting
+    // MARK: Properties
+    
+    /// The leves to be displayed.
+    @State private var leves: [Leve] = [Leve.example, Leve.example]
+    
+    /// The currently selected `LeveType`.
+    @State private var selectedLeveType: LeveType = .crafting
+    
+    /// The search text currently entered.
     @State private var searchText = ""
+    
+    // MARK: Body
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                Picker("Levequest Type", selection: $leveType) {
-                    ForEach(LeveType.allCases, id: \.self) { type in
-                        Text(type.rawValue)
-                    }
+            List {
+                ForEach(leves, id: \.id) { leve in
+                    LeveView(leve: leve)
                 }
-                .pickerStyle(.segmented)
-                .padding([.horizontal, .bottom])
-                Text("Searching \(searchText) in \(leveType.rawValue)")
             }
             .searchable(text: $searchText)
             .navigationTitle("Levequests")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Picker("Levequest Type", selection: $selectedLeveType) {
+                        ForEach(LeveType.allCases, id: \.self) { type in
+                            Text(type.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+            }
         }
     }
 }
 
-enum LeveType: String, CaseIterable {
-    case crafting = "Crafting"
-    case gathering = "Gathering"
-}
+// MARK: - PreviewProvider
 
 struct LeveListView_Previews: PreviewProvider {
     static var previews: some View {

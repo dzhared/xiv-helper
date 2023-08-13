@@ -1,26 +1,35 @@
-//
-//  ClassJobCategory.swift
-//  xiv-turnins
-//
-//  Created by Jared on 5/22/23.
-//
-
 import Foundation
 
-struct ClassJobCategory: Codable {
+// MARK: - ClassJobCategory
+
+struct ClassJobCategory {
+    
+    // MARK: Properties
+    
+    /// The acronym for the class.
     let equipClass: String?
     
+    /// The full name of the class.
     var fullEquipClass: String {
         return getFullJobName(for: equipClass ?? "All Classes")
     }
     
-    enum CodingKeys: String, CodingKey {
-        case equipClass = "Name"
-    }
+    // MARK: Example
     
     static let example: ClassJobCategory = ClassJobCategory(equipClass: "BTN")
 }
 
+// MARK: Codable
+
+extension ClassJobCategory: Codable {
+    enum CodingKeys: String, CodingKey {
+        case equipClass = "Name"
+    }
+}
+
+// MARK: - Functions
+
+/// Returns the abbreviation and full name of a job from its ID number.
 func getJobAcronym(id: Int) -> (String, String) {
     switch id {
     case 1:
@@ -108,6 +117,7 @@ func getJobAcronym(id: Int) -> (String, String) {
     }
 }
 
+/// Returns the full name of a job from its abbreviation.
 func getFullJobName(for abbreviation: String) -> String {
     switch abbreviation {
     case "GLA":

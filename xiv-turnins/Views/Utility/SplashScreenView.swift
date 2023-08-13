@@ -1,21 +1,21 @@
-//
-//  StartScreen.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/20/23.
-//
-
 import SwiftUI
+
+// MARK: - SplashScreen
 
 struct SplashScreen: View {
     
-    // MARK: - Properties
+    // MARK: Properties
     
+    /// Whether or not the main screen is active.
     @State private var isActive = false
+    
+    /// The current size of the logo.
     @State private var size = 0.8
+    
+    /// The current opacity of the logo.
     @State private var opacity = 0.5
     
-    // MARK: - View
+    // MARK: Body
     
     var body: some View {
         if isActive {
@@ -48,6 +48,8 @@ struct SplashScreen: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
 
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {

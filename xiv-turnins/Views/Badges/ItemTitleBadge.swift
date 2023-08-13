@@ -1,15 +1,15 @@
-//
-//  ItemTitleBadge.swift
-//  xiv-turnins
-//
-//  Created by Jared on 5/22/23.
-//
-
 import SwiftUI
+
+// MARK: - ItemTitleBadge
 
 struct ItemTitleBadge: View {
     
+    // MARK: Properties
+    
+    /// The `Item` to be displayed.
     let item: Item
+    
+    // MARK: Body
     
     var body: some View {
         HStack(alignment: .center) {
@@ -38,6 +38,8 @@ struct ItemTitleBadge: View {
         }
     }
 }
+
+// MARK: - PreviewProvider
 
 struct ItemTitleBadge_Previews: PreviewProvider {
     static var previews: some View {

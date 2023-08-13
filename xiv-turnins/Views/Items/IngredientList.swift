@@ -1,16 +1,18 @@
-//
-//  RecipeView.swift
-//  xiv-turnins
-//
-//  Created by Jared on 3/28/23.
-//
-
 import SwiftUI
 
-struct IngredientListView: View {
+// MARK: - IngredientList
+
+struct IngredientList: View {
     
+    // MARK: Properties
+    
+    /// The recipe to be displayed. Must be wrapped as `@State` to enable `getRecipe`.
     @State var recipe: Recipe?
+    
+    /// The identifier for the `Recipe`.
     let recipeID: Int
+    
+    // MARK: Body
     
     var body: some View {
         Section("Recipe") {
@@ -59,12 +61,13 @@ struct IngredientListView: View {
     }
 }
 
+// MARK: - PreviewProvider
 
 struct IngredientListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             List {
-                IngredientListView(recipeID: 2394)
+                IngredientList(recipeID: 2394)
             }
         }
     }

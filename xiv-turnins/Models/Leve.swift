@@ -1,13 +1,11 @@
-//
-//  Leve.swift
-//  xiv-turnins
-//
-//  Created by Jared on 5/22/23.
-//
-
 import Foundation
 
+// MARK: - Leve
+
 struct Leve: Codable, Identifiable {
+    
+    // MARK: Properties
+    
     let allowanceCost: Int
     let classJobCategory: ClassJobCategory
     let classJobLevel: Int
@@ -16,7 +14,14 @@ struct Leve: Codable, Identifiable {
     let expReward: Int
     let id: Int
     let leveClient: LeveClient
+    let name: String
     let town: Town
+    
+    var iconURL: URL {
+        URL(string: "https://xivapi.com\(town.iconHd)")!
+    }
+    
+    // MARK: Example
     
     static let example: Leve = Leve(
         allowanceCost: 1,
@@ -27,12 +32,20 @@ struct Leve: Codable, Identifiable {
         expReward: 0,
         id: 700,
         leveClient: LeveClient.example,
+        name: "Bleeding Them Dry",
         town: Town.example)
 }
 
+// MARK: - LeveClient
+
 struct LeveClient: Codable {
+    
+    // MARK: Properties
+    
     let id: Int
     let name: String
+    
+    // MARK: Example
     
     static let example: LeveClient = LeveClient(id: 65, name: "Client: Flying Shark Proprietor, Dyrstweitz the Daft")
 }
