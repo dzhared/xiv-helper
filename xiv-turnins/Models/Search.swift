@@ -4,6 +4,10 @@ import Foundation
 
 struct Response: Codable {
     let results: [Result]
+    
+    enum CodingKeys: String, CodingKey {
+        case results = "Results"
+    }
 }
 
 // MARK: - Result
@@ -12,6 +16,12 @@ struct Result: Codable {
     let id: Int
     let icon: String
     let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case icon = "Icon"
+        case name = "Name"
+    }
 }
 
 // MARK: - QueryType
@@ -50,10 +60,11 @@ func searchItems(for query: String, queryType: QueryType, completion: @escaping 
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(Response.self, from: data)
-            if !response.results.isEmpty {
-                completion(response.results)
-            } else {
+            if response.results.isEmpty {
                 completion([])
+                return
+            } else {
+                completion(response.results)
                 return
             }
         } catch {
