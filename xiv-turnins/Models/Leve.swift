@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Leve
 
-struct Leve: Codable, Identifiable {
+struct Leve: Searchable {
     
     // MARK: Properties
     
@@ -40,6 +40,31 @@ struct Leve: Codable, Identifiable {
         town: Town.example)
 }
 
+// MARK: Equatable
+
+extension Leve: Equatable {
+    static func == (lhs: Leve, rhs: Leve) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+// MARK: Codable
+
+extension Leve: Codable {
+    enum CodingKeys: String, CodingKey {
+        case allowanceCost = "AllowanceCost"
+        case classJobCategory = "ClassJobCategory"
+        case classJobLevel = "ClassJobLevel"
+        case description = "Description"
+        case expFactor = "ExpFactor"
+        case expReward = "ExpReward"
+        case id = "ID"
+        case leveClient = "LeveClient"
+        case name = "Name"
+        case town = "Town"
+    }
+}
+
 // MARK: - LeveClient
 
 struct LeveClient: Codable {
@@ -52,4 +77,98 @@ struct LeveClient: Codable {
     // MARK: Example
     
     static let example: LeveClient = LeveClient(id: 65, name: "Client: Flying Shark Proprietor, Dyrstweitz the Daft")
+    
+    // MARK: Codable
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case name = "Name"
+    }
+}
+
+func getLeveFromString(string: String, completion: @escaping (Leve?) -> Void) {
+    getLeveIDFromName(leveName: string) { leveID in
+        if let leveID = leveID {
+            getLeveFromID(itemID: leveID) { retrievedLeve in
+                completion(retrievedLeve)
+            }
+            completion(nil)
+        } else {
+            completion(nil)
+        }
+    }
+}
+
+func getLeveIDFromName(leveName: String, completion: @escaping (Int?) -> Void) {
+    let baseURL = "https://xivapi.com"
+    let encodedLeveName = leveName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    let url = URL(string: "\(baseURL)/search?string=\(encodedLeveName)&string_algo=match&columns=ID&limit=1")!
+    
+    var request = URLRequest(url: url)
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpMethod = "GET"
+    
+    let session = URLSession.shared
+    
+    let task = session.dataTask(with: request) { data, response, error in
+        if let error = error {
+            print("Error in API call: \(error.localizedDescription)")
+            completion(nil)
+            return
+        }
+        
+        guard let data = data else {
+            print("Error retrieving data.")
+            completion(nil)
+            return
+        }
+        
+        do {
+            let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+            if let results = json["Results"] as? [[String: Any]], let itemID = results[0]["ID"] as? Int {
+                completion(itemID)
+            } else {
+                completion(nil)
+            }
+        } catch {
+            print("Error decoding data: \(error.localizedDescription)")
+            completion(nil)
+            return
+        }
+    }
+    task.resume()
+}
+
+func getLeveFromID(itemID: Int, completion: @escaping (Leve?) -> Void) {
+    let url = URL(string: "https://xivapi.com/leve/\(itemID)?columns=AllowanceCost,ClassJobCategory,ClassJobLevel,Description,ExpFactor,ExpReward,ID,LeveClient,Name,Town")!
+    
+    var request = URLRequest(url: url)
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpMethod = "GET"
+    
+    let session = URLSession.shared
+    
+    let task = session.dataTask(with: request) { data, response, error in
+        if let error = error {
+            print("Error in API call: \(error.localizedDescription)")
+            completion(nil)
+            return
+        }
+        
+        guard let data = data else {
+            print("Error retrieving data.")
+            completion(nil)
+            return
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            let leve = try decoder.decode(Leve.self, from: data)
+            completion(leve)
+        } catch {
+            print("Error while decoding in getLeveFromID for \(response.debugDescription): \(error.localizedDescription)")
+            completion(nil)
+        }
+    }
+    task.resume()
 }

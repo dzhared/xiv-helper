@@ -10,6 +10,13 @@ struct Town: Codable, Identifiable {
     let iconHd: String
     let name: String
     
+    // MARK: CodingKey
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case iconHd = "IconHD"
+        case name = "Name"
+    }
+    
     // MARK: Example
     
     static let example: Town = Town(

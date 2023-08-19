@@ -15,9 +15,26 @@ struct ItemSearchView: View {
     /// The results for the search query.
     @State private var searchResults: [Result] = []
     
+    /// The type of result to be searched for.
+    @State var queryType: QueryType
+    
     /// The item selected in the search.
     @State var selectedItem: Item? = nil
-    var onItemSelected: ((Item?) -> Void)
+    var onItemSelected: ((Item?) -> Void)?
+    
+    /// The leve selected in the search.
+    @State var selectedLeve: Leve? = nil
+    var onLeveSelected: ((Leve?) -> Void)?
+    
+    /// The prompt text for the given `QueryType`.
+    private var promptText: String {
+        switch queryType {
+        case .recipe:
+            return "\"Lemonade\""
+        case .leve:
+            return "\"Bleeding Them Dry\""
+        }
+    }
     
     // MARK: Body
     
@@ -30,11 +47,21 @@ struct ItemSearchView: View {
                     Text("No results. Please try again.")
                 } else {
                     ForEach(searchResults, id: \.id) { item in
-                        Button(item.name) {
-                            getItemFromString(item.name) { item in
-                                self.selectedItem = item
-                                onItemSelected(item)
+                        Button {
+                            switch queryType {
+                            case .recipe:
+                                getItemFromString(item.name) { item in
+                                    selectedItem = item
+                                    onItemSelected!(item)
+                                }
+                            case .leve:
+                                getLeveFromString(string: item.name) { leve in
+                                    selectedLeve = leve
+                                    onLeveSelected!(leve)
+                                }
                             }
+                        } label: {
+                            Text(item.name)
                         }
                     }
                 }
@@ -42,16 +69,23 @@ struct ItemSearchView: View {
             .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar() {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(role: .cancel, action: { dismiss() }, label: { Text("Cancel") })
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(
+                        role: .cancel,
+                        action: { dismiss() },
+                        label: { Text("Cancel") }
+                    )
                 }
             }
             .onChange(of: searchText) { _ in
-                searchItems(for: searchText, queryType: .recipe) { results in
+                searchItems(for: searchText, queryType: queryType) { results in
                     searchResults = results
                 }
             }
-            .searchable(text: $searchText, prompt: "Search (i.e., \"Lemonade\")")
+            .searchable(
+                text: $searchText,
+                prompt: "Search (i.e., \(promptText))"
+            )
         }
     }
 }
@@ -60,6 +94,9 @@ struct ItemSearchView: View {
 
 struct ItemSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemSearchView(onItemSelected: { _ in })
+        ItemSearchView(
+            queryType: .recipe,
+            onItemSelected: { _ in }
+        )
     }
 }

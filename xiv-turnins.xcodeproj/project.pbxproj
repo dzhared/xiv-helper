@@ -10,6 +10,7 @@
 		7F0626982A898B54005C01FD /* LodestoneNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0626972A898B54005C01FD /* LodestoneNews.swift */; };
 		7F0CA1232A8855CC00F6D84B /* ItemRecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */; };
 		7F0E373E29D3BAD9008D51A3 /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */; };
+		7F173E802A905A8B00D94BDA /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F173E7F2A905A8B00D94BDA /* Searchable.swift */; };
 		7F23342329E0ABCD006EAF6F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */; };
 		7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */; };
 		7F43560D29E1EBCF00E54A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F43560C29E1EBCF00E54A64 /* Search.swift */; };
@@ -36,6 +37,8 @@
 		7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1186C29BFA60900100E0D /* DummyData.swift */; };
 		7FB1319B2A7B1B9300C6999A /* LeveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1319A2A7B1B9300C6999A /* LeveType.swift */; };
 		7FB1319D2A7B21D300C6999A /* LeveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1319C2A7B21D300C6999A /* LeveView.swift */; };
+		7FB658B52A8DA88100808C0D /* ClassJobBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB658B42A8DA88100808C0D /* ClassJobBadge.swift */; };
+		7FB658B72A8DAE6D00808C0D /* ParameterGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB658B62A8DAE6D00808C0D /* ParameterGrid.swift */; };
 		7FE0088429C168570098C5E1 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0088329C168570098C5E1 /* ItemView.swift */; };
 		7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* xiv_turninsApp.swift */; };
@@ -72,6 +75,7 @@
 		7F0626972A898B54005C01FD /* LodestoneNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNews.swift; sourceTree = "<group>"; };
 		7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRecipeInfo.swift; sourceTree = "<group>"; };
 		7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		7F173E7F2A905A8B00D94BDA /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
 		7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBadge.swift; sourceTree = "<group>"; };
 		7F43560C29E1EBCF00E54A64 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		7FA1186C29BFA60900100E0D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7FB1319A2A7B1B9300C6999A /* LeveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveType.swift; sourceTree = "<group>"; };
 		7FB1319C2A7B21D300C6999A /* LeveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveView.swift; sourceTree = "<group>"; };
+		7FB658B42A8DA88100808C0D /* ClassJobBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassJobBadge.swift; sourceTree = "<group>"; };
 		7FB658B62A8DAE6D00808C0D /* ParameterGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterGrid.swift; sourceTree = "<group>"; };
 		7FE0088329C168570098C5E1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
@@ -191,6 +196,7 @@
 				7F7374BB29E1D39200FED6DB /* Recipe.swift */,
 				7F6DBE7E29C783070023503A /* ScanText.swift */,
 				7FA1186929BFA49F00100E0D /* Item.swift */,
+				7F173E7F2A905A8B00D94BDA /* Searchable.swift */,
 				7F0CA1222A8855CC00F6D84B /* ItemRecipeInfo.swift */,
 				7F576BA92A1C111400169C2B /* Leve.swift */,
 				7F576BAD2A1C1A7D00169C2B /* Town.swift */,
@@ -227,6 +233,7 @@
 			children = (
 				7F23342429E0BF2D006EAF6F /* IngredientBadge.swift */,
 				7F576BB82A1C4E4E00169C2B /* ItemTitleBadge.swift */,
+				7FB658B42A8DA88100808C0D /* ClassJobBadge.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -482,12 +489,14 @@
 				7FB1319B2A7B1B9300C6999A /* LeveType.swift in Sources */,
 				7F9F4BE729D0B5BB00F7371C /* LodestoneNewsView.swift in Sources */,
 				7F576BB12A1C1D0800169C2B /* LeveDetailView.swift in Sources */,
+				7F173E802A905A8B00D94BDA /* Searchable.swift in Sources */,
 				7F96FA2229D0EC9100E3EAED /* ItemListView.swift in Sources */,
 				7FF52B1929BFA21C00B7BF58 /* ContentView.swift in Sources */,
 				7F576BAA2A1C111400169C2B /* Leve.swift in Sources */,
 				7F0626982A898B54005C01FD /* LodestoneNews.swift in Sources */,
 				7F6DBE7F29C783070023503A /* ScanText.swift in Sources */,
 				7F23342529E0BF2D006EAF6F /* IngredientBadge.swift in Sources */,
+				7FB658B52A8DA88100808C0D /* ClassJobBadge.swift in Sources */,
 				7FE0088429C168570098C5E1 /* ItemView.swift in Sources */,
 				7FF52B1729BFA21C00B7BF58 /* xiv_turninsApp.swift in Sources */,
 				7F6DBE8429C7A5150023503A /* TimerView.swift in Sources */,
