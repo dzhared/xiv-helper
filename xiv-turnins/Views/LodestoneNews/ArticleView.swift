@@ -14,7 +14,7 @@ struct ArticleView: View {
     var body: some View {
         NavigationView {
             VStack {
-                AsyncImage(url: article.formattedURL) { image in
+                AsyncImage(url: article.formattedImageURL) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)

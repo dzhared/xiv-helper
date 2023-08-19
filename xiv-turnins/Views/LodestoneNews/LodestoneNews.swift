@@ -14,6 +14,10 @@ struct LodestoneNews: Codable {
         URL(string: url)!
     }
     
+    var formattedImageURL: URL {
+        URL(string: image)!
+    }
+    
     var formattedTime: String {
         time.formatted(date: .abbreviated, time: .omitted)
     }

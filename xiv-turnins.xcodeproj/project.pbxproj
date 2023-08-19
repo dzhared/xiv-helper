@@ -101,6 +101,7 @@
 		7FA1186C29BFA60900100E0D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7FB1319A2A7B1B9300C6999A /* LeveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveType.swift; sourceTree = "<group>"; };
 		7FB1319C2A7B21D300C6999A /* LeveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeveView.swift; sourceTree = "<group>"; };
+		7FB658B62A8DAE6D00808C0D /* ParameterGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterGrid.swift; sourceTree = "<group>"; };
 		7FE0088329C168570098C5E1 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		7FEA14AD29F5C4260038684F /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* xiv-turnins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xiv-turnins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0E373D29D3BAD9008D51A3 /* IngredientList.swift */,
+				7FB658B62A8DAE6D00808C0D /* ParameterGrid.swift */,
 				7F96FA2129D0EC9100E3EAED /* ItemListView.swift */,
 				7F7374BD29E1D94A00FED6DB /* ItemSearchView.swift */,
 				7F23342229E0ABCD006EAF6F /* ItemDetailView.swift */,
@@ -495,6 +497,7 @@
 				7FA1186D29BFA60900100E0D /* DummyData.swift in Sources */,
 				7FA1186A29BFA49F00100E0D /* Item.swift in Sources */,
 				7F576BB92A1C4E4E00169C2B /* ItemTitleBadge.swift in Sources */,
+				7FB658B72A8DAE6D00808C0D /* ParameterGrid.swift in Sources */,
 				7FEA14AE29F5C4260038684F /* FileManager-DocumentsDirectory.swift in Sources */,
 				7F7374BC29E1D39200FED6DB /* Recipe.swift in Sources */,
 				7FB1319D2A7B21D300C6999A /* LeveView.swift in Sources */,

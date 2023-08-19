@@ -13,28 +13,28 @@ struct LeveDetailView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                List {
-                    Group {
-                        Text("Allowance Cost: \(leve.allowanceCost)")
-                        if let equipClass = leve.classJobCategory.equipClass {
-                            Text("Class: \(equipClass)")
-                        }
-                        Text("Level: \(leve.classJobLevel)")
-                        Text("Description: \(leve.description)")
-                        Text("EXP Factor: \(leve.expFactor)")
-                        Text("EXP : \(leve.expReward)")
-                        Text("ID: \(leve.id)")
-                        Text("Client: \(leve.leveClient.name)")
-                        HStack {
-                            AsyncImage(url: URL(string: "https://xivapi.com/i/060000/060881_hr1.png"))
-                            Text(leve.town.name)
-                                .font(.title)
-                                .padding(.leading)
-                        }
+            List {
+                ClassJobBadge(leve: leve)
+                Group {
+                    Text("Allowance Cost: \(leve.allowanceCost)")
+                    if let equipClass = leve.classJobCategory.equipClass {
+                        Text("Class: \(equipClass)")
+                    }
+                    Text("Level: \(leve.classJobLevel)")
+                    Text("Description: \(leve.description)")
+                    Text("EXP Factor: \(leve.expFactor)")
+                    Text("EXP : \(leve.expReward)")
+                    Text("ID: \(leve.id)")
+                    Text("Client: \(leve.leveClient.name)")
+                    HStack {
+                        AsyncImage(url: URL(string: "https://xivapi.com/i/060000/060881_hr1.png"))
+                        Text(leve.town.name)
+                            .font(.title)
+                            .padding(.leading)
                     }
                 }
             }
+            .navigationTitle(leve.name)
         }
     }
 }

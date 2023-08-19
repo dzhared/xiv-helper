@@ -147,6 +147,49 @@ extension Recipe: Codable {
     }
 }
 
+// MARK: Example
+
+extension Recipe {
+    /// An example `Recipe` to use for testing and previews.
+    static let example: Recipe = Recipe(
+        amountIngredient0: 1,
+        amountIngredient1: 2,
+        amountIngredient2: 1,
+        amountIngredient3: 0,
+        amountIngredient4: 0,
+        amountIngredient5: 0,
+        amountIngredient6: 0,
+        amountIngredient7: 0,
+        amountIngredient8: 7,
+        amountIngredient9: 7,
+        itemIngredient0: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient1: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient2: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient3: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient4: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient5: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient6: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient7: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient8: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        itemIngredient9: ItemIngredient(wrappedIcon: "27835", wrappedName: "Lemonette"),
+        recipeLevelTable: [
+            "ClassJobLevel": 74,
+            "ConditionsFlag": 15,
+            "Difficulty": 1360,
+            "Durability": 80,
+            "ID": 403,
+            "ProgressDivider": 104,
+            "ProgressModifier": 100,
+            "Quality": 4000,
+            "QualityDivider": 84,
+            "QualityModifier": 100,
+            "Stars": 0,
+            "SuggestedControl": 1387,
+            "SuggestedCraftsmanship": 1498
+        ]
+    )
+}
+
 // MARK: - ItemIngredient
 
 extension Recipe {

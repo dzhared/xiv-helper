@@ -7,7 +7,7 @@ struct LeveListView: View {
     // MARK: Properties
     
     /// The leves to be displayed.
-    @State private var leves: [Leve] = [Leve.example, Leve.example]
+    @State private var leves: [Leve] = []
     
     /// The currently selected `LeveType`.
     @State private var selectedLeveType: LeveType = .crafting

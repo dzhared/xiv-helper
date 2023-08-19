@@ -1,15 +1,16 @@
-import SwiftUI
+import Foundation
 
 // MARK: - Item
 
-struct Item {
+struct Item: Searchable {
     
     // MARK: Properties
     
     let classJobCategory: ClassJobCategory
     let id: Int
     let icon: String
-    let levelEquip, levelItem: Int
+    let levelEquip: Int
+    let levelItem: Int
     let name: String
     let itemRecipeInfo: [ItemRecipeInfo]
     
@@ -35,14 +36,6 @@ struct Item {
 extension Item: Equatable {
     static func == (lhs: Item, rhs: Item) -> Bool {
         return lhs.id == rhs.id
-    }
-}
-
-// MARK: Identifiable
-
-extension Item: Identifiable {
-    var identifier: Int {
-        return id
     }
 }
 

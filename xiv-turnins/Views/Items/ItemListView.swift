@@ -84,15 +84,18 @@ struct ItemListView: View {
                 }
             }
             .sheet(isPresented: $showingSearchView) {
-                ItemSearchView(onItemSelected: { item in
-                    if let selectedItem = item {
-                        if !items.contains(where: { $0.name == selectedItem.name }) {
-                            self.items.append(selectedItem)
-                            save()
-                            showingSearchView = false
+                ItemSearchView(
+                    queryType: .recipe,
+                    onItemSelected: { item in
+                        if let selectedItem = item {
+                            if !items.contains(where: { $0 == selectedItem }) {
+                                items.append(selectedItem)
+                                save()
+                                showingSearchView = false
+                            }
                         }
                     }
-                })
+                )
             }
             .navigationTitle("Crafting")
             .navigationBarTitleDisplayMode(.inline)

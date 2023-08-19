@@ -16,7 +16,7 @@ struct LodestoneNewsView: View {
             ScrollView {
                 ForEach(allArticles, id: \.id) { article in
                     LazyVStack {
-                        AsyncImage(url: article.formattedURL) { image in
+                        AsyncImage(url: article.formattedImageURL) { image in
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)

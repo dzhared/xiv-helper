@@ -17,6 +17,10 @@ struct Leve: Codable, Identifiable {
     let name: String
     let town: Town
     
+    var icon: String {
+        town.iconHd
+    }
+    
     var iconURL: URL {
         URL(string: "https://xivapi.com\(town.iconHd)")!
     }
