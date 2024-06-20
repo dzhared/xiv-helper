@@ -1,7 +1,8 @@
-# FFXIV Deliverables
-iOS app to scan Final Fantasy XIV item deliverables for Grand Company provisioning, call XIVAPI, and create list with item details.
+# XIV Helper
+An iOS app to help players easily find item and crafting information and create material lists for their crafts.
 
-Item lists are populated by providing the app with a screenshot of the Grand Company deliverables list. It then creates an array of item names' strings and calls XIVAPI to get its image, ID, and provide a link to Teamcraft to quickly find information on finding or crafting the daily items.
+This app previously used live calls to XIVAPI, but as of version 2.0.0, now uses a prebuilt CoreData database to populate SwiftData, which also contains user’s saved recipes. This allows richer integration between items, recipes, and ingredients, as well as more useful search sorting tools.
 
-XIVAPI: https://xivapi.com
-FFXIV Teamcraft: https://ffxivteamcraft.com
+Data is compiled from various JSON files used in [FFXIV Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft), and static images for item icons are retrieved from XIVAPI.
+
+[<img src="https://github.com/dzhared/xiv-helper/assets/25894006/0d24432d-f03a-4621-b402-33794a6cac97">](http://google.com.au/)
