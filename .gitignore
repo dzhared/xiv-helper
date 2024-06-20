@@ -90,5 +90,10 @@ fastlane/test_output
 iOSInjectionProject/
 icon.ai
 icon.png
-xiv-turnins/Playground.playground/Contents.swift
-xiv-turnins/Playground.playground/Contents.swift
+Python/item
+Python/switch_item_category.py
+Python/switch_patch.py
+Python/env
+XIVHelper/Utilities/CompoundPredicate.swift
+XIVHelperDataBuilder/JSON/item.json
+XIVHelperDataBuilder/JSON/recipe.json
