@@ -89,7 +89,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 icon.ai
-icon.png
 Python/item
 Python/switch_item_category.py
 Python/switch_patch.py
