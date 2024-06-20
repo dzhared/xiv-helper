@@ -45,7 +45,7 @@ struct ClassJob: Codable, Identifiable {
 
     private static func getClassJobFromAcronym(acronym: String) -> ClassJob {
         switch acronym {
-        case "GLD": return ClassJob(id: 1, name: "Gladiator", abbreviation: "GLD")
+        case "GLA": return ClassJob(id: 1, name: "Gladiator", abbreviation: "GLA")
         case "PGL": return ClassJob(id: 2, name: "Pugilist", abbreviation: "PGL")
         case "MRD": return ClassJob(id: 3, name: "Marauder", abbreviation: "MRD")
         case "LNC": return ClassJob(id: 4, name: "Lancer", abbreviation: "LNC")
@@ -94,7 +94,7 @@ struct ClassJob: Codable, Identifiable {
     /// Returns a `ClassJob` from a given ID.
     private static func getClassJobFromId(_ id: Int) -> ClassJob {
         switch id {
-        case 1:  return ClassJob(id: 1, name: "Gladiator", abbreviation: "GLD")
+        case 1:  return ClassJob(id: 1, name: "Gladiator", abbreviation: "GLA")
         case 2:  return ClassJob(id: 2, name: "Pugilist", abbreviation: "PGL")
         case 3:  return ClassJob(id: 3, name: "Marauder", abbreviation: "MRD")
         case 4:  return ClassJob(id: 4, name: "Lancer", abbreviation: "LNC")

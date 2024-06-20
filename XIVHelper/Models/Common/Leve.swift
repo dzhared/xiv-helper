@@ -1,5 +1,5 @@
 /// The info about a leve for a given item.
-struct Leve: Codable {
+struct Leve: Codable, Equatable {
 
     /// The id of the `leve`.
     let leve: Int

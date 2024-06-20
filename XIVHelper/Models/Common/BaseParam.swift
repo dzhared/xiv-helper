@@ -25,7 +25,7 @@ struct BaseParam: Codable, Identifiable {
     /// Initialize using only the ID.
     init(id: Int) {
         let baseParam = BaseParam.getBaseParamFromId(id)
-        self.id = id
+        self.id = baseParam.id
         self.name = baseParam.name
     }
 

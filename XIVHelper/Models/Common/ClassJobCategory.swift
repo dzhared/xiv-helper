@@ -4,6 +4,8 @@ import Foundation
 // Add/verify PIC/VPR
 // Update ALL of the CJCs
 
+// TODO: Off by one. GLA is initializing as ID 2 (should be 1), etc
+
 /// The category of ClassJobs available in a given context.
 struct ClassJobCategory: Codable {
 
