@@ -5,4 +5,4 @@ This app previously used live calls to XIVAPI, but as of version 2.0.0, now uses
 
 Data is compiled from various JSON files used in [FFXIV Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft), and static images for item icons are retrieved from XIVAPI.
 
-[<img src="https://github.com/dzhared/xiv-helper/assets/25894006/0d24432d-f03a-4621-b402-33794a6cac97">](http://google.com.au/)
+[<img src="https://github.com/dzhared/xiv-helper/assets/25894006/0d24432d-f03a-4621-b402-33794a6cac97">](https://apps.apple.com/us/app/xiv-helper/id6446816983)
