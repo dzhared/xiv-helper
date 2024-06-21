@@ -26,6 +26,42 @@ struct SearchView: View {
     /// The recipes that match the search text.
     @State private var recipes: [Recipe] = []
 
+    /// The resulting `Item` objects, sorted using the given sort method.
+    private var sortedItems: [Item] {
+        let sortedItems: [Item]
+
+        switch settings.searchSortMethod {
+        case .alphabetical:
+            sortedItems = items.sorted { $0.name.en < $1.name.en }
+        case .ilvl:
+            sortedItems = items.sorted { $0.ilvl ?? 1 < $1.ilvl ?? 1 }
+        case .patch:
+            sortedItems = items.sorted { $0.patchId < $1.patchId }
+        default:
+            sortedItems = items.sorted { $0.name.en < $1.name.en }
+        }
+
+        return settings.searchAscending ? sortedItems : sortedItems.reversed()
+    }
+
+    /// The resulting `Recipe` objects, sorted using the given sort method.
+    private var sortedRecipes: [Recipe] {
+        let sortedRecipes: [Recipe]
+
+        switch settings.searchSortMethod {
+        case .alphabetical:
+            sortedRecipes = recipes.sorted { $0.resultName.en < $1.resultName.en }
+        case .ilvl:
+            sortedRecipes = recipes.sorted { $0.resultIlvl < $1.resultIlvl }
+        case .patch:
+            sortedRecipes = recipes.sorted { $0.resultPatch < $1.resultPatch }
+        case .rlvl:
+            sortedRecipes = recipes.sorted { $0.recipeLevel < $1.recipeLevel }
+        }
+
+        return settings.searchAscending ? sortedRecipes : sortedRecipes.reversed()
+    }
+
     // MARK: Body
 
     var body: some View {
@@ -62,7 +98,7 @@ struct SearchView: View {
                                 isSearching = true
                             }
                         } else {
-                            ForEach(items, id: \.id) { item in
+                            ForEach(sortedItems, id: \.id) { item in
                                 NavigationLink {
                                     ItemDetailView(item: item)
                                 } label: {
@@ -78,7 +114,7 @@ struct SearchView: View {
                                 isSearching = true
                             }
                         } else {
-                            ForEach(recipes, id: \.id) { recipe in
+                            ForEach(sortedRecipes, id: \.id) { recipe in
                                 NavigationLink {
                                     RecipeDetailView(recipe: recipe)
                                 } label: {
