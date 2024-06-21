@@ -4,7 +4,7 @@ import Foundation
 // Probably only involves adding patch 95.
 
 /// Game update patches.
-struct Patch: Codable {
+struct Patch: Codable, Equatable {
 
     // MARK: Properties
 

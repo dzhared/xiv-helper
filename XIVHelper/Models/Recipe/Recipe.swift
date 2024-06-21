@@ -8,7 +8,7 @@ import SwiftData
 // Figure out migration schema
 
 /// Contains all necessary information about a recipe. Users will search these by its item name.
-@Model class Recipe: Codable, Identifiable {
+@Model class Recipe: Codable, Equatable {
 
     // MARK: Properties
 
@@ -216,4 +216,77 @@ import SwiftData
         try container.encode(self.suggestedCraftsmanship, forKey: .suggestedCraftsmanship)
         try container.encode(self.yields, forKey: .yields)
     }
+
+    /// Memberwise initializer. Used only for making the `.example` below.
+    fileprivate init(id: Int, canHq: Bool, canQs: Bool, classJobId: Int, classJobLevel: Int, durability: Int, expert: Bool, ingredients: [Ingredient], masterbookId: Int?, masterbookItemIcon: String?, masterbookName: LocalizedString?, progress: Int, quality: Int, recipeLevel: Int, requiredControl: Int, requiredCraftsmanship: Int, requiredQuality: Int, resultId: Int, resultIlvl: Int, resultItem: Item? = nil, resultItemCategory: Int, resultItemIcon: String, resultName: LocalizedString, resultPatch: Int, stars: Int, suggestedControl: Int, suggestedCraftsmanship: Int, yields: Int) {
+        self.id = id
+        self.canHq = canHq
+        self.canQs = canQs
+        self.classJobId = classJobId
+        self.classJobLevel = classJobLevel
+        self.durability = durability
+        self.expert = expert
+        self.ingredients = ingredients
+        self.masterbookId = masterbookId
+        self.masterbookItemIcon = masterbookItemIcon
+        self.masterbookName = masterbookName
+        self.progress = progress
+        self.quality = quality
+        self.recipeLevel = recipeLevel
+        self.requiredControl = requiredControl
+        self.requiredCraftsmanship = requiredCraftsmanship
+        self.requiredQuality = requiredQuality
+        self.resultId = resultId
+        self.resultIlvl = resultIlvl
+        self.resultItem = resultItem
+        self.resultItemCategory = resultItemCategory
+        self.resultItemIcon = resultItemIcon
+        self.resultName = resultName
+        self.resultPatch = resultPatch
+        self.stars = stars
+        self.suggestedControl = suggestedControl
+        self.suggestedCraftsmanship = suggestedCraftsmanship
+        self.yields = yields
+    }
+}
+
+// MARK: Example
+
+extension Recipe {
+    /// An example recipe for convenience.
+    static let example = Recipe(
+        id: 3890,
+        canHq: true,
+        canQs: true,
+        classJobId: 15,
+        classJobLevel: 74,
+        durability: 80,
+        expert: false,
+        ingredients: [
+            Ingredient(id: 27841, ingredientItemIcon: "/i/025000/025351_hr1.png", name: LocalizedString(en: "Upland Wheat Flour"), quantity: 2),
+            Ingredient(id: 27968, ingredientItemIcon: "/i/022000/022678_hr1.png", name: LocalizedString(en: "Highland Spring Water"), quantity: 3),
+            Ingredient(id: 19907, ingredientItemIcon: "/i/022000/022617_hr1.png", name: LocalizedString(en: "Ala Mhigan Salt Crystal"), quantity: 1),
+            Ingredient(id: 8, ingredientItemIcon: "/i/020000/020007_hr1.png", name: LocalizedString(en: "Fire Crystal"), quantity: 7),
+            Ingredient(id: 13, ingredientItemIcon: "/i/020000/020008_hr1.png", name: LocalizedString(en: "Water Crystal"), quantity: 6),
+        ],
+        masterbookId: 12244,
+        masterbookItemIcon: "/i/026000/026156_hr1.png",
+        masterbookName: LocalizedString(en: "Master Carpenter III", ja: "木工秘伝書:第3巻", de: "Der Meister-Zimmerer III", fr: "Menuiserie experte III"),
+        progress: 1360,
+        quality: 4000,
+        recipeLevel: 403,
+        requiredControl: 0,
+        requiredCraftsmanship: 0,
+        requiredQuality: 0,
+        resultId: 27860,
+        resultIlvl: 403,
+        resultItemCategory: 46,
+        resultItemIcon: "/i/024000/024030_hr1.png",
+        resultName: LocalizedString(en: "Baguette", ja: "バゲット", de: "Baguette", fr: "Baguette tradition"),
+        resultPatch: 58,
+        stars: 0,
+        suggestedControl: 1387,
+        suggestedCraftsmanship: 1498,
+        yields: 3
+    )
 }

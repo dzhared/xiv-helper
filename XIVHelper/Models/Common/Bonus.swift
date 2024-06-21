@@ -1,5 +1,5 @@
 /// Bonus stats for consumable items.
-struct Bonus: Codable {
+struct Bonus: Codable, Equatable {
 
     // MARK: Properties
 

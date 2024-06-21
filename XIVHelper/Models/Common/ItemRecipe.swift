@@ -1,5 +1,5 @@
 /// A simplified recipe for display on an item's detail view.
-struct ItemRecipe: Codable {
+struct ItemRecipe: Codable, Equatable {
 
     // MARK: Properties
 

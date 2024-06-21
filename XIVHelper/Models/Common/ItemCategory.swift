@@ -3,8 +3,6 @@ import Foundation
 // TODO: Dawntrail
 // Probably only need to add Pictomanger's Arm and Viper's Arm, but verify
 
-// TODO: Filter out Belts (id 39)
-
 /// The name of a category of item.
 struct ItemCategory: Codable {
 

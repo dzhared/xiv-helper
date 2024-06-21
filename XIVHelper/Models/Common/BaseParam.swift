@@ -4,7 +4,7 @@ import Foundation
 // Shouldn't need any updates, but worth checking.
 
 /// The parameters that an item can modify.
-struct BaseParam: Codable, Identifiable {
+struct BaseParam: Codable, Equatable {
 
     // MARK: Properties
 
@@ -25,7 +25,7 @@ struct BaseParam: Codable, Identifiable {
     /// Initialize using only the ID.
     init(id: Int) {
         let baseParam = BaseParam.getBaseParamFromId(id)
-        self.id = id
+        self.id = baseParam.id
         self.name = baseParam.name
     }
 

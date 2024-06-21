@@ -1,5 +1,5 @@
 /// Possible item names, including plural versions, for an item.
-struct LocalizedString: Codable {
+struct LocalizedString: Codable, Equatable {
 
     // MARK: Properties
 

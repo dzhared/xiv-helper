@@ -1,5 +1,5 @@
 /// The stats for an item, with both NQ and HQ values as well as the corresponding `BaseParam`.
-struct Stat: Codable {
+struct Stat: Codable, Equatable {
 
     // MARK: Properties
 
