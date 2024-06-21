@@ -14,21 +14,6 @@ final class ClassJobTests: XCTestCase {
         classJob = nil
     }
 
-    /// A known ID initializes a `ClassJob` correctly.
-    func testClassJobFromId() {
-        /// Initialize with a known ID.
-        classJob = ClassJob(id: 10)
-        XCTAssertEqual(classJob.id, 10)
-        XCTAssertEqual(classJob.name, "Armorer")
-        XCTAssertEqual(classJob.abbreviation, "ARM")
-
-        /// An unknown ID returns a default value.
-        classJob = ClassJob(id: 300)
-        XCTAssertEqual(classJob.id, 0)
-        XCTAssertEqual(classJob.name, "Adventurer")
-        XCTAssertEqual(classJob.abbreviation, "ADV")
-    }
-
     /// A known acronym initializes a `ClassJob` correctly.
     func testClassJobFromAcronym() {
         /// Initialize with a known acronym.
@@ -57,5 +42,20 @@ final class ClassJobTests: XCTestCase {
         XCTAssertEqual(classJob.id, 24)
         XCTAssertEqual(classJob.name, "White Mage")
         XCTAssertEqual(classJob.abbreviation, "WHM")
+    }
+
+    /// A known ID initializes a `ClassJob` correctly.
+    func testClassJobFromId() {
+        /// Initialize with a known ID.
+        classJob = ClassJob(id: 10)
+        XCTAssertEqual(classJob.id, 10)
+        XCTAssertEqual(classJob.name, "Armorer")
+        XCTAssertEqual(classJob.abbreviation, "ARM")
+
+        /// An unknown ID returns a default value.
+        classJob = ClassJob(id: 300)
+        XCTAssertEqual(classJob.id, 0)
+        XCTAssertEqual(classJob.name, "Adventurer")
+        XCTAssertEqual(classJob.abbreviation, "ADV")
     }
 }

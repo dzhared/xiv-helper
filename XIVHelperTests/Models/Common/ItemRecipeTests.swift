@@ -27,7 +27,7 @@ final class ItemRecipeTests: XCTestCase {
     }
 
     /// The `ItemRecipe` encodes and decodes correctly.
-    func testItemRecipeCodable() throws {
+    func testItemRecipeEncodeDecode() throws {
         let encoded = try encoder.encode(itemRecipe)
         let decoded = try decoder.decode(ItemRecipe.self, from: encoded)
         XCTAssertEqual(decoded, itemRecipe)

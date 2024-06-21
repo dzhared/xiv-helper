@@ -5,6 +5,8 @@ import XCTest
 final class BonusTests: XCTestCase {
 
     var bonus: Bonus!
+    var decoder: JSONDecoder!
+    var encoder: JSONEncoder!
 
     override func setUp() {
         bonus = Bonus(
@@ -14,10 +16,14 @@ final class BonusTests: XCTestCase {
             max: 46,
             maxHQ: 58
         )
+        decoder = JSONDecoder()
+        encoder = JSONEncoder()
     }
 
     override func tearDown() {
         bonus = nil
+        decoder = nil
+        encoder = nil
     }
 
     /// The BaseParam of the Bonus is initialized using its `id`.
@@ -34,5 +40,12 @@ final class BonusTests: XCTestCase {
         XCTAssertEqual(Bonus.CodingKeys.max.rawValue, "Max")
         XCTAssertEqual(Bonus.CodingKeys.maxHQ.rawValue, "MaxHQ")
         XCTAssertEqual(Bonus.CodingKeys.nq.rawValue, "NQ")
+    }
+
+    /// The `Bonus` encodes and decodes as expected.
+    func testBonusEncodeDecode() throws {
+        let encoded = try encoder.encode(bonus)
+        let decoded = try decoder.decode(Bonus.self, from: encoded)
+        XCTAssertEqual(decoded, bonus)
     }
 }

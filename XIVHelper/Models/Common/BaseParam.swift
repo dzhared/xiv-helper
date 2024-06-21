@@ -4,7 +4,7 @@ import Foundation
 // Shouldn't need any updates, but worth checking.
 
 /// The parameters that an item can modify.
-struct BaseParam: Codable, Identifiable {
+struct BaseParam: Codable, Equatable {
 
     // MARK: Properties
 

@@ -7,27 +7,20 @@ final class LocalizedStringTests: XCTestCase {
     var decoder: JSONDecoder!
     var encoder: JSONEncoder!
     var localizedString: LocalizedString!
-
-    let settings = SettingsManager.shared
+    var settings: SettingsManager!
 
     override func setUp() {
         decoder = JSONDecoder()
         encoder = JSONEncoder()
         localizedString = LocalizedString.example
+        settings = SettingsManager.shared
     }
 
     override func tearDown() {
         decoder = nil
         encoder = nil
         localizedString = nil
-        settings.locale = .en
-    }
-
-    /// The raw values for codable conformance are as expected.
-    func testLocalizedStringEncodeDecode() throws {
-        let encoded = try encoder.encode(localizedString)
-        let decoded = try decoder.decode(LocalizedString.self, from: encoded)
-        XCTAssertEqual(decoded, localizedString)
+        settings = nil
     }
 
     /// LocalizedString returns different languages depending on the locale in SettingsManager.
@@ -55,5 +48,12 @@ final class LocalizedStringTests: XCTestCase {
         /// Chinese locale.
         settings.locale = .zh
         XCTAssertEqual(localizedString.string, "金币")
+    }
+
+    /// The raw values for codable conformance are as expected.
+    func testLocalizedStringEncodeDecode() throws {
+        let encoded = try encoder.encode(localizedString)
+        let decoded = try decoder.decode(LocalizedString.self, from: encoded)
+        XCTAssertEqual(decoded, localizedString)
     }
 }

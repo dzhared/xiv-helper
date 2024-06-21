@@ -1,5 +1,5 @@
 /// The rewards for a Grand Company supply mission.
-struct Supply: Codable {
+struct Supply: Codable, Equatable {
 
     // MARK: Properties
 

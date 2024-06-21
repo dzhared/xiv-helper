@@ -4,7 +4,7 @@ import Foundation
 // Add/verify PIC/VPR
 
 /// The possible classes/jobs available to the player.
-struct ClassJob: Codable, Identifiable {
+struct ClassJob: Codable, Equatable {
 
     // MARK: Properties
 
