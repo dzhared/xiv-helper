@@ -70,25 +70,6 @@
 		7F7154EF2C2131C300F458B4 /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F7154F02C21335A00F458B4 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */; };
 		7F7154F12C21338A00F458B4 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44022C20ECE4003F2AAB /* Locale.swift */; };
-		7F71550A2C22546200F458B4 /* CompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7155092C22546200F458B4 /* CompoundPredicate.swift */; };
-		7FA846072C23F5580043006D /* BaseParamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846062C23F5580043006D /* BaseParamTests.swift */; };
-		7FA846112C23F85A0043006D /* BonusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846102C23F85A0043006D /* BonusTests.swift */; };
-		7FA846142C23FA630043006D /* ClassJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846132C23FA630043006D /* ClassJobTests.swift */; };
-		7FA846162C23FCE90043006D /* ClassJobCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846152C23FCE90043006D /* ClassJobCategoryTests.swift */; };
-		7FA846182C2404D90043006D /* ItemCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846172C2404D90043006D /* ItemCategoryTests.swift */; };
-		7FA8461A2C24065D0043006D /* ItemRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846192C24065D0043006D /* ItemRecipeTests.swift */; };
-		7FA8461D2C2407B50043006D /* LeveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8461C2C2407B50043006D /* LeveTests.swift */; };
-		7FA8461F2C24089E0043006D /* LocalizedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8461E2C24089E0043006D /* LocalizedStringTests.swift */; };
-		7FA846232C2409510043006D /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */; };
-		7FA846242C2409F40043006D /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44022C20ECE4003F2AAB /* Locale.swift */; };
-		7FA846262C240BB40043006D /* PatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846252C240BB40043006D /* PatchTests.swift */; };
-		7FA846282C24C55F0043006D /* SupplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846272C24C55F0043006D /* SupplyTests.swift */; };
-		7FA8462B2C24C6040043006D /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462A2C24C6040043006D /* ItemTests.swift */; };
-		7FA8462D2C2525340043006D /* StatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462C2C2525340043006D /* StatTests.swift */; };
-		7FA846302C25263C0043006D /* LodestoneNewsArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462F2C25263C0043006D /* LodestoneNewsArticleTests.swift */; };
-		7FA846332C25277A0043006D /* IngredientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846322C25277A0043006D /* IngredientTests.swift */; };
-		7FA846352C2528DB0043006D /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846342C2528DB0043006D /* RecipeTests.swift */; };
-		7FA846382C252A220043006D /* UserRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846372C252A220043006D /* UserRecipeTests.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -767,7 +748,6 @@
 				7F1D443A2C20ECE4003F2AAB /* ItemCategory.swift in Sources */,
 				7F1D44202C20ECE4003F2AAB /* InfoView.swift in Sources */,
 				7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */,
-				7F71550A2C22546200F458B4 /* CompoundPredicate.swift in Sources */,
 				7F1D44222C20ECE4003F2AAB /* LeveDetailView.swift in Sources */,
 				7F1D44332C20ECE4003F2AAB /* ScalingImage.swift in Sources */,
 				7F1D44342C20ECE4003F2AAB /* SettingsManager.swift in Sources */,
