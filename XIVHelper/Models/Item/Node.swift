@@ -1,7 +1,7 @@
 import SwiftData
 
 /// Information on a gathering node.
-struct Node: Codable, Identifiable {
+struct Node: Codable, Identifiable, Equatable {
 
     /// The unique identifier for the node.
     let id: Int

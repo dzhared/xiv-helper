@@ -56,6 +56,7 @@
 		7F44DF152C292DF5003E51AC /* xivhelper-2.1.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF122C292DF5003E51AC /* xivhelper-2.1.0.store-shm */; };
 		7F44DF172C292DF5003E51AC /* xivhelper-2.1.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF132C292DF5003E51AC /* xivhelper-2.1.0.store-wal */; };
 		7F44DF192C292DF5003E51AC /* xivhelper-2.1.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF142C292DF5003E51AC /* xivhelper-2.1.0.store */; };
+		7F44DF1E2C2931FF003E51AC /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF1B2C2931DF003E51AC /* NodeTests.swift */; };
 		7F7154CB2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7154CA2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift */; };
 		7F7154CD2C212FD600F458B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7154CC2C212FD600F458B4 /* ContentView.swift */; };
 		7F7154CF2C212FD700F458B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7154CE2C212FD700F458B4 /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 		7F44DF122C292DF5003E51AC /* xivhelper-2.1.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store-shm"; sourceTree = "<group>"; };
 		7F44DF132C292DF5003E51AC /* xivhelper-2.1.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.1.0.store-wal"; sourceTree = "<group>"; };
 		7F44DF142C292DF5003E51AC /* xivhelper-2.1.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store"; sourceTree = "<group>"; };
+		7F44DF1B2C2931DF003E51AC /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		7F7154C82C212FD600F458B4 /* XIV Helper Data Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper Data Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7154CA2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperDataBuilderApp.swift; sourceTree = "<group>"; };
 		7F7154CC2C212FD600F458B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA8462A2C24C6040043006D /* ItemTests.swift */,
+				7F44DF1B2C2931DF003E51AC /* NodeTests.swift */,
 				7FA8462C2C2525340043006D /* StatTests.swift */,
 			);
 			path = Item;
@@ -745,6 +748,7 @@
 				7FFEF6392C28AE4500E0A733 /* UserRecipeTests.swift in Sources */,
 				7FFEF63A2C28AE4500E0A733 /* IngredientTests.swift in Sources */,
 				7FFEF63B2C28AE4500E0A733 /* RecipeTests.swift in Sources */,
+				7F44DF1E2C2931FF003E51AC /* NodeTests.swift in Sources */,
 				7FFEF6352C28AE3E00E0A733 /* ClassJobTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
