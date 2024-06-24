@@ -101,6 +101,11 @@ struct SearchSheetView: View {
                         Section("Recipe Settings") {
                             
                         }
+
+                    case .gathering:
+                        Section("Gathering Settings") {
+                            
+                        }
                     }
 
                     Section {

@@ -17,4 +17,12 @@ struct ItemRecipe: Codable, Equatable {
 
     /// The number of items the recipe yields.
     let yields: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case classJob = "classJobId"
+        case lvl
+        case stars
+        case yields
+    }
 }

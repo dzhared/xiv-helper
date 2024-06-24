@@ -61,6 +61,31 @@ struct ItemDetailView: View {
                         }
                     }
 
+                    if item.canBeGathered, !item.nodes.isEmpty {
+                        Section("Gathering") {
+                            ForEach(item.nodes.prefix(5)) { node in
+                                VStack(alignment: .leading) {
+                                    Text(node.mapName.string)
+                                        .bold()
+                                    Text("\(node.name.string) (x: \(String(format: "%.1f", node.x)), y: \(String(format: "%.1f", node.y)))")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+
+                            if item.nodes.count > 5 {
+                                NavigationLink {
+                                    ItemNodesView(nodes: item.nodes)
+                                } label: {
+                                    Text("All Nodes (\(item.nodes.count))")
+                                        .foregroundStyle(Color.accentColor)
+                                        .multilineTextAlignment(.leading)
+                                }
+
+                            }
+                        }
+                    }
+
                     // Recipes
                     Section("Recipes") {
                         if !item.recipes.isEmpty {
