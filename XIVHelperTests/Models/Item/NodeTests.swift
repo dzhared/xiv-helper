@@ -20,15 +20,32 @@ final class NodeTests: XCTestCase {
         node = nil
     }
 
-    /// The computed properties initialize correctly.
+    /// The computed properties initialize correctly. As of 2.1.0 there are none.
     func testNodeComputedProperties() {
-        // TODO
+        // no-op
     }
 
-    /// The Stat encodes and decodes as expected.
+    /// The Node encodes and decodes as expected.
     func testNodeEncodeDecode() throws {
         let encoded = try encoder.encode(node)
         let decoded = try decoder.decode(Node.self, from: encoded)
-        XCTAssertEqual(decoded, node)
+        XCTAssertEqual(decoded.id, node.id)
+        XCTAssertEqual(decoded.items, node.items)
+        XCTAssertEqual(decoded.limited, node.limited)
+        XCTAssertEqual(decoded.level, node.level)
+        XCTAssertEqual(decoded.type, node.type)
+        XCTAssertEqual(decoded.legendary, node.legendary)
+        XCTAssertEqual(decoded.ephemeral, node.ephemeral)
+        XCTAssertEqual(decoded.spawns, node.spawns)
+        XCTAssertEqual(decoded.duration, node.duration)
+        XCTAssertEqual(decoded.zoneId, node.zoneId)
+        XCTAssertEqual(decoded.radius, node.radius)
+        XCTAssertEqual(decoded.x, node.x)
+        XCTAssertEqual(decoded.y, node.y)
+        XCTAssertEqual(decoded.z, node.z)
+        XCTAssertEqual(decoded.map, node.map)
+        XCTAssertEqual(decoded.mapName, node.mapName)
+        XCTAssertEqual(decoded.hiddenItems, node.hiddenItems)
+        XCTAssertEqual(decoded.patch, node.patch)
     }
 }

@@ -78,6 +78,9 @@
 		7F7154EF2C2131C300F458B4 /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F7154F02C21335A00F458B4 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */; };
 		7F7154F12C21338A00F458B4 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44022C20ECE4003F2AAB /* Locale.swift */; };
+		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
+		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
+		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -182,6 +185,9 @@
 		7FA846322C25277A0043006D /* IngredientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTests.swift; sourceTree = "<group>"; };
 		7FA846342C2528DB0043006D /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
 		7FA846372C252A220043006D /* UserRecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeTests.swift; sourceTree = "<group>"; };
+		7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTests.swift; sourceTree = "<group>"; };
+		7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		7FACC0A42C29D915009B84C8 /* MigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTests.swift; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
 		7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -447,8 +453,10 @@
 		7FA846052C23F5580043006D /* XIVHelperTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FACC0A32C29D812009B84C8 /* Database */,
 				7FA846202C2409240043006D /* Utilities */,
 				7FA8460D2C23F5820043006D /* Models */,
+				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
 			);
 			path = XIVHelperTests;
 			sourceTree = "<group>";
@@ -522,6 +530,15 @@
 				7FA846372C252A220043006D /* UserRecipeTests.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		7FACC0A32C29D812009B84C8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */,
+				7FACC0A42C29D915009B84C8 /* MigrationTests.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		7FF52B0A29BFA21C00B7BF58 = {
@@ -733,12 +750,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */,
 				7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */,
 				7FFEF62D2C28AE3E00E0A733 /* ClassJobCategoryTests.swift in Sources */,
 				7FFEF62E2C28AE3E00E0A733 /* SupplyTests.swift in Sources */,
 				7FFEF62F2C28AE3E00E0A733 /* LeveTests.swift in Sources */,
 				7FFEF6302C28AE3E00E0A733 /* PatchTests.swift in Sources */,
 				7FFEF6312C28AE3E00E0A733 /* LocalizedStringTests.swift in Sources */,
+				7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */,
+				7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */,
 				7FFEF6362C28AE4100E0A733 /* StatTests.swift in Sources */,
 				7FFEF6372C28AE4100E0A733 /* ItemTests.swift in Sources */,
 				7FFEF6322C28AE3E00E0A733 /* ItemCategoryTests.swift in Sources */,
