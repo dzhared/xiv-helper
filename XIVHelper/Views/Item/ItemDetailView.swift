@@ -61,9 +61,9 @@ struct ItemDetailView: View {
                         }
                     }
 
-                    if item.canBeGathered, !item.nodes.isEmpty {
+                    if let nodes = item.nodes, !nodes.isEmpty, item.canBeGathered ?? false {
                         Section("Gathering") {
-                            ForEach(item.nodes.prefix(5)) { node in
+                            ForEach(nodes.prefix(5)) { node in
                                 VStack(alignment: .leading) {
                                     Text(node.mapName.string)
                                         .bold()
@@ -73,11 +73,11 @@ struct ItemDetailView: View {
                                 }
                             }
 
-                            if item.nodes.count > 5 {
+                            if nodes.count > 5 {
                                 NavigationLink {
-                                    ItemNodesView(nodes: item.nodes)
+                                    ItemNodesView(nodes: nodes)
                                 } label: {
-                                    Text("All Nodes (\(item.nodes.count))")
+                                    Text("All Nodes (\(nodes.count))")
                                         .foregroundStyle(Color.accentColor)
                                         .multilineTextAlignment(.leading)
                                 }

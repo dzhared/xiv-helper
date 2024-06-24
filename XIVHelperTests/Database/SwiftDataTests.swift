@@ -49,6 +49,7 @@ final class SwiftDataTests: XCTestCase {
         recipes = try container.mainContext.fetch(descriptor)
         XCTAssertEqual(recipes.count, 10_851)
         for recipe in recipes {
+            let _ = RecipeDetailView(recipe: recipe)
             let _ = RecipeDetailView(recipeID: recipe.id)
         }
     }

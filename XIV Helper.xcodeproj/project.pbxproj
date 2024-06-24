@@ -46,16 +46,9 @@
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
-		7F204A7B2C2369060047D2A0 /* xivhelper-2.0.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */; };
-		7F204A7C2C2369060047D2A0 /* xivhelper-2.0.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */; };
-		7F204A7D2C2369060047D2A0 /* xivhelper-2.0.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
-		7F44DF112C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
-		7F44DF152C292DF5003E51AC /* xivhelper-2.1.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF122C292DF5003E51AC /* xivhelper-2.1.0.store-shm */; };
-		7F44DF172C292DF5003E51AC /* xivhelper-2.1.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF132C292DF5003E51AC /* xivhelper-2.1.0.store-wal */; };
-		7F44DF192C292DF5003E51AC /* xivhelper-2.1.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F44DF142C292DF5003E51AC /* xivhelper-2.1.0.store */; };
 		7F44DF1E2C2931FF003E51AC /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF1B2C2931DF003E51AC /* NodeTests.swift */; };
 		7F7154CB2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7154CA2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift */; };
 		7F7154CD2C212FD600F458B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7154CC2C212FD600F458B4 /* ContentView.swift */; };
@@ -81,6 +74,9 @@
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
+		7FACC0BE2C2A3864009B84C8 /* xivhelper-2.1.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BB2C2A3863009B84C8 /* xivhelper-2.1.0.store-shm */; };
+		7FACC0BF2C2A3864009B84C8 /* xivhelper-2.1.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BC2C2A3863009B84C8 /* xivhelper-2.1.0.store-wal */; };
+		7FACC0C02C2A3864009B84C8 /* xivhelper-2.1.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -157,9 +153,6 @@
 		7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store"; sourceTree = "<group>"; };
 		7F44DF0C2C292D04003E51AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNodesView.swift; sourceTree = "<group>"; };
-		7F44DF122C292DF5003E51AC /* xivhelper-2.1.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store-shm"; sourceTree = "<group>"; };
-		7F44DF132C292DF5003E51AC /* xivhelper-2.1.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.1.0.store-wal"; sourceTree = "<group>"; };
-		7F44DF142C292DF5003E51AC /* xivhelper-2.1.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store"; sourceTree = "<group>"; };
 		7F44DF1B2C2931DF003E51AC /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		7F7154C82C212FD600F458B4 /* XIV Helper Data Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper Data Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7154CA2C212FD600F458B4 /* XIVHelperDataBuilderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperDataBuilderApp.swift; sourceTree = "<group>"; };
@@ -188,6 +181,9 @@
 		7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTests.swift; sourceTree = "<group>"; };
 		7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		7FACC0A42C29D915009B84C8 /* MigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTests.swift; sourceTree = "<group>"; };
+		7FACC0BB2C2A3863009B84C8 /* xivhelper-2.1.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store-shm"; sourceTree = "<group>"; };
+		7FACC0BC2C2A3863009B84C8 /* xivhelper-2.1.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.1.0.store-wal"; sourceTree = "<group>"; };
+		7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
 		7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -325,12 +321,8 @@
 		7F1D43FE2C20ECE4003F2AAB /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */,
-				7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */,
-				7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */,
-				7F44DF142C292DF5003E51AC /* xivhelper-2.1.0.store */,
-				7F44DF122C292DF5003E51AC /* xivhelper-2.1.0.store-shm */,
-				7F44DF132C292DF5003E51AC /* xivhelper-2.1.0.store-wal */,
+				7FACC0C12C2A3AC3009B84C8 /* xivhelper-2.0.0 */,
+				7FACC0C22C2A3AD2009B84C8 /* xivhelper-2.1.0 */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -541,6 +533,26 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		7FACC0C12C2A3AC3009B84C8 /* xivhelper-2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */,
+				7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */,
+				7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */,
+			);
+			path = "xivhelper-2.0.0";
+			sourceTree = "<group>";
+		};
+		7FACC0C22C2A3AD2009B84C8 /* xivhelper-2.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */,
+				7FACC0BB2C2A3863009B84C8 /* xivhelper-2.1.0.store-shm */,
+				7FACC0BC2C2A3863009B84C8 /* xivhelper-2.1.0.store-wal */,
+			);
+			path = "xivhelper-2.1.0";
+			sourceTree = "<group>";
+		};
 		7FF52B0A29BFA21C00B7BF58 = {
 			isa = PBXGroup;
 			children = (
@@ -703,14 +715,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F204A7D2C2369060047D2A0 /* xivhelper-2.0.0.store in Resources */,
-				7F44DF172C292DF5003E51AC /* xivhelper-2.1.0.store-wal in Resources */,
+				7FACC0BF2C2A3864009B84C8 /* xivhelper-2.1.0.store-wal in Resources */,
 				7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */,
-				7F44DF192C292DF5003E51AC /* xivhelper-2.1.0.store in Resources */,
-				7F44DF152C292DF5003E51AC /* xivhelper-2.1.0.store-shm in Resources */,
-				7F204A7B2C2369060047D2A0 /* xivhelper-2.0.0.store-shm in Resources */,
+				7FACC0C02C2A3864009B84C8 /* xivhelper-2.1.0.store in Resources */,
+				7FACC0BE2C2A3864009B84C8 /* xivhelper-2.1.0.store-shm in Resources */,
 				7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */,
-				7F204A7C2C2369060047D2A0 /* xivhelper-2.0.0.store-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +739,6 @@
 				7F44DF0E2C292D04003E51AC /* Node.swift in Sources */,
 				7F7154EB2C2131B900F458B4 /* Stat.swift in Sources */,
 				7F7154EC2C2131B900F458B4 /* Item.swift in Sources */,
-				7F44DF112C292D54003E51AC /* ItemNodesView.swift in Sources */,
 				7F7154F02C21335A00F458B4 /* SettingsManager.swift in Sources */,
 				7F7154E22C2131B500F458B4 /* ClassJob.swift in Sources */,
 				7F7154E32C2131B500F458B4 /* ClassJobCategory.swift in Sources */,
@@ -1082,7 +1090,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1118,7 +1126,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

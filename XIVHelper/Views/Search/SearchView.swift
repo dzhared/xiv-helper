@@ -173,7 +173,7 @@ struct SearchView: View {
             if settings.searchType == .gathering {
                 return FetchDescriptor<Item>(predicate: #Predicate<Item> {
                     $0.name.en.localizedStandardContains(searchText) &&
-                    $0.canBeGathered
+                    ($0.canBeGathered ?? false)
                 })
             }
             else {

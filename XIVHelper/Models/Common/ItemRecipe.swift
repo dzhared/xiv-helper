@@ -20,7 +20,7 @@ struct ItemRecipe: Codable, Equatable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case classJob = "classJobId"
+        case classJob
         case lvl
         case stars
         case yields

@@ -1,4 +1,5 @@
 from json_writing import clean_html, load_json_file, write_json_to_file
+from parse_nodes import nodes_dict
 
 # The primary source of item information
 items_database_pages_json = load_json_file('items-database-pages.json')
@@ -14,6 +15,7 @@ ui_categories_json = load_json_file('ui-categories.json')
 
 # The array of items to be written to JSON file
 items = []
+nodes_dict = nodes_dict()
 
 for key in items_database_pages_json.keys():
     # The primary source of information for the item
@@ -67,6 +69,16 @@ for key in items_database_pages_json.keys():
     rarity = rarities_json.get(key, 1)
     gcReward = i.get('gcReward', None) if rarity in [2, 3, 7] and canBeEquipped else None
 
+    nodes = []
+    canBeGathered = False
+    try:
+        nodes = nodes_dict.get(int(key), [])
+    except:
+        nodes = []
+
+    if len(nodes) > 0:
+        canBeGathered = True
+
     leves = []
     for l in i.get('usedForLeves', []):
         leve_data = leves_json.get(str(l.get('leve')))
@@ -111,6 +123,9 @@ for key in items_database_pages_json.keys():
 
         # Whether the item can be equipped
         'canBeEquipped': canBeEquipped,
+
+        # Whether the item can be gathered
+        'canBeGathered': canBeGathered,
 
         # Whether the item can be HQ
         'canBeHq': bool(i.get('hq', False)),
@@ -164,6 +179,9 @@ for key in items_database_pages_json.keys():
         # - classJob: The ID of the requisite class/job for the leve
         'leves': leves,
 
+        # The nodes at which the item can be collected
+        'nodes': nodes,
+
         # ID of patch that the item was added in. `2` is initial release
         'patchId': i.get('patch', 2),
 
@@ -211,4 +229,5 @@ for key in items_database_pages_json.keys():
             items.append(new_item)
 
 
+print(f"Total items: {len(items)}")
 write_json_to_file(data=items, file_path=f"./XIVHelperDataBuilder/JSON/item.json")
