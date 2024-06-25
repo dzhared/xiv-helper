@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Displays a grid of parameters. Used for both recipes and items.
-struct ParameterGrid: View {
+struct ParameterGridView: View {
 
     // MARK: Properties
 

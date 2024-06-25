@@ -56,7 +56,7 @@ struct RecipeDetailView: View {
                             Text("**Can\(recipe.canHq ? "" : "not")** be HQ")
                             Text("**Can\(recipe.canQs ? "" : "not")** be quick synthesized")
                         }
-                        ParameterGrid(recipe: recipe)
+                        ParameterGridView(recipe: recipe)
                     }
 
                     // Master recipe information

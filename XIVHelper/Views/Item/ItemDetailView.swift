@@ -10,9 +10,6 @@ struct ItemDetailView: View {
     /// The SwiftData model context.
     @Environment(\.modelContext) private var context
 
-    /// The current Dynamic Type size.
-    @Environment(\.dynamicTypeSize) private var size
-
     /// The shared settings manager instance.
     @ObservedObject var settings = SettingsManager.shared
 
@@ -46,10 +43,10 @@ struct ItemDetailView: View {
                     if !item.statsMain.isEmpty || !item.statsSecondary.isEmpty {
                         Section("Stats") {
                             if !item.statsMain.isEmpty {
-                                ParameterGrid(stats: item.statsMain, hq: settings.hq)
+                                ParameterGridView(stats: item.statsMain, hq: settings.hq)
                             }
                             if !item.statsSecondary.isEmpty {
-                                ParameterGrid(stats: item.statsSecondary, hq: settings.hq)
+                                ParameterGridView(stats: item.statsSecondary, hq: settings.hq)
                             }
                         }
                     }
@@ -57,7 +54,7 @@ struct ItemDetailView: View {
                     // Bonuses (food, potions, etc)
                     if !item.bonuses.isEmpty {
                         Section("Bonuses") {
-                            ParameterGrid(bonuses: item.bonuses, hq: settings.hq)
+                            ParameterGridView(bonuses: item.bonuses, hq: settings.hq)
                         }
                     }
 
