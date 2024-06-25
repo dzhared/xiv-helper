@@ -161,6 +161,7 @@ class SettingsManager: ObservableObject {
 
 /// The available objects the user can search for.
 enum SearchType: String, CaseIterable, LosslessStringConvertible {
+    case gathering = "Gathering"
     case recipes = "Recipes"
     case items = "Items"
 

@@ -21,7 +21,11 @@ struct ShoppingListView: View {
         NavigationStack {
             List {
                 ForEach(ingredients.sorted(by: { $0.id > $1.id }), id: \.id) { ingredient in
-                    ListBadgeView(ingredient: ingredient)
+                    NavigationLink {
+                        ItemDetailView(itemID: ingredient.id)
+                    } label: {
+                        ListBadgeView(ingredient: ingredient)
+                    }
                 }
             }
             .navigationTitle("Shopping List")

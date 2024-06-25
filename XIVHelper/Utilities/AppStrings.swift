@@ -35,6 +35,7 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
     }
 
     enum Navigation {
+        static let allNodes = "All Nodes"
         static let info = "About"
         static let itemDetail = "Item Detail"
         static let lodestoneNews = "Lodestone News"

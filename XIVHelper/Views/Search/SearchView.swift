@@ -74,6 +74,8 @@ struct SearchView: View {
                             .tag(SearchType.items)
                         Text(SearchType.recipes.rawValue)
                             .tag(SearchType.recipes)
+                        Text(SearchType.gathering.rawValue)
+                            .tag(SearchType.gathering)
                         // TODO: Add Leves
                     }
                     .pickerStyle(.segmented)
@@ -90,7 +92,7 @@ struct SearchView: View {
                 List {
                     // Search results, depending on search type defined with picker
                     switch settings.searchType {
-                    case .items:
+                    case .items, .gathering:
                         if items.isEmpty && !debouncer.searchText.isEmpty {
                             Text(AppStrings.Search.noResults)
                         } else if items.isEmpty {
@@ -167,14 +169,19 @@ struct SearchView: View {
 
     /// Fetches the items that match the search text, and assigns them to `items`.
     private func fetchItems(searchText: String) {
-        var descriptor = FetchDescriptor<Item>(
-            predicate: #Predicate<Item> {
-                $0.name.en.localizedStandardContains(searchText)
-            },
-            sortBy: [
-                SortDescriptor(\Item.ilvl, order: .reverse)
-            ]
-        )
+        var descriptor: FetchDescriptor<Item> = {
+            if settings.searchType == .gathering {
+                return FetchDescriptor<Item>(predicate: #Predicate<Item> {
+                    $0.name.en.localizedStandardContains(searchText) &&
+                    ($0.canBeGathered ?? false)
+                })
+            }
+            else {
+                return FetchDescriptor<Item>(predicate: #Predicate<Item> {
+                    $0.name.en.localizedStandardContains(searchText)
+                })
+            }
+        }()
         descriptor.fetchLimit = settings.searchResultsLimit
         let fetchedItems = try? context.fetch(descriptor)
         withAnimation(.easeIn) {

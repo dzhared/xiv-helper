@@ -20,6 +20,7 @@ final class LocalizedStringTests: XCTestCase {
         decoder = nil
         encoder = nil
         localizedString = nil
+        settings.locale = .en // Otherwise, locale is left in Chinese, oops
         settings = nil
     }
 

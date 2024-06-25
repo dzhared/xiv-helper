@@ -24,6 +24,9 @@ import SwiftData
     /// Whether the item can be equipped.
     let canBeEquipped: Bool
 
+    /// Whether the item can be gathered.
+    let canBeGathered: Bool?
+
     /// Whether the item can be High Quality.
     let canBeHq: Bool
 
@@ -78,6 +81,9 @@ import SwiftData
 
     /// The localized name of the item.
     let name: LocalizedString
+
+    /// The nodes from which the item can be gathered.
+    let nodes: [Node]?
 
     /// The ID of the patch that added the item. Default is `0`, initial release.
     let patchId: Int
@@ -145,6 +151,7 @@ import SwiftData
         bonuses: [Bonus],
         canBeCrafted: Bool,
         canBeEquipped: Bool,
+        canBeGathered: Bool?,
         canBeHq: Bool,
         classJobCategoryId: Int?,
         desc: LocalizedString,
@@ -159,6 +166,7 @@ import SwiftData
         isUnique: Bool,
         itemCategory: Int,
         leves: [Leve],
+        nodes: [Node]?,
         patchId: Int,
         price: Int?,
         rarity: Int,
@@ -176,6 +184,7 @@ import SwiftData
         self.bonuses = bonuses
         self.canBeCrafted = canBeCrafted
         self.canBeEquipped = canBeEquipped
+        self.canBeGathered = canBeGathered
         self.canBeHq = canBeHq
         self.classJobCategoryId = classJobCategoryId
         self.desc = desc
@@ -190,6 +199,7 @@ import SwiftData
         self.isUnique = isUnique
         self.itemCategory = itemCategory
         self.leves = leves
+        self.nodes = nodes
         self.patchId = patchId
         self.price = price
         self.rarity = rarity
@@ -211,6 +221,7 @@ import SwiftData
         case bonuses
         case canBeCrafted
         case canBeEquipped
+        case canBeGathered
         case canBeHq
         case classJobCategoryId
         case desc
@@ -225,6 +236,7 @@ import SwiftData
         case isUnique
         case itemCategory
         case leves
+        case nodes
         case patchId
         case price
         case rarity
@@ -247,6 +259,7 @@ import SwiftData
         self.bonuses = try container.decode([Bonus].self, forKey: .bonuses)
         self.canBeCrafted = try container.decode(Bool.self, forKey: .canBeCrafted)
         self.canBeEquipped = try container.decode(Bool.self, forKey: .canBeEquipped)
+        self.canBeGathered = try container.decodeIfPresent(Bool.self, forKey: .canBeGathered)
         self.canBeHq = try container.decode(Bool.self, forKey: .canBeHq)
         self.classJobCategoryId = try container.decodeIfPresent(Int.self, forKey: .classJobCategoryId)
         self.desc = try container.decode(LocalizedString.self, forKey: .desc)
@@ -261,6 +274,7 @@ import SwiftData
         self.isUnique = try container.decode(Bool.self, forKey: .isUnique)
         self.itemCategory = try container.decode(Int.self, forKey: .itemCategory)
         self.leves = try container.decode([Leve].self, forKey: .leves)
+        self.nodes = try container.decodeIfPresent([Node].self, forKey: .nodes)
         self.patchId = try container.decode(Int.self, forKey: .patchId)
         self.price = try container.decodeIfPresent(Int.self, forKey: .price)
         self.rarity = try container.decode(Int.self, forKey: .rarity)
@@ -283,6 +297,7 @@ import SwiftData
         try container.encode(self.bonuses, forKey: .bonuses)
         try container.encode(self.canBeCrafted, forKey: .canBeCrafted)
         try container.encode(self.canBeEquipped, forKey: .canBeEquipped)
+        try container.encodeIfPresent(self.canBeGathered, forKey: .canBeGathered)
         try container.encode(self.canBeHq, forKey: .canBeHq)
         try container.encodeIfPresent(self.classJobCategoryId, forKey: .classJobCategoryId)
         try container.encode(self.desc, forKey: .desc)
@@ -297,6 +312,7 @@ import SwiftData
         try container.encode(self.isUnique, forKey: .isUnique)
         try container.encode(self.itemCategory, forKey: .itemCategory)
         try container.encode(self.leves, forKey: .leves)
+        try container.encodeIfPresent(self.nodes, forKey: .nodes)
         try container.encode(self.patchId, forKey: .patchId)
         try container.encodeIfPresent(self.price, forKey: .price)
         try container.encode(self.rarity, forKey: .rarity)
