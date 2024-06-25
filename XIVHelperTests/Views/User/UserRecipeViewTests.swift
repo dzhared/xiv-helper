@@ -17,6 +17,9 @@ final class UserRecipeViewTests: XCTestCase {
 
     /// The view renders as expected.
     func testAppearance() {
-        assertSnapshots(of: subject, as: [.image])
+        assertSnapshots(
+            of: subject,
+            as: [.image(layout: .device(config: .iPhone13ProMax))]
+        )
     }
 }
