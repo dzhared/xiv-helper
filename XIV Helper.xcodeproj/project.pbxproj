@@ -46,6 +46,9 @@
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
+		7F2913072C2A61B000BD0E88 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7F2913062C2A61B000BD0E88 /* InlineSnapshotTesting */; };
+		7F2913092C2A61B000BD0E88 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7F2913082C2A61B000BD0E88 /* SnapshotTesting */; };
+		7F29130C2C2A61CD00BD0E88 /* ItemDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29130B2C2A61CD00BD0E88 /* ItemDetailViewTests.swift */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
@@ -151,6 +154,7 @@
 		7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store-shm"; sourceTree = "<group>"; };
 		7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.0.0.store-wal"; sourceTree = "<group>"; };
 		7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store"; sourceTree = "<group>"; };
+		7F29130B2C2A61CD00BD0E88 /* ItemDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewTests.swift; sourceTree = "<group>"; };
 		7F44DF0C2C292D04003E51AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNodesView.swift; sourceTree = "<group>"; };
 		7F44DF1B2C2931DF003E51AC /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2913072C2A61B000BD0E88 /* InlineSnapshotTesting in Frameworks */,
+				7F2913092C2A61B000BD0E88 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +410,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7F29130A2C2A61B700BD0E88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F29130B2C2A61CD00BD0E88 /* ItemDetailViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7F7154C92C212FD600F458B4 /* XIVHelperDataBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +462,7 @@
 				7FACC0A32C29D812009B84C8 /* Database */,
 				7FA846202C2409240043006D /* Utilities */,
 				7FA8460D2C23F5820043006D /* Models */,
+				7F29130A2C2A61B700BD0E88 /* Views */,
 				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
 			);
 			path = XIVHelperTests;
@@ -630,6 +645,10 @@
 				7FA846092C23F5580043006D /* PBXTargetDependency */,
 			);
 			name = "XIV Helper Tests";
+			packageProductDependencies = (
+				7F2913062C2A61B000BD0E88 /* InlineSnapshotTesting */,
+				7F2913082C2A61B000BD0E88 /* SnapshotTesting */,
+			);
 			productName = "XIV Helper Tests";
 			productReference = 7FA846042C23F5580043006D /* XIV Helper Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -682,6 +701,9 @@
 				Base,
 			);
 			mainGroup = 7FF52B0A29BFA21C00B7BF58;
+			packageReferences = (
+				7F2913052C2A61B000BD0E88 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 7FF52B1429BFA21C00B7BF58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -771,6 +793,7 @@
 				7FFEF6372C28AE4100E0A733 /* ItemTests.swift in Sources */,
 				7FFEF6322C28AE3E00E0A733 /* ItemCategoryTests.swift in Sources */,
 				7FFEF6332C28AE3E00E0A733 /* BaseParamTests.swift in Sources */,
+				7F29130C2C2A61CD00BD0E88 /* ItemDetailViewTests.swift in Sources */,
 				7FFEF6342C28AE3E00E0A733 /* ItemRecipeTests.swift in Sources */,
 				7FFEF6382C28AE4500E0A733 /* LodestoneNewsArticleTests.swift in Sources */,
 				7FFEF6392C28AE4500E0A733 /* UserRecipeTests.swift in Sources */,
@@ -1179,6 +1202,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F2913052C2A61B000BD0E88 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F2913062C2A61B000BD0E88 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F2913052C2A61B000BD0E88 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		7F2913082C2A61B000BD0E88 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F2913052C2A61B000BD0E88 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7FF52B0B29BFA21C00B7BF58 /* Project object */;
 }
