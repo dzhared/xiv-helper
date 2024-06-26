@@ -36,8 +36,6 @@ public extension XCTestCase {
     let testClassName = testClassFileURL.deletingPathExtension().lastPathComponent
 
     let folderCandidates = [
-      // For SPM modules.
-      testBundleResourceURL.appending(path: "__Snapshots__").appending(path: testClassName),
       // For top-level xcodeproj app target.
       testBundleResourceURL.appending(path: testClassName)
     ]
