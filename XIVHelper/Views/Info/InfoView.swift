@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Displays info about the app, as well as necessary credits, legal, and contact information.
-struct InfoScreen: View {
+struct InfoView: View {
 
     // MARK: Body
 
@@ -52,6 +52,6 @@ struct InfoScreen: View {
 // MARK: Previews
 
 #Preview {
-    InfoScreen()
+    InfoView()
 }
 

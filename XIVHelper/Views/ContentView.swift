@@ -21,7 +21,7 @@ struct ContentView: View {
             LodestoneNewsView()
                 .tabItem { Label(AppStrings.TabView.news, systemImage: "newspaper") }
                 .tag(2)
-            InfoScreen()
+            InfoView()
                 .tabItem { Label(AppStrings.TabView.info, systemImage: "info.circle") }
                 .tag(3)
         }
