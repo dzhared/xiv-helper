@@ -16,7 +16,7 @@ final class ParameterGridViewTests: XCTestCase {
     }
 
     /// The view renders as expected.
-    func testAppearance() {
+    func testParameterGridViewAppearance() {
         assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }

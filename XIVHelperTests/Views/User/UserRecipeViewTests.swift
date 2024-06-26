@@ -16,7 +16,7 @@ final class UserRecipeViewTests: XCTestCase {
     }
 
     /// The view renders as expected.
-    func testAppearance() {
+    func testUserRecipeViewAppearance() {
         assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }

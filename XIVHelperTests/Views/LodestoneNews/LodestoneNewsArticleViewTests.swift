@@ -16,7 +16,7 @@ final class LodestoneNewsArticleViewTests: XCTestCase {
     }
 
     /// The view renders as expected.
-    func testAppearance() {
+    func testLodestoneNewsArticleViewAppearance() {
         assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }

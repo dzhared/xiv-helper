@@ -16,7 +16,7 @@ final class SearchViewTests: XCTestCase {
     }
 
     /// The view renders as expected.
-    func testAppearance() {
+    func testSearchViewAppearance() {
         assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }

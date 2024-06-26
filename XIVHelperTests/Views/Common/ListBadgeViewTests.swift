@@ -16,7 +16,7 @@ final class ListBadgeViewTests: XCTestCase {
     }
 
     /// The view renders as expected.
-    func testAppearance() {
+    func testListBadgeAppearance() {
         assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }
