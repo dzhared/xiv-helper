@@ -63,6 +63,7 @@
 		7F2913072C2A61B000BD0E88 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7F2913062C2A61B000BD0E88 /* InlineSnapshotTesting */; };
 		7F2913092C2A61B000BD0E88 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7F2913082C2A61B000BD0E88 /* SnapshotTesting */; };
 		7F29130C2C2A61CD00BD0E88 /* ItemDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29130B2C2A61CD00BD0E88 /* ItemDetailViewTests.swift */; };
+		7F4208BA2C2C9B52006D1B06 /* XCTestCase+SnapshotTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4208B92C2C9B52006D1B06 /* XCTestCase+SnapshotTesting.swift */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
@@ -183,6 +184,7 @@
 		7F2359ED2C2B3593004B07D6 /* SplashScreenViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewTests.swift; sourceTree = "<group>"; };
 		7F2359EF2C2B35A3004B07D6 /* UserRecipeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeViewTests.swift; sourceTree = "<group>"; };
 		7F29130B2C2A61CD00BD0E88 /* ItemDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewTests.swift; sourceTree = "<group>"; };
+		7F4208B92C2C9B52006D1B06 /* XCTestCase+SnapshotTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+SnapshotTesting.swift"; sourceTree = "<group>"; };
 		7F44DF0C2C292D04003E51AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNodesView.swift; sourceTree = "<group>"; };
 		7F44DF1B2C2931DF003E51AC /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 				7FA8460D2C23F5820043006D /* Models */,
 				7F29130A2C2A61B700BD0E88 /* Views */,
 				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
+				7F4208B92C2C9B52006D1B06 /* XCTestCase+SnapshotTesting.swift */,
 			);
 			path = XIVHelperTests;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				7F2359D62C2B3173004B07D6 /* ItemNodesViewTests.swift in Sources */,
 				7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */,
 				7F2359DE2C2B3464004B07D6 /* ParameterGridViewTests.swift in Sources */,
+				7F4208BA2C2C9B52006D1B06 /* XCTestCase+SnapshotTesting.swift in Sources */,
 				7F2359E62C2B3509004B07D6 /* RecipeDetailViewTests.swift in Sources */,
 				7F2359D82C2B3303004B07D6 /* InfoViewTests.swift in Sources */,
 				7FFEF62D2C28AE3E00E0A733 /* ClassJobCategoryTests.swift in Sources */,

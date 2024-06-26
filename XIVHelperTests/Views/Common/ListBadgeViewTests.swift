@@ -17,9 +17,6 @@ final class ListBadgeViewTests: XCTestCase {
 
     /// The view renders as expected.
     func testAppearance() {
-        assertSnapshots(
-            of: subject,
-            as: [.image(layout: .device(config: .iPhone13ProMax))]
-        )
+        assertSnapshot(view: subject, testBundleResourceURL: Bundle(for: type(of: self)).resourceURL!)
     }
 }
