@@ -93,6 +93,7 @@ import SwiftData
     let stars: Int
 
     /// The suggested Control stat for the recipe.
+    /// NOTE: Always 0 as of Dawntrail update.
     let suggestedControl: Int
 
     /// The suggested Craftsmanship stat for the recipe.

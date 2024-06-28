@@ -114,4 +114,6 @@ final class ItemTests: XCTestCase {
         XCTAssertEqual(decoded.statsSecondary, item.statsSecondary)
         XCTAssertEqual(decoded.supply, item.supply)
     }
+
+    // TODO: Unit test to catch any missing icons instead of manually searching JSON
 }

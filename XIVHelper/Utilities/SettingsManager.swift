@@ -23,6 +23,10 @@ class SettingsManager: ObservableObject {
 
     /// The available settings in AppStorage.
     enum Keys {
+        enum Dawntrail: String, CaseIterable {
+            case enabled
+            case hasSeenWarning
+        }
         enum Item: String, CaseIterable {
             case hq
         }
@@ -67,6 +71,14 @@ class SettingsManager: ObservableObject {
         }
     }
 
+    // MARK: Dawntrail
+
+    /// Whether to show Dawntrail content.
+    @AppStorage(Keys.Dawntrail.enabled.rawValue) var dawntrailEnabled: Bool = true
+
+    /// Whether the Dawntrail content warning has been shown.
+    @AppStorage(Keys.Dawntrail.hasSeenWarning.rawValue) var dawntrailHasSeenWarning: Bool = false
+
     // MARK: Item
 
     /// Whether to show the HQ version of items.
@@ -77,6 +89,7 @@ class SettingsManager: ObservableObject {
     /// The language locale, defaulting to `en`.
     @AppStorage(Keys.General.locale.rawValue) var locale: Locale = .en
 
+    /// The name of the current database store. Updated upon instantiating new database store.
     @AppStorage(Keys.General.currentStoreName.rawValue) var currentStoreName: String = "xivhelper-2.0.0"
 
     // MARK: User
@@ -243,7 +256,7 @@ enum AllClassJob: String, CaseIterable, LosslessStringConvertible {
     case rpr = "RPR"
     case sge = "SGE"
     case vpr = "VPR" // TODO: Verify (Dawntrail)
-    case pic = "PIC" // TODO: Verify (Dawntrail)
+    case pct = "PCT" // TODO: Verify (Dawntrail)
 
     /// Initialize from a matching string value.
     init?(_ description: String) {

@@ -28,7 +28,7 @@ struct SearchView: View {
 
     /// The resulting `Item` objects, sorted using the given sort method.
     private var sortedItems: [Item] {
-        let sortedItems: [Item]
+        var sortedItems: [Item]
 
         switch settings.searchSortMethod {
         case .alphabetical:
@@ -41,12 +41,17 @@ struct SearchView: View {
             sortedItems = items.sorted { $0.name.en < $1.name.en }
         }
 
+        // Filter out Dawntrail content if needed
+        if !settings.dawntrailEnabled {
+            sortedItems = sortedItems.filter { $0.patchId < 95 }
+        }
+
         return settings.searchAscending ? sortedItems : sortedItems.reversed()
     }
 
     /// The resulting `Recipe` objects, sorted using the given sort method.
     private var sortedRecipes: [Recipe] {
-        let sortedRecipes: [Recipe]
+        var sortedRecipes: [Recipe]
 
         switch settings.searchSortMethod {
         case .alphabetical:
@@ -57,6 +62,11 @@ struct SearchView: View {
             sortedRecipes = recipes.sorted { $0.resultPatch < $1.resultPatch }
         case .rlvl:
             sortedRecipes = recipes.sorted { $0.recipeLevel < $1.recipeLevel }
+        }
+
+        // Filter out Dawntrail content if needed
+        if !settings.dawntrailEnabled {
+            sortedRecipes = sortedRecipes.filter { $0.resultPatch < 95 }
         }
 
         return settings.searchAscending ? sortedRecipes : sortedRecipes.reversed()
@@ -93,7 +103,7 @@ struct SearchView: View {
                     // Search results, depending on search type defined with picker
                     switch settings.searchType {
                     case .items, .gathering:
-                        if items.isEmpty && !debouncer.searchText.isEmpty {
+                        if sortedItems.isEmpty && !debouncer.searchText.isEmpty {
                             Text(AppStrings.Search.noResults)
                         } else if items.isEmpty {
                             Button(AppStrings.Search.searchButton) {
@@ -109,7 +119,7 @@ struct SearchView: View {
                             }
                         }
                     case .recipes:
-                        if recipes.isEmpty && !debouncer.searchText.isEmpty {
+                        if sortedRecipes.isEmpty && !debouncer.searchText.isEmpty {
                             Text(AppStrings.Search.noResults)
                         } else if recipes.isEmpty {
                             Button(AppStrings.Search.searchButton) {
@@ -145,6 +155,7 @@ struct SearchView: View {
                             Text("Descending")
                                 .tag(false)
                         }
+                        Toggle(AppStrings.Info.dawntrailShow, isOn: $settings.dawntrailEnabled)
                     } label: {
                         Label("Sort", systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)

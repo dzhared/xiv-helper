@@ -125,7 +125,8 @@ for r in recipes_json:
         'stars': int(r.get('stars', 0)),
 
         # The Control stat suggested for the recipe
-        'suggestedControl': int(r.get('suggestedControl')),
+        # NOTE: Always 0 as of Dawntrail update
+        'suggestedControl': int(r.get('suggestedControl', 0)),
 
         # The Craftsmanship stat suggested for the recipe
         'suggestedCraftsmanship': int(r.get('suggestedCraftsmanship')),

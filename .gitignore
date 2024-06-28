@@ -91,9 +91,9 @@ iOSInjectionProject/
 icon.ai
 Python/csv
 Python/item
+Python/item-2.0.0
 Python/switch_item_category.py
 Python/switch_patch.py
 Python/env
 XIVHelper/Utilities/CompoundPredicate.swift
-XIVHelperDataBuilder/JSON/item.json
-XIVHelperDataBuilder/JSON/recipe.json
+XIVHelperDataBuilder/JSON
