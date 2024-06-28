@@ -20,10 +20,10 @@ final class PatchTests: XCTestCase {
         patch = nil
     }
 
-    /// Patch `95`, likely the release of Dawntrail, has not yet been added.
-    /// This test should fail when the app is updated to include Dawntrail data.
-    func testPatchDawntrailNotReleased() {
-        let futurePatch = Patch(id: 95)
+    /// Patch `96`, the future first patch of Dawntrail, has not yet been added.
+    /// This patch should fail when that patch is released.
+    func testPatchDawntrailPatchNotReleased() {
+        let futurePatch = Patch(id: 96)
         XCTAssertEqual(futurePatch.id, 2)
     }
 
