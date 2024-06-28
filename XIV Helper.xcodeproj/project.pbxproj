@@ -46,6 +46,9 @@
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
+		7F41CDD32C2EFAB20040C80D /* xivhelper-2.2.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CDCF2C2EFAB20040C80D /* xivhelper-2.2.0.store */; };
+		7F41CDD42C2EFAB20040C80D /* xivhelper-2.2.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CDD02C2EFAB20040C80D /* xivhelper-2.2.0.store-shm */; };
+		7F41CDD52C2EFAB20040C80D /* xivhelper-2.2.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CDD12C2EFAB20040C80D /* xivhelper-2.2.0.store-wal */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
@@ -74,9 +77,6 @@
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
-		7FACC0BE2C2A3864009B84C8 /* xivhelper-2.1.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BB2C2A3863009B84C8 /* xivhelper-2.1.0.store-shm */; };
-		7FACC0BF2C2A3864009B84C8 /* xivhelper-2.1.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BC2C2A3863009B84C8 /* xivhelper-2.1.0.store-wal */; };
-		7FACC0C02C2A3864009B84C8 /* xivhelper-2.1.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -151,6 +151,9 @@
 		7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store-shm"; sourceTree = "<group>"; };
 		7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.0.0.store-wal"; sourceTree = "<group>"; };
 		7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store"; sourceTree = "<group>"; };
+		7F41CDCF2C2EFAB20040C80D /* xivhelper-2.2.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.2.0.store"; sourceTree = "<group>"; };
+		7F41CDD02C2EFAB20040C80D /* xivhelper-2.2.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.2.0.store-shm"; sourceTree = "<group>"; };
+		7F41CDD12C2EFAB20040C80D /* xivhelper-2.2.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.2.0.store-wal"; sourceTree = "<group>"; };
 		7F44DF0C2C292D04003E51AC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNodesView.swift; sourceTree = "<group>"; };
 		7F44DF1B2C2931DF003E51AC /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
@@ -323,6 +326,7 @@
 			children = (
 				7FACC0C12C2A3AC3009B84C8 /* xivhelper-2.0.0 */,
 				7FACC0C22C2A3AD2009B84C8 /* xivhelper-2.1.0 */,
+				7F41CDD22C2EFAB20040C80D /* xivhelper-2.2.0 */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -402,6 +406,16 @@
 				7F1D441B2C20ECE4003F2AAB /* User */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7F41CDD22C2EFAB20040C80D /* xivhelper-2.2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CDCF2C2EFAB20040C80D /* xivhelper-2.2.0.store */,
+				7F41CDD02C2EFAB20040C80D /* xivhelper-2.2.0.store-shm */,
+				7F41CDD12C2EFAB20040C80D /* xivhelper-2.2.0.store-wal */,
+			);
+			path = "xivhelper-2.2.0";
 			sourceTree = "<group>";
 		};
 		7F7154C92C212FD600F458B4 /* XIVHelperDataBuilder */ = {
@@ -715,10 +729,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FACC0BF2C2A3864009B84C8 /* xivhelper-2.1.0.store-wal in Resources */,
+				7F41CDD32C2EFAB20040C80D /* xivhelper-2.2.0.store in Resources */,
+				7F41CDD52C2EFAB20040C80D /* xivhelper-2.2.0.store-wal in Resources */,
+				7F41CDD42C2EFAB20040C80D /* xivhelper-2.2.0.store-shm in Resources */,
 				7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */,
-				7FACC0C02C2A3864009B84C8 /* xivhelper-2.1.0.store in Resources */,
-				7FACC0BE2C2A3864009B84C8 /* xivhelper-2.1.0.store-shm in Resources */,
 				7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

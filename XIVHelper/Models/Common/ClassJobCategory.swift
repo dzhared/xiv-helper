@@ -88,6 +88,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 2: return ClassJobCategory(
@@ -308,6 +310,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 31: return ClassJobCategory(
@@ -325,6 +328,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 36),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 32: return ClassJobCategory(
@@ -383,6 +387,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 35: return ClassJobCategory(
@@ -420,6 +426,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 31),
                 ClassJob(id: 32),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 37: return ClassJobCategory(
@@ -781,7 +788,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 63: return ClassJobCategory(
             id: 63,
-            name: "THM ACN BLM SMN RDM BLU",
+            name: "THM ACN BLM SMN RDM BLU PCT",
             classJobs: [
                 ClassJob(id: 7),
                 ClassJob(id: 25),
@@ -789,6 +796,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 27),
                 ClassJob(id: 35),
                 ClassJob(id: 36),
+                ClassJob(id: 42),
             ]
         )
         case 64: return ClassJobCategory(
@@ -952,6 +960,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 86: return ClassJobCategory(
@@ -1148,15 +1158,16 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 103: return ClassJobCategory(
             id: 103,
-            name: "ROG NIN",
+            name: "ROG NIN VPR",
             classJobs: [
                 ClassJob(id: 29),
                 ClassJob(id: 30),
+                ClassJob(id: 41),
             ]
         )
         case 105: return ClassJobCategory(
             id: 105,
-            name: "ARC ROG BRD NIN MCH DNC",
+            name: "ARC ROG BRD NIN MCH DNC VPR",
             classJobs: [
                 ClassJob(id: 5),
                 ClassJob(id: 23),
@@ -1164,6 +1175,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 30),
                 ClassJob(id: 31),
                 ClassJob(id: 38),
+                ClassJob(id: 41),
             ]
         )
         case 106: return ClassJobCategory(
@@ -1231,6 +1243,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 110: return ClassJobCategory(
@@ -1257,6 +1271,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 111: return ClassJobCategory(
@@ -1287,7 +1303,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 114: return ClassJobCategory(
             id: 114,
-            name: "PGL LNC ROG MNK DRG NIN SAM RPR",
+            name: "PGL LNC ROG MNK DRG NIN SAM RPR VPR",
             classJobs: [
                 ClassJob(id: 2),
                 ClassJob(id: 4),
@@ -1297,6 +1313,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 30),
                 ClassJob(id: 34),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 115: return ClassJobCategory(
@@ -1311,7 +1328,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 116: return ClassJobCategory(
             id: 116,
-            name: "THM ACN BLM SMN RDM BLU",
+            name: "THM ACN BLM SMN RDM BLU PCT",
             classJobs: [
                 ClassJob(id: 7),
                 ClassJob(id: 25),
@@ -1319,6 +1336,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 27),
                 ClassJob(id: 35),
                 ClassJob(id: 36),
+                ClassJob(id: 42),
             ]
         )
         case 117: return ClassJobCategory(
@@ -1334,7 +1352,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 118: return ClassJobCategory(
             id: 118,
-            name: "PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR",
+            name: "PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 2),
                 ClassJob(id: 4),
@@ -1348,11 +1366,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 119: return ClassJobCategory(
             id: 119,
-            name: "PGL LNC THM ACN ROG MNK DRG BLM SMN NIN SAM RDM BLU RPR",
+            name: "PGL LNC THM ACN ROG MNK DRG BLM SMN NIN SAM RDM BLU RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 2),
                 ClassJob(id: 4),
@@ -1368,11 +1387,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 36),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 120: return ClassJobCategory(
             id: 120,
-            name: "CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE",
+            name: "CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE PCT",
             classJobs: [
                 ClassJob(id: 6),
                 ClassJob(id: 7),
@@ -1385,6 +1406,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 36),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 121: return ClassJobCategory(
@@ -1399,13 +1421,14 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 122: return ClassJobCategory(
             id: 122,
-            name: "MNK DRG NIN SAM RPR",
+            name: "MNK DRG NIN SAM RPR VPR",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
                 ClassJob(id: 30),
                 ClassJob(id: 34),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 123: return ClassJobCategory(
@@ -1419,12 +1442,13 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 124: return ClassJobCategory(
             id: 124,
-            name: "BLM SMN RDM BLU",
+            name: "BLM SMN RDM BLU PCT",
             classJobs: [
                 ClassJob(id: 25),
                 ClassJob(id: 27),
                 ClassJob(id: 35),
                 ClassJob(id: 36),
+                ClassJob(id: 42),
             ]
         )
         case 125: return ClassJobCategory(
@@ -1439,7 +1463,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 126: return ClassJobCategory(
             id: 126,
-            name: "MNK DRG BRD NIN MCH SAM DNC RPR",
+            name: "MNK DRG BRD NIN MCH SAM DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -1449,11 +1473,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 127: return ClassJobCategory(
             id: 127,
-            name: "MNK DRG BLM SMN NIN SAM RDM BLU RPR",
+            name: "MNK DRG BLM SMN NIN SAM RDM BLU RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -1464,11 +1489,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 36),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 128: return ClassJobCategory(
             id: 128,
-            name: "WHM BLM SMN SCH AST RDM BLU SGE",
+            name: "WHM BLM SMN SCH AST RDM BLU SGE PCT",
             classJobs: [
                 ClassJob(id: 24),
                 ClassJob(id: 25),
@@ -1478,6 +1505,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 36),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 129: return ClassJobCategory(
@@ -1531,11 +1559,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 131: return ClassJobCategory(
             id: 131,
-            name: "MNK DRG BRD BLM SMN NIN MCH SAM RDM DNC RPR",
+            name: "MNK DRG BRD BLM SMN NIN MCH SAM RDM DNC RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -1548,11 +1578,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 132: return ClassJobCategory(
             id: 132,
-            name: "MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE",
+            name: "MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -1569,6 +1601,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 133: return ClassJobCategory(
@@ -1593,7 +1627,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 135: return ClassJobCategory(
             id: 135,
-            name: "PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR",
+            name: "PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -1610,6 +1644,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 136: return ClassJobCategory(
@@ -1628,7 +1664,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 137: return ClassJobCategory(
             id: 137,
-            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH NIN MCH DRK AST SAM RDM GNB DNC RPR SGE",
+            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH NIN MCH DRK AST SAM RDM GNB DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -1649,11 +1685,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 138: return ClassJobCategory(
             id: 138,
-            name: "PLD MNK WAR DRG NIN DRK SAM GNB RPR",
+            name: "PLD MNK WAR DRG NIN DRK SAM GNB RPR VPR",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -1664,6 +1702,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 37),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 139: return ClassJobCategory(
@@ -1677,7 +1716,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 140: return ClassJobCategory(
             id: 140,
-            name: "WHM BLM SMN SCH AST RDM SGE",
+            name: "WHM BLM SMN SCH AST RDM SGE PCT",
             classJobs: [
                 ClassJob(id: 24),
                 ClassJob(id: 25),
@@ -1686,11 +1725,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 33),
                 ClassJob(id: 35),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 141: return ClassJobCategory(
             id: 141,
-            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH MCH DRK AST SAM RDM GNB DNC RPR SGE",
+            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH MCH DRK AST SAM RDM GNB DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -1710,6 +1750,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 142: return ClassJobCategory(
@@ -1744,6 +1786,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 143: return ClassJobCategory(
@@ -1768,6 +1812,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 144: return ClassJobCategory(
@@ -1784,11 +1829,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 33),
                 ClassJob(id: 35),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 145: return ClassJobCategory(
             id: 145,
-            name: "PLD MNK WAR DRG BRD NIN MCH DRK SAM GNB DNC RPR",
+            name: "PLD MNK WAR DRG BRD NIN MCH DRK SAM GNB DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -1802,6 +1848,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 146: return ClassJobCategory(
@@ -1827,26 +1874,30 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 147: return ClassJobCategory(
             id: 147,
-            name: "BLM SMN RDM",
+            name: "BLM SMN RDM PCT",
             classJobs: [
                 ClassJob(id: 25),
                 ClassJob(id: 27),
                 ClassJob(id: 35),
+                ClassJob(id: 42),
             ]
         )
         case 148: return ClassJobCategory(
             id: 148,
-            name: "MNK DRG NIN SAM RPR",
+            name: "MNK DRG NIN SAM RPR VPR",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
                 ClassJob(id: 30),
                 ClassJob(id: 34),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 149: return ClassJobCategory(
@@ -1936,6 +1987,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 159: return ClassJobCategory(
@@ -1945,6 +1997,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 25),
                 ClassJob(id: 27),
                 ClassJob(id: 35),
+                ClassJob(id: 42),
             ]
         )
         case 160: return ClassJobCategory(
@@ -1957,7 +2010,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 161: return ClassJobCategory(
             id: 161,
-            name: "GLA PGL MRD LNC ARC PLD MNK WAR DRG BRD ROG NIN MCH DRK SAM GNB DNC RPR",
+            name: "GLA PGL MRD LNC ARC PLD MNK WAR DRG BRD ROG NIN MCH DRK SAM GNB DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 1),
                 ClassJob(id: 2),
@@ -1977,6 +2030,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 162: return ClassJobCategory(
@@ -2004,7 +2058,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 163: return ClassJobCategory(
             id: 163,
-            name: "MNK DRG BRD BLM SMN NIN MCH SAM RDM DNC RPR",
+            name: "MNK DRG BRD BLM SMN NIN MCH SAM RDM DNC RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -2017,11 +2071,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 35),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 164: return ClassJobCategory(
             id: 164,
-            name: "MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE",
+            name: "MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -2038,6 +2094,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 165: return ClassJobCategory(
@@ -2062,7 +2120,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 167: return ClassJobCategory(
             id: 167,
-            name: "PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR",
+            name: "PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -2079,6 +2137,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 168: return ClassJobCategory(
@@ -2097,7 +2157,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 169: return ClassJobCategory(
             id: 169,
-            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH NIN MCH DRK AST SAM RDM GNB DNC RPR SGE",
+            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH NIN MCH DRK AST SAM RDM GNB DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -2118,11 +2178,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 170: return ClassJobCategory(
             id: 170,
-            name: "PLD MNK WAR DRG NIN DRK SAM GNB RPR",
+            name: "PLD MNK WAR DRG NIN DRK SAM GNB RPR VPR",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -2133,6 +2195,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 37),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 171: return ClassJobCategory(
@@ -2146,7 +2209,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 172: return ClassJobCategory(
             id: 172,
-            name: "WHM BLM SMN SCH AST RDM SGE",
+            name: "WHM BLM SMN SCH AST RDM SGE PCT",
             classJobs: [
                 ClassJob(id: 24),
                 ClassJob(id: 25),
@@ -2155,11 +2218,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 33),
                 ClassJob(id: 35),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 173: return ClassJobCategory(
             id: 173,
-            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH MCH DRK AST SAM RDM GNB DNC RPR SGE",
+            name: "PLD MNK WAR DRG BRD WHM BLM SMN SCH MCH DRK AST SAM RDM GNB DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -2179,11 +2243,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 174: return ClassJobCategory(
             id: 174,
-            name: "PLD MNK WAR DRG BRD NIN MCH DRK SAM GNB DNC RPR",
+            name: "PLD MNK WAR DRG BRD NIN MCH DRK SAM GNB DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 20),
@@ -2197,31 +2263,34 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 175: return ClassJobCategory(
             id: 175,
-            name: "BLM SMN RDM",
+            name: "BLM SMN RDM PCT",
             classJobs: [
                 ClassJob(id: 25),
                 ClassJob(id: 27),
                 ClassJob(id: 35),
+                ClassJob(id: 42),
             ]
         )
         case 176: return ClassJobCategory(
             id: 176,
-            name: "MNK DRG NIN SAM RPR",
+            name: "MNK DRG NIN SAM RPR VPR",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
                 ClassJob(id: 30),
                 ClassJob(id: 34),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 177: return ClassJobCategory(
             id: 177,
-            name: "MNK DRG BRD NIN MCH SAM DNC RPR",
+            name: "MNK DRG BRD NIN MCH SAM DNC RPR VPR",
             classJobs: [
                 ClassJob(id: 20),
                 ClassJob(id: 22),
@@ -2231,11 +2300,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 34),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 178: return ClassJobCategory(
             id: 178,
-            name: "PLD WAR BLM SMN DRK RDM GNB",
+            name: "PLD WAR BLM SMN DRK RDM GNB PCT",
             classJobs: [
                 ClassJob(id: 19),
                 ClassJob(id: 21),
@@ -2244,11 +2314,12 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 32),
                 ClassJob(id: 35),
                 ClassJob(id: 37),
+                ClassJob(id: 42),
             ]
         )
         case 179: return ClassJobCategory(
             id: 179,
-            name: "WHM SMN SCH AST RDM SGE",
+            name: "WHM SMN SCH AST RDM SGE PCT",
             classJobs: [
                 ClassJob(id: 24),
                 ClassJob(id: 27),
@@ -2256,6 +2327,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 33),
                 ClassJob(id: 35),
                 ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         case 180: return ClassJobCategory(
@@ -2301,6 +2373,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 30),
                 ClassJob(id: 34),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
             ]
         )
         case 189: return ClassJobCategory(
@@ -2319,6 +2392,7 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 25),
                 ClassJob(id: 27),
                 ClassJob(id: 35),
+                ClassJob(id: 42),
             ]
         )
         case 191: return ClassJobCategory(
@@ -2378,11 +2452,13 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 193: return ClassJobCategory(
             id: 193,
-            name: "PGL LNC ARC ROG CNJ THM ACN MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE",
+            name: "PGL LNC ARC ROG CNJ THM ACN MNK DRG BRD WHM BLM SMN SCH NIN MCH AST SAM RDM DNC RPR SGE VPR PCT",
             classJobs: [
                 ClassJob(id: 2),
                 ClassJob(id: 4),
@@ -2406,6 +2482,8 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 38),
                 ClassJob(id: 39),
                 ClassJob(id: 40),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
             ]
         )
         case 194: return ClassJobCategory(
@@ -2427,7 +2505,7 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 195: return ClassJobCategory(
             id: 195,
-            name: "GLA MRD PGL LNC ARC ROG THM ACN PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR",
+            name: "GLA MRD PGL LNC ARC ROG THM ACN PLD MNK WAR DRG BRD BLM SMN NIN MCH DRK SAM RDM GNB DNC RPR VPR PCT",
             classJobs: [
                 ClassJob(id: 1),
                 ClassJob(id: 2),
@@ -2452,9 +2530,55 @@ struct ClassJobCategory: Codable, Equatable {
                 ClassJob(id: 37),
                 ClassJob(id: 38),
                 ClassJob(id: 39),
+                ClassJob(id: 41),
+                ClassJob(id: 42),
+            ]
+        )
+        case 196: return ClassJobCategory(
+            id: 196,
+            name: "VPR",
+            classJobs: [
+                ClassJob(id: 41),
+            ]
+        )
+        case 197: return ClassJobCategory(
+            id: 197,
+            name: "PCT",
+            classJobs: [
+                ClassJob(id: 42),
+            ]
+        )
+        case 198: return ClassJobCategory(
+            id: 198,
+            name: "THM BLM ACN SMN RDM PCT",
+            classJobs: [
+                ClassJob(id: 7),
+                ClassJob(id: 25),
+                ClassJob(id: 26),
+                ClassJob(id: 27),
+                ClassJob(id: 35),
+                ClassJob(id: 42),
+            ]
+        )
+        case 199: return ClassJobCategory(
+            id: 199,
+            name: "CNJ THM WHM BLM ACN SMN SCH AST RDM SGE PCT",
+            classJobs: [
+                ClassJob(id: 6),
+                ClassJob(id: 7),
+                ClassJob(id: 24),
+                ClassJob(id: 25),
+                ClassJob(id: 26),
+                ClassJob(id: 27),
+                ClassJob(id: 28),
+                ClassJob(id: 33),
+                ClassJob(id: 35),
+                ClassJob(id: 40),
+                ClassJob(id: 42),
             ]
         )
         default: return ClassJobCategory(id: 0, name: "Unknown", classJobs: [])
         }
     }
+
 }

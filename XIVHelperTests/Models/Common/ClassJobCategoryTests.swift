@@ -20,7 +20,7 @@ final class ClassJobCategoryTests: XCTestCase {
         classJobCategory = ClassJobCategory(id: 1)
         XCTAssertEqual(classJobCategory.name, "All Classes")
         XCTAssertEqual(classJobCategory.id, 1)
-        XCTAssertEqual(classJobCategory.classJobs.count, 41)
+        XCTAssertEqual(classJobCategory.classJobs.count, 43)
     }
 
     /// Initializing a ClassJobCategory returns the expected ClassJobs and matching abbreviations.
@@ -43,12 +43,39 @@ final class ClassJobCategoryTests: XCTestCase {
         /// Initialize with a broader name.
         classJobCategory = ClassJobCategory(id: 35)
         XCTAssertEqual(classJobCategory.name, "Disciples of the Land or Hand")
-        let expected: [ClassJob] = [
+        var expected: [ClassJob] = [
             // Disciples of the Hand
             "CRP", "BSM", "ARM", "GSM", "LTW", "WVR", "ALC", "CUL",
             // Disciples of the Land
             "MIN", "BTN", "FSH",
         ].map { ClassJob(acronym: $0) }
         XCTAssertEqual(classJobCategory.classJobs.count, expected.count)
+
+        /// Test Dawntrail examples.
+        /// Various jobs, including Viper.
+        classJobCategory = ClassJobCategory(id: 103)
+        XCTAssertEqual(classJobCategory.name, "ROG NIN VPR")
+        expected = [
+            "ROG", "NIN", "VPR"
+        ].map { ClassJob(acronym: $0) }
+        XCTAssertEqual(classJobCategory.classJobs.count, expected.count)
+
+        /// Various jobs, including Pictomancer.
+        classJobCategory = ClassJobCategory(id: 116)
+        XCTAssertEqual(classJobCategory.name, "THM ACN BLM SMN RDM BLU PCT")
+        expected = [
+            "THM", "ACN", "BLM", "SMN", "RDM", "BLU", "PCT"
+        ].map { ClassJob(acronym: $0) }
+        XCTAssertEqual(classJobCategory.classJobs.count, expected.count)
+
+        /// Viper only.
+        classJobCategory = ClassJobCategory(id: 196)
+        XCTAssertEqual(classJobCategory.name, "VPR")
+        XCTAssertEqual(classJobCategory.classJobs, [ClassJob(id: 41)])
+
+        /// Pictomancer only.
+        classJobCategory = ClassJobCategory(id: 197)
+        XCTAssertEqual(classJobCategory.name, "PCT")
+        XCTAssertEqual(classJobCategory.classJobs, [ClassJob(id: 42)])
     }
 }

@@ -33,6 +33,17 @@ final class ClassJobTests: XCTestCase {
         XCTAssertEqual(classJob.id, 0)
         XCTAssertEqual(classJob.name, "Adventurer")
         XCTAssertEqual(classJob.abbreviation, "ADV")
+
+        /// Test Dawntrail classes.
+        classJob = ClassJob(acronym: "VPR")
+        XCTAssertEqual(classJob.id, 41)
+        XCTAssertEqual(classJob.name, "Viper")
+        XCTAssertEqual(classJob.abbreviation, "VPR")
+
+        classJob = ClassJob(acronym: "PCT")
+        XCTAssertEqual(classJob.id, 42)
+        XCTAssertEqual(classJob.name, "Pictomancer")
+        XCTAssertEqual(classJob.abbreviation, "PCT")
     }
 
     /// An `AllClassJob` enum initializes a `ClassJob` correctly.
@@ -42,6 +53,17 @@ final class ClassJobTests: XCTestCase {
         XCTAssertEqual(classJob.id, 24)
         XCTAssertEqual(classJob.name, "White Mage")
         XCTAssertEqual(classJob.abbreviation, "WHM")
+
+        /// Test Dawntrail classes.
+        classJob = ClassJob(classJob: .vpr)
+        XCTAssertEqual(classJob.id, 41)
+        XCTAssertEqual(classJob.name, "Viper")
+        XCTAssertEqual(classJob.abbreviation, "VPR")
+
+        classJob = ClassJob(classJob: .pct)
+        XCTAssertEqual(classJob.id, 42)
+        XCTAssertEqual(classJob.name, "Pictomancer")
+        XCTAssertEqual(classJob.abbreviation, "PCT")
     }
 
     /// A known ID initializes a `ClassJob` correctly.
@@ -57,5 +79,16 @@ final class ClassJobTests: XCTestCase {
         XCTAssertEqual(classJob.id, 0)
         XCTAssertEqual(classJob.name, "Adventurer")
         XCTAssertEqual(classJob.abbreviation, "ADV")
+
+        /// Test Dawntrail classes.
+        classJob = ClassJob(id: 41)
+        XCTAssertEqual(classJob.id, 41)
+        XCTAssertEqual(classJob.name, "Viper")
+        XCTAssertEqual(classJob.abbreviation, "VPR")
+
+        classJob = ClassJob(id: 42)
+        XCTAssertEqual(classJob.id, 42)
+        XCTAssertEqual(classJob.name, "Pictomancer")
+        XCTAssertEqual(classJob.abbreviation, "PCT")
     }
 }

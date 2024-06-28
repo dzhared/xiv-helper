@@ -1041,12 +1041,12 @@ struct Patch: Codable, Equatable {
             banner: "None",
             ex: true,
             release: 1638525600,
-            en: "Patch 6.0",
-            de: "Patch 6.0",
-            ja: "Patch 6.0",
-            fr: "Patch 6.0",
-            ko: "Patch 6.0",
-            zh: "Patch 6.0",
+            en: "Patch 6.0: Endwalker",
+            de: "Patch 6.0: Endwalker",
+            ja: "Patch 6.0: Endwalker",
+            fr: "Patch 6.0: Endwalker",
+            ko: "Patch 6.0: Endwalker",
+            zh: "Patch 6.0: Endwalker",
             version: "6.0"
         )
         case 78: return Patch(
@@ -1269,6 +1269,19 @@ struct Patch: Codable, Equatable {
             ko: "Patch 6.58",
             zh: "Patch 6.58",
             version: "6.58"
+        )
+        case 95: return Patch(
+            id: 95,
+            banner: "None",
+            ex: true,
+            release: 1719565205,
+            en: "Patch 7.0: Dawntrail",
+            de: "Patch 7.0: Dawntrail",
+            ja: "Patch 7.0: Dawntrail",
+            fr: "Patch 7.0: Dawntrail",
+            ko: "Patch 7.0: Dawntrail",
+            zh: "Patch 7.0: Dawntrail",
+            version: "7.0"
         )
         default: return Patch(
             id: 2,

@@ -110,4 +110,6 @@ final class RecipeTests: XCTestCase {
         XCTAssertEqual(retrieved.suggestedCraftsmanship, recipe.suggestedCraftsmanship)
         XCTAssertEqual(retrieved.yields, recipe.yields)
     }
+
+    // TODO: Unit test to catch any missing icons instead of manually searching JSON
 }

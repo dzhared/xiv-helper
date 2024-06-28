@@ -103,7 +103,7 @@ struct SearchView: View {
                     // Search results, depending on search type defined with picker
                     switch settings.searchType {
                     case .items, .gathering:
-                        if items.isEmpty && !debouncer.searchText.isEmpty {
+                        if sortedItems.isEmpty && !debouncer.searchText.isEmpty {
                             Text(AppStrings.Search.noResults)
                         } else if items.isEmpty {
                             Button(AppStrings.Search.searchButton) {
@@ -119,7 +119,7 @@ struct SearchView: View {
                             }
                         }
                     case .recipes:
-                        if recipes.isEmpty && !debouncer.searchText.isEmpty {
+                        if sortedRecipes.isEmpty && !debouncer.searchText.isEmpty {
                             Text(AppStrings.Search.noResults)
                         } else if recipes.isEmpty {
                             Button(AppStrings.Search.searchButton) {
