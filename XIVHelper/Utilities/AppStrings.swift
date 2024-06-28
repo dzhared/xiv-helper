@@ -25,6 +25,10 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
         static let creditsTeamcraftURL = "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
         static let creditsXIVAPI = "Item Icons from XIVAPI"
         static let creditsXIVAPIURL = "https://xivapi.com/"
+        static let dawntrail = "Dawntrail"
+        static let dawntrailShow = "Show Dawntrail Content"
+        static let dawntrailWarningTitle = "Dawntrail Update"
+        static let dawntrailWarning = "Welcome to XIV Helper! This version adds Dawntrail content. If you want to avoid seeing this content, you can disable Dawntrail content in the Info menu."
         static let legal = "XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game and news content shown in the app is owned by Square Enix, and the use of such content is permitted only for non-commercial purposes, in accordance with the Materials Usage License, as specified on the Final Fantasy XIV website.\n\n© SQUARE ENIX CO., LTD. All Rights Reserved."
         static let privacyPolicyURL = "https://sites.google.com/view/xivhelper-privacypolicy"
     }

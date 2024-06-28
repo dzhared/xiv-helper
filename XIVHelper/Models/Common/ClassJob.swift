@@ -86,7 +86,7 @@ struct ClassJob: Codable, Equatable {
         case "RPR": return ClassJob(id: 39, name: "Reaper", abbreviation: "RPR")
         case "SGE": return ClassJob(id: 40, name: "Sage", abbreviation: "SGE")
         case "VPR": return ClassJob(id: 41, name: "Viper", abbreviation: "VPR") // TODO: (Dawntrail)
-        case "PIC": return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PIC") // TODO: (Dawntrail)
+        case "PCT": return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PIC") // TODO: (Dawntrail)
         default: return ClassJob(id: 0, name: "Adventurer", abbreviation: "ADV")
         }
     }
@@ -135,7 +135,7 @@ struct ClassJob: Codable, Equatable {
         case 39: return ClassJob(id: 39, name: "Reaper", abbreviation: "RPR")
         case 40: return ClassJob(id: 40, name: "Sage", abbreviation: "SGE")
         case 41: return ClassJob(id: 41, name: "Viper", abbreviation: "VPR") // TODO: (Dawntrail)
-        case 42: return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PIC") // TODO: (Dawntrail)
+        case 42: return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PCT") // TODO: (Dawntrail)
         default: return ClassJob(id: 0, name: "Adventurer", abbreviation: "ADV")
         }
     }

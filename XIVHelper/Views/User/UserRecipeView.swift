@@ -15,6 +15,9 @@ struct UserRecipeView: View {
     /// Whether the deletion confirmation dialog is showing.
     @State private var isShowingConfirmationDialog = false
 
+    /// Whether the alert is showing.
+    @State private var isShowingAlert = false
+
     /// Whether the sort options dialog is showing.
     @State private var isShowingSortOptions = true
 
@@ -88,6 +91,29 @@ struct UserRecipeView: View {
                 }
             }
 
+            // Dawntrail intro/warning
+            .onAppear {
+                if !settings.dawntrailHasSeenWarning {
+                    isShowingAlert = true
+                    settings.dawntrailHasSeenWarning = true
+                }
+            }
+            .alert(
+                AppStrings.Info.dawntrailWarningTitle,
+                isPresented: $isShowingAlert
+            ) {
+                Button {
+                    settings.selectedTab = 3
+                } label: {
+                    Text("Go to Settings")
+                }
+                Button(role: .cancel) { } label: {
+                    Text("Got it!")
+                }
+            } message: {
+                Text(AppStrings.Info.dawntrailWarning)
+            }
+
             // Deletion confirmation dialog
             .confirmationDialog(
                 AppStrings.User.deletionConfirmation,
@@ -118,6 +144,7 @@ struct UserRecipeView: View {
                             Text("Descending")
                                 .tag(false)
                         }
+                        Toggle(AppStrings.Info.dawntrailShow, isOn: $settings.dawntrailEnabled)
                     } label: {
                         Label("Sort", systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)

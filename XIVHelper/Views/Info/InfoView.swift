@@ -3,13 +3,24 @@ import SwiftUI
 /// Displays info about the app, as well as necessary credits, legal, and contact information.
 struct InfoScreen: View {
 
+    // MARK: Properties
+
+    /// The shared settings manager instance.
+    @ObservedObject var settings: SettingsManager = .shared
+
     // MARK: Body
 
     var body: some View {
         NavigationStack {
             List {
                 // About text
-                Text(AppStrings.Info.about)
+                Section {
+                    Text(AppStrings.Info.about)
+                }
+                // Dawntrail content toggle
+                Section {
+                    Toggle(AppStrings.Info.dawntrailShow, isOn: $settings.dawntrailEnabled)
+                }
                 Section {
                     // Credits
                     NavigationLink(destination: List {
