@@ -35,7 +35,7 @@ final class SwiftDataTests: XCTestCase {
     @MainActor func testAllItems() throws {
         let descriptor = FetchDescriptor<Item>()
         items = try container.mainContext.fetch(descriptor)
-        XCTAssertEqual(items.count, 38_970)
+        XCTAssertEqual(items.count, 41_064)
         for item in items {
             let _ = ItemDetailView(itemID: item.id)
             let _ = ItemDetailView(item: item)
@@ -47,7 +47,7 @@ final class SwiftDataTests: XCTestCase {
     @MainActor func testAllRecipes() throws {
         let descriptor = FetchDescriptor<Recipe>()
         recipes = try container.mainContext.fetch(descriptor)
-        XCTAssertEqual(recipes.count, 10_851)
+        XCTAssertEqual(recipes.count, 11_605)
         for recipe in recipes {
             let _ = RecipeDetailView(recipe: recipe)
             let _ = RecipeDetailView(recipeID: recipe.id)
