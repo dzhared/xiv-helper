@@ -1,4 +1,4 @@
-from json_writing import load_json_file
+from json_writing import clean_html, load_json_file
 
 nodes_json = load_json_file('nodes.json')
 nodes_database_pages_json = load_json_file('nodes-database-pages.json')
@@ -35,12 +35,12 @@ def parse_nodes():
                 },
                 'hiddenItems': nodes_json.get(key, {}).get('hiddenItems', []),
                 'name': {
-                    'en': n.get('en'),
-                    'ja': n.get('ja', ''),
-                    'de': n.get('de', ''),
-                    'fr': n.get('fr', ''),
-                    'ko': n.get('ko', ''),
-                    'zh': n.get('zh', '')
+                    'en': clean_html(n.get('en')),
+                    'ja': clean_html(n.get('ja', '')),
+                    'de': clean_html(n.get('de', '')),
+                    'fr': clean_html(n.get('fr', '')),
+                    'ko': clean_html(n.get('ko', '')),
+                    'zh': clean_html(n.get('zh', ''))
                 },
                 'patch': int(n.get('patch', 2))
             }

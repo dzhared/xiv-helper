@@ -32,6 +32,16 @@ for key in items_database_pages_json.keys():
         'zh': clean_html(html_desc.get('zh', '')),
     }
 
+    retrieved_name = i.get('name')
+    name = {
+        'en': clean_html(retrieved_name.get('en', '')),
+        'ja': clean_html(retrieved_name.get('ja', '')),
+        'de': clean_html(retrieved_name.get('de', '')),
+        'fr': clean_html(retrieved_name.get('fr', '')),
+        'ko': clean_html(retrieved_name.get('ko', '')),
+        'zh': clean_html(retrieved_name.get('zh', '')),
+    }
+
     # The URL for the image, in higher resolution
     icon = str(i.get('icon', '/i/000000/000033.png')).replace('.png', '_hr1.png')
 
@@ -87,10 +97,10 @@ for key in items_database_pages_json.keys():
             'amount': l.get('amount'),
             'lvl': l.get('lvl'),
             'name': {
-                'en': leve_data.get('en', ''),
-                'ja': leve_data.get('ja', ''),
-                'de': leve_data.get('de', ''),
-                'fr': leve_data.get('fr', '')
+                'en': clean_html(leve_data.get('en', '')),
+                'ja': clean_html(leve_data.get('ja', '')),
+                'de': clean_html(leve_data.get('de', '')),
+                'fr': clean_html(leve_data.get('fr', ''))
             },
             'classJob': l.get('classJob')
         }
@@ -101,7 +111,7 @@ for key in items_database_pages_json.keys():
         'id': i.get('id'),
 
         # Localized name of item
-        'name': i.get('name'),
+        'name': name,
 
         # Bonuses for the item, typically food or potions, if applicable
         # - ID: The BaseParam ID of the bonus TODO: Rename `id`
@@ -134,7 +144,6 @@ for key in items_database_pages_json.keys():
         'classJobCategoryId': i.get('cjc', None),
 
         # Localized description of item, includes EN, JA, DE, FR, KO, ZH
-        # NOTE: Contains some HTML formatting, may need to add parsing
         'desc': desc,
 
         # Items that result from desynthesis, mostly for fish TODO

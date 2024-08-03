@@ -79,6 +79,9 @@
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
 		7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */; };
 		7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */; };
+		7FB2E26B2C5EF8B800720B28 /* xivhelper-2.3.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FB2E2642C5EF5D100720B28 /* xivhelper-2.3.0.store-wal */; };
+		7FB2E26C2C5EF8B800720B28 /* xivhelper-2.3.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FB2E2632C5EF5D100720B28 /* xivhelper-2.3.0.store */; };
+		7FB2E26D2C5EF8B800720B28 /* xivhelper-2.3.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FB2E2622C5EF5D100720B28 /* xivhelper-2.3.0.store-shm */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -191,6 +194,9 @@
 		7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store"; sourceTree = "<group>"; };
 		7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListBuilder.swift; sourceTree = "<group>"; };
 		7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListBuilderTests.swift; sourceTree = "<group>"; };
+		7FB2E2622C5EF5D100720B28 /* xivhelper-2.3.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.3.0.store-shm"; sourceTree = "<group>"; };
+		7FB2E2632C5EF5D100720B28 /* xivhelper-2.3.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.3.0.store"; sourceTree = "<group>"; };
+		7FB2E2642C5EF5D100720B28 /* xivhelper-2.3.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.3.0.store-wal"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
 		7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 				7FACC0C12C2A3AC3009B84C8 /* xivhelper-2.0.0 */,
 				7FACC0C22C2A3AD2009B84C8 /* xivhelper-2.1.0 */,
 				7F41CDD22C2EFAB20040C80D /* xivhelper-2.2.0 */,
+				7FB2E2612C5EF59300720B28 /* xivhelper-2.3.0 */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -573,6 +580,16 @@
 			path = "xivhelper-2.1.0";
 			sourceTree = "<group>";
 		};
+		7FB2E2612C5EF59300720B28 /* xivhelper-2.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7FB2E2632C5EF5D100720B28 /* xivhelper-2.3.0.store */,
+				7FB2E2622C5EF5D100720B28 /* xivhelper-2.3.0.store-shm */,
+				7FB2E2642C5EF5D100720B28 /* xivhelper-2.3.0.store-wal */,
+			);
+			path = "xivhelper-2.3.0";
+			sourceTree = "<group>";
+		};
 		7FF52B0A29BFA21C00B7BF58 = {
 			isa = PBXGroup;
 			children = (
@@ -736,6 +753,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F41CDD32C2EFAB20040C80D /* xivhelper-2.2.0.store in Resources */,
+				7FB2E26B2C5EF8B800720B28 /* xivhelper-2.3.0.store-wal in Resources */,
+				7FB2E26C2C5EF8B800720B28 /* xivhelper-2.3.0.store in Resources */,
+				7FB2E26D2C5EF8B800720B28 /* xivhelper-2.3.0.store-shm in Resources */,
 				7F41CDD52C2EFAB20040C80D /* xivhelper-2.2.0.store-wal in Resources */,
 				7F41CDD42C2EFAB20040C80D /* xivhelper-2.2.0.store-shm in Resources */,
 				7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */,
