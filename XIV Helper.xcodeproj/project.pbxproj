@@ -77,6 +77,8 @@
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
+		7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */; };
+		7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1D29BFA21D00B7BF58 /* Preview Assets.xcassets */; };
@@ -187,6 +189,8 @@
 		7FACC0BB2C2A3863009B84C8 /* xivhelper-2.1.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store-shm"; sourceTree = "<group>"; };
 		7FACC0BC2C2A3863009B84C8 /* xivhelper-2.1.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.1.0.store-wal"; sourceTree = "<group>"; };
 		7FACC0BD2C2A3864009B84C8 /* xivhelper-2.1.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.1.0.store"; sourceTree = "<group>"; };
+		7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListBuilder.swift; sourceTree = "<group>"; };
+		7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListBuilderTests.swift; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
 		7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 				7F1D44002C20ECE4003F2AAB /* AppStrings.swift */,
 				7F7155092C22546200F458B4 /* CompoundPredicate.swift */,
 				7F1D44012C20ECE4003F2AAB /* Debouncer.swift */,
+				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F1D44022C20ECE4003F2AAB /* Locale.swift */,
 				7F1D44032C20ECE4003F2AAB /* ScalingImage.swift */,
 				7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */,
@@ -499,6 +504,7 @@
 		7FA846202C2409240043006D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -785,6 +791,7 @@
 				7FFEF6372C28AE4100E0A733 /* ItemTests.swift in Sources */,
 				7FFEF6322C28AE3E00E0A733 /* ItemCategoryTests.swift in Sources */,
 				7FFEF6332C28AE3E00E0A733 /* BaseParamTests.swift in Sources */,
+				7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */,
 				7FFEF6342C28AE3E00E0A733 /* ItemRecipeTests.swift in Sources */,
 				7FFEF6382C28AE4500E0A733 /* LodestoneNewsArticleTests.swift in Sources */,
 				7FFEF6392C28AE4500E0A733 /* UserRecipeTests.swift in Sources */,
@@ -807,6 +814,7 @@
 				7F1D44212C20ECE4003F2AAB /* ItemDetailView.swift in Sources */,
 				7F1D442F2C20ECE4003F2AAB /* SwiftDataAppContainer.swift in Sources */,
 				7F1D44422C20ECE4003F2AAB /* LodestoneNewsArticle.swift in Sources */,
+				7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */,
 				7F1D44372C20ECE4003F2AAB /* Bonus.swift in Sources */,
 				7F1D44362C20ECE4003F2AAB /* BaseParam.swift in Sources */,
 				7F1D44382C20ECE4003F2AAB /* ClassJob.swift in Sources */,

@@ -18,6 +18,9 @@ struct ShoppingListView: View {
     /// The ingredients needed to craft everything.
     @State var ingredients: [Ingredient] = []
 
+    /// A helper struct to create ingredients lists with only base ingredients.
+    private var ingredientsListBuilder: IngredientsListBuilder { IngredientsListBuilder(context: context) }
+
     // MARK: Body
 
     var body: some View {
@@ -34,9 +37,18 @@ struct ShoppingListView: View {
             .navigationTitle(AppStrings.Navigation.shoppingList)
             .onAppear {
                 generateShoppingList()
+                if settings.baseMaterials {
+                    ingredients = ingredientsListBuilder.buildIngredientsList(from: ingredients)
+                }
             }
             .onChange(of: settings.baseMaterials) {
-                generateShoppingList()
+                withAnimation {
+                    if settings.baseMaterials {
+                        ingredients = ingredientsListBuilder.buildIngredientsList(from: ingredients)
+                    } else {
+                        generateShoppingList()
+                    }
+                }
             }
             .toolbar {
                 // Display sort options
@@ -53,79 +65,6 @@ struct ShoppingListView: View {
     }
 
     // MARK: Private Methods
-
-    /// Whether the item can be crafted. Does not query for an actual recipe for performance.
-    private func canBeCrafted(_ itemId: Int) -> Bool {
-        let descriptor = FetchDescriptor<Recipe>(
-            predicate: #Predicate<Recipe> {
-                $0.resultId == itemId
-            }
-        )
-        let count = try? context.fetchCount(descriptor)
-        return (count ?? 0) > 0
-    }
-
-    /// Checks if an item can be crafted, and if so, returns its first `Recipe`.
-    ///
-    /// - Parameter itemId: The ID of the item to be checked.
-    /// - Returns: The first Recipe found for that item.
-    ///
-    private func getRecipeFromItemId(_ itemId: Int) -> Recipe? {
-        /// Retrieve first found recipe
-        var descriptor = FetchDescriptor<Recipe>(
-            predicate: #Predicate<Recipe> {
-                $0.resultId == itemId
-            }
-        )
-        descriptor.fetchLimit = 1
-        let fetchedRecipe = try? context.fetch(descriptor).first
-
-        /// Return optional recipe or `nil` if none was found.
-        return fetchedRecipe
-    }
-
-    /// Checks if a given array of Ingredient objects contains any items that can be crafted.
-    ///
-    /// - Returns: Whether any craftable ingredients exist.
-    ///
-    private func ingredientsContainCraftable() -> Bool {
-        for ingredient in ingredients {
-            if canBeCrafted(ingredient.id) {
-                return true
-            }
-        }
-        return false
-    }
-
-    /// Iterates through all saved ingredients,
-    private func getBaseIngredients() {
-        // Iterate while ingredients list contains craftable items
-        while ingredientsContainCraftable() {
-            // Check each ingredient, and if any are craftable, add to list
-            for ingredient in self.ingredients.filter({ canBeCrafted($0.id) }) {
-                // Factor to multiply by to reflect needed quantities
-                let ingredientQuantity = ingredient.quantity
-
-                // Remove ingredient from list
-                if let index = ingredients.firstIndex(of: ingredient) {
-                    ingredients.remove(at: index)
-                }
-
-                // Replace or update quantity
-                if let subRecipe = getRecipeFromItemId(ingredient.id) {
-                    for ingredient in subRecipe.ingredients {
-                        if let index = ingredients.firstIndex(where: { $0.id == ingredient.id }) {
-                            ingredients[index].quantity += (ingredient.quantity * ingredientQuantity)
-                        } else {
-                            var ingredientToAdd = ingredient
-                            ingredientToAdd.quantity = ingredient.quantity * ingredientQuantity
-                            ingredients.append(ingredientToAdd)
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     /// Generates a shopping list for the users and updates `ingredients`.
     private func generateShoppingList() {
@@ -146,9 +85,6 @@ struct ShoppingListView: View {
                     ingredients.append(ingredientToAdd)
                 }
             }
-        }
-        if settings.baseMaterials {
-            getBaseIngredients()
         }
     }
 }
