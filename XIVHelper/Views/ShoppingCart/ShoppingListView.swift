@@ -45,8 +45,8 @@ struct ShoppingListView: View {
             /// Iterate through ingredients for this recipe.
             for ingredient in userRecipe.recipe.ingredients {
                 /// If the ingredient exists, update its quantity. If not, add this to the list.
-                if var existingIngredient = ingredients.first(where: { $0.id == ingredient.id }) {
-                    existingIngredient.quantity += (recipeQuantity * ingredient.quantity)
+                if let index = ingredients.firstIndex(where: { $0.id == ingredient.id }) {
+                    ingredients[index].quantity += (ingredient.quantity * recipeQuantity)
                 } else {
                     var ingredientToAdd = ingredient
                     ingredientToAdd.quantity = (ingredient.quantity * recipeQuantity)
