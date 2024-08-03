@@ -69,6 +69,9 @@ class SettingsManager: ObservableObject {
                 case searchRecipeStars
             }
         }
+        enum ShoppingList: String, CaseIterable {
+            case baseMaterials
+        }
     }
 
     // MARK: Dawntrail
@@ -166,6 +169,13 @@ class SettingsManager: ObservableObject {
         searchItemTradableOnly = false
         searchItemUniqueOnly = false
     }
+
+    // MARK: Shopping List
+
+    /// Whether to show base materials for the shopping list. For instance, if there are two Iron
+    /// Ingots in the shopping list, this setting will instead replace those with the constituent
+    /// ingredients needed for the two Iron Ingots.
+    @AppStorage(Keys.ShoppingList.baseMaterials.rawValue) var baseMaterials: Bool = false
 }
 
 // MARK: - Enums
