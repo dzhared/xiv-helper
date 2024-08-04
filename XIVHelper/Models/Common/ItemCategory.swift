@@ -1,8 +1,5 @@
 import Foundation
 
-// TODO: Dawntrail
-// Probably only need to add Pictomanger's Arm and Viper's Arm, but verify
-
 /// The name of a category of item.
 struct ItemCategory: Codable {
 
@@ -137,6 +134,8 @@ struct ItemCategory: Codable {
         case 107: return LocalizedString(en: "Dancer's Arm", ja: "投擲武器", de: "Hauptwaffe der Tänzer", fr: "Arme de danseur")
         case 108: return LocalizedString(en: "Reaper's Arm", ja: "両手鎌", de: "Hauptwaffe der Schnitter", fr: "Arme de faucheur")
         case 109: return LocalizedString(en: "Sage's Arm", ja: "賢具", de: "Hauptwaffe der Weisen", fr: "Arme de sage")
+        case 110: return LocalizedString(en: "Viper's Arm", ja: "二刀流武器", de: "Hauptwaffe der Vipern", fr: "Arme de rôdeur vipère")
+        case 111: return LocalizedString(en: "Pictomancer's Arm", ja: "筆", de: "Hauptwaffe der Piktomanten", fr: "Arme de pictomancien")
         default: return LocalizedString(en: "Other", ja: "その他", de: "Anderes", fr: "Autre")
         }
     }

@@ -1,8 +1,5 @@
 import SwiftData
 
-// TODO: SwiftData
-// Figure out migration schema
-
 /// The SwiftData object to store recipes the user has saved.
 @Model class UserRecipe: Codable, Equatable {
 

@@ -265,8 +265,8 @@ enum AllClassJob: String, CaseIterable, LosslessStringConvertible {
     case dnc = "DNC"
     case rpr = "RPR"
     case sge = "SGE"
-    case vpr = "VPR" // TODO: Verify (Dawntrail)
-    case pct = "PCT" // TODO: Verify (Dawntrail)
+    case vpr = "VPR"
+    case pct = "PCT"
 
     /// Initialize from a matching string value.
     init?(_ description: String) {
@@ -417,7 +417,7 @@ enum Expansion: String, CaseIterable, LosslessStringConvertible {
     case sb = "Stormblood"          // id 36 - 57
     case shb = "Shadowbringers"     // id 58 - 76
     case ew = "Endwalker"           // id 77 - 94
-    case dt = "Dawntrail"           // TODO: id 95 onward (Dawntrail)
+    case dt = "Dawntrail"           // id 95+
 
     /// Initialize from a matching string value.
     init?(_ description: String) {

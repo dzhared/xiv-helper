@@ -1,12 +1,6 @@
 import Foundation
 import SwiftData
 
-// TODO: Dawntrail
-// Need to generate the new JSON and Store
-
-// TODO: SwiftData
-// Figure out migration schema
-
 /// An item with relevant stats and information.
 @Model class Item: Codable, Identifiable {
 

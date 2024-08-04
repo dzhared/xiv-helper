@@ -1,8 +1,5 @@
 import Foundation
 
-// TODO: Dawntrail
-// Add/verify PIC/VPR
-
 /// The possible classes/jobs available to the player.
 struct ClassJob: Codable, Equatable {
 
@@ -85,8 +82,8 @@ struct ClassJob: Codable, Equatable {
         case "DNC": return ClassJob(id: 38, name: "Dancer", abbreviation: "DNC")
         case "RPR": return ClassJob(id: 39, name: "Reaper", abbreviation: "RPR")
         case "SGE": return ClassJob(id: 40, name: "Sage", abbreviation: "SGE")
-        case "VPR": return ClassJob(id: 41, name: "Viper", abbreviation: "VPR") // TODO: (Dawntrail)
-        case "PCT": return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PCT") // TODO: (Dawntrail)
+        case "VPR": return ClassJob(id: 41, name: "Viper", abbreviation: "VPR")
+        case "PCT": return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PCT")
         default: return ClassJob(id: 0, name: "Adventurer", abbreviation: "ADV")
         }
     }
@@ -134,8 +131,8 @@ struct ClassJob: Codable, Equatable {
         case 38: return ClassJob(id: 38, name: "Dancer", abbreviation: "DNC")
         case 39: return ClassJob(id: 39, name: "Reaper", abbreviation: "RPR")
         case 40: return ClassJob(id: 40, name: "Sage", abbreviation: "SGE")
-        case 41: return ClassJob(id: 41, name: "Viper", abbreviation: "VPR") // TODO: (Dawntrail)
-        case 42: return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PCT") // TODO: (Dawntrail)
+        case 41: return ClassJob(id: 41, name: "Viper", abbreviation: "VPR")
+        case 42: return ClassJob(id: 42, name: "Pictomancer", abbreviation: "PCT")
         default: return ClassJob(id: 0, name: "Adventurer", abbreviation: "ADV")
         }
     }

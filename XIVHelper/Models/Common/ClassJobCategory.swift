@@ -1,11 +1,5 @@
 import Foundation
 
-// TODO: Dawntrail
-// Add/verify PIC/VPR
-// Update ALL of the CJCs
-
-// TODO: Off by one. GLA is initializing as ID 2 (should be 1), etc
-
 /// The category of ClassJobs available in a given context.
 struct ClassJobCategory: Codable, Equatable {
     
@@ -1147,13 +1141,14 @@ struct ClassJobCategory: Codable, Equatable {
         )
         case 102: return ClassJobCategory(
             id: 102,
-            name: "PGL ROG MNK NIN SAM",
+            name: "PGL ROG MNK NIN SAM VPR",
             classJobs: [
                 ClassJob(id: 2),
                 ClassJob(id: 20),
                 ClassJob(id: 29),
                 ClassJob(id: 30),
                 ClassJob(id: 34),
+                ClassJob(id: 41),
             ]
         )
         case 103: return ClassJobCategory(
@@ -2580,5 +2575,4 @@ struct ClassJobCategory: Codable, Equatable {
         default: return ClassJobCategory(id: 0, name: "Unknown", classJobs: [])
         }
     }
-
 }

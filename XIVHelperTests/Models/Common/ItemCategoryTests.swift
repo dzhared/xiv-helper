@@ -27,5 +27,11 @@ final class ItemCategoryTests: XCTestCase {
         /// An unknown ID returns "Other".
         itemCategory = ItemCategory(id: 1_000_000)
         XCTAssertEqual(itemCategory.name.en, "Other")
+
+        /// Dawntrail categories initialize properly.
+        itemCategory = ItemCategory(id: 110)
+        XCTAssertEqual(itemCategory.name.en, "Viper's Arm")
+        itemCategory = ItemCategory(id: 111)
+        XCTAssertEqual(itemCategory.name.en, "Pictomancer's Arm")
     }
 }

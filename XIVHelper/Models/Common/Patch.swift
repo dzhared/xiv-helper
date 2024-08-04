@@ -1,8 +1,5 @@
 import Foundation
 
-// TODO: Dawntrail
-// Probably only involves adding patch 95.
-
 /// Game update patches.
 struct Patch: Codable, Equatable {
 

@@ -36,6 +36,8 @@ final class SwiftDataTests: XCTestCase {
         let descriptor = FetchDescriptor<Item>()
         items = try container.mainContext.fetch(descriptor)
         XCTAssertEqual(items.count, 41_538)
+
+        // Rendering any ItemDetailView, either from the item or its id, does not throw an error.
         for item in items {
             let _ = ItemDetailView(itemID: item.id)
             let _ = ItemDetailView(item: item)
@@ -52,6 +54,14 @@ final class SwiftDataTests: XCTestCase {
             let _ = RecipeDetailView(recipe: recipe)
             let _ = RecipeDetailView(recipeID: recipe.id)
         }
+    }
+
+    @MainActor func testNewItems() throws {
+        let descriptor = FetchDescriptor<Item>(predicate: #Predicate<Item> { $0.id == 42818 })
+        items = try container.mainContext.fetch(descriptor)
+        let result = items.first
+        XCTAssertEqual(result?.id, 42818)
+        XCTAssertEqual(result?.name.en, "Light-heavy Breeches of Fending")
     }
 
     /// The decoded container does not include any `UserRecipe` objects by default.

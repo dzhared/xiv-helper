@@ -1,6 +1,3 @@
-
-// TODO: Verify contents of strings
-
 /// Strings used throughout the app.
 enum AppStrings {
 
