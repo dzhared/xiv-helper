@@ -61,4 +61,11 @@ struct Ingredient: Codable, Equatable {
         self.name = try container.decode(LocalizedString.self, forKey: .name)
         self.quantity = try container.decode(Int.self, forKey: .quantity)
     }
+
+    // MARK: Equatable
+
+    static func ==(lhs: Ingredient, rhs: Ingredient) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.quantity == rhs.quantity
+    }
 }

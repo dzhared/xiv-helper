@@ -24,45 +24,51 @@ final class IngredientsListBuilderTests: XCTestCase {
 
     @MainActor func testIngredientsListBuilder() {
         let ingredients: [Ingredient] = [
-            Ingredient(id: 5367, ingredientItemIcon: "/i/022000/022457_hr1.png", name: LocalizedString(en: "Elm Lumber"), quantity: 5),
-            Ingredient(id: 5277, ingredientItemIcon: "/i/022000/022007_hr1.png", name: LocalizedString(en: "Aldgoat Leather"), quantity: 5),
-            Ingredient(id: 5111, ingredientItemIcon: "/i/021000/021202_hr1.png", name: LocalizedString(en: "Iron Ore"), quantity: 15),
-            Ingredient(id: 5057, ingredientItemIcon: "/i/020000/020801_hr1.png", name: LocalizedString(en: "Iron Ingot"), quantity: 10),
-            Ingredient(id: 5, ingredientItemIcon: "/i/020000/020006_hr1.png", name: LocalizedString(en: "Earth Shard"), quantity: 5),
-            Ingredient(id: 2, ingredientItemIcon: "/i/020000/020001_hr1.png", name: LocalizedString(en: "Fire Shard"), quantity: 15),
+            // Ginseng Lumber x10
+            Ingredient(id: 44019, ingredientItemIcon: "/i/022000/022457_hr1.png", name: LocalizedString(en: "Ginseng Lumber"), quantity: 10),
+            // Enchanted High Durium Ink x10
+            Ingredient(id: 36237, ingredientItemIcon: "/i/025000/025923_hr1.png", name: LocalizedString(en: "Enchanted High Durium Ink"), quantity: 10),
+            // High Durium Sand x40
+            Ingredient(id: 36162, ingredientItemIcon: "/i/021000/021242_hr1.png", name: LocalizedString(en: "High Durium Sand"), quantity: 40),
+            // Cubus Flesh x10
+            Ingredient(id: 27799, ingredientItemIcon: "/i/025000/025156_hr1.png", name: LocalizedString(en: "Cubus Flesh"), quantity: 10),
+            // Underground Spring Water x10
+            Ingredient(id: 27782, ingredientItemIcon: "/i/022000/022678_hr1.png", name: LocalizedString(en: "Underground Spring Water"), quantity: 10),
+            // Rush Grash x20
+            Ingredient(id: 8021, ingredientItemIcon: "/i/021000/021653_hr1.png", name: LocalizedString(en: "Rush Grass"), quantity: 20),
+            // Water Crystal x80
+            Ingredient(id: 13, ingredientItemIcon: "/i/020000/020008_hr1.png", name: LocalizedString(en: "Water Crystal"), quantity: 80),
+            // Wind Crystal x40
+            Ingredient(id: 10, ingredientItemIcon: "/i/020000/020010_hr1.png", name: LocalizedString(en: "Wind Crystal"), quantity: 40),
+            // Ice Crystal x40
+            Ingredient(id: 9, ingredientItemIcon: "/i/020000/020009_hr1.png", name: LocalizedString(en: "Ice Crystal"), quantity: 40),
         ]
-        let expected: [Ingredient] = [
-            // Alumen x5
-            Ingredient(id: 5524, ingredientItemIcon: "/i/022000/022616_hr1.png", name: LocalizedString(en: "Alumen"), quantity: 5),
-            // Elm Log x15
-            Ingredient(id: 5385, ingredientItemIcon: "/i/022000/022405_hr1.png", name: LocalizedString(en: "Elm Log"), quantity: 15),
-            // Aldgoat Skin x5
-            Ingredient(id: 5296, ingredientItemIcon: "/i/021000/021814_hr1.png", name: LocalizedString(en: "Aldgoat Skin"), quantity: 5),
-            // Iron Ore x45
-            Ingredient(id: 5111, ingredientItemIcon: "/i/021000/021202_hr1.png", name: LocalizedString(en: "Iron Ore"), quantity: 45),
-            // Earth Shard x10
-            Ingredient(id: 5, ingredientItemIcon: "/i/020000/020006_hr1.png", name: LocalizedString(en: "Earth Shard"), quantity: 10),
-            // Wind Shard x5
-            Ingredient(id: 4, ingredientItemIcon: "/i/020000/020004_hr1.png", name: LocalizedString(en: "Wind Shard"), quantity: 5),
-            // Fire Shard x25
-            Ingredient(id: 2, ingredientItemIcon: "/i/020000/020001_hr1.png", name: LocalizedString(en: "Fire Shard"), quantity: 25),
+        var expected: [Ingredient] = [
+            // Ginseng Log x50
+            Ingredient(id: 44014, ingredientItemIcon: "/i/022000/022405_hr1.png", name: LocalizedString(en: "Ginseng Log"), quantity: 50),
+            // High Durium Sand x80
+            Ingredient(id: 36162, ingredientItemIcon: "/i/021000/021242_hr1.png", name: LocalizedString(en: "High Durium Sand"), quantity: 80),
+            // Cubus Flesh x20
+            Ingredient(id: 27799, ingredientItemIcon: "/i/025000/025156_hr1.png", name: LocalizedString(en: "Cubus Flesh"), quantity: 20),
+            // Underground Spring Water x20
+            Ingredient(id: 27782, ingredientItemIcon: "/i/022000/022678_hr1.png", name: LocalizedString(en: "Underground Spring Water"), quantity: 20),
+            // Rush Grass x20
+            Ingredient(id: 8021, ingredientItemIcon: "/i/021000/021653_hr1.png", name: LocalizedString(en: "Rush Grass"), quantity: 20),
+            // Water Crystal x160
+            Ingredient(id: 13, ingredientItemIcon: "/i/020000/020008_hr1.png", name: LocalizedString(en: "Water Crystal"), quantity: 160),
+            // Wind Crystal x120
+            Ingredient(id: 10, ingredientItemIcon: "/i/020000/020010_hr1.png", name: LocalizedString(en: "Wind Crystal"), quantity: 120),
+            // Ice Crystal x40
+            Ingredient(id: 9, ingredientItemIcon: "/i/020000/020009_hr1.png", name: LocalizedString(en: "Ice Crystal"), quantity: 40),
         ]
 
         // For each expected result, there is an actual result with a matching ID and quantity.
         var results = builder.buildIngredientsList(from: ingredients)
 
-        for e in expected {
-            if let index = results.firstIndex(where: {
-                $0.quantity == e.quantity &&
-                $0.id == e.id &&
-                $0.icon == e.icon &&
-                $0.name.en == e.name.en
-            }) {
-                results.remove(at: index)
-            }
-        }
+        // Sort to avoid errors due to array order mismatch
+        results.sort(by: { $0.id < $1.id })
+        expected.sort(by: { $0.id < $1.id })
 
-        // After removing all matches, results should be empty.
-        XCTAssertEqual(results, [])
+        XCTAssertEqual(results, expected)
     }
 }

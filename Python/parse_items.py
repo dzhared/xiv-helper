@@ -1,5 +1,6 @@
 from json_writing import clean_html, load_json_file, write_json_to_file
 from parse_nodes import nodes_dict
+from parse_patch import patch_dict
 
 # The primary source of item information
 items_database_pages_json = load_json_file('items-database-pages.json')
@@ -12,6 +13,9 @@ leves_json = load_json_file('leves.json')
 rarities_json = load_json_file('rarities.json')
 recipes_per_item_json = load_json_file('recipes-per-item.json')
 ui_categories_json = load_json_file('ui-categories.json')
+
+# Patch IDs by item ID
+patch_dict = patch_dict()
 
 # The array of items to be written to JSON file
 items = []
@@ -192,7 +196,7 @@ for key in items_database_pages_json.keys():
         'nodes': nodes,
 
         # ID of patch that the item was added in. `2` is initial release
-        'patchId': i.get('patch', 2),
+        'patchId': patch_dict.get(int(key)),
 
         # Price to purchase the item from an NPC shop
         'price': i.get('price', None),
