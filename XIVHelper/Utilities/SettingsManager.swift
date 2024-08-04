@@ -69,6 +69,9 @@ class SettingsManager: ObservableObject {
                 case searchRecipeStars
             }
         }
+        enum ShoppingList: String, CaseIterable {
+            case baseMaterials
+        }
     }
 
     // MARK: Dawntrail
@@ -166,6 +169,13 @@ class SettingsManager: ObservableObject {
         searchItemTradableOnly = false
         searchItemUniqueOnly = false
     }
+
+    // MARK: Shopping List
+
+    /// Whether to show base materials for the shopping list. For instance, if there are two Iron
+    /// Ingots in the shopping list, this setting will instead replace those with the constituent
+    /// ingredients needed for the two Iron Ingots.
+    @AppStorage(Keys.ShoppingList.baseMaterials.rawValue) var baseMaterials: Bool = false
 }
 
 // MARK: - Enums
@@ -255,8 +265,8 @@ enum AllClassJob: String, CaseIterable, LosslessStringConvertible {
     case dnc = "DNC"
     case rpr = "RPR"
     case sge = "SGE"
-    case vpr = "VPR" // TODO: Verify (Dawntrail)
-    case pct = "PCT" // TODO: Verify (Dawntrail)
+    case vpr = "VPR"
+    case pct = "PCT"
 
     /// Initialize from a matching string value.
     init?(_ description: String) {
@@ -407,7 +417,7 @@ enum Expansion: String, CaseIterable, LosslessStringConvertible {
     case sb = "Stormblood"          // id 36 - 57
     case shb = "Shadowbringers"     // id 58 - 76
     case ew = "Endwalker"           // id 77 - 94
-    case dt = "Dawntrail"           // TODO: id 95 onward (Dawntrail)
+    case dt = "Dawntrail"           // id 95+
 
     /// Initialize from a matching string value.
     init?(_ description: String) {

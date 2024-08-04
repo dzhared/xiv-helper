@@ -9,11 +9,17 @@ struct ShoppingListView: View {
     /// The SwiftData model context.
     @Environment(\.modelContext) private var context
 
+    /// The shared SettingsManager instance.
+    @ObservedObject private var settings = SettingsManager.shared
+
     /// The recipes the user has saved.
     @Query private var userRecipes: [UserRecipe]
 
     /// The ingredients needed to craft everything.
     @State var ingredients: [Ingredient] = []
+
+    /// A helper struct to create ingredients lists with only base ingredients.
+    private var ingredientsListBuilder: IngredientsListBuilder { IngredientsListBuilder(context: context) }
 
     // MARK: Body
 
@@ -28,15 +34,41 @@ struct ShoppingListView: View {
                     }
                 }
             }
-            .navigationTitle("Shopping List")
+            .navigationTitle(AppStrings.Navigation.shoppingList)
             .onAppear {
                 generateShoppingList()
+                if settings.baseMaterials {
+                    ingredients = ingredientsListBuilder.buildIngredientsList(from: ingredients)
+                }
+            }
+            .onChange(of: settings.baseMaterials) {
+                withAnimation {
+                    if settings.baseMaterials {
+                        ingredients = ingredientsListBuilder.buildIngredientsList(from: ingredients)
+                    } else {
+                        generateShoppingList()
+                    }
+                }
+            }
+            .toolbar {
+                // Display sort options
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Toggle(AppStrings.ShoppingList.baseMaterials, isOn: settings.$baseMaterials)
+                    } label: {
+                        Label(AppStrings.General.settings, systemImage: "ellipsis.circle")
+                            .labelStyle(.titleAndIcon)
+                    }
+                }
             }
         }
     }
 
+    // MARK: Private Methods
+
     /// Generates a shopping list for the users and updates `ingredients`.
     private func generateShoppingList() {
+        ingredients = []
         /// Iterate through user's saved recipes.
         for userRecipe in userRecipes {
             /// Determine how many items are needed for the given quantity.

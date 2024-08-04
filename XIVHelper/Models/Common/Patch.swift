@@ -1,8 +1,5 @@
 import Foundation
 
-// TODO: Dawntrail
-// Probably only involves adding patch 95.
-
 /// Game update patches.
 struct Patch: Codable, Equatable {
 
@@ -1282,6 +1279,32 @@ struct Patch: Codable, Equatable {
             ko: "Patch 7.0: Dawntrail",
             zh: "Patch 7.0: Dawntrail",
             version: "7.0"
+        )
+        case 96: return Patch(
+            id: 96,
+            banner: "None",
+            ex: true,
+            release: 1721117376,
+            en: "Patch 7.01",
+            de: "Patch 7.01",
+            ja: "Patch 7.01",
+            fr: "Patch 7.01",
+            ko: "Patch 7.01",
+            zh: "Patch 7.01",
+            version: "7.01"
+        )
+        case 97: return Patch(
+            id: 97,
+            banner: "None",
+            ex: true,
+            release: 1722326171,
+            en: "Patch 7.05",
+            de: "Patch 7.05",
+            ja: "Patch 7.05",
+            fr: "Patch 7.05",
+            ko: "Patch 7.05",
+            zh: "Patch 7.05",
+            version: "7.05"
         )
         default: return Patch(
             id: 2,

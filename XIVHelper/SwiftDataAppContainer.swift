@@ -7,7 +7,7 @@ let appContainer: ModelContainer = {
     do {
         /// Construct URL of store in bundle.
         let documentStoreName = "xivhelper"
-        let bundleStoreName = "xivhelper-2.2.0"
+        let bundleStoreName = "xivhelper-2.3.0"
         let bundleStoreExtension = "store"
         guard let bundleURL = Bundle.main.url(forResource: bundleStoreName, withExtension: bundleStoreExtension) else {
             fatalError("Failed to find \(bundleStoreName).\(bundleStoreExtension) in app bundle.")
@@ -72,7 +72,7 @@ let appContainer: ModelContainer = {
 let previewContainer: ModelContainer = {
 
     /// The name and extension of the database in the app bundle.
-    let bundleStoreName = "xivhelper-2.2.0"
+    let bundleStoreName = "xivhelper-2.3.0"
     let bundleStoreExtension = "store"
 
     do {

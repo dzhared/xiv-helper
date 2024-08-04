@@ -1,12 +1,10 @@
-
-// TODO: Verify contents of strings
-
 /// Strings used throughout the app.
 enum AppStrings {
 
     /// Strings used throughout the app.
     enum General {
         static let appName = "XIV Helper"
+        static let settings = "Settings"
     }
 
     /// Strings used in the info view tab.
@@ -38,6 +36,7 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
         static let noRecipes = "This item has no recipes."
     }
 
+    /// Strings used for navigation.
     enum Navigation {
         static let allNodes = "All Nodes"
         static let info = "About"
@@ -46,6 +45,7 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
         static let recipeDetail = "Recipe Detail"
         static let savedRecipes = "Saved Recipes"
         static let search = "Search"
+        static let shoppingList = "Shopping List"
     }
 
     /// Strings used on views pertaining to searches.
@@ -56,6 +56,12 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
         static let pickerPrompt = "Search For"
     }
 
+    /// Strings used in the Shopping List view.
+    enum ShoppingList {
+        static let baseMaterials = "Base Materials Only"
+    }
+
+    /// Strings used in the tab bar.
     enum TabView {
         static let recipes = "Recipes"
         static let search = "Search"
@@ -63,6 +69,7 @@ To generate a shopping list for all the recipes you've saved, tap the \(AppStrin
         static let info = "Info"
     }
 
+    /// Strings used in the User ("Recipes") view.
     enum User {
         static let deletionConfirmation = "Delete all saved recipes?"
         static let deleteItem = "Delete item"

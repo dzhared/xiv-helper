@@ -1,4 +1,4 @@
-from json_writing import load_json_file, write_json_to_file
+from json_writing import clean_html, load_json_file, write_json_to_file
 
 # The primary source of recipe information
 recipes_json = load_json_file('recipes.json')
@@ -29,10 +29,17 @@ for r in recipes_json:
     ingredients = []
     for i in r.get('ingredients', []):
         id = i.get('id')
+        name = items_json.get(str(id))
+        name = {
+            'en': clean_html(name.get('en', '')),
+            'de': clean_html(name.get('de', '')),
+            'ja': clean_html(name.get('ja', '')),
+            'fr': clean_html(name.get('fr', '')),
+        }
         new_ingredient = {
             'id': id,
             'ingredientItemIcon': item_icons_json.get(str(id)),
-            'name': items_json.get(str(id)),
+            'name': name,
             'quantity': i.get('amount')
         }
         ingredients.append(new_ingredient)

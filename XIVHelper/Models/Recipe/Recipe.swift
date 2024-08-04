@@ -1,12 +1,6 @@
 import Foundation
 import SwiftData
 
-// TODO: Dawntrail
-// Need to generate the new JSON and Store
-
-// TODO: SwiftData
-// Figure out migration schema
-
 /// Contains all necessary information about a recipe. Users will search these by its item name.
 @Model class Recipe: Codable, Equatable {
 
