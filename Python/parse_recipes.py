@@ -1,4 +1,5 @@
 from json_writing import clean_html, load_json_file, write_json_to_file
+from parse_patch import patch_dict
 
 # The primary source of recipe information
 recipes_json = load_json_file('recipes.json')
@@ -9,6 +10,9 @@ items_database_pages_json = load_json_file('items-database-pages.json')
 item_icons_json = load_json_file('item-icons.json')
 item_patch_json = load_json_file('item-patch.json')
 ui_categories_json = load_json_file('ui-categories.json')
+
+# Patch IDs by result item ID
+patch_dict = patch_dict()
 
 # Start with empty array of recipes
 recipes = []
@@ -55,7 +59,7 @@ for r in recipes_json:
     resultItemIcon = item_icons_json.get(str(resultId), '/i/000000/000033.png')
     resultName = items_json.get(str(resultId), None)
     resultIlvl = items_database_pages_json.get(str(resultId), None).get('ilvl', 0)
-    resultPatch = item_patch_json.get(str(resultId), 2)
+    resultPatch = patch_dict.get(resultId)
 
     # Construct the recipe as JSON
     new_recipe = {

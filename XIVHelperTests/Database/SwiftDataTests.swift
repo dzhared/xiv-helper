@@ -56,12 +56,21 @@ final class SwiftDataTests: XCTestCase {
         }
     }
 
+    /// Items from 7.01 and 7.05 are present and contain the correct information.
     @MainActor func testNewItems() throws {
-        let descriptor = FetchDescriptor<Item>(predicate: #Predicate<Item> { $0.id == 42818 })
+        var descriptor = FetchDescriptor<Item>(predicate: #Predicate<Item> { $0.id == 41112 })
         items = try container.mainContext.fetch(descriptor)
-        let result = items.first
+        var result = items.first
+        XCTAssertEqual(result?.id, 41112)
+        XCTAssertEqual(result?.name.en, "Sake Barrel")
+        XCTAssertEqual(result?.patchId, 97)
+
+        descriptor = FetchDescriptor<Item>(predicate: #Predicate<Item> { $0.id == 42818 })
+        items = try container.mainContext.fetch(descriptor)
+        result = items.first
         XCTAssertEqual(result?.id, 42818)
         XCTAssertEqual(result?.name.en, "Light-heavy Breeches of Fending")
+        XCTAssertEqual(result?.patchId, 96)
     }
 
     /// The decoded container does not include any `UserRecipe` objects by default.

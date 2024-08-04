@@ -30,8 +30,7 @@
       enableThreadSanitizer = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FA846032C23F5580043006D"
