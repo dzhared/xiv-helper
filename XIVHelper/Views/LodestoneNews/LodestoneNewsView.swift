@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// The view displaying Lodestone News articles.
-struct LodestoneNewsView: View {
+@MainActor struct LodestoneNewsView: View {
 
     // MARK: Properties
 
@@ -22,7 +22,9 @@ struct LodestoneNewsView: View {
                 if allArticles.isEmpty {
                     Button {
                         getLodestoneNews { articles in
-                            allArticles = articles
+                            Task { @MainActor in
+                                allArticles = articles
+                            }
                         }
                     } label: {
                         retryCard()
@@ -35,7 +37,9 @@ struct LodestoneNewsView: View {
         .onAppear {
             if allArticles.isEmpty {
                 getLodestoneNews { articles in
-                    allArticles = articles
+                    Task { @MainActor in
+                        allArticles = articles
+                    }
                 }
             }
         }
@@ -98,10 +102,7 @@ struct LodestoneNewsView: View {
     // MARK: Private Methods
 
     /// Attempt to load the articles.
-    private func getLodestoneNews(completion: @escaping ([LodestoneNewsArticle]) -> Void) {
-        var articles: [LodestoneNewsArticle] = []
-        completion(articles)
-
+    private func getLodestoneNews(completion: @escaping @Sendable ([LodestoneNewsArticle]) -> Void) {
         let url = URL(string: "https://na.lodestonenews.com/news/topics")!
 
         var request = URLRequest(url: url)
@@ -113,20 +114,26 @@ struct LodestoneNewsView: View {
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error {
                 print("Error while retrieving articles: \(error)")
-                articles = []
+                Task { @MainActor in
+                    completion([])
+                }
                 return
             }
             guard let data else {
                 print("Error while retrieving articles: received invalid data")
-                articles = []
+                Task { @MainActor in
+                    completion([])
+                }
                 return
             }
             do {
                 // Decode JSON into articles
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-                articles = try decoder.decode([LodestoneNewsArticle].self, from: data)
-                completion(articles)
+                let decodedArticles = try decoder.decode([LodestoneNewsArticle].self, from: data)
+                Task { @MainActor in
+                    completion(decodedArticles)
+                }
             } catch {
                 print("Error decoding JSON.")
             }

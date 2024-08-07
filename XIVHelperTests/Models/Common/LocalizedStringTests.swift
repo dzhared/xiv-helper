@@ -9,14 +9,14 @@ final class LocalizedStringTests: XCTestCase {
     var localizedString: LocalizedString!
     var settings: SettingsManager!
 
-    override func setUp() {
+    @MainActor override func setUp() {
         decoder = JSONDecoder()
         encoder = JSONEncoder()
         localizedString = LocalizedString.example
         settings = SettingsManager.shared
     }
 
-    override func tearDown() {
+    @MainActor override func tearDown() {
         decoder = nil
         encoder = nil
         localizedString = nil
@@ -25,7 +25,7 @@ final class LocalizedStringTests: XCTestCase {
     }
 
     /// LocalizedString returns different languages depending on the locale in SettingsManager.
-    func testLocalizedStringChangesWithLocale() {
+    @MainActor func testLocalizedStringChangesWithLocale() {
         /// English locale.
         settings.locale = .en
         XCTAssertEqual(localizedString.string, "Gil")

@@ -249,7 +249,7 @@ import SwiftData
 
 extension Recipe {
     /// An example recipe for convenience.
-    static let example = Recipe(
+    @MainActor static let example = Recipe(
         id: 3890,
         canHq: true,
         canQs: true,
