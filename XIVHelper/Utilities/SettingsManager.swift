@@ -4,12 +4,12 @@ import SwiftData
 // MARK: - SettingsManager
 
 /// The current settings for the app.
-class SettingsManager: ObservableObject {
+@MainActor final class SettingsManager: ObservableObject {
 
     // MARK: Initialization
 
     /// The shared instance of the settings manager.
-    static var shared = SettingsManager()
+    static let shared = SettingsManager()
 
     /// Do not initialize the settings manager.
     private init() {}

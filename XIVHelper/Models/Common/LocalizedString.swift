@@ -5,7 +5,7 @@ struct LocalizedString: Codable, Equatable {
 
     /// The singular verison of the item name. If not available in a locale, default to the English
     /// plural form.
-    var string: String {
+    @MainActor var string: String {
         switch SettingsManager.shared.locale {
             case .en: return en
             case .ja: return ja ?? en
