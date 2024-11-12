@@ -91,29 +91,6 @@ struct UserRecipeView: View {
                 }
             }
 
-            // Dawntrail intro/warning
-            .onAppear {
-                if !settings.dawntrailHasSeenWarning {
-                    isShowingAlert = true
-                    settings.dawntrailHasSeenWarning = true
-                }
-            }
-            .alert(
-                AppStrings.Info.dawntrailWarningTitle,
-                isPresented: $isShowingAlert
-            ) {
-                Button {
-                    settings.selectedTab = 3
-                } label: {
-                    Text("Go to Settings")
-                }
-                Button(role: .cancel) { } label: {
-                    Text("Got it!")
-                }
-            } message: {
-                Text(AppStrings.Info.dawntrailWarning)
-            }
-
             // Deletion confirmation dialog
             .confirmationDialog(
                 AppStrings.User.deletionConfirmation,

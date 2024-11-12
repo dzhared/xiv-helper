@@ -1306,6 +1306,19 @@ struct Patch: Codable, Equatable {
             zh: "Patch 7.05",
             version: "7.05"
         )
+        case 98: return Patch(
+            id: 98,
+            banner: "None",
+            ex: true,
+            release: 1731428229,
+            en: "Patch 7.1",
+            de: "Patch 7.1",
+            ja: "Patch 7.1",
+            fr: "Patch 7.1",
+            ko: "Patch 7.1",
+            zh: "Patch 7.1",
+            version: "7.1"
+        )
         default: return Patch(
             id: 2,
             banner: "https://i.imgur.com/ZUUtGzH.png",

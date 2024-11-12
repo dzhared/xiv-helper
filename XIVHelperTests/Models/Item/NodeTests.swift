@@ -20,7 +20,7 @@ final class NodeTests: XCTestCase {
         node = nil
     }
 
-    /// The computed properties initialize correctly. As of 2.3.0 there are none.
+    /// The computed properties initialize correctly. As of 2.4.0 there are none.
     func testNodeComputedProperties() {
         // no-op
     }

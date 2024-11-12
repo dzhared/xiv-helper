@@ -6,7 +6,7 @@ import SwiftData
 @MainActor
 let TestContainer: ModelContainer = {
     do {
-        let bundleStoreName = "xivhelper-2.3.0"
+        let bundleStoreName = "xivhelper-2.4.0"
         let bundleStoreExtension = "store"
         guard let bundleURL = Bundle.main.url(forResource: bundleStoreName, withExtension: bundleStoreExtension) else {
             fatalError("Failed to find \(bundleStoreName).\(bundleStoreExtension) in app bundle. Does it target XIVHelperTests?")
