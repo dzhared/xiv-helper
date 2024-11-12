@@ -121,7 +121,6 @@ struct UserRecipeView: View {
                             Text("Descending")
                                 .tag(false)
                         }
-                        Toggle(AppStrings.Info.dawntrailShow, isOn: $settings.dawntrailEnabled)
                     } label: {
                         Label("Sort", systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)

@@ -17,10 +17,6 @@ struct InfoScreen: View {
                 Section {
                     Text(AppStrings.Info.about)
                 }
-                // Dawntrail content toggle
-                Section {
-                    Toggle(AppStrings.Info.dawntrailShow, isOn: $settings.dawntrailEnabled)
-                }
                 Section {
                     // Credits
                     NavigationLink(destination: List {

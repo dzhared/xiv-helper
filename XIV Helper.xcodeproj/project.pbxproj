@@ -46,6 +46,7 @@
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
+		7F2B726F2CE3F1A7001EF5B3 /* xivhelper-2.4.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
@@ -750,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2B726F2CE3F1A7001EF5B3 /* xivhelper-2.4.0.store in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
