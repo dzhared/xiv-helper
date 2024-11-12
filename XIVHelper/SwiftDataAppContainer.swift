@@ -7,7 +7,7 @@ let appContainer: ModelContainer = {
     do {
         /// Construct URL of store in bundle.
         let documentStoreName = "xivhelper"
-        let bundleStoreName = "xivhelper-2.3.0"
+        let bundleStoreName = "xivhelper-2.4.0"
         let bundleStoreExtension = "store"
         guard let bundleURL = Bundle.main.url(forResource: bundleStoreName, withExtension: bundleStoreExtension) else {
             fatalError("Failed to find \(bundleStoreName).\(bundleStoreExtension) in app bundle.")
@@ -39,7 +39,7 @@ let appContainer: ModelContainer = {
             let currentUserRecipes: [UserRecipe] = try documentContainer.mainContext.fetch(descriptor)
 
             /// Attempt to update user recipes from new store.
-            let bundleConfig = ModelConfiguration(url: bundleURL, allowsSave: false)
+            let bundleConfig = ModelConfiguration(url: bundleURL, allowsSave: true)
             let bundleContainer = try ModelContainer(for: Item.self, Recipe.self, UserRecipe.self, configurations: bundleConfig)
 
             /// Make the document store equal to the bundle store. This removes all UserRecipe objects. Will add UserRecipes back in next step.
@@ -72,7 +72,7 @@ let appContainer: ModelContainer = {
 let previewContainer: ModelContainer = {
 
     /// The name and extension of the database in the app bundle.
-    let bundleStoreName = "xivhelper-2.3.0"
+    let bundleStoreName = "xivhelper-2.4.0"
     let bundleStoreExtension = "store"
 
     do {

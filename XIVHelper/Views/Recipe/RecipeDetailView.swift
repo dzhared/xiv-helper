@@ -132,6 +132,8 @@ struct RecipeDetailView: View {
 
         /// Assign the existing item's quantity to the view's state variable.
         quantitySelected = fetchedUserRecipe.quantity
+
+        try? context.save()
     }
 
     /// Updates the recipe's `quantity` in the SwiftData context.
@@ -143,10 +145,11 @@ struct RecipeDetailView: View {
         /// Attempt to update the quantity in SwiftData.
         if quantitySelected > 0 {
             fetchedUserRecipe.quantity = quantitySelected
-            try? context.save()
         } else {
             context.delete(fetchedUserRecipe)
         }
+
+        try? context.save()
     }
 
     // MARK: ViewBuilders
