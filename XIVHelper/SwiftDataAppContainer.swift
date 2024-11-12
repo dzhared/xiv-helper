@@ -82,7 +82,7 @@ let previewContainer: ModelContainer = {
         }
 
         /// Return the read-only store.
-        let config = ModelConfiguration(url: bundleURL, allowsSave: false)
+        let config = ModelConfiguration(url: bundleURL, allowsSave: true)
         let container = try ModelContainer(
             for: Item.self, Recipe.self, UserRecipe.self,
             configurations: config

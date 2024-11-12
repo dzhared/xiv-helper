@@ -74,14 +74,6 @@ import SwiftData
         }
     }
 
-    // MARK: Dawntrail
-
-    /// Whether to show Dawntrail content.
-    @AppStorage(Keys.Dawntrail.enabled.rawValue) var dawntrailEnabled: Bool = true
-
-    /// Whether the Dawntrail content warning has been shown.
-    @AppStorage(Keys.Dawntrail.hasSeenWarning.rawValue) var dawntrailHasSeenWarning: Bool = false
-
     // MARK: Item
 
     /// Whether to show the HQ version of items.
