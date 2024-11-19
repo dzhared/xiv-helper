@@ -210,7 +210,9 @@ struct SearchView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview {
     SearchView()
         .modelContainer(previewContainer)
 }
+#endif

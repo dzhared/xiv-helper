@@ -233,6 +233,7 @@ struct RecipeDetailView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Bronze Ingot") {
     RecipeDetailView(recipeID: 1)
         .modelContainer(previewContainer)
@@ -242,3 +243,4 @@ struct RecipeDetailView: View {
     RecipeDetailView(recipeID: 30968)
         .modelContainer(previewContainer)
 }
+#endif

@@ -49,7 +49,9 @@ struct SplashScreenView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Splash Screen") {
     SplashScreenView()
         .modelContainer(previewContainer)
 }
+#endif

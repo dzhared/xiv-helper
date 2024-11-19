@@ -144,6 +144,8 @@ import SwiftUI
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Lodestone News") {
     LodestoneNewsView()
 }
+#endif
