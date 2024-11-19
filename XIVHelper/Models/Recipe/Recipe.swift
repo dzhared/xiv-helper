@@ -7,16 +7,16 @@ import SwiftData
     // MARK: Properties
 
     /// The unique ID of the recipe.
-    let id: Int
+    private(set) var id: Int
 
     /// Whether the item can be High Quality.
-    let canHq: Bool
+    private(set) var canHq: Bool
 
     /// Whether the recipe can be Quick Synthesized.
-    let canQs: Bool
+    private(set) var canQs: Bool
 
     /// The Disciple of the Hand class ID for the recipe.
-    private let classJobId: Int
+    private(set) var classJobId: Int
 
     /// The Disciple of the Hand `ClassJob` for the recipe.
     var classJob: ClassJob {
@@ -24,77 +24,77 @@ import SwiftData
     }
 
     /// The Disciple of the Hand level required to unlock the recipe.
-    let classJobLevel: Int
+    private(set) var classJobLevel: Int
 
     /// The Durability for crafting the recipe.
-    let durability: Int
+    private(set) var durability: Int
 
     /// Whether the recipe is an expert recipe.
-    let expert: Bool
+    private(set) var expert: Bool
 
     /// The items and quantities needed to craft the recipe.
-    let ingredients: [Ingredient]
+    private(set) var ingredients: [Ingredient]
 
     /// The item ID of the recipe's Master recipe book, if applicable.
-    let masterbookId: Int?
+    private(set) var masterbookId: Int?
 
     /// The item icon URL of the recipe's Master recipe book, if applicable.
-    private let masterbookItemIcon: String?
+    private(set) var masterbookItemIcon: String?
 
     /// The localized name of the recipe's Master recipe book, if applicable.
-    let masterbookName: LocalizedString?
+    private(set) var masterbookName: LocalizedString?
 
     /// The progress required for the recipe.
-    let progress: Int
+    private(set) var progress: Int
 
     /// The quality of the recipe.
-    let quality: Int
+    private(set) var quality: Int
 
     /// The rlvl of the recipe.
-    let recipeLevel: Int
+    private(set) var recipeLevel: Int
 
     /// The required Control stat for the recipe.
-    let requiredControl: Int
+    private(set) var requiredControl: Int
 
     /// The required Craftsmanship stat for the recipe.
-    let requiredCraftsmanship: Int
+    private(set) var requiredCraftsmanship: Int
 
     /// The required Quality for the recipe. Very rarely used.
-    let requiredQuality: Int
+    private(set) var requiredQuality: Int
 
     /// The item ID of the resulting item.
-    let resultId: Int
+    private(set) var resultId: Int
 
     /// The Item Level of the resulting item.
-    let resultIlvl: Int
+    private(set) var resultIlvl: Int
 
     /// The resulting item. Fetched using SwiftData upon initialization.
     var resultItem: Item?
 
     /// The ItemCategory ID of the resulting item.
-    let resultItemCategory: Int
+    private(set) var resultItemCategory: Int
 
     /// The resulting item's icon URL. See below for implementation.
-    private let resultItemIcon: String
+    private(set) var resultItemIcon: String
 
     /// The resulting item's localized name.
-    let resultName: LocalizedString
+    private(set) var resultName: LocalizedString
 
     /// The resulting item's patch ID.
-    let resultPatch: Int
+    private(set) var resultPatch: Int
 
     /// The number of Stars for the recipe, if any.
-    let stars: Int
+    private(set) var stars: Int
 
     /// The suggested Control stat for the recipe.
     /// NOTE: Always 0 as of Dawntrail update.
-    let suggestedControl: Int
+    private(set) var suggestedControl: Int
 
     /// The suggested Craftsmanship stat for the recipe.
-    let suggestedCraftsmanship: Int
+    private(set) var suggestedCraftsmanship: Int
 
     /// The quantity of items yielded by the recipe.
-    let yields: Int
+    private(set) var yields: Int
 
     // MARK: Computed Properties
 
@@ -247,9 +247,10 @@ import SwiftData
 
 // MARK: Example
 
+#if DEBUG
 extension Recipe {
     /// An example recipe for convenience.
-    @MainActor static let example = Recipe(
+    nonisolated(unsafe) static let example = Recipe(
         id: 3890,
         canHq: true,
         canQs: true,
@@ -285,3 +286,4 @@ extension Recipe {
         yields: 3
     )
 }
+#endif

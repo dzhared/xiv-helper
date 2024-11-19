@@ -5,24 +5,23 @@ import SwiftData
 
 final class IngredientsListBuilderTests: XCTestCase {
 
-    var builder: IngredientsListBuilder!
     var container: ModelContainer!
 
-    @MainActor override func setUp() {
+    override func setUp() {
         super.setUp()
 
         container = previewContainer
-        builder = IngredientsListBuilder(context: container.mainContext)
     }
 
     override func tearDown() {
         super.tearDown()
 
-        builder = nil
         container = nil
     }
 
     @MainActor func testIngredientsListBuilder() {
+        let builder = IngredientsListBuilder(context: container.mainContext)
+
         let ingredients: [Ingredient] = [
             // Ginseng Lumber x10
             Ingredient(id: 44019, ingredientItemIcon: "/i/022000/022457_hr1.png", name: LocalizedString(en: "Ginseng Lumber"), quantity: 10),

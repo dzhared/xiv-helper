@@ -200,7 +200,6 @@ fileprivate func removeStoreFromDocuments(currentStoreName: String) {
 
 #if DEBUG
 /// The ModelContainer used for Xcode Previews.
-@MainActor
 let previewContainer: ModelContainer = {
 
     /// The name and extension of the database in the app bundle.

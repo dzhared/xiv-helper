@@ -12,8 +12,8 @@ final class SwiftDataTests: XCTestCase {
     var recipes: [Recipe]!
     var userRecipes: [UserRecipe]!
 
-    @MainActor override func setUp() {
-        container = TestContainer
+    override func setUp() {
+        container = testContainer
         decoder = JSONDecoder()
         encoder = JSONEncoder()
         items = []
@@ -21,7 +21,7 @@ final class SwiftDataTests: XCTestCase {
         userRecipes = []
     }
 
-    @MainActor override func tearDown() {
+    override func tearDown() {
         container = nil
         decoder = nil
         encoder = nil

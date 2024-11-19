@@ -10,14 +10,14 @@ final class UserRecipeTests: XCTestCase {
     var encoder: JSONEncoder!
     var userRecipe: UserRecipe!
 
-    @MainActor override func setUp() {
+    override func setUp() {
         container = previewContainer
         decoder = JSONDecoder()
         encoder = JSONEncoder()
         userRecipe = UserRecipe(recipe: .example, quantity: 1)
     }
 
-    @MainActor override func tearDown() {
+    override func tearDown() {
         container = nil
         decoder = nil
         encoder = nil

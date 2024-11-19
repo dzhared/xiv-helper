@@ -9,14 +9,14 @@ final class LocalizedStringTests: XCTestCase {
     var localizedString: LocalizedString!
     var settings: SettingsManager!
 
-    @MainActor override func setUp() {
+    override func setUp() {
         decoder = JSONDecoder()
         encoder = JSONEncoder()
         localizedString = LocalizedString.example
         settings = SettingsManager.shared
     }
 
-    @MainActor override func tearDown() {
+    override func tearDown() {
         decoder = nil
         encoder = nil
         localizedString = nil

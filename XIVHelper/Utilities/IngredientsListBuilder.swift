@@ -7,7 +7,7 @@ struct IngredientsListBuilder {
 
     // MARK: Methods
 
-    @MainActor func buildIngredientsList(from ingredients: [Ingredient]) -> [Ingredient] {
+    func buildIngredientsList(from ingredients: [Ingredient]) -> [Ingredient] {
         // Create modifiable array from initial ingredients array
         var newIngredients = ingredients
         // Iterate until all ingredients are base ingredients
@@ -49,7 +49,7 @@ struct IngredientsListBuilder {
     // MARK: Private Methods
 
     /// Whether the item can be crafted. Does not query for an actual recipe for performance.
-    @MainActor private func canBeCrafted(_ itemId: Int) -> Bool {
+    private func canBeCrafted(_ itemId: Int) -> Bool {
         let descriptor = FetchDescriptor<Recipe>(
             predicate: #Predicate<Recipe> {
                 $0.resultId == itemId
@@ -64,7 +64,7 @@ struct IngredientsListBuilder {
     /// - Parameter itemId: The ID of the item to be checked.
     /// - Returns: The first Recipe found for that item.
     ///
-    @MainActor private func getRecipeFromItemId(_ itemId: Int) -> Recipe? {
+    private func getRecipeFromItemId(_ itemId: Int) -> Recipe? {
         /// Retrieve first found recipe
         var descriptor = FetchDescriptor<Recipe>(
             predicate: #Predicate<Recipe> {
@@ -82,7 +82,7 @@ struct IngredientsListBuilder {
     ///
     /// - Returns: Whether any craftable ingredients exist.
     ///
-    @MainActor private func ingredientsContainCraftable(_ ingredients: [Ingredient]) -> Bool {
+    private func ingredientsContainCraftable(_ ingredients: [Ingredient]) -> Bool {
         for ingredient in ingredients {
             if canBeCrafted(ingredient.id) {
                 return true

@@ -185,7 +185,7 @@ struct RecipeDetailView: View {
     }
 
     /// ViewBuilder to create the Picker used to modify the recipe's quantity.
-    @MainActor @ViewBuilder private func quantitySelector() -> some View {
+    @ViewBuilder private func quantitySelector() -> some View {
         NavigationStack {
             Picker("Quantity", selection: $quantitySelected) {
                 ForEach(0...100, id: \.self) {
