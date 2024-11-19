@@ -106,6 +106,7 @@ struct ItemTitleBadgeView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("In Context") {
     List {
         Section {
@@ -120,3 +121,4 @@ struct ItemTitleBadgeView: View {
         }
     }
 }
+#endif

@@ -19,6 +19,7 @@ struct LeveDetailView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview {
     LeveDetailView(
         leve: Leve(
@@ -30,3 +31,4 @@ struct LeveDetailView: View {
         )
     )
 }
+#endif

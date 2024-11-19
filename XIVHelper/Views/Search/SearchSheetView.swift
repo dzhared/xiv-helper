@@ -128,6 +128,8 @@ struct SearchSheetView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     SearchSheetView()
 }
+#endif

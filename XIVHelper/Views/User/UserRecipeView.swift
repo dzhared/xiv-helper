@@ -156,7 +156,9 @@ struct UserRecipeView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview {
     UserRecipeView()
         .modelContainer(previewContainer)
 }
+#endif

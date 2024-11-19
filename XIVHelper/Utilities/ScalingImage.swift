@@ -58,6 +58,8 @@ struct ScalingImage: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview {
     ScalingImage("HQ")
 }
+#endif

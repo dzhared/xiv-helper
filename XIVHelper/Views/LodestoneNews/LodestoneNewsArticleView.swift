@@ -56,6 +56,8 @@ struct LodestoneNewsArticleView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Article") {
     LodestoneNewsArticleView(article: .example)
 }
+#endif

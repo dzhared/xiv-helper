@@ -61,6 +61,8 @@ struct InfoScreen: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview {
     InfoScreen()
 }
+#endif

@@ -210,6 +210,7 @@ struct ItemDetailView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Iron Bar") {
     ItemDetailView(itemID: 5057)
         .modelContainer(previewContainer)
@@ -234,3 +235,4 @@ struct ItemDetailView: View {
     ItemDetailView(itemID: 1614)
         .modelContainer(previewContainer)
 }
+#endif

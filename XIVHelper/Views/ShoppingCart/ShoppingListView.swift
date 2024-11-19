@@ -91,6 +91,7 @@ struct ShoppingListView: View {
 
 // MARK: Previews
 
+#if DEBUG
 #Preview("Not Empty") {
     ShoppingListView(
         ingredients: [
@@ -133,3 +134,4 @@ struct ShoppingListView: View {
     ShoppingListView(ingredients: [])
         .modelContainer(previewContainer)
 }
+#endif
