@@ -9,25 +9,37 @@ enum AppStrings {
 
     /// Strings used in the info view tab.
     enum Info {
-        static let about = 
-"""
-This app helps find and organize item and recipe information for Final Fantasy XIV. To find an item or recipe, tap the search icon on the bottom bar and search by item name. Relevant item and recipe information, including stats, bonuses, relevant leves and Grand Company turnins, and more is displayed on an item's detail page.
+        static let about = """
+        This app helps find and organize item and recipe information for Final Fantasy XIV. To \
+        find an item or recipe, tap the search icon on the bottom bar and search by item name. \
+        Relevant item and recipe information, including stats, bonuses, relevant leves and Grand \
+        Company turnins, and more is displayed on an item's detail page.
 
-To save a craftable item's recipe, tap a Recipe on its \(AppStrings.Navigation.itemDetail) screen, if any are available. This displays crafting information, including an ingredient list and relevant stats. To save a recipe, tap the + icon to add it, and choose a desired quantity to craft. This will add it to the Saved Recipes tab. Items that yield more than one are selected in multiples of their respective yield.
+        To save a craftable item's recipe, tap a Recipe on its \(AppStrings.Navigation.itemDetail) \
+        screen, if any are available. This displays crafting information, including an ingredient \
+        list and relevant stats. To save a recipe, tap the + icon to add it, and choose a desired \
+        quantity to craft. This will add it to the Saved Recipes tab. Items that yield more than \
+        one are selected in multiples of their respective yield.
 
-To generate a shopping list for all the recipes you've saved, tap the \(AppStrings.User.createShoppingList) button on the \(AppStrings.Navigation.savedRecipes) tab. This aggregates the ingredients from all the recipes with their respective quantities to make shopping for ingredients much easier.
-"""
+        To generate a shopping list for all the recipes you've saved, tap the \
+        \(AppStrings.User.createShoppingList) button on the \(AppStrings.Navigation.savedRecipes) \
+        tab. This aggregates the ingredients from all the recipes with their respective quantities \
+        to make shopping for ingredients much easier.
+        """
         static let creditsLodestoneNews = "Lodestone News API"
         static let creditsLodestoneNewsURL = "https://lodestonenews.com/"
         static let creditsTeamcraft = "Game data from FFXIV Teamcraft used under MIT License"
         static let creditsTeamcraftURL = "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
-        static let creditsXIVAPI = "Item Icons from XIVAPI"
-        static let creditsXIVAPIURL = "https://xivapi.com/"
-        static let dawntrail = "Dawntrail"
-        static let dawntrailShow = "Show Dawntrail Content"
-        static let dawntrailWarningTitle = "Dawntrail Update"
-        static let dawntrailWarning = "Welcome to XIV Helper! This version adds Dawntrail content. If you want to avoid seeing this content, you can disable Dawntrail content in the Info menu."
-        static let legal = "XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game and news content shown in the app is owned by Square Enix, and the use of such content is permitted only for non-commercial purposes, in accordance with the Materials Usage License, as specified on the Final Fantasy XIV website.\n\n© SQUARE ENIX CO., LTD. All Rights Reserved."
+        static let emailMe = "Bugs? Feedback? Contact me!"
+        static let emailMeURL = "mailto:xivhelper@pm.me"
+        static let legal = """
+        XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game \
+        and news content shown in the app is owned by Square Enix, and the use of such content is \
+        permitted only for non-commercial purposes, in accordance with the Materials Usage \
+        License, as specified on the Final Fantasy XIV website.\n\n© SQUARE ENIX CO., LTD. All \
+        Rights Reserved.
+        """
+        static let privacyPolicy = "Privacy Policy"
         static let privacyPolicyURL = "https://sites.google.com/view/xivhelper-privacypolicy"
     }
 
