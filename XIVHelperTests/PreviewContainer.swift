@@ -3,8 +3,7 @@ import SwiftData
 
 @testable import XIV_Helper
 
-@MainActor
-let TestContainer: ModelContainer = {
+let testContainer: ModelContainer = {
     do {
         let bundleStoreName = "xivhelper-2.4.0"
         let bundleStoreExtension = "store"

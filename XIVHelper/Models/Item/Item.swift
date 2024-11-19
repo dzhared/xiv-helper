@@ -7,22 +7,22 @@ import SwiftData
     // MARK: Properties
 
     /// The unique ID of the item.
-    let id: Int
+    private(set) var id: Int
 
     /// The bonuses for a consumable item, such as food or potions.
-    let bonuses: [Bonus]
+    private(set) var bonuses: [Bonus]
 
     /// Whether the item can be created using crafting.
     var canBeCrafted: Bool
 
     /// Whether the item can be equipped.
-    let canBeEquipped: Bool
+    private(set) var canBeEquipped: Bool
 
     /// Whether the item can be gathered.
-    let canBeGathered: Bool?
+    private(set) var canBeGathered: Bool?
 
     /// Whether the item can be High Quality.
-    let canBeHq: Bool
+    private(set) var canBeHq: Bool
 
     /// The `ClassJobCategory` for the item, if applicable.
     var classJobCategory: ClassJobCategory? {
@@ -33,84 +33,84 @@ import SwiftData
     }
 
     /// The ID of the ClassJobCategory. Can be used to return an array of ClassJob objects.
-    private let classJobCategoryId: Int?
+    private(set) var classJobCategoryId: Int?
 
     /// The localized description of the item. Name truncated as `description` is reserved in Swift.
-    let desc: LocalizedString
+    private(set) var desc: LocalizedString
 
     /// The Class Job level required to equip the item, if equippable.
-    let equipLevel: Int?
+    private(set) var equipLevel: Int?
 
     /// The EquipSlotCategory ID for the item, if equippable.
-    let equipSlotCategory: Int?
+    private(set) var equipSlotCategory: Int?
 
     /// The number of Grand Company seals rewarded for expert delivery. This is NOT the same as the
     /// daily supply/provisioning missions. See `supply` for details on those.
-    let gcReward: Int?
+    private(set) var gcReward: Int?
 
     /// The icon's ID, used to construct the image URL. See `iconUrl` below for actual implementation.
-    private let icon: String
+    private(set) var icon: String
 
     /// The iLvl of the item.
-    let ilvl: Int?
+    private(set) var ilvl: Int?
 
     /// For fish, the illustration shown in fishing log. See `ingameDrawingUrl` below for implementation.
-    private let ingameDrawing: String?
+    private(set) var ingameDrawing: String?
 
     /// Whether the item is a fish.
-    let isFish: Bool
+    private(set) var isFish: Bool
 
     /// Whether the item is tradable. Use `isUntradable` in practice, as the game denotes items as
     /// untradable rather than tradable.
-    private let isTradable: Bool
+    private(set) var isTradable: Bool
 
     /// Whether the item is unique, such as dungeon armor.
-    let isUnique: Bool
+    private(set) var isUnique: Bool
 
     /// The ID of the item's category, such as `40` for necklaces.
-    let itemCategory: Int
+    private(set) var itemCategory: Int
 
     /// The leves that the item can be turned in for.
-    let leves: [Leve]
+    private(set) var leves: [Leve]
 
     /// The localized name of the item.
-    let name: LocalizedString
+    private(set) var name: LocalizedString
 
     /// The nodes from which the item can be gathered.
-    let nodes: [Node]?
+    private(set) var nodes: [Node]?
 
     /// The ID of the patch that added the item. Default is `0`, initial release.
-    let patchId: Int
+    private(set) var patchId: Int
 
     /// The price in gil for the item, if available in NPC shops.
-    let price: Int?
+    private(set) var price: Int?
 
     /// The ID of the item's rarity.
-    let rarity: Int
+    private(set) var rarity: Int
 
     /// Simplified information about the recipes to make the item, if available. Default `[]`.
-    let recipes: [ItemRecipe]
+    private(set) var recipes: [ItemRecipe]
 
     /// The ID of the class that can repair the item, if applicable.
-    let repair: Int?
+    private(set) var repair: Int?
 
     /// The search category for the item. Default is `8` for "Other".
-    let searchCategory: Int
+    private(set) var searchCategory: Int
 
     /// The value in gil, if able to sell to NPC shops or retainer.
-    let sellPrice: Int?
+    private(set) var sellPrice: Int?
 
     /// The number of materia slots. Default is 0.
-    let sockets: Int
+    private(set) var sockets: Int
 
     /// The item's main stats (e.g., Block and Block rate, or Defense and Magic Defense). Default is empty array.
-    let statsMain: [Stat]
+    private(set) var statsMain: [Stat]
 
     /// The item's secondary stats (e.g., Vitality, Mind, Piety). Default is empty array.
-    let statsSecondary: [Stat]
+    private(set) var statsSecondary: [Stat]
 
     /// The Grand Company supply mission rewards, if applicable.
-    let supply: Supply?
+    private(set) var supply: Supply?
 
     /// The icon's URL, used for AsyncImage.
     var iconUrl: URL {

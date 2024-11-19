@@ -168,7 +168,6 @@
 		7F7154CE2C212FD700F458B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7154D32C212FD700F458B4 /* XIVHelperDataBuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XIVHelperDataBuilder.entitlements; sourceTree = "<group>"; };
 		7F7154D92C21312200F458B4 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		7F7155092C22546200F458B4 /* CompoundPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundPredicate.swift; sourceTree = "<group>"; };
 		7FA846042C23F5580043006D /* XIV Helper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XIV Helper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA846062C23F5580043006D /* BaseParamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParamTests.swift; sourceTree = "<group>"; };
 		7FA846102C23F85A0043006D /* BonusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusTests.swift; sourceTree = "<group>"; };
@@ -347,7 +346,6 @@
 			isa = PBXGroup;
 			children = (
 				7F1D44002C20ECE4003F2AAB /* AppStrings.swift */,
-				7F7155092C22546200F458B4 /* CompoundPredicate.swift */,
 				7F1D44012C20ECE4003F2AAB /* Debouncer.swift */,
 				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F1D44022C20ECE4003F2AAB /* Locale.swift */,
@@ -920,7 +918,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -954,7 +952,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -976,7 +974,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XIV Helper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/XIV Helper";
 			};
@@ -999,7 +997,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.XIV-Helper-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XIV Helper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/XIV Helper";
 			};
@@ -1065,6 +1063,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -1121,6 +1120,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1156,7 +1156,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1192,7 +1192,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

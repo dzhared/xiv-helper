@@ -9,7 +9,7 @@ import SwiftData
     var quantity: Int
 
     /// The recipe.
-    @Attribute(.unique) let recipe: Recipe
+    @Attribute(.unique) private(set) var recipe: Recipe
 
     // MARK: Initialization
 

@@ -10,7 +10,7 @@ final class RecipeTests: XCTestCase {
     var encoder: JSONEncoder!
     var recipe: Recipe!
 
-    @MainActor override func setUp() {
+    override func setUp() {
         container = previewContainer
         decoder = JSONDecoder()
         encoder = JSONEncoder()

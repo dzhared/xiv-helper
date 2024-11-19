@@ -67,7 +67,7 @@ struct ListBadgeView: View {
     }
 
     /// Initialize the badge with an `Item`.
-    @MainActor init(item: Item) {
+    init(item: Item) {
         self.icon = item.iconUrl
         self.name = item.name
         self.quantity = nil

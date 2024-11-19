@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// The view displaying Lodestone News articles.
-@MainActor struct LodestoneNewsView: View {
+struct LodestoneNewsView: View {
 
     // MARK: Properties
 
