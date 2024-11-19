@@ -18,12 +18,14 @@ struct InfoScreen: View {
                     Text(AppStrings.Info.about)
                 }
                 Section {
+                    Link(
+                        AppStrings.Info.emailMe,
+                        destination: URL(string: AppStrings.Info.emailMeURL)!
+                    )
+                }
+                Section {
                     // Credits
                     NavigationLink(destination: List {
-                        Link(
-                            AppStrings.Info.creditsXIVAPI,
-                            destination: URL(string: AppStrings.Info.creditsXIVAPIURL)!
-                        )
                         Link(
                             AppStrings.Info.creditsLodestoneNews,
                             destination: URL(string: AppStrings.Info.creditsLodestoneNewsURL)!
@@ -44,9 +46,10 @@ struct InfoScreen: View {
                     }
 
                     // Privacy policy
-                    Link(destination: URL(string: AppStrings.Info.privacyPolicyURL)!) {
-                        Text("Privacy Policy")
-                    }
+                    Link(
+                        AppStrings.Info.privacyPolicy,
+                        destination: URL(string: AppStrings.Info.privacyPolicyURL)!
+                    )
                 }
                 Text("Database version: \(SettingsManager.shared.currentStoreName)")
             }
