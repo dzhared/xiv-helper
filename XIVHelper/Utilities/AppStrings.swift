@@ -3,7 +3,6 @@ import SwiftUI
 
 /// Strings used throughout the app.
 enum AppStrings {
-
     /// Strings used throughout the app.
     enum General {
         static let about = String(localized: "general.about")
@@ -23,7 +22,7 @@ enum AppStrings {
         static let result = String(localized: "general.result")
         static let settings = String(localized: "general.settings")
         static let sort = String(localized: "general.sort")
-        static let textAndBoldText = NSLocalizedString("general.textAndBoldText", comment: "")
+        static let textAndBoldText = String(localized: "general.textAndBoldText")
         static let yes = String(localized: "general.yes")
     }
 
@@ -51,7 +50,7 @@ enum AppStrings {
         static let creditsLodestoneNewsURL = String(localized: "info.creditsLodestoneNewsURL")
         static let creditsTeamcraft = String(localized: "info.creditsTeamcraft")
         static let creditsTeamcraftURL = String(localized: "info.creditsTeamcraftURL")
-        static let databaseVersion = NSLocalizedString("info.databaseVersion", comment: "database version")
+        static let databaseVersion = String(localized: "info.databaseVersion")
         static let emailMe = String(localized: "info.emailMe")
         static let emailMeURL = String(localized: "info.emailMeURL")
         static let legal = String(localized: "info.legal")
@@ -61,25 +60,26 @@ enum AppStrings {
 
     /// Strings used on views pertaining to Items.
     enum Item {
-        static let allNodes = NSLocalizedString("item.allNodes", comment: "")
+        static let allNodes = String(localized: "item.allNodes")
         static let bonuses = String(localized: "item.bonuses")
-        static let canBeHQ = NSLocalizedString("item.canBeHQ", comment: "")
-        static let canBeQuickSynthesized = NSLocalizedString("item.canBeQuickSynthesized", comment: "")
+        static let canBeHQ = String(localized: "item.canBeHQ")
+        static let canBeQuickSynthesized = String(localized: "item.canBeQuickSynthesized")
         static let deleteRecipe = String(localized: "item.deleteRecipe")
-        static let grandCompanyQuantity = NSLocalizedString("item.grandCompanyQuantity", comment: "")
-        static let levelAndType = NSLocalizedString("item.levelAndType", comment: "")
-        static let locationAndCoordinates = NSLocalizedString("item.locationAndCoordinates", comment: "")
+        static let grandCompanyQuantity = String(localized: "item.grandCompanyQuantity")
+        static let levelAndType = String(localized: "item.levelAndType")
+        static let locationAndCoordinates = String(localized: "item.locationAndCoordinates")
         static let noRecipes = String(localized: "item.noRecipes")
-        static let seals = NSLocalizedString("item.seals", comment: "")
+        static let seals = String(localized: "item.seals")
         static let stats = String(localized: "item.stats")
-        static let xp = NSLocalizedString("item.xp", comment: "")
+        static let xp = String(localized: "item.xp")
     }
 
+    /// Strings used in the Lodestone News section of the app.
     enum LodestoneNews {
         static let keepReading = String(localized: "lodestoneNews.keepReading")
         static let openInWebBrowser = String(localized: "lodestoneNews.openInWebBrowser")
         static let share = String(localized: "lodestoneNews.share")
-        static let tapToLoad = NSLocalizedString("lodestoneNews.tapToLoad", comment: "")
+        static let tapToLoad = String(localized: "lodestoneNews.tapToLoad")
     }
 
     /// Strings used for navigation.

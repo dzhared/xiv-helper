@@ -74,6 +74,7 @@
 		7F7DD89F2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */; };
 		7F7DD8A02CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0D5A72CE460D40088D19C /* xivhelper-2.4.0.store-wal */; };
 		7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */; };
+		7F7DD8B22CEDA74200D7B7D8 /* AttributedString+Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */; };
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
@@ -169,6 +170,7 @@
 		7F7154D32C212FD700F458B4 /* XIVHelperDataBuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XIVHelperDataBuilder.entitlements; sourceTree = "<group>"; };
 		7F7154D92C21312200F458B4 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Markdown.swift"; sourceTree = "<group>"; };
 		7FA846042C23F5580043006D /* XIV Helper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XIV Helper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA846062C23F5580043006D /* BaseParamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParamTests.swift; sourceTree = "<group>"; };
 		7FA846102C23F85A0043006D /* BonusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusTests.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				7F1D44002C20ECE4003F2AAB /* AppStrings.swift */,
+				7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */,
 				7F1D44012C20ECE4003F2AAB /* Debouncer.swift */,
 				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F1D44022C20ECE4003F2AAB /* Locale.swift */,
@@ -842,6 +845,7 @@
 				7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */,
 				7F1D442A2C20ECE4003F2AAB /* UserRecipeView.swift in Sources */,
 				7F1D44402C20ECE4003F2AAB /* Item.swift in Sources */,
+				7F7DD8B22CEDA74200D7B7D8 /* AttributedString+Markdown.swift in Sources */,
 				7F1D44312C20ECE4003F2AAB /* Debouncer.swift in Sources */,
 				7F1D44212C20ECE4003F2AAB /* ItemDetailView.swift in Sources */,
 				7F1D442F2C20ECE4003F2AAB /* SwiftDataAppContainer.swift in Sources */,

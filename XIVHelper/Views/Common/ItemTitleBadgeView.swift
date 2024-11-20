@@ -46,7 +46,9 @@ struct ItemTitleBadgeView: View {
                 .padding(.trailing, 8)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(name.string).font(.headline)
+                    Text(name.string)
+                        .font(.headline)
+                        .fixedSize(horizontal: false, vertical: true) // Prevent truncating in List
                     if let classJobCategory {
                         Text(classJobCategory.name)
                             .font(.subheadline)

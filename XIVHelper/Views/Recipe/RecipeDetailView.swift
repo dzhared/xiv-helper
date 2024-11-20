@@ -57,11 +57,11 @@ struct RecipeDetailView: View {
                             .font(.headline)
                         }
                         VStack(alignment: .leading) {
-                            Text(String(
+                            Text(AttributedString(
                                 format: AppStrings.Item.canBeHQ,
                                 recipe.canHq ? "Can" : "Cannot"
                             ))
-                            Text(String(
+                            Text(AttributedString(
                                 format: AppStrings.Item.canBeQuickSynthesized,
                                 recipe.canQs ? "Can" : "Cannot"
                             ))

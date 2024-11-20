@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Displays info about the app, as well as necessary credits, legal, and contact information.
 struct InfoScreen: View {
