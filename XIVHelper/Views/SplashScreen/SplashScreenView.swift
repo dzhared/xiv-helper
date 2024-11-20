@@ -22,7 +22,7 @@ struct SplashScreenView: View {
         } else {
             VStack {
                 VStack(spacing: 16) {
-                    Image("SplashScreenIcon")
+                    Image(.splashScreenIcon)
                     Text(AppStrings.General.appName)
                         .font(.system(size: 48))
                         .foregroundStyle(.primary)

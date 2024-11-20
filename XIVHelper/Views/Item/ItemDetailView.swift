@@ -124,14 +124,14 @@ struct ItemDetailView: View {
                             supply.amount
                         )) {
                             HStack(spacing: 16) {
-                                ScalingImage("GCSeal")
+                                ScalingImage(.gcSeal)
                                 Text(String(
                                     format: AppStrings.Item.seals,
                                     settings.hq ? supply.sealsHq : supply.seals
                                 ))
                             }
                             HStack(spacing: 16) {
-                                ScalingImage("EXP")
+                                ScalingImage(.EXP)
                                 Text(String(
                                     format: AppStrings.Item.xp,
                                     settings.hq ? supply.xpHq : supply.xp
@@ -144,7 +144,7 @@ struct ItemDetailView: View {
                     if let gcReward = item.gcReward {
                         Section(AppStrings.General.expertDelivery) {
                             HStack(spacing: 8) {
-                                ScalingImage("GCSeal")
+                                ScalingImage(.gcSeal)
                                 Text(String(format: AppStrings.Item.seals, gcReward))
                             }
                         }

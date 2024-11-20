@@ -36,7 +36,6 @@ final class SettingsManager: ObservableObject {
         }
         enum User: String, CaseIterable {
             case userAscending
-            // TODO: Store UserRecipes here?
             case userSortMethod
         }
         enum Search: String, CaseIterable {
@@ -82,7 +81,7 @@ final class SettingsManager: ObservableObject {
     // MARK: General
 
     /// The language locale, defaulting to `en`.
-    @AppStorage(Keys.General.locale.rawValue) var locale: Locale = .en
+    @AppStorage(Keys.General.locale.rawValue) var locale: GameLocale = .en
 
     /// The name of the current database store. Updated upon instantiating new database store.
     @AppStorage(Keys.General.currentStoreName.rawValue) var currentStoreName: String = "xivhelper-2.0.0"
@@ -175,38 +174,20 @@ final class SettingsManager: ObservableObject {
 // MARK: SearchType
 
 /// The available objects the user can search for.
-enum SearchType: String, CaseIterable, LosslessStringConvertible {
-    case gathering = "Gathering"
-    case recipes = "Recipes"
-    case items = "Items"
-
-    init?(_ description: String) {
-        self.init(rawValue: description)
-    }
-
-    var description: String {
-        self.rawValue
-    }
+enum SearchType: String {
+    case gathering
+    case items
+    case recipes
 }
 
 // MARK: SortMethod
 
 /// The methods of sorting search results or items.
-enum SortMethod: String, CaseIterable, LosslessStringConvertible {
-    case alphabetical = "Alphabetical"
-    case ilvl = "Item Level"
-    case patch = "Patch"
-    case rlvl = "Recipe Level"
-
-    /// Initialize from a matching string value.
-    init?(_ description: String) {
-        self.init(rawValue: description)
-    }
-
-    /// The raw value for initialization.
-    var description: String {
-        self.rawValue
-    }
+enum SortMethod: String, CaseIterable {
+    case alphabetical
+    case ilvl
+    case patch
+    case rlvl
 }
 
 // MARK: AllClassJob

@@ -110,10 +110,14 @@ struct UserRecipeView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Menu {
                         Picker(AppStrings.User.sortMethod, selection: $settings.userSortMethod) {
-                            ForEach(SortMethod.allCases, id: \.rawValue) { method in
-                                Text(method.rawValue)
-                                    .tag(method)
-                            }
+                            Text(AppStrings.SortMethod.alphabetical)
+                                .tag(SortMethod.alphabetical)
+                            Text(AppStrings.SortMethod.ilvl)
+                                .tag(SortMethod.ilvl)
+                            Text(AppStrings.SortMethod.patch)
+                                .tag(SortMethod.patch)
+                            Text(AppStrings.SortMethod.rlvl)
+                                .tag(SortMethod.rlvl)
                         }
                         Picker(AppStrings.User.sortOrder, selection: $settings.userAscending) {
                             Text(AppStrings.Search.ascending)

@@ -84,13 +84,13 @@ struct LodestoneNewsView: View {
     /// A card to retry loading articles.
     @ViewBuilder func retryCard() -> some View {
         VStack {
-            Image("LodestoneNewsPlaceholder")
+            Image(.lodestoneNewsPlaceholder)
                 .resizable()
                 .scaledToFit()
-            Text(String(
-                format: AppStrings.LodestoneNews.tapToLoad,
-                hasLoadedArticles ? "retry loading" : "load"
-            ))
+            Text(hasLoadedArticles
+                 ? AppStrings.LodestoneNews.tapToRetry
+                 : AppStrings.LodestoneNews.tapToLoad
+            )
             .font(.headline)
             .multilineTextAlignment(.center)
             .padding()

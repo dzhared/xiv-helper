@@ -57,13 +57,13 @@ struct RecipeDetailView: View {
                             .font(.headline)
                         }
                         VStack(alignment: .leading) {
-                            Text(AttributedString(
-                                format: AppStrings.Item.canBeHQ,
-                                recipe.canHq ? "Can" : "Cannot"
+                            Text(AttributedString(format: recipe.canHq
+                                ? AppStrings.Item.canBeHQ
+                                : AppStrings.Item.cannotBeHQ
                             ))
-                            Text(AttributedString(
-                                format: AppStrings.Item.canBeQuickSynthesized,
-                                recipe.canQs ? "Can" : "Cannot"
+                            Text(AttributedString(format: recipe.canQs
+                                ? AppStrings.Item.canBeQuickSynthesized
+                                : AppStrings.Item.cannotBeQuickSynthesized
                             ))
                         }
                         ParameterGrid(recipe: recipe)

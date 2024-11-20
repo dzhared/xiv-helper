@@ -1,5 +1,5 @@
 /// The available locales, primarily for name and description purposes.
-enum Locale: String, LosslessStringConvertible {
+enum GameLocale: String, LosslessStringConvertible {
 
     /// English locale.
     case en = "English"

@@ -37,9 +37,14 @@ struct SearchSheetView: View {
                 List {
                     Section("Search Settings") {
                         Picker(AppStrings.User.sortMethod, selection: $settings.searchSortMethod) {
-                            ForEach(SortMethod.allCases, id: \.self) { type in
-                                Text(type.rawValue)
-                            }
+                            Text(AppStrings.SortMethod.alphabetical)
+                                .tag(SortMethod.alphabetical)
+                            Text(AppStrings.SortMethod.ilvl)
+                                .tag(SortMethod.ilvl)
+                            Text(AppStrings.SortMethod.patch)
+                                .tag(SortMethod.patch)
+                            Text(AppStrings.SortMethod.rlvl)
+                                .tag(SortMethod.rlvl)
                         }
                         Toggle("Case Sensitive", isOn: $settings.searchCaseSensitive)
                         Toggle("Sort Order: \(settings.searchAscending ? AppStrings.Search.ascending : AppStrings.Search.descending)", isOn: $settings.searchAscending)

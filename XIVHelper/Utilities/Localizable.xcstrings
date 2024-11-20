@@ -4,10 +4,28 @@
     "general.about" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "About"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informations"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "について"
           }
         }
       }
@@ -15,7 +33,25 @@
     "general.appName" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "XIV Helper"
@@ -26,10 +62,28 @@
     "general.confirm" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestätigen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Confirm"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認"
           }
         }
       }
@@ -37,10 +91,28 @@
     "general.description" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschreibung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Description"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "説明"
           }
         }
       }
@@ -48,10 +120,28 @@
     "general.done" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Done"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
           }
         }
       }
@@ -59,10 +149,28 @@
     "general.equipment" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausrüstung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Equipment"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Équipement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "装備"
           }
         }
       }
@@ -70,10 +178,28 @@
     "general.expansion" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erweiterung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Expansion"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extension"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拡張パッケージ"
           }
         }
       }
@@ -81,10 +207,28 @@
     "general.expertDelivery" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expertenlieferung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Expert Delivery"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Livraison experte"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エキスパート納品"
           }
         }
       }
@@ -92,10 +236,28 @@
     "general.gathering" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammeln"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gathering"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collecte"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "採集"
           }
         }
       }
@@ -103,10 +265,57 @@
     "general.ingredients" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zutaten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingredients"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingrédients"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "材料"
+          }
+        }
+      }
+    },
+    "general.items" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegenstände"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Items"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objets"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテム"
           }
         }
       }
@@ -114,10 +323,28 @@
     "general.leves" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leves"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leves"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leves"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リーヴ"
           }
         }
       }
@@ -125,10 +352,28 @@
     "general.masterRecipe" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meisterrezept"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Master Recipe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recette maître"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マスターレシピ"
           }
         }
       }
@@ -136,20 +381,56 @@
     "general.quantity" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menge"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quantity"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quantité"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数量"
           }
         }
       }
     },
     "general.recipes" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezepte"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recipes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recettes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピ"
           }
         }
       }
@@ -157,10 +438,28 @@
     "general.result" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ergebnis"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Result"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résultat"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結果"
           }
         }
       }
@@ -168,10 +467,28 @@
     "general.settings" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paramètres"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
           }
         }
       }
@@ -179,10 +496,28 @@
     "general.sort" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortieren"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sort"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trier"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "並べ替え"
           }
         }
       }
@@ -191,7 +526,25 @@
       "comment" : "Text, a colon, and bold text. Example: \"Strength: **200**\"",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@: **%2$@**"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@: **%2$@**"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ : **%2$@**"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@: **%2$@**"
@@ -202,10 +555,58 @@
     "general.yes" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oui"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はい"
+          }
+        }
+      }
+    },
+    "info.about" : {
+      "comment" : "The explanation text giving an overview of the whole app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App hilft dabei, Informationen über Gegenstände und Rezepte für Final Fantasy XIV zu finden und zu organisieren. Um einen Gegenstand oder ein Rezept zu finden, tippen Sie auf das Suchsymbol in der unteren Leiste und suchen Sie nach dem Gegenstandsnamen. Relevante Informationen zu Gegenständen und Rezepten, einschließlich Werte, Boni, relevante Leves und Abgaben für Große Gesellschaften sowie weitere Details, werden auf der Detailseite eines Gegenstands angezeigt.\n\nUm das Rezept eines herstellbaren Gegenstands zu speichern, tippen Sie im Bildschirm Gegenstanddetails auf ein Rezept, falls verfügbar. Dies zeigt Informationen zum Herstellen an, einschließlich einer Zutatenliste und relevanter Werte. Um ein Rezept zu speichern, tippen Sie auf das +-Symbol, um es hinzuzufügen, und wählen Sie die gewünschte Menge zum Herstellen aus. Dies wird im Tab Gespeicherte Rezepte hinzugefügt. Gegenstände, die mehr als einen Ertrag bringen, werden in Vielfachen ihres jeweiligen Ertrags ausgewählt.\n\nUm eine Einkaufsliste für alle gespeicherten Rezepte zu erstellen, tippen Sie auf die Schaltfläche Einkaufsliste im Tab Gespeicherte Rezepte. Dies aggregiert die Zutaten aller Rezepte mit ihren jeweiligen Mengen, um das Einkaufen von Zutaten erheblich zu erleichtern."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app helps find and organize item and recipe information for Final Fantasy XIV. To find an item or recipe, tap the search icon on the bottom bar and search by item name. Relevant item and recipe information, including stats, bonuses, relevant leves and Grand Company turnins, and more is displayed on an item's detail page.\n\nTo save a craftable item's recipe, tap a Recipe on its Item Detail screen, if any are available. This displays crafting information, including an ingredient list and relevant stats. To save a recipe, tap the + icon to add it, and choose a desired quantity to craft. This will add it to the Saved Recipes tab. Items that yield more than one are selected in multiples of their respective yield.\n\nTo generate a shopping list for all the recipes you've saved, tap the Create Shopping List button on the Saved Recipes tab. This aggregates the ingredients from all the recipes with their respective quantities to make shopping for ingredients much easier."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application aide à trouver et organiser des informations sur les objets et recettes pour Final Fantasy XIV. Pour trouver un objet ou une recette, appuyez sur l'icône de recherche dans la barre inférieure et recherchez par nom d'objet. Les informations pertinentes sur les objets et recettes, y compris les caractéristiques, bonus, leves associés et livraisons de Compagnies grandioses, ainsi que d'autres détails, sont affichées sur la page de détail d'un objet.\n\nPour enregistrer la recette d'un objet fabriquable, appuyez sur une recette dans son écran Détail de l'objet, si des recettes sont disponibles. Cela affiche les informations de fabrication, y compris une liste d'ingrédients et les caractéristiques pertinentes. Pour enregistrer une recette, appuyez sur l'icône + pour l'ajouter et choisissez une quantité souhaitée à fabriquer. Cela l'ajoutera à l'onglet Recettes enregistrées. Les objets produisant plusieurs unités sont sélectionnés par multiples de leur rendement respectif.\n\nPour générer une liste de courses pour toutes les recettes enregistrées, appuyez sur le bouton Liste de courses dans l'onglet Recettes enregistrées. Cela regroupe les ingrédients de toutes les recettes avec leurs quantités respectives pour rendre les achats d'ingrédients beaucoup plus simples."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアプリは、ファイナルファンタジーXIVのアイテムとレシピ情報を検索および整理するのに役立ちます。アイテムやレシピを見つけるには、下部バーの検索アイコンをタップし、アイテム名で検索してください。ステータス、ボーナス、関連するリーヴやグランドカンパニーへの納品など、関連するアイテムとレシピ情報がアイテムの詳細ページに表示されます。\n\nクラフト可能なアイテムのレシピを保存するには、アイテム詳細画面で利用可能なレシピをタップしてください。これにより、材料リストや関連するステータスを含むクラフト情報が表示されます。レシピを保存するには、+アイコンをタップして追加し、作成したい数量を選択します。これにより、「保存されたレシピ」タブに追加されます。一度に複数作成可能なアイテムは、それぞれの生成数に応じた倍数で選択されます。\n\n保存したすべてのレシピのショッピングリストを生成するには、保存されたレシピタブで ショッピングリストボタンをタップしてください。これにより、すべてのレシピの材料とそれぞれの数量が集計され、材料の購入が非常に簡単になります。"
           }
         }
       }
@@ -214,10 +615,28 @@
       "comment" : "The navigation link title for the Credits view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danksagungen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Credits"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crédits"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クレジット"
           }
         }
       }
@@ -226,10 +645,28 @@
       "comment" : "The name of the Lodestone News API.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API für die Nachrichten von The Lodestone"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lodestone News API"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API des actualités de The Lodestone"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「The Lodestone」ニュースAPI"
           }
         }
       }
@@ -238,7 +675,25 @@
       "comment" : "The URL to learn more about the Lodestone News API.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://lodestonenews.com/"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://lodestonenews.com/"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://lodestonenews.com/"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "https://lodestonenews.com/"
@@ -250,10 +705,28 @@
       "comment" : "Credits for Teamcraft, used for hyperlink text.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spieldaten von FFXIV Teamcraft werden unter der MIT-Lizenz verwendet."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Game data from FFXIV Teamcraft used under MIT License"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les données du jeu provenant de FFXIV Teamcraft sont utilisées sous la licence MIT."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FFXIV TeamcraftのゲームデータはMITライセンスのもとで使用されています。"
           }
         }
       }
@@ -262,7 +735,25 @@
       "comment" : "The URL for the Teamcraft GitHub repo.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
@@ -274,10 +765,28 @@
       "comment" : "The current database version (example: `xivhelper-2.4.0`)",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenbankversion: %@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Database version: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version de la base de données : %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "データベースバージョン：%@"
           }
         }
       }
@@ -286,10 +795,28 @@
       "comment" : "A message encouraging the user to contact me with any feedback.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugs? Feedback? Kontaktieren Sie mich!"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bugs? Feedback? Contact me!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Des bugs ? Des retours ? Contactez-moi !"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バグ？フィードバック？ご連絡ください！"
           }
         }
       }
@@ -298,7 +825,25 @@
       "comment" : "A mailto URL used to email me.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mailto:xivhelper@pm.me"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mailto:xivhelper@pm.me"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mailto:xivhelper@pm.me"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "mailto:xivhelper@pm.me"
@@ -310,10 +855,28 @@
       "comment" : "Legal disclaimer text.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper ist kein offizielles Produkt von Final Fantasy XIV oder Square Enix, Inc. Alle im Spiel und in den Nachrichten angezeigten Inhalte in der App sind Eigentum von Square Enix, und die Nutzung solcher Inhalte ist nur für nicht-kommerzielle Zwecke gestattet, in Übereinstimmung mit der Materials Usage License, wie auf der Final Fantasy XIV-Website angegeben.\n© SQUARE ENIX CO., LTD. Alle Rechte vorbehalten."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game and news content shown in the app is owned by Square Enix, and the use of such content is permitted only for non-commercial purposes, in accordance with the Materials Usage License, as specified on the Final Fantasy XIV website. © SQUARE ENIX CO., LTD. All Rights Reserved."
+            "value" : "XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game and news content shown in the app is owned by Square Enix, and the use of such content is permitted only for non-commercial purposes, in accordance with the Materials Usage License, as specified on the Final Fantasy XIV website.\n© SQUARE ENIX CO., LTD. All Rights Reserved."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper n'est pas un produit officiel de Final Fantasy XIV ou de Square Enix, Inc. Tout le contenu du jeu et des actualités affiché dans l'application appartient à Square Enix, et l'utilisation de ce contenu n'est autorisée qu'à des fins non commerciales, conformément à la Licence d'utilisation des matériaux, comme spécifié sur le site web de Final Fantasy XIV.\n© SQUARE ENIX CO., LTD. Tous droits réservés."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helperは、Final Fantasy XIVまたはSquare Enix, Inc.の公式製品ではありません。アプリ内に表示されるすべてのゲームおよびニュースコンテンツはSquare Enixの所有物であり、これらのコンテンツの使用は、Final Fantasy XIVウェブサイトに記載されている素材使用ライセンスに従い、非商業目的でのみ許可されています。\n© SQUARE ENIX CO., LTD. All Rights Reserved."
           }
         }
       }
@@ -322,10 +885,28 @@
       "comment" : "Hyperlink label for the Privacy Policy.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy Policy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politique de confidentialité"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシー"
           }
         }
       }
@@ -334,7 +915,25 @@
       "comment" : "URL for the Privacy Policy.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://sites.google.com/view/xivhelper-privacypolicy"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://sites.google.com/view/xivhelper-privacypolicy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://sites.google.com/view/xivhelper-privacypolicy"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "https://sites.google.com/view/xivhelper-privacypolicy"
@@ -346,10 +945,28 @@
       "comment" : "Total number of nodes at which an item can be gathered.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Knoten (%lld)"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All Nodes (%lld)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les nœuds (%lld)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてのノード（%lld）"
           }
         }
       }
@@ -358,34 +975,148 @@
       "comment" : "Bonuses provided by a given piece of equipment.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boni"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bonuses"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonus"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボーナス"
+          }
         }
       }
     },
     "item.canBeHQ" : {
-      "comment" : "Whether or not an item can be high quality. %@ to be replaced with \"Can\" or \"Cannot\". Example: \"**Can** be HQ\"",
+      "comment" : "Text indicating that an item can be High Quality.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Kann** HQ sein"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**%@** be HQ"
+            "value" : "**Can** be HQ"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Peut** être HQ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HQにできます"
           }
         }
       }
     },
     "item.canBeQuickSynthesized" : {
-      "comment" : "Whether or not an item can be quick synthesized. %@ to be replaced with \"Can\" or \"Cannot\". Example: \"**Can** be quick synthesized\"",
+      "comment" : "Text indicating that an item can be quick synthesized.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Kann** schnell synthetisiert werden"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "**%@** be quick synthesized"
+            "value" : "**Can** be quick synthesized"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Peut** être synthétisé rapidement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迅速に作成できます"
+          }
+        }
+      }
+    },
+    "item.cannotBeHQ" : {
+      "comment" : "Text indicating that an item cannot be High Quality.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Kann nicht** HQ sein"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Can’t** be HQ"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Ne peut** pas être HQ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HQにできません"
+          }
+        }
+      }
+    },
+    "item.cannotBeQuickSynthesized" : {
+      "comment" : "Text indicating that an item cannot be quick synthesized.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Kann nicht** schnell synthetisiert werden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Can’t** be quick synthesized"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Ne peut** pas être synthétisé rapidement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迅速に作成できません"
           }
         }
       }
@@ -394,10 +1125,28 @@
       "comment" : "Button text for a recipe's Delete Recipe prompt.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezept löschen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete Recipe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la recette"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピを削除"
           }
         }
       }
@@ -406,10 +1155,28 @@
       "comment" : "The quantity of an item needed for a Grand Company delivery.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Staatliche Gesellschaften (%lld erforderlich)"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grand Company (%lld Required)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grande compagnie (%lld requis)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グランドカンパニー（%lld必要）"
           }
         }
       }
@@ -418,10 +1185,28 @@
       "comment" : "The level as an integer and a string. Example: \"Level 100 BSM\" or \"Level 115 Necklace\"",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stufe %lld %@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Level %lld %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niveau %lld %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レベル%lld%@"
           }
         }
       }
@@ -430,7 +1215,25 @@
       "comment" : "The location of an item and its x/y coordinates. Example: \"Limsa Lominsa (x: 13.3, y: 15.7)\"",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (x: %2$@, y: %3$@)"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (x: %2$@, y: %3$@)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (x : %2$@, y : %3$@)"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ (x: %2$@, y: %3$@)"
@@ -442,10 +1245,28 @@
       "comment" : "A message indicating that an item does not have any crafting recipes.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Gegenstand hat keine Rezepte."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This item has no recipes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet objet n'a pas de recettes."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアイテムにはレシピがありません。"
           }
         }
       }
@@ -454,10 +1275,28 @@
       "comment" : "Quantity of Grand Company seals.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld besitzen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Seals"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sceaux"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld軍票"
           }
         }
       }
@@ -466,10 +1305,28 @@
       "comment" : "The stats for an item.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werte"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stats"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caractéristiques"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステータス"
           }
         }
       }
@@ -478,7 +1335,25 @@
       "comment" : "Quantity of experience points.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld EP"
+          }
+        },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld XP"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld PX"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld XP"
@@ -490,10 +1365,28 @@
       "comment" : "Button text prompting the user to read more.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiterlesen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keep Reading"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lire la suite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続きを読む"
           }
         }
       }
@@ -502,10 +1395,28 @@
       "comment" : "Button text prompting the user to open the article in their browser.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Webbrowser öffnen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open in Web Browser"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir dans le navigateur"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウェブブラウザで開く"
           }
         }
       }
@@ -514,22 +1425,88 @@
       "comment" : "Button text for the Share button.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teilen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有"
+          }
         }
       }
     },
     "lodestoneNews.tapToLoad" : {
-      "comment" : "Button text to either load or re-load articles.",
+      "comment" : "Button text to load articles.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippen, um Artikel zu laden"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tap to %@ articles"
+            "value" : "Tap to load articles"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez pour charger les articles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記事を読み込むにはタップしてください"
+          }
+        }
+      }
+    },
+    "lodestoneNews.tapToRetry" : {
+      "comment" : "Button text to try reloading articles.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippen, um das Laden der Artikel erneut zu versuchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to retry loading articles"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez pour réessayer de charger les articles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記事の読み込みを再試行するにはタップしてください"
           }
         }
       }
@@ -538,10 +1515,28 @@
       "comment" : "Navigation title for the About view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "About"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informations"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "について"
           }
         }
       }
@@ -550,10 +1545,28 @@
       "comment" : "Navigation title for a screen listing nodes where a gathering item is available.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Knoten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All Nodes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les nœuds"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてのノード"
           }
         }
       }
@@ -562,10 +1575,28 @@
       "comment" : "Navigation title for the Credits view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danksagungen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Credits"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crédits"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クレジット"
           }
         }
       }
@@ -574,10 +1605,28 @@
       "comment" : "Navigation title for the Item Detail view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegenstanddetails"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Item Detail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détail de l'objet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテム詳細"
           }
         }
       }
@@ -586,10 +1635,28 @@
       "comment" : "Navigation title for the Legal view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechtliches"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Légal"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法的"
           }
         }
       }
@@ -598,10 +1665,28 @@
       "comment" : "Navigation title for the Lodestone News view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nachrichten von The Lodestone"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lodestone News"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualités de The Lodestone"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「The Lodestone」ニュース"
           }
         }
       }
@@ -610,10 +1695,28 @@
       "comment" : "Navigation title for the Recipe Detail view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezeptdetails"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recipe Detail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détail de la recette"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピ詳細"
           }
         }
       }
@@ -622,10 +1725,28 @@
       "comment" : "Navigation title for the Saved Recipes view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gespeicherte Rezepte"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saved Recipes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recettes enregistrées"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存されたレシピ"
           }
         }
       }
@@ -634,10 +1755,28 @@
       "comment" : "Navigation title for the Search view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suchen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索"
           }
         }
       }
@@ -646,10 +1785,28 @@
       "comment" : "Navigation title for the Shopping List view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einkaufsliste"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shopping List"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste de courses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショッピングリスト"
           }
         }
       }
@@ -658,10 +1815,28 @@
       "comment" : "Increasing sort order. Used in multiple places.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufsteigend"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ascending"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Croissant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昇順"
           }
         }
       }
@@ -670,10 +1845,28 @@
       "comment" : "Decreasing sort order. Used in multiple places.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Absteigend"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descending"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descendant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降順"
           }
         }
       }
@@ -682,10 +1875,28 @@
       "comment" : "A message telling the user that their search yielded no results.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Ergebnisse. Bitte versuche es erneut."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No results. Please try again."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun résultat. Veuillez réessayer."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結果がありません。もう一度お試しください。"
           }
         }
       }
@@ -694,10 +1905,28 @@
       "comment" : "The picker prompt to determine what kind of item to search for.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche nach"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search For"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher pour"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索する"
           }
         }
       }
@@ -706,10 +1935,28 @@
       "comment" : "Text prompting the user to tap it to begin searching.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippen, um zu suchen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap to search."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez pour rechercher"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップして検索"
           }
         }
       }
@@ -718,10 +1965,28 @@
       "comment" : "The prompt text in the search field, probably could use a parameter though.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche nach %@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search for "
+            "value" : "Search for %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を検索"
           }
         }
       }
@@ -730,10 +1995,148 @@
       "comment" : "The name of a setting to only display base materials rather than craftable ingredients.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur Grundmaterialien"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Base Materials Only"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uniquement les matériaux de base"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基本素材のみ"
+          }
+        }
+      }
+    },
+    "sortMethod.alphabetical" : {
+      "comment" : "Picker text to sort results alphabetically.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabetisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabetical"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabétique"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アルファベット順"
+          }
+        }
+      }
+    },
+    "sortMethod.ilvl" : {
+      "comment" : "Picker text to sort results by item level (ilvl).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegenstandsstufe"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item Level"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niveau d'objet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテムレベル"
+          }
+        }
+      }
+    },
+    "sortMethod.patch" : {
+      "comment" : "Picker text to sort results by patch number.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッチ"
+          }
+        }
+      }
+    },
+    "sortMethod.rlvl" : {
+      "comment" : "Picker text to sort results by recipe level (rlvl).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezeptstufe"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Level"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niveau de recette"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピレベル"
           }
         }
       }
@@ -742,10 +2145,28 @@
       "comment" : "The tab bar name for the Info view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Info"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "情報"
           }
         }
       }
@@ -754,10 +2175,28 @@
       "comment" : "The tab bar name for the Lodestone News view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nachrichten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "News"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualités"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ニュース"
           }
         }
       }
@@ -766,10 +2205,28 @@
       "comment" : "The tab bar name for the Recipes view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezepte"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recipes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recettes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レシピ"
           }
         }
       }
@@ -778,10 +2235,28 @@
       "comment" : "The tab bar name for the Search view.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suchen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検索"
           }
         }
       }
@@ -790,10 +2265,28 @@
       "comment" : "Button prompt to create a shopping list.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einkaufsliste"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Create Shopping List"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liste de courses"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショッピングリスト"
           }
         }
       }
@@ -802,10 +2295,28 @@
       "comment" : "Delete all recipes.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles löschen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete All"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout supprimer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて削除"
           }
         }
       }
@@ -814,10 +2325,28 @@
       "comment" : "Delete an individual item.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegenstand löschen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete item"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer l'objet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテムを削除"
           }
         }
       }
@@ -826,10 +2355,28 @@
       "comment" : "Confirmation text that the user wants to delete all saved recipes.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle gespeicherten Rezepte löschen?"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete all saved recipes?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer toutes les recettes enregistrées ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存されたレシピをすべて削除しますか？"
           }
         }
       }
@@ -838,10 +2385,28 @@
       "comment" : "Text shown if the user has no recipes, prompting them to tap and search.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Rezepte hinzugefügt. Tippen Sie hier, um zum Suchbildschirm zu gelangen."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No recipes added yet. Tap here to go to the search screen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune recette ajoutée pour le moment. Appuyez ici pour accéder à l'écran de recherche."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだレシピは追加されていません。検索画面に移動するにはここをタップしてください。"
           }
         }
       }
@@ -850,10 +2415,28 @@
       "comment" : "The sort method used.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortieren nach"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sort By"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trier par"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "並べ替え"
           }
         }
       }
@@ -862,10 +2445,28 @@
       "comment" : "The order (ascending, descending) used to sort the saved recipes.",
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortierreihenfolge"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sort Order"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordre de tri"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "並べ替え順"
           }
         }
       }

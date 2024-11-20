@@ -15,6 +15,7 @@ enum AppStrings {
         static let expertDelivery = String(localized: "general.expertDelivery")
         static let gathering = String(localized: "general.gathering")
         static let ingredients = String(localized: "general.ingredients")
+        static let items = String(localized: "general.items")
         static let leves = String(localized: "general.leves")
         static let masterRecipe = String(localized: "general.masterRecipe")
         static let quantity = String(localized: "general.quantity")
@@ -28,23 +29,7 @@ enum AppStrings {
 
     /// Strings used in the info view tab.
     enum Info {
-        static let about = """
-        This app helps find and organize item and recipe information for Final Fantasy XIV. To \
-        find an item or recipe, tap the search icon on the bottom bar and search by item name. \
-        Relevant item and recipe information, including stats, bonuses, relevant leves and Grand \
-        Company turnins, and more is displayed on an item's detail page.
-
-        To save a craftable item's recipe, tap a Recipe on its \(AppStrings.Navigation.itemDetail) \
-        screen, if any are available. This displays crafting information, including an ingredient \
-        list and relevant stats. To save a recipe, tap the + icon to add it, and choose a desired \
-        quantity to craft. This will add it to the Saved Recipes tab. Items that yield more than \
-        one are selected in multiples of their respective yield.
-
-        To generate a shopping list for all the recipes you've saved, tap the \
-        \(AppStrings.User.createShoppingList) button on the \(AppStrings.Navigation.savedRecipes) \
-        tab. This aggregates the ingredients from all the recipes with their respective quantities \
-        to make shopping for ingredients much easier.
-        """
+        static let about = String(localized: "info.about")
         static let credits = String(localized: "info.credits")
         static let creditsLodestoneNews = String(localized: "info.creditsLodestoneNews")
         static let creditsLodestoneNewsURL = String(localized: "info.creditsLodestoneNewsURL")
@@ -64,6 +49,8 @@ enum AppStrings {
         static let bonuses = String(localized: "item.bonuses")
         static let canBeHQ = String(localized: "item.canBeHQ")
         static let canBeQuickSynthesized = String(localized: "item.canBeQuickSynthesized")
+        static let cannotBeHQ = String(localized: "item.cannotBeHQ")
+        static let cannotBeQuickSynthesized = String(localized: "item.cannotBeQuickSynthesized")
         static let deleteRecipe = String(localized: "item.deleteRecipe")
         static let grandCompanyQuantity = String(localized: "item.grandCompanyQuantity")
         static let levelAndType = String(localized: "item.levelAndType")
@@ -80,6 +67,7 @@ enum AppStrings {
         static let openInWebBrowser = String(localized: "lodestoneNews.openInWebBrowser")
         static let share = String(localized: "lodestoneNews.share")
         static let tapToLoad = String(localized: "lodestoneNews.tapToLoad")
+        static let tapToRetry = String(localized: "lodestoneNews.tapToRetry")
     }
 
     /// Strings used for navigation.
@@ -109,6 +97,14 @@ enum AppStrings {
     /// Strings used in the Shopping List view.
     enum ShoppingList {
         static let baseMaterials = String(localized: "shoppingList.baseMaterials")
+    }
+
+    /// Strings used when listing available sort methods.
+    enum SortMethod {
+        static let alphabetical = String(localized: "sortMethod.alphabetical")
+        static let ilvl = String(localized: "sortMethod.ilvl")
+        static let patch = String(localized: "sortMethod.patch")
+        static let rlvl = String(localized: "sortMethod.rlvl")
     }
 
     /// Strings used in the tab bar.
