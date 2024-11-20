@@ -13,7 +13,7 @@ struct LeveDetailView: View {
     // MARK: Body
 
     var body: some View {
-        Text("Hello, \(leve.name.string)!")
+        EmptyView()
     }
 }
 

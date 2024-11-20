@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Displays info about the app, as well as necessary credits, legal, and contact information.
 struct InfoScreen: View {
@@ -34,15 +35,15 @@ struct InfoScreen: View {
                             AppStrings.Info.creditsTeamcraft,
                             destination: URL(string: AppStrings.Info.creditsTeamcraftURL)!
                         )
-                    }.navigationTitle("Credits")) {
-                        Text("Credits")
+                    }.navigationTitle(AppStrings.Navigation.credits)) {
+                        Text(AppStrings.Navigation.credits)
                     }
 
                     // Legal info
                     NavigationLink(destination: List {
                         Text(AppStrings.Info.legal)
-                    }.navigationTitle("Legal")) {
-                        Text("Legal")
+                    }.navigationTitle(AppStrings.Navigation.legal)) {
+                        Text(AppStrings.Navigation.legal)
                     }
 
                     // Privacy policy
@@ -51,10 +52,10 @@ struct InfoScreen: View {
                         destination: URL(string: AppStrings.Info.privacyPolicyURL)!
                     )
                 }
-                Text("Database version: \(SettingsManager.shared.currentStoreName)")
+                Text(String(format: AppStrings.Info.databaseVersion, settings.currentStoreName))
             }
             .listStyle(.insetGrouped)
-            .navigationTitle(AppStrings.Navigation.info)
+            .navigationTitle(AppStrings.Navigation.about)
         }
     }
 }

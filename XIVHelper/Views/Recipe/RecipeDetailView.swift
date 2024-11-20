@@ -38,7 +38,7 @@ struct RecipeDetailView: View {
             if let recipe, let item = recipe.resultItem {
                 List {
                     // Primary information
-                    Section("Result") {
+                    Section(AppStrings.General.result) {
                         NavigationLink {
                             ItemDetailView(item: item)
                         } label: {
@@ -49,12 +49,22 @@ struct RecipeDetailView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 36)
-                            Text("Level \(recipe.classJobLevel) \(recipe.classJob.name)")
-                                .font(.headline)
+                            Text(String(
+                                format: AppStrings.Item.levelAndType,
+                                recipe.classJobLevel,
+                                recipe.classJob.name
+                            ))
+                            .font(.headline)
                         }
                         VStack(alignment: .leading) {
-                            Text("**Can\(recipe.canHq ? "" : "not")** be HQ")
-                            Text("**Can\(recipe.canQs ? "" : "not")** be quick synthesized")
+                            Text(String(
+                                format: AppStrings.Item.canBeHQ,
+                                recipe.canHq ? "Can" : "Cannot"
+                            ))
+                            Text(String(
+                                format: AppStrings.Item.canBeQuickSynthesized,
+                                recipe.canQs ? "Can" : "Cannot"
+                            ))
                         }
                         ParameterGrid(recipe: recipe)
                     }
@@ -62,7 +72,7 @@ struct RecipeDetailView: View {
                     // Master recipe information
                     if let name = recipe.masterbookName,
                        let icon = recipe.masterbookIcon {
-                        Section("Master Recipe") {
+                        Section(AppStrings.General.masterRecipe) {
                             ListBadgeView(
                                 icon: icon,
                                 name: name,
@@ -73,7 +83,7 @@ struct RecipeDetailView: View {
                     }
 
                     // Ingredients list
-                    Section("Ingredients") {
+                    Section(AppStrings.General.ingredients) {
                         ForEach(recipe.ingredients, id: \.id) { ingredient in
                             NavigationLink {
                                 ItemDetailView(itemID: ingredient.id)
@@ -169,7 +179,7 @@ struct RecipeDetailView: View {
             } label: {
                 HStack {
                     if quantitySelected > 0 {
-                        Text("\(displayQuantity)")
+                        Text(String(displayQuantity))
                             .bold()
                     }
                     Image(
@@ -187,12 +197,12 @@ struct RecipeDetailView: View {
     /// ViewBuilder to create the Picker used to modify the recipe's quantity.
     @ViewBuilder private func quantitySelector() -> some View {
         NavigationStack {
-            Picker("Quantity", selection: $quantitySelected) {
+            Picker(AppStrings.General.quantity, selection: $quantitySelected) {
                 ForEach(0...100, id: \.self) {
-                    Text("\($0 * displayQuantityFactor)").tag($0)
+                    Text(String($0 * displayQuantityFactor)).tag($0)
                 }
             }
-            .navigationTitle("Quantity")
+            .navigationTitle(AppStrings.General.quantity)
             .navigationBarTitleDisplayMode(.inline)
             .pickerStyle(.wheel)
             .toolbar {
@@ -202,7 +212,7 @@ struct RecipeDetailView: View {
                         updateSwiftDataQuantity()
                         isShowingQuantitySelector = false
                     } label: {
-                        Label("Delete Recipe", systemImage: "trash")
+                        Label(AppStrings.Item.deleteRecipe, systemImage: "trash")
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
@@ -210,7 +220,7 @@ struct RecipeDetailView: View {
                         updateSwiftDataQuantity()
                         isShowingQuantitySelector = false
                     } label: {
-                        Text("Confirm")
+                        Text(AppStrings.General.confirm)
                     }
                 }
             }

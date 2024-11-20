@@ -40,12 +40,12 @@ struct LodestoneNewsArticleView: View {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Spacer()
                     Link(destination: url) {
-                        Label("Open in Web Browser", systemImage: "globe")
+                        Label(AppStrings.LodestoneNews.openInWebBrowser, systemImage: "globe")
                     }
                     Spacer()
                     Spacer()
                     ShareLink(item: url) {
-                        Label("Share", systemImage: "square.and.arrow.up")
+                        Label(AppStrings.LodestoneNews.share, systemImage: "square.and.arrow.up")
                     }
                     Spacer()
                 }

@@ -36,13 +36,13 @@ struct SearchSheetView: View {
                 )
                 List {
                     Section("Search Settings") {
-                        Picker("Sort By", selection: $settings.searchSortMethod) {
+                        Picker(AppStrings.User.sortMethod, selection: $settings.searchSortMethod) {
                             ForEach(SortMethod.allCases, id: \.self) { type in
                                 Text(type.rawValue)
                             }
                         }
                         Toggle("Case Sensitive", isOn: $settings.searchCaseSensitive)
-                        Toggle("Sort Order: \(settings.searchAscending ? "Ascending" : "Descending")", isOn: $settings.searchAscending)
+                        Toggle("Sort Order: \(settings.searchAscending ? AppStrings.Search.ascending : AppStrings.Search.descending)", isOn: $settings.searchAscending)
                         VStack(alignment: .leading) {
                             Text("Number of Results: **\(settings.searchResultsLimit)**")
                             Slider(
@@ -62,7 +62,7 @@ struct SearchSheetView: View {
                         Section("Item Settings") {
                             Toggle("Can be HQ Only", isOn: $settings.searchHqOnly)
                             Toggle("Craftable Only", isOn: $settings.searchItemCraftableOnly)
-                            Picker("Expansion", selection: $settings.searchExpansion) {
+                            Picker(AppStrings.General.expansion, selection: $settings.searchExpansion) {
                                 ForEach(Expansion.allCases, id: \.rawValue) { expansion in
                                     Text(expansion.rawValue)
                                         .tag(expansion)
@@ -72,7 +72,7 @@ struct SearchSheetView: View {
                             Toggle("Tradable Only", isOn: $settings.searchItemTradableOnly)
                             Toggle("Unique Only", isOn: $settings.searchItemUniqueOnly)
                         }
-                        Section("Equipment") {
+                        Section(AppStrings.General.equipment) {
                             Toggle("Equipment Only", isOn: $settings.searchEquipmentOnly)
                             if settings.searchEquipmentOnly {
                                 Picker("Equip Class", selection: $settings.searchEquipmentClass) {
@@ -119,7 +119,7 @@ struct SearchSheetView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") {
+                    Button(AppStrings.General.done) {
                         dismiss()
                     }
                 }

@@ -61,7 +61,7 @@ struct LodestoneNewsView: View {
             VStack(alignment: .leading) {
                 Text(article.title)
                     .font(.headline)
-                Text("\(article.time.formatted(date: .abbreviated, time: .omitted))")
+                Text(article.time.formatted(date: .abbreviated, time: .omitted))
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Divider()
@@ -69,7 +69,7 @@ struct LodestoneNewsView: View {
                     .lineLimit(3)
                 Divider()
                 NavigationLink(destination: LodestoneNewsArticleView(article: article)) {
-                    Text("Keep Reading")
+                    Text(AppStrings.LodestoneNews.keepReading)
                 }
             }
             .padding([.horizontal, .bottom])
@@ -87,11 +87,14 @@ struct LodestoneNewsView: View {
             Image("LodestoneNewsPlaceholder")
                 .resizable()
                 .scaledToFit()
-            Text("Tap to \(hasLoadedArticles ? "retry loading" : "load") articles")
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .padding()
-                .padding(.bottom, 8)
+            Text(String(
+                format: AppStrings.LodestoneNews.tapToLoad,
+                hasLoadedArticles ? "retry loading" : "load"
+            ))
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            .padding()
+            .padding(.bottom, 8)
         }
         .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))

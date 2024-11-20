@@ -13,9 +13,14 @@ struct ItemNodesView: View {
                     VStack(alignment: .leading) {
                         Text(node.mapName.string)
                             .bold()
-                        Text("\(node.name.string) (x: \(String(format: "%.1f", node.x)), y: \(String(format: "%.1f", node.y)))")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                        Text(String(
+                            format: AppStrings.Item.locationAndCoordinates,
+                            node.name.string,
+                            String(format: "%.1f", node.x),
+                            String(format: "%.1f", node.y)
+                        ))
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                     }
                 }
             }

@@ -97,7 +97,7 @@ struct UserRecipeView: View {
                 isPresented: $isShowingConfirmationDialog,
                 titleVisibility: .visible
             ) {
-                Button("Yes", role: .destructive) {
+                Button(AppStrings.General.yes, role: .destructive) {
                     withAnimation {
                         try? context.delete(model: UserRecipe.self)
                     }
@@ -116,13 +116,13 @@ struct UserRecipeView: View {
                             }
                         }
                         Picker(AppStrings.User.sortOrder, selection: $settings.userAscending) {
-                            Text("Ascending")
+                            Text(AppStrings.Search.ascending)
                                 .tag(true)
-                            Text("Descending")
+                            Text(AppStrings.Search.descending)
                                 .tag(false)
                         }
                     } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                        Label(AppStrings.General.sort, systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)
                     }
                 }

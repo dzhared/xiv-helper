@@ -1,0 +1,875 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "general.about" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "general.appName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper"
+          }
+        }
+      }
+    },
+    "general.confirm" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm"
+          }
+        }
+      }
+    },
+    "general.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "general.done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "general.equipment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equipment"
+          }
+        }
+      }
+    },
+    "general.expansion" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expansion"
+          }
+        }
+      }
+    },
+    "general.expertDelivery" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expert Delivery"
+          }
+        }
+      }
+    },
+    "general.gathering" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gathering"
+          }
+        }
+      }
+    },
+    "general.ingredients" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingredients"
+          }
+        }
+      }
+    },
+    "general.leves" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leves"
+          }
+        }
+      }
+    },
+    "general.masterRecipe" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Master Recipe"
+          }
+        }
+      }
+    },
+    "general.quantity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quantity"
+          }
+        }
+      }
+    },
+    "general.recipes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes"
+          }
+        }
+      }
+    },
+    "general.result" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Result"
+          }
+        }
+      }
+    },
+    "general.settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "general.sort" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort"
+          }
+        }
+      }
+    },
+    "general.textAndBoldText" : {
+      "comment" : "Text, a colon, and bold text. Example: \"Strength: **200**\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@: **%2$@**"
+          }
+        }
+      }
+    },
+    "general.yes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        }
+      }
+    },
+    "info.credits" : {
+      "comment" : "The navigation link title for the Credits view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Credits"
+          }
+        }
+      }
+    },
+    "info.creditsLodestoneNews" : {
+      "comment" : "The name of the Lodestone News API.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lodestone News API"
+          }
+        }
+      }
+    },
+    "info.creditsLodestoneNewsURL" : {
+      "comment" : "The URL to learn more about the Lodestone News API.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://lodestonenews.com/"
+          }
+        }
+      }
+    },
+    "info.creditsTeamcraft" : {
+      "comment" : "Credits for Teamcraft, used for hyperlink text.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Game data from FFXIV Teamcraft used under MIT License"
+          }
+        }
+      }
+    },
+    "info.creditsTeamcraftURL" : {
+      "comment" : "The URL for the Teamcraft GitHub repo.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
+          }
+        }
+      }
+    },
+    "info.databaseVersion" : {
+      "comment" : "The current database version (example: `xivhelper-2.4.0`)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Database version: %@"
+          }
+        }
+      }
+    },
+    "info.emailMe" : {
+      "comment" : "A message encouraging the user to contact me with any feedback.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugs? Feedback? Contact me!"
+          }
+        }
+      }
+    },
+    "info.emailMeURL" : {
+      "comment" : "A mailto URL used to email me.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mailto:xivhelper@pm.me"
+          }
+        }
+      }
+    },
+    "info.legal" : {
+      "comment" : "Legal disclaimer text.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game and news content shown in the app is owned by Square Enix, and the use of such content is permitted only for non-commercial purposes, in accordance with the Materials Usage License, as specified on the Final Fantasy XIV website.\\n\\n© SQUARE ENIX CO., LTD. All Rights Reserved."
+          }
+        }
+      }
+    },
+    "info.privacyPolicy" : {
+      "comment" : "Hyperlink label for the Privacy Policy.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "info.privacyPolicyURL" : {
+      "comment" : "URL for the Privacy Policy.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://sites.google.com/view/xivhelper-privacypolicy"
+          }
+        }
+      }
+    },
+    "item.allNodes" : {
+      "comment" : "Total number of nodes at which an item can be gathered.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Nodes (%lld)"
+          }
+        }
+      }
+    },
+    "item.bonuses" : {
+      "comment" : "Bonuses provided by a given piece of equipment.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonuses"
+          }
+        }
+      }
+    },
+    "item.canBeHQ" : {
+      "comment" : "Whether or not an item can be high quality. %@ to be replaced with \"Can\" or \"Cannot\". Example: \"**Can** be HQ\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%@** be HQ"
+          }
+        }
+      }
+    },
+    "item.canBeQuickSynthesized" : {
+      "comment" : "Whether or not an item can be quick synthesized. %@ to be replaced with \"Can\" or \"Cannot\". Example: \"**Can** be quick synthesized\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**%@** be quick synthesized"
+          }
+        }
+      }
+    },
+    "item.deleteRecipe" : {
+      "comment" : "Button text for a recipe's Delete Recipe prompt.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Recipe"
+          }
+        }
+      }
+    },
+    "item.grandCompanyQuantity" : {
+      "comment" : "The quantity of an item needed for a Grand Company delivery.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grand Company (%lld Required)"
+          }
+        }
+      }
+    },
+    "item.levelAndType" : {
+      "comment" : "The level as an integer and a string. Example: \"Level 100 BSM\" or \"Level 115 Necklace\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %lld %@"
+          }
+        }
+      }
+    },
+    "item.locationAndCoordinates" : {
+      "comment" : "The location of an item and its x/y coordinates. Example: \"Limsa Lominsa (x: 13.3, y: 15.7)\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (x: %2$@, y: %3$@)"
+          }
+        }
+      }
+    },
+    "item.noRecipes" : {
+      "comment" : "A message indicating that an item does not have any crafting recipes.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This item has no recipes."
+          }
+        }
+      }
+    },
+    "item.seals" : {
+      "comment" : "Quantity of Grand Company seals.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Seals"
+          }
+        }
+      }
+    },
+    "item.stats" : {
+      "comment" : "The stats for an item.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stats"
+          }
+        }
+      }
+    },
+    "item.xp" : {
+      "comment" : "Quantity of experience points.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld XP"
+          }
+        }
+      }
+    },
+    "lodestoneNews.keepReading" : {
+      "comment" : "Button text prompting the user to read more.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep Reading"
+          }
+        }
+      }
+    },
+    "lodestoneNews.openInWebBrowser" : {
+      "comment" : "Button text prompting the user to open the article in their browser.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in Web Browser"
+          }
+        }
+      }
+    },
+    "lodestoneNews.share" : {
+      "comment" : "Button text for the Share button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
+          }
+        }
+      }
+    },
+    "lodestoneNews.tapToLoad" : {
+      "comment" : "Button text to either load or re-load articles.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to %@ articles"
+          }
+        }
+      }
+    },
+    "navigation.about" : {
+      "comment" : "Navigation title for the About view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "navigation.allNodes" : {
+      "comment" : "Navigation title for a screen listing nodes where a gathering item is available.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Nodes"
+          }
+        }
+      }
+    },
+    "navigation.credits" : {
+      "comment" : "Navigation title for the Credits view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Credits"
+          }
+        }
+      }
+    },
+    "navigation.itemDetail" : {
+      "comment" : "Navigation title for the Item Detail view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item Detail"
+          }
+        }
+      }
+    },
+    "navigation.legal" : {
+      "comment" : "Navigation title for the Legal view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legal"
+          }
+        }
+      }
+    },
+    "navigation.lodestoneNews" : {
+      "comment" : "Navigation title for the Lodestone News view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lodestone News"
+          }
+        }
+      }
+    },
+    "navigation.recipeDetail" : {
+      "comment" : "Navigation title for the Recipe Detail view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipe Detail"
+          }
+        }
+      }
+    },
+    "navigation.savedRecipes" : {
+      "comment" : "Navigation title for the Saved Recipes view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved Recipes"
+          }
+        }
+      }
+    },
+    "navigation.search" : {
+      "comment" : "Navigation title for the Search view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
+    "navigation.shoppingList" : {
+      "comment" : "Navigation title for the Shopping List view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shopping List"
+          }
+        }
+      }
+    },
+    "search.ascending" : {
+      "comment" : "Increasing sort order. Used in multiple places.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ascending"
+          }
+        }
+      }
+    },
+    "search.descending" : {
+      "comment" : "Decreasing sort order. Used in multiple places.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descending"
+          }
+        }
+      }
+    },
+    "search.noResults" : {
+      "comment" : "A message telling the user that their search yielded no results.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No results. Please try again."
+          }
+        }
+      }
+    },
+    "search.pickerPrompt" : {
+      "comment" : "The picker prompt to determine what kind of item to search for.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search For"
+          }
+        }
+      }
+    },
+    "search.searchButton" : {
+      "comment" : "Text prompting the user to tap it to begin searching.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to search."
+          }
+        }
+      }
+    },
+    "search.searchFieldPrompt" : {
+      "comment" : "The prompt text in the search field, probably could use a parameter though.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search for "
+          }
+        }
+      }
+    },
+    "shoppingList.baseMaterials" : {
+      "comment" : "The name of a setting to only display base materials rather than craftable ingredients.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Base Materials Only"
+          }
+        }
+      }
+    },
+    "tabView.info" : {
+      "comment" : "The tab bar name for the Info view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "tabView.news" : {
+      "comment" : "The tab bar name for the Lodestone News view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "News"
+          }
+        }
+      }
+    },
+    "tabView.recipes" : {
+      "comment" : "The tab bar name for the Recipes view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes"
+          }
+        }
+      }
+    },
+    "tabView.search" : {
+      "comment" : "The tab bar name for the Search view.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
+    "user.createShoppingList" : {
+      "comment" : "Button prompt to create a shopping list.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Shopping List"
+          }
+        }
+      }
+    },
+    "user.deleteAll" : {
+      "comment" : "Delete all recipes.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete All"
+          }
+        }
+      }
+    },
+    "user.deleteItem" : {
+      "comment" : "Delete an individual item.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete item"
+          }
+        }
+      }
+    },
+    "user.deletionConfirmation" : {
+      "comment" : "Confirmation text that the user wants to delete all saved recipes.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all saved recipes?"
+          }
+        }
+      }
+    },
+    "user.noRecipes" : {
+      "comment" : "Text shown if the user has no recipes, prompting them to tap and search.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No recipes added yet. Tap here to go to the search screen."
+          }
+        }
+      }
+    },
+    "user.sortMethod" : {
+      "comment" : "The sort method used.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort By"
+          }
+        }
+      }
+    },
+    "user.sortOrder" : {
+      "comment" : "The order (ascending, descending) used to sort the saved recipes.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort Order"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

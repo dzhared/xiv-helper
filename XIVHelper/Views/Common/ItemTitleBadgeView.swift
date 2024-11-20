@@ -52,9 +52,13 @@ struct ItemTitleBadgeView: View {
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
-                    Text("Level \(ilvl) \(itemCategory.name.string)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    Text(String(
+                        format: AppStrings.Item.levelAndType,
+                        ilvl,
+                        itemCategory.name.string
+                    ))
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
                 }
             }
             if let patch {

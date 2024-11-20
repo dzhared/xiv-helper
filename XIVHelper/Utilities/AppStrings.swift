@@ -1,10 +1,30 @@
+import Foundation
+import SwiftUI
+
 /// Strings used throughout the app.
 enum AppStrings {
 
     /// Strings used throughout the app.
     enum General {
-        static let appName = "XIV Helper"
-        static let settings = "Settings"
+        static let about = String(localized: "general.about")
+        static let appName = String(localized: "general.appName")
+        static let confirm = String(localized: "general.confirm")
+        static let description = String(localized: "general.description")
+        static let done = String(localized: "general.done")
+        static let equipment = String(localized: "general.equipment")
+        static let expansion = String(localized: "general.expansion")
+        static let expertDelivery = String(localized: "general.expertDelivery")
+        static let gathering = String(localized: "general.gathering")
+        static let ingredients = String(localized: "general.ingredients")
+        static let leves = String(localized: "general.leves")
+        static let masterRecipe = String(localized: "general.masterRecipe")
+        static let quantity = String(localized: "general.quantity")
+        static let recipes = String(localized: "general.recipes")
+        static let result = String(localized: "general.result")
+        static let settings = String(localized: "general.settings")
+        static let sort = String(localized: "general.sort")
+        static let textAndBoldText = NSLocalizedString("general.textAndBoldText", comment: "")
+        static let yes = String(localized: "general.yes")
     }
 
     /// Strings used in the info view tab.
@@ -26,69 +46,87 @@ enum AppStrings {
         tab. This aggregates the ingredients from all the recipes with their respective quantities \
         to make shopping for ingredients much easier.
         """
-        static let creditsLodestoneNews = "Lodestone News API"
-        static let creditsLodestoneNewsURL = "https://lodestonenews.com/"
-        static let creditsTeamcraft = "Game data from FFXIV Teamcraft used under MIT License"
-        static let creditsTeamcraftURL = "https://github.com/ffxiv-teamcraft/ffxiv-teamcraft"
-        static let emailMe = "Bugs? Feedback? Contact me!"
-        static let emailMeURL = "mailto:xivhelper@pm.me"
-        static let legal = """
-        XIV Helper is not an official product of Final Fantasy XIV or Square Enix, Inc. All game \
-        and news content shown in the app is owned by Square Enix, and the use of such content is \
-        permitted only for non-commercial purposes, in accordance with the Materials Usage \
-        License, as specified on the Final Fantasy XIV website.\n\n© SQUARE ENIX CO., LTD. All \
-        Rights Reserved.
-        """
-        static let privacyPolicy = "Privacy Policy"
-        static let privacyPolicyURL = "https://sites.google.com/view/xivhelper-privacypolicy"
+        static let credits = String(localized: "info.credits")
+        static let creditsLodestoneNews = String(localized: "info.creditsLodestoneNews")
+        static let creditsLodestoneNewsURL = String(localized: "info.creditsLodestoneNewsURL")
+        static let creditsTeamcraft = String(localized: "info.creditsTeamcraft")
+        static let creditsTeamcraftURL = String(localized: "info.creditsTeamcraftURL")
+        static let databaseVersion = NSLocalizedString("info.databaseVersion", comment: "database version")
+        static let emailMe = String(localized: "info.emailMe")
+        static let emailMeURL = String(localized: "info.emailMeURL")
+        static let legal = String(localized: "info.legal")
+        static let privacyPolicy = String(localized: "info.privacyPolicy")
+        static let privacyPolicyURL = String(localized: "info.privacyPolicyURL")
     }
 
     /// Strings used on views pertaining to Items.
     enum Item {
-        static let noRecipes = "This item has no recipes."
+        static let allNodes = NSLocalizedString("item.allNodes", comment: "")
+        static let bonuses = String(localized: "item.bonuses")
+        static let canBeHQ = NSLocalizedString("item.canBeHQ", comment: "")
+        static let canBeQuickSynthesized = NSLocalizedString("item.canBeQuickSynthesized", comment: "")
+        static let deleteRecipe = String(localized: "item.deleteRecipe")
+        static let grandCompanyQuantity = NSLocalizedString("item.grandCompanyQuantity", comment: "")
+        static let levelAndType = NSLocalizedString("item.levelAndType", comment: "")
+        static let locationAndCoordinates = NSLocalizedString("item.locationAndCoordinates", comment: "")
+        static let noRecipes = String(localized: "item.noRecipes")
+        static let seals = NSLocalizedString("item.seals", comment: "")
+        static let stats = String(localized: "item.stats")
+        static let xp = NSLocalizedString("item.xp", comment: "")
+    }
+
+    enum LodestoneNews {
+        static let keepReading = String(localized: "lodestoneNews.keepReading")
+        static let openInWebBrowser = String(localized: "lodestoneNews.openInWebBrowser")
+        static let share = String(localized: "lodestoneNews.share")
+        static let tapToLoad = NSLocalizedString("lodestoneNews.tapToLoad", comment: "")
     }
 
     /// Strings used for navigation.
     enum Navigation {
-        static let allNodes = "All Nodes"
-        static let info = "About"
-        static let itemDetail = "Item Detail"
-        static let lodestoneNews = "Lodestone News"
-        static let recipeDetail = "Recipe Detail"
-        static let savedRecipes = "Saved Recipes"
-        static let search = "Search"
-        static let shoppingList = "Shopping List"
+        static let about = String(localized: "navigation.about")
+        static let allNodes = String(localized: "navigation.allNodes")
+        static let credits = String(localized: "navigation.credits")
+        static let itemDetail = String(localized: "navigation.itemDetail")
+        static let legal = String(localized: "navigation.legal")
+        static let lodestoneNews = String(localized: "navigation.lodestoneNews")
+        static let recipeDetail = String(localized: "navigation.recipeDetail")
+        static let savedRecipes = String(localized: "navigation.savedRecipes")
+        static let search = String(localized: "navigation.search")
+        static let shoppingList = String(localized: "navigation.shoppingList")
     }
 
     /// Strings used on views pertaining to searches.
     enum Search {
-        static let noResults = "No results. Please try again."
-        static let searchButton = "Tap to search."
-        static let searchFieldPrompt = "Search for "
-        static let pickerPrompt = "Search For"
+        static let ascending = String(localized: "search.ascending")
+        static let descending = String(localized: "search.descending")
+        static let noResults = String(localized: "search.noResults")
+        static let pickerPrompt = String(localized: "search.pickerPrompt")
+        static let searchButton = String(localized: "search.searchButton")
+        static let searchFieldPrompt = String(localized: "search.searchFieldPrompt")
     }
 
     /// Strings used in the Shopping List view.
     enum ShoppingList {
-        static let baseMaterials = "Base Materials Only"
+        static let baseMaterials = String(localized: "shoppingList.baseMaterials")
     }
 
     /// Strings used in the tab bar.
     enum TabView {
-        static let recipes = "Recipes"
-        static let search = "Search"
-        static let news = "News"
-        static let info = "Info"
+        static let info = String(localized: "tabView.info")
+        static let news = String(localized: "tabView.news")
+        static let recipes = String(localized: "tabView.recipes")
+        static let search = String(localized: "tabView.search")
     }
 
     /// Strings used in the User ("Recipes") view.
     enum User {
-        static let deletionConfirmation = "Delete all saved recipes?"
-        static let deleteItem = "Delete item"
-        static let deleteAll = "Delete All"
-        static let createShoppingList = "Create Shopping List"
-        static let noRecipes = "No recipes added yet. Tap here to go to the search screen."
-        static let sortMethod = "Sort By"
-        static let sortOrder = "Sort Order"
+        static let createShoppingList = String(localized: "user.createShoppingList")
+        static let deleteAll = String(localized: "user.deleteAll")
+        static let deleteItem = String(localized: "user.deleteItem")
+        static let deletionConfirmation = String(localized: "user.deletionConfirmation")
+        static let noRecipes = String(localized: "user.noRecipes")
+        static let sortMethod = String(localized: "user.sortMethod")
+        static let sortOrder = String(localized: "user.sortOrder")
     }
 }

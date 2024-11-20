@@ -29,8 +29,12 @@ struct ParameterGrid: View {
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
             ForEach(parameters, id: \.0) { name, value in
-                Text("\(name): **\(value)**")
-                    .multilineTextAlignment(.leading)
+                Text(String(
+                    format: AppStrings.General.textAndBoldText,
+                    name,
+                    value
+                ))
+                .multilineTextAlignment(.leading)
             }
         }
     }

@@ -16,7 +16,6 @@
 		7F1D44232C20ECE4003F2AAB /* LodestoneNewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EB2C20ECE4003F2AAB /* LodestoneNewsArticleView.swift */; };
 		7F1D44242C20ECE4003F2AAB /* LodestoneNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EC2C20ECE4003F2AAB /* LodestoneNewsView.swift */; };
 		7F1D44252C20ECE4003F2AAB /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EE2C20ECE4003F2AAB /* RecipeDetailView.swift */; };
-		7F1D44262C20ECE4003F2AAB /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43F02C20ECE4003F2AAB /* SearchSheetView.swift */; };
 		7F1D44272C20ECE4003F2AAB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43F12C20ECE4003F2AAB /* SearchView.swift */; };
 		7F1D44282C20ECE4003F2AAB /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43F32C20ECE4003F2AAB /* ShoppingListView.swift */; };
 		7F1D44292C20ECE4003F2AAB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43F52C20ECE4003F2AAB /* SplashScreenView.swift */; };
@@ -74,6 +73,7 @@
 		7F7DD89E2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0D5A82CE460D40088D19C /* xivhelper-2.4.0.store-shm */; };
 		7F7DD89F2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */; };
 		7F7DD8A02CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0D5A72CE460D40088D19C /* xivhelper-2.4.0.store-wal */; };
+		7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */; };
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
@@ -168,6 +168,7 @@
 		7F7154CE2C212FD700F458B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7154D32C212FD700F458B4 /* XIVHelperDataBuilder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XIVHelperDataBuilder.entitlements; sourceTree = "<group>"; };
 		7F7154D92C21312200F458B4 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7FA846042C23F5580043006D /* XIV Helper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XIV Helper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA846062C23F5580043006D /* BaseParamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParamTests.swift; sourceTree = "<group>"; };
 		7FA846102C23F85A0043006D /* BonusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusTests.swift; sourceTree = "<group>"; };
@@ -349,6 +350,7 @@
 				7F1D44012C20ECE4003F2AAB /* Debouncer.swift */,
 				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F1D44022C20ECE4003F2AAB /* Locale.swift */,
+				7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */,
 				7F1D44032C20ECE4003F2AAB /* ScalingImage.swift */,
 				7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */,
 			);
@@ -705,7 +707,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					7F7154C72C212FD600F458B4 = {
 						CreatedOnToolsVersion = 15.4;
@@ -725,6 +727,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
+				de,
+				ja,
 				Base,
 			);
 			mainGroup = 7FF52B0A29BFA21C00B7BF58;
@@ -763,6 +768,7 @@
 			files = (
 				7F7DD89E2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-shm in Resources */,
 				7F7DD89F2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store in Resources */,
+				7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */,
 				7F7DD8A02CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-wal in Resources */,
 				7FF52B1E29BFA21D00B7BF58 /* Preview Assets.xcassets in Resources */,
 				7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */,
@@ -845,7 +851,6 @@
 				7F1D44362C20ECE4003F2AAB /* BaseParam.swift in Sources */,
 				7F1D44382C20ECE4003F2AAB /* ClassJob.swift in Sources */,
 				7F1D442B2C20ECE4003F2AAB /* ContentView.swift in Sources */,
-				7F1D44262C20ECE4003F2AAB /* SearchSheetView.swift in Sources */,
 				7F1D443B2C20ECE4003F2AAB /* ItemRecipe.swift in Sources */,
 				7F1D44252C20ECE4003F2AAB /* RecipeDetailView.swift in Sources */,
 				7F1D441F2C20ECE4003F2AAB /* ParameterGridView.swift in Sources */,
@@ -1008,6 +1013,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1060,6 +1066,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
@@ -1072,6 +1079,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1117,6 +1125,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;

@@ -37,14 +37,14 @@ struct ItemDetailView: View {
 
                     // Item description
                     if !item.desc.en.isEmpty {
-                        Section("Description") {
+                        Section(AppStrings.General.description) {
                             Text(item.desc.string)
                         }
                     }
 
                     // Stats (Defense, Magic Defense, etc)
                     if !item.statsMain.isEmpty || !item.statsSecondary.isEmpty {
-                        Section("Stats") {
+                        Section(AppStrings.Item.stats) {
                             if !item.statsMain.isEmpty {
                                 ParameterGrid(stats: item.statsMain, hq: settings.hq)
                             }
@@ -56,20 +56,26 @@ struct ItemDetailView: View {
 
                     // Bonuses (food, potions, etc)
                     if !item.bonuses.isEmpty {
-                        Section("Bonuses") {
+                        Section(AppStrings.Item.bonuses) {
                             ParameterGrid(bonuses: item.bonuses, hq: settings.hq)
                         }
                     }
 
+                    // Gathering nodes
                     if let nodes = item.nodes, !nodes.isEmpty, item.canBeGathered ?? false {
-                        Section("Gathering") {
+                        Section(AppStrings.General.gathering) {
                             ForEach(nodes.prefix(5)) { node in
                                 VStack(alignment: .leading) {
                                     Text(node.mapName.string)
                                         .bold()
-                                    Text("\(node.name.string) (x: \(String(format: "%.1f", node.x)), y: \(String(format: "%.1f", node.y)))")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
+                                    Text(String(
+                                        format: AppStrings.Item.locationAndCoordinates,
+                                        node.name.string,
+                                        String(format: "%.1f", node.x),
+                                        String(format: "%.1f", node.y)
+                                    ))
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
                                 }
                             }
 
@@ -77,7 +83,7 @@ struct ItemDetailView: View {
                                 NavigationLink {
                                     ItemNodesView(nodes: nodes)
                                 } label: {
-                                    Text("All Nodes (\(nodes.count))")
+                                    Text(String(format: AppStrings.Item.allNodes, nodes.count))
                                         .foregroundStyle(Color.accentColor)
                                         .multilineTextAlignment(.leading)
                                 }
@@ -87,7 +93,7 @@ struct ItemDetailView: View {
                     }
 
                     // Recipes
-                    Section("Recipes") {
+                    Section(AppStrings.General.recipes) {
                         if !item.recipes.isEmpty {
                             ForEach(item.recipes, id: \.id) { recipe in
                                 let abbreviation = ClassJob(id: recipe.classJob).abbreviation
@@ -95,10 +101,14 @@ struct ItemDetailView: View {
                                     RecipeDetailView(recipeID: recipe.id)
                                 } label: {
                                     HStack {
-                                        Image("\(abbreviation)")
+                                        Image(abbreviation)
                                             .resizable()
                                             .frame(width: 32, height: 32)
-                                        Text("Level \(recipe.lvl) \(abbreviation)")
+                                        Text(String(
+                                            format: AppStrings.Item.levelAndType,
+                                            recipe.lvl,
+                                            abbreviation
+                                        ))
                                     }
                                 }
                             }
@@ -109,31 +119,40 @@ struct ItemDetailView: View {
 
                     // Grand Company Supply info, if applicable
                     if let supply = item.supply {
-                        Section("Grand Company (\(supply.amount) Required)") {
+                        Section(String(
+                            format: AppStrings.Item.grandCompanyQuantity,
+                            supply.amount
+                        )) {
                             HStack(spacing: 16) {
                                 ScalingImage("GCSeal")
-                                Text("\(settings.hq ? supply.sealsHq : supply.seals) Seals")
+                                Text(String(
+                                    format: AppStrings.Item.seals,
+                                    settings.hq ? supply.sealsHq : supply.seals
+                                ))
                             }
                             HStack(spacing: 16) {
                                 ScalingImage("EXP")
-                                Text("\(settings.hq ? supply.xpHq : supply.xp) XP")
+                                Text(String(
+                                    format: AppStrings.Item.xp,
+                                    settings.hq ? supply.xpHq : supply.xp
+                                ))
                             }
                         }
                     }
 
                     // Grand Company expert delivery info, if applicable
                     if let gcReward = item.gcReward {
-                        Section("Expert Delivery") {
+                        Section(AppStrings.General.expertDelivery) {
                             HStack(spacing: 8) {
                                 ScalingImage("GCSeal")
-                                Text("\(gcReward) Seals")
+                                Text(String(format: AppStrings.Item.seals, gcReward))
                             }
                         }
                     }
 
                     // Leves, if applicable
                     if !item.leves.isEmpty {
-                        Section("Leves") {
+                        Section(AppStrings.General.leves) {
                             ForEach(item.leves, id: \.leve) { leve in
                                 let classJobCategory = ClassJobCategory(id: leve.classJob)
                                 // TODO: Add LeveDetailView
@@ -143,9 +162,13 @@ struct ItemDetailView: View {
                                         .frame(width: 32, height: 32)
                                     VStack(alignment: .leading) {
                                         Text(leve.name.string)
-                                        Text("Level \(leve.lvl) \(classJobCategory.name)")
-                                            .font(.subheadline)
-                                            .foregroundStyle(.secondary)
+                                        Text(String(
+                                            format: AppStrings.Item.levelAndType,
+                                            leve.lvl,
+                                            classJobCategory.name
+                                        ))
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
                                     }
                                 }
                             }
@@ -160,7 +183,7 @@ struct ItemDetailView: View {
                     // HQ toggle, if item can be HQ
                     ToolbarItem(placement: .primaryAction) {
                         Toggle(isOn: $settings.hq) {
-                            Image("HQ")
+                            Image(ImageResource.HQ)
                                 .scaleEffect(1.5)
                                 .padding(.trailing, 4)
                         }
