@@ -47,13 +47,13 @@ struct SearchView: View {
 
         switch settings.searchSortMethod {
         case .alphabetical:
-            sortedItems = items.sorted { $0.name.en < $1.name.en }
+            sortedItems = items.sorted { $0.name < $1.name }
         case .ilvl:
             sortedItems = items.sorted { $0.ilvl ?? 1 < $1.ilvl ?? 1 }
         case .patch:
             sortedItems = items.sorted { $0.patchId < $1.patchId }
         default:
-            sortedItems = items.sorted { $0.name.en < $1.name.en }
+            sortedItems = items.sorted { $0.name < $1.name }
         }
 
         return settings.searchAscending ? sortedItems : sortedItems.reversed()
@@ -65,7 +65,7 @@ struct SearchView: View {
 
         switch settings.searchSortMethod {
         case .alphabetical:
-            sortedRecipes = recipes.sorted { $0.resultName.en < $1.resultName.en }
+            sortedRecipes = recipes.sorted { $0.resultName < $1.resultName }
         case .ilvl:
             sortedRecipes = recipes.sorted { $0.resultIlvl < $1.resultIlvl }
         case .patch:

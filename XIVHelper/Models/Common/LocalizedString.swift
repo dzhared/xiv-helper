@@ -1,18 +1,23 @@
+import Foundation
+
 /// Possible item names, including plural versions, for an item.
 struct LocalizedString: Codable, Equatable {
 
     // MARK: Properties
 
-    /// The singular verison of the item name. If not available in a locale, default to the English
-    /// plural form.
+    /// The localized item name as a string. If not available in a locale, default to English.
     var string: String {
-        switch SettingsManager.shared.locale {
-            case .en: return en
-            case .ja: return ja ?? en
-            case .de: return de ?? en
-            case .fr: return fr ?? en
-            case .ko: return ko ?? en
-            case .zh: return zh ?? en
+        switch GameLocale.localeForDevice() {
+        case .en:
+            return en
+        case .de:
+            return de ?? en
+        case .fr:
+            return fr ?? en
+        case .ja:
+            return ja ?? en
+        default:
+            return en
         }
     }
 
@@ -22,13 +27,13 @@ struct LocalizedString: Codable, Equatable {
     let en: String
 
     /// The optional German string.
-    private let de: String?
+    let de: String?
 
     /// The optional French string.
-    private let fr: String?
+    let fr: String?
 
     /// The optional Japanese string.
-    private let ja: String?
+    let ja: String?
 
     /// The optional Korean string.
     private let ko: String?
@@ -57,4 +62,32 @@ struct LocalizedString: Codable, Equatable {
     // MARK: Example
 
     static let example = LocalizedString(en: "Gil", ja: "ギル", de: "Gil", fr: "Gil", ko: "길", zh: "金币")
+}
+
+// MARK: Comparable
+
+extension LocalizedString: Comparable {
+    static func <(lhs: LocalizedString, rhs: LocalizedString) -> Bool {
+        switch GameLocale.localeForDevice() {
+        case .de:
+            if let left = lhs.de, let right = rhs.de {
+                return left < right
+            }
+        case .en:
+            return lhs.en < rhs.en
+        case .fr:
+            if let left = lhs.fr, let right = rhs.fr {
+                return left < right
+            }
+        case .ja:
+            if let left = lhs.ja, let right = rhs.ja {
+                return left < right
+            }
+        default:
+            return lhs.en < rhs.en
+        }
+
+        // Default to comparing the English string.
+        return lhs.en < rhs.en
+    }
 }
