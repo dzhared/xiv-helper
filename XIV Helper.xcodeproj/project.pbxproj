@@ -75,9 +75,9 @@
 		7F9E23642CEEC35C00C974D7 /* String+LowercasedByLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */; };
 		7F9E237F2CF6DA5D00C974D7 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44002C20ECE4003F2AAB /* AppStrings.swift */; };
 		7F9E23802CF6DA7000C974D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
-		7F9E23842CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */; };
-		7F9E23852CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */; };
-		7F9E23862CF6DB4C00C974D7 /* xivhelper-2.5.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */; };
+		7F9E238A2CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23882CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm */; };
+		7F9E238B2CF7C71F00C974D7 /* xivhelper-2.5.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23872CF7C71F00C974D7 /* xivhelper-2.5.0.store */; };
+		7F9E238C2CF7C71F00C974D7 /* xivhelper-2.5.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23892CF7C71F00C974D7 /* xivhelper-2.5.0.store-wal */; };
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
@@ -174,9 +174,9 @@
 		7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Markdown.swift"; sourceTree = "<group>"; };
 		7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LowercasedByLocale.swift"; sourceTree = "<group>"; };
-		7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store"; sourceTree = "<group>"; };
-		7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store-shm"; sourceTree = "<group>"; };
-		7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */ = {isa = PBXFileReference; lastKnownFileType = text; path = "xivhelper-2.5.0.store-wal"; sourceTree = "<group>"; };
+		7F9E23872CF7C71F00C974D7 /* xivhelper-2.5.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store"; sourceTree = "<group>"; };
+		7F9E23882CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store-shm"; sourceTree = "<group>"; };
+		7F9E23892CF7C71F00C974D7 /* xivhelper-2.5.0.store-wal */ = {isa = PBXFileReference; lastKnownFileType = text; path = "xivhelper-2.5.0.store-wal"; sourceTree = "<group>"; };
 		7FA846042C23F5580043006D /* XIV Helper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XIV Helper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA846062C23F5580043006D /* BaseParamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParamTests.swift; sourceTree = "<group>"; };
 		7FA846102C23F85A0043006D /* BonusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusTests.swift; sourceTree = "<group>"; };
@@ -482,9 +482,9 @@
 		7F9E23672CF1707800C974D7 /* xivhelper-2.5.0 */ = {
 			isa = PBXGroup;
 			children = (
-				7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */,
-				7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */,
-				7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */,
+				7F9E23872CF7C71F00C974D7 /* xivhelper-2.5.0.store */,
+				7F9E23882CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm */,
+				7F9E23892CF7C71F00C974D7 /* xivhelper-2.5.0.store-wal */,
 			);
 			path = "xivhelper-2.5.0";
 			sourceTree = "<group>";
@@ -778,11 +778,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9E238A2CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm in Resources */,
+				7F9E238B2CF7C71F00C974D7 /* xivhelper-2.5.0.store in Resources */,
+				7F9E238C2CF7C71F00C974D7 /* xivhelper-2.5.0.store-wal in Resources */,
 				7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */,
 				7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */,
-				7F9E23842CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal in Resources */,
-				7F9E23852CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm in Resources */,
-				7F9E23862CF6DB4C00C974D7 /* xivhelper-2.5.0.store in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
