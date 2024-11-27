@@ -216,14 +216,26 @@ struct ItemDetailView: View {
     /// The Supply section for the item.
     @ViewBuilder private func sectionSupply() -> some View {
         if let item, let supply = item.supply, supply.amount > 0 {
-            Section(String(AppStrings.Item.grandCompanyQuantity)) {
+            let seals = settings.hq ? supply.sealsHq : supply.seals
+            let xp = settings.hq ? supply.xpHq : supply.xp
+
+            Section(String(
+                format: AppStrings.Item.grandCompanyQuantity,
+                supply.amount
+            )) {
                 HStack(spacing: 16) {
-                    ScalingImage("gcSeal")
-                    Text("Seals qty")
+                    ScalingImage("GCSeal")
+                    Text(String(
+                        format: AppStrings.Item.seals,
+                        seals
+                    ))
                 }
                 HStack(spacing: 16) {
                     ScalingImage("EXP")
-                    Text("XP qty")
+                    Text(String(
+                        format: AppStrings.Item.xp,
+                        xp
+                    ))
                 }
             }
         }
