@@ -178,6 +178,9 @@ struct SearchView: View {
             placement: .toolbar,
             prompt: promptText)
         .autocorrectionDisabled()
+        .onDisappear {
+            isSearching = false
+        }
         .onReceive(debouncer.searchTextPublisher) { searchText in
             fetchItems(searchText: searchText)
             fetchRecipes(searchText: searchText)
