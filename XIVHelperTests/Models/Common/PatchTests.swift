@@ -23,8 +23,28 @@ final class PatchTests: XCTestCase {
     /// Patch `100`, the patch after 7.11, has not yet been added. This patch should fail when that
     /// patch is released.
     func testFuturePatchNotReleased() {
-        let futurePatch = Patch(id: 100)
-        XCTAssertEqual(futurePatch.id, 2)
+        // The current patch returns the expected attributes.
+        patch = Patch(id: 99)
+        XCTAssertEqual(
+            patch,
+            Patch(
+                id: 99,
+                banner: "None",
+                ex: true,
+                release: 1732606637,
+                en: "Patch 7.11",
+                de: "Patch 7.11",
+                ja: "Patch 7.11",
+                fr: "Patch 7.11",
+                ko: "Patch 7.11",
+                zh: "Patch 7.11",
+                version: "7.11"
+            )
+        )
+
+        // The following patch does not exist.
+        patch = Patch(id: 100)
+        XCTAssertEqual(patch.id, 2)
     }
 
     /// The `Patch` encodes and decodes as expected.
@@ -36,7 +56,7 @@ final class PatchTests: XCTestCase {
 
     /// Patch `release` values increment sequentially. Necessary for sorting.
     func testPatchReleaseSequentially() {
-        for n in 1..<93 {
+        for n in 1..<100 {
             let earlierPatch = Patch(id: n)
             let laterPatch = Patch(id: n + 1)
 
