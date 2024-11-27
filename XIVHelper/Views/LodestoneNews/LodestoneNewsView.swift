@@ -16,7 +16,7 @@ struct LodestoneNewsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(allArticles, id: \.id) {
+                ForEach(allArticles) {
                     newsCard(article: $0)
                 }
                 if allArticles.isEmpty {
@@ -56,12 +56,12 @@ struct LodestoneNewsView: View {
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
                 ProgressView()
-                    .frame(width: 188, height: 720)
+                    .frame(width: 360, height: 90)
             }
             VStack(alignment: .leading) {
                 Text(article.title)
                     .font(.headline)
-                Text("\(article.time.formatted(date: .abbreviated, time: .omitted))")
+                Text(article.time.formatted(date: .abbreviated, time: .omitted))
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Divider()
@@ -69,7 +69,7 @@ struct LodestoneNewsView: View {
                     .lineLimit(3)
                 Divider()
                 NavigationLink(destination: LodestoneNewsArticleView(article: article)) {
-                    Text("Keep Reading")
+                    Text(AppStrings.LodestoneNews.keepReading)
                 }
             }
             .padding([.horizontal, .bottom])
@@ -84,14 +84,17 @@ struct LodestoneNewsView: View {
     /// A card to retry loading articles.
     @ViewBuilder func retryCard() -> some View {
         VStack {
-            Image("LodestoneNewsPlaceholder")
+            Image(.lodestoneNewsPlaceholder)
                 .resizable()
                 .scaledToFit()
-            Text("Tap to \(hasLoadedArticles ? "retry loading" : "load") articles")
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .padding()
-                .padding(.bottom, 8)
+            Text(hasLoadedArticles
+                 ? AppStrings.LodestoneNews.tapToRetry
+                 : AppStrings.LodestoneNews.tapToLoad
+            )
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            .padding()
+            .padding(.bottom, 8)
         }
         .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -103,7 +106,20 @@ struct LodestoneNewsView: View {
 
     /// Attempt to load the articles.
     private func getLodestoneNews(completion: @escaping @Sendable ([LodestoneNewsArticle]) -> Void) {
-        let url = URL(string: "https://na.lodestonenews.com/news/topics")!
+        let url: URL = {
+            switch GameLocale.localeForDevice() {
+            case .en:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=en")!
+            case .de:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=de")!
+            case .fr:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=fr")!
+            case .ja:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=jp")!
+            default:
+                return URL(string: "https://lodestonenews.com/news/topics")!
+            }
+        }()
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

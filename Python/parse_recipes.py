@@ -35,10 +35,10 @@ for r in recipes_json:
         id = i.get('id')
         name = items_json.get(str(id))
         name = {
-            'en': clean_html(name.get('en', '')),
-            'de': clean_html(name.get('de', '')),
-            'ja': clean_html(name.get('ja', '')),
-            'fr': clean_html(name.get('fr', '')),
+            'en': clean_html(name.get('en')),
+            'de': clean_html(name.get('de')),
+            'ja': clean_html(name.get('ja')),
+            'fr': clean_html(name.get('fr')),
         }
         new_ingredient = {
             'id': id,
@@ -56,7 +56,7 @@ for r in recipes_json:
     # Construct result item ID, name and icon URL
     resultId = int(r.get('result'))
     resultItemCategory = ui_categories_json.get(str(resultId), 63)
-    resultItemIcon = item_icons_json.get(str(resultId), '/i/000000/000033.png')
+    resultItemIcon = item_icons_json.get(str(resultId))
     resultName = items_json.get(str(resultId), None)
     resultIlvl = items_database_pages_json.get(str(resultId), None).get('ilvl', 0)
     resultPatch = patch_dict.get(resultId)

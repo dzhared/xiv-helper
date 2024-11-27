@@ -27,146 +27,20 @@ struct ItemDetailView: View {
     var body: some View {
         NavigationStack {
             List {
-                if let item {
-                    // Main item badge
-                    Section {
-                        VStack(alignment: .leading) {
-                            ItemTitleBadgeView(item: item)
-                        }
-                    }
-
-                    // Item description
-                    if !item.desc.en.isEmpty {
-                        Section("Description") {
-                            Text(item.desc.string)
-                        }
-                    }
-
-                    // Stats (Defense, Magic Defense, etc)
-                    if !item.statsMain.isEmpty || !item.statsSecondary.isEmpty {
-                        Section("Stats") {
-                            if !item.statsMain.isEmpty {
-                                ParameterGrid(stats: item.statsMain, hq: settings.hq)
-                            }
-                            if !item.statsSecondary.isEmpty {
-                                ParameterGrid(stats: item.statsSecondary, hq: settings.hq)
-                            }
-                        }
-                    }
-
-                    // Bonuses (food, potions, etc)
-                    if !item.bonuses.isEmpty {
-                        Section("Bonuses") {
-                            ParameterGrid(bonuses: item.bonuses, hq: settings.hq)
-                        }
-                    }
-
-                    if let nodes = item.nodes, !nodes.isEmpty, item.canBeGathered ?? false {
-                        Section("Gathering") {
-                            ForEach(nodes.prefix(5)) { node in
-                                VStack(alignment: .leading) {
-                                    Text(node.mapName.string)
-                                        .bold()
-                                    Text("\(node.name.string) (x: \(String(format: "%.1f", node.x)), y: \(String(format: "%.1f", node.y)))")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-
-                            if nodes.count > 5 {
-                                NavigationLink {
-                                    ItemNodesView(nodes: nodes)
-                                } label: {
-                                    Text("All Nodes (\(nodes.count))")
-                                        .foregroundStyle(Color.accentColor)
-                                        .multilineTextAlignment(.leading)
-                                }
-
-                            }
-                        }
-                    }
-
-                    // Recipes
-                    Section("Recipes") {
-                        if !item.recipes.isEmpty {
-                            ForEach(item.recipes, id: \.id) { recipe in
-                                let abbreviation = ClassJob(id: recipe.classJob).abbreviation
-                                NavigationLink {
-                                    RecipeDetailView(recipeID: recipe.id)
-                                } label: {
-                                    HStack {
-                                        Image("\(abbreviation)")
-                                            .resizable()
-                                            .frame(width: 32, height: 32)
-                                        Text("Level \(recipe.lvl) \(abbreviation)")
-                                    }
-                                }
-                            }
-                        } else {
-                            Text(AppStrings.Item.noRecipes)
-                        }
-                    }
-
-                    // Grand Company Supply info, if applicable
-                    if let supply = item.supply {
-                        Section("Grand Company (\(supply.amount) Required)") {
-                            HStack(spacing: 16) {
-                                ScalingImage("GCSeal")
-                                Text("\(settings.hq ? supply.sealsHq : supply.seals) Seals")
-                            }
-                            HStack(spacing: 16) {
-                                ScalingImage("EXP")
-                                Text("\(settings.hq ? supply.xpHq : supply.xp) XP")
-                            }
-                        }
-                    }
-
-                    // Grand Company expert delivery info, if applicable
-                    if let gcReward = item.gcReward {
-                        Section("Expert Delivery") {
-                            HStack(spacing: 8) {
-                                ScalingImage("GCSeal")
-                                Text("\(gcReward) Seals")
-                            }
-                        }
-                    }
-
-                    // Leves, if applicable
-                    if !item.leves.isEmpty {
-                        Section("Leves") {
-                            ForEach(item.leves, id: \.leve) { leve in
-                                let classJobCategory = ClassJobCategory(id: leve.classJob)
-                                // TODO: Add LeveDetailView
-                                HStack {
-                                    Image(classJobCategory.name)
-                                        .resizable()
-                                        .frame(width: 32, height: 32)
-                                    VStack(alignment: .leading) {
-                                        Text(leve.name.string)
-                                        Text("Level \(leve.lvl) \(classJobCategory.name)")
-                                            .font(.subheadline)
-                                            .foregroundStyle(.secondary)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                sectionItemBadge()
+                sectionItemDescription()
+                sectionStats()
+                sectionBonuses()
+                sectionGatheringNodes()
+                sectionRecipes()
+                sectionSupply()
+                sectionGrandCompanyExpertDelivery()
+                sectionLeves()
             }
             .navigationTitle(AppStrings.Navigation.itemDetail)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                if let item, item.canBeHq {
-                    // HQ toggle, if item can be HQ
-                    ToolbarItem(placement: .primaryAction) {
-                        Toggle(isOn: $settings.hq) {
-                            Image("HQ")
-                                .scaleEffect(1.5)
-                                .padding(.trailing, 4)
-                        }
-                        .toggleStyle(.switch)
-                    }
-                }
+                toolbarContent()
             }
         }
         .onAppear {
@@ -191,6 +65,194 @@ struct ItemDetailView: View {
             item = fetchedItems.first
         } catch {
             item = nil
+        }
+    }
+
+    // MARK: Content Builders
+
+    /// The Bonuses section for the item.
+    @ViewBuilder private func sectionBonuses() -> some View {
+        if let item, !item.bonuses.isEmpty {
+            Section(AppStrings.Item.bonuses) {
+                ParameterGrid(bonuses: item.bonuses, hq: settings.hq)
+            }
+        }
+    }
+
+    /// The Gathering Nodes section for the item.
+    @ViewBuilder private func sectionGatheringNodes() -> some View {
+        if let item, let nodes = item.nodes, !nodes.isEmpty, item.canBeGathered ?? false {
+            Section(AppStrings.General.gathering) {
+                ForEach(nodes.prefix(5)) { node in
+                    VStack(alignment: .leading) {
+                        Text(node.mapName.string)
+                            .bold()
+                        Text(String(
+                            format: AppStrings.Item.locationAndCoordinates,
+                            node.name.string,
+                            String(format: "%.1f", node.x),
+                            String(format: "%.1f", node.y)
+                        ))
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    }
+                }
+
+                if nodes.count > 5 {
+                    NavigationLink {
+                        ItemNodesView(nodes: nodes)
+                    } label: {
+                        Text(String(format: AppStrings.Item.allNodes, nodes.count))
+                            .foregroundStyle(Color.accentColor)
+                            .multilineTextAlignment(.leading)
+                    }
+
+                }
+            }
+        }
+    }
+
+    /// The Grand Company Expert Delivery section for the item.
+    @ViewBuilder private func sectionGrandCompanyExpertDelivery() -> some View {
+        if let item, let gcReward = item.gcReward {
+            Section(AppStrings.General.expertDelivery) {
+                HStack(spacing: 8) {
+                    ScalingImage(ImageResource.gcSeal)
+                    Text(String(format: AppStrings.Item.seals, gcReward))
+                }
+            }
+        }
+    }
+
+    /// The main item badge section for the item.
+    @ViewBuilder private func sectionItemBadge() -> some View {
+        if let item {
+            Section(AppStrings.General.item) {
+                VStack(alignment: .leading) {
+                    ItemTitleBadgeView(item: item)
+                }
+            }
+        }
+    }
+
+    /// The Item Description section for the item.
+    @ViewBuilder private func sectionItemDescription() -> some View {
+        if let item, !item.desc.string.isEmpty {
+            Section(AppStrings.General.description) {
+                Text(item.desc.string)
+            }
+        }
+    }
+
+    /// The Leves section for the item.
+    @ViewBuilder private func sectionLeves() -> some View {
+        if let item, !item.leves.isEmpty {
+            Section(AppStrings.General.leves) {
+                ForEach(item.leves, id: \.leve) { leve in
+                    let classJobCategory = ClassJobCategory(id: leve.classJob)
+                    HStack {
+                        Image(classJobCategory.name)
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                        VStack(alignment: .leading) {
+                            Text(leve.name.string)
+                            Text(String(
+                                format: AppStrings.Item.levelAndType,
+                                leve.lvl,
+                                classJobCategory.name
+                            ))
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// The Recipes section for the item.
+    @ViewBuilder private func sectionRecipes() -> some View {
+        if let item {
+            Section(AppStrings.General.recipes) {
+                if !item.recipes.isEmpty {
+                    ForEach(item.recipes) { recipe in
+                        let classJob = ClassJob(id: recipe.classJob)
+                        NavigationLink {
+                            RecipeDetailView(recipeID: recipe.id)
+                        } label: {
+                            HStack {
+                                classJob.icon
+                                    .resizable()
+                                    .frame(width: 32, height: 32)
+                                Text(String(
+                                    format: AppStrings.Item.levelAndType,
+                                    recipe.lvl,
+                                    classJob.abbreviation
+                                ))
+                            }
+                        }
+                    }
+                } else {
+                    Text(AppStrings.Item.noRecipes)
+                }
+            }
+        }
+    }
+
+    /// The Stats section for the item.
+    @ViewBuilder private func sectionStats() -> some View {
+        if let item, !item.statsMain.isEmpty || !item.statsSecondary.isEmpty {
+            Section(AppStrings.Item.stats) {
+                if !item.statsMain.isEmpty {
+                    ParameterGrid(stats: item.statsMain, hq: settings.hq)
+                }
+                if !item.statsSecondary.isEmpty {
+                    ParameterGrid(stats: item.statsSecondary, hq: settings.hq)
+                }
+            }
+        }
+    }
+
+    /// The Supply section for the item.
+    @ViewBuilder private func sectionSupply() -> some View {
+        if let item, let supply = item.supply, supply.amount > 0 {
+            let seals = settings.hq ? supply.sealsHq : supply.seals
+            let xp = settings.hq ? supply.xpHq : supply.xp
+
+            Section(String(
+                format: AppStrings.Item.grandCompanyQuantity,
+                supply.amount
+            )) {
+                HStack(spacing: 16) {
+                    ScalingImage("GCSeal")
+                    Text(String(
+                        format: AppStrings.Item.seals,
+                        seals
+                    ))
+                }
+                HStack(spacing: 16) {
+                    ScalingImage("EXP")
+                    Text(String(
+                        format: AppStrings.Item.xp,
+                        xp
+                    ))
+                }
+            }
+        }
+    }
+
+    /// The toolbar content to toggle HQ stats, if applicable.
+    @ToolbarContentBuilder private func toolbarContent() -> some ToolbarContent {
+        if let item, item.canBeHq, (!item.statsMain.isEmpty || !item.statsSecondary.isEmpty) {
+            // HQ toggle, if item can be HQ and has stats to display
+            ToolbarItem(placement: .primaryAction) {
+                Toggle(isOn: $settings.hq) {
+                    Image(ImageResource.HQ)
+                        .scaleEffect(1.5)
+                        .padding(.trailing, 4)
+                }
+                .toggleStyle(.switch)
+            }
         }
     }
 

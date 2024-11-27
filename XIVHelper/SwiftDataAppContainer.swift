@@ -12,7 +12,7 @@ import SwiftData
 @MainActor let appContainer: ModelContainer = {
     // Check if store already exists. If so, and if it matches the bundle, return it.
     let currentStoreName = SettingsManager.shared.currentStoreName
-    let bundleStoreName = "xivhelper-2.4.0"
+    let bundleStoreName = "xivhelper-2.5.0"
 
     // Create a store from the bundle if needed.
     let bundleContainer = createBundleContainer(filename: bundleStoreName)
@@ -203,7 +203,7 @@ fileprivate func removeStoreFromDocuments(currentStoreName: String) {
 let previewContainer: ModelContainer = {
 
     /// The name and extension of the database in the app bundle.
-    let bundleStoreName = "xivhelper-2.4.0"
+    let bundleStoreName = "xivhelper-2.5.0"
 
     do {
         /// Retrieve the prebuilt, read-only store from the app bundle.

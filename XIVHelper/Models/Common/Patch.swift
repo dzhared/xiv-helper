@@ -41,9 +41,9 @@ struct Patch: Codable, Equatable {
         ex: Bool,
         release: Int,
         en: String,
-        de: String?,
-        ja: String?,
-        fr: String?,
+        de: String,
+        ja: String,
+        fr: String,
         ko: String?,
         zh: String?,
         version: String
@@ -1318,6 +1318,19 @@ struct Patch: Codable, Equatable {
             ko: "Patch 7.1",
             zh: "Patch 7.1",
             version: "7.1"
+        )
+        case 99: return Patch(
+            id: 99,
+            banner: "None",
+            ex: true,
+            release: 1732606637,
+            en: "Patch 7.11",
+            de: "Patch 7.11",
+            ja: "Patch 7.11",
+            fr: "Patch 7.11",
+            ko: "Patch 7.11",
+            zh: "Patch 7.11",
+            version: "7.11"
         )
         default: return Patch(
             id: 2,

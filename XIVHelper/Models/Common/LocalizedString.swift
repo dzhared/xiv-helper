@@ -1,18 +1,23 @@
+import Foundation
+
 /// Possible item names, including plural versions, for an item.
 struct LocalizedString: Codable, Equatable {
 
     // MARK: Properties
 
-    /// The singular verison of the item name. If not available in a locale, default to the English
-    /// plural form.
+    /// The localized item name as a string. If not available in a locale, default to English.
     var string: String {
-        switch SettingsManager.shared.locale {
-            case .en: return en
-            case .ja: return ja ?? en
-            case .de: return de ?? en
-            case .fr: return fr ?? en
-            case .ko: return ko ?? en
-            case .zh: return zh ?? en
+        switch GameLocale.localeForDevice() {
+        case .en:
+            return en
+        case .de:
+            return de
+        case .fr:
+            return fr
+        case .ja:
+            return ja
+        default:
+            return en
         }
     }
 
@@ -21,14 +26,14 @@ struct LocalizedString: Codable, Equatable {
     /// The English string.
     let en: String
 
-    /// The optional German string.
-    private let de: String?
+    /// The German string.
+    let de: String
 
-    /// The optional French string.
-    private let fr: String?
+    /// The French string.
+    let fr: String
 
-    /// The optional Japanese string.
-    private let ja: String?
+    /// The Japanese string.
+    let ja: String
 
     /// The optional Korean string.
     private let ko: String?
@@ -40,9 +45,9 @@ struct LocalizedString: Codable, Equatable {
 
     init(
         en: String,
-        ja: String? = nil,
-        de: String? = nil,
-        fr: String? = nil,
+        ja: String,
+        de: String,
+        fr: String,
         ko: String? = nil,
         zh: String? = nil
     ) {
@@ -57,4 +62,23 @@ struct LocalizedString: Codable, Equatable {
     // MARK: Example
 
     static let example = LocalizedString(en: "Gil", ja: "ギル", de: "Gil", fr: "Gil", ko: "길", zh: "金币")
+}
+
+// MARK: Comparable
+
+extension LocalizedString: Comparable {
+    static func < (lhs: LocalizedString, rhs: LocalizedString) -> Bool {
+        switch GameLocale.localeForDevice() {
+        case .de:
+            return lhs.de < rhs.de
+        case .en:
+            return lhs.en < rhs.en
+        case .fr:
+            return lhs.fr < rhs.fr
+        case .ja:
+            return lhs.ja < rhs.ja
+        default:
+            return lhs.en < rhs.en
+        }
+    }
 }

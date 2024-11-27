@@ -10,5 +10,6 @@ def patch_dict():
             dict[item] = int(key)
     return dict
 
-# dict = patch_dict()
-# print(dict[41112])
+if __name__ == '__main__':
+    dict = patch_dict()
+    print(dict[41112])

@@ -6,8 +6,8 @@ struct ScalingImage: View {
     /// The current Dynamic Type size.
     @Environment(\.dynamicTypeSize) var size
 
-    /// The name of the image in the asset bundle.
-    let name: String
+    /// The image in the asset bundle.
+    let image: Image
 
     /// The desired scale for the image.
     var scale: CGFloat {
@@ -44,7 +44,7 @@ struct ScalingImage: View {
     // MARK: Body
 
     var body: some View {
-        Image(name)
+        image
             .antialiased(true)
             .scaleEffect(scale)
     }
@@ -52,7 +52,11 @@ struct ScalingImage: View {
     // MARK: Initialization
 
     init(_ name: String) {
-        self.name = name
+        self.image = Image(name)
+    }
+
+    init(_ resource: ImageResource) {
+        self.image = Image(resource)
     }
 }
 
@@ -60,6 +64,6 @@ struct ScalingImage: View {
 
 #if DEBUG
 #Preview {
-    ScalingImage("HQ")
+    ScalingImage(ImageResource.HQ)
 }
 #endif

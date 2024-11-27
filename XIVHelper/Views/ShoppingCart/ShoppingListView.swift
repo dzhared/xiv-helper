@@ -26,7 +26,7 @@ struct ShoppingListView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(ingredients.sorted(by: { $0.id > $1.id }), id: \.id) { ingredient in
+                ForEach(ingredients.sorted(by: { $0.id > $1.id })) { ingredient in
                     NavigationLink {
                         ItemDetailView(itemID: ingredient.id)
                     } label: {
@@ -34,6 +34,7 @@ struct ShoppingListView: View {
                     }
                 }
             }
+            .contentMargins(.top, 8)
             .navigationTitle(AppStrings.Navigation.shoppingList)
             .onAppear {
                 generateShoppingList()
@@ -98,31 +99,56 @@ struct ShoppingListView: View {
             Ingredient(
                 id: 28176,
                 ingredientItemIcon: "/i/025000/025597_hr1.png",
-                name: LocalizedString(en: "Red Campanulas"),
+                name: LocalizedString(
+                    en: "Red Campanulas",
+                    ja: "カンパニュラ:レッド",
+                    de: "Rote Glockenblumen",
+                    fr: "Campanules rouges"
+                ),
                 quantity: 4
             ),
             Ingredient(
                 id: 12609,
                 ingredientItemIcon: "/i/022000/022609_hr1.png",
-                name: LocalizedString(en: "Bear Fat"),
+                name: LocalizedString(
+                    en: "Bear Fat",
+                    ja: "熊脂",
+                    de: "Bärenfett",
+                    fr: "Graisse d'ours"
+                ),
                 quantity: 4
             ),
             Ingredient(
                 id: 12631,
                 ingredientItemIcon: "/i/022000/022614_hr1.png",
-                name: LocalizedString(en: "Dravanian Spring Water"),
+                name: LocalizedString(
+                    en: "Dravanian Spring Water",
+                    ja: "ドラヴァニア天然水",
+                    de: "Dravanisches Quellwasser",
+                    fr: "Eau de source de Dravania"
+                ),
                 quantity: 4
             ),
             Ingredient(
                 id: 13,
                 ingredientItemIcon: "/i/020000/020008_hr1.png",
-                name: LocalizedString(en: "Water Crystal"),
+                name: LocalizedString(
+                    en: "Water Crystal",
+                    ja: "ウォータークリスタル",
+                    de: "Wasserkristall",
+                    fr: "Cristal d'eau"
+                ),
                 quantity: 20
             ),
             Ingredient(
                 id: 12,
                 ingredientItemIcon: "/i/020000/020011_hr1.png",
-                name: LocalizedString(en: "Lightning Crystal"),
+                name: LocalizedString(
+                    en: "Lightning Crystal",
+                    ja: "ライトニングクリスタル",
+                    de: "Blitzkristall",
+                    fr: "Cristal de foudre"
+                ),
                 quantity: 16
             )
         ]

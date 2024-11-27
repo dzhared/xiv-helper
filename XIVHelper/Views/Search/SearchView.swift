@@ -23,6 +23,21 @@ struct SearchView: View {
     /// The items that match the search text.
     @State private var items: [Item] = []
 
+    /// The search field localized text.
+    private var promptText: String {
+        let promptText: String = {
+            switch settings.searchType {
+            case .gathering:
+                return AppStrings.General.gathering
+            case .items:
+                return AppStrings.General.items
+            case .recipes:
+                return AppStrings.General.recipes
+            }
+        }().lowercasedByLocale()
+        return String(format: AppStrings.Search.searchFieldPrompt, promptText)
+    }
+
     /// The recipes that match the search text.
     @State private var recipes: [Recipe] = []
 
@@ -32,13 +47,13 @@ struct SearchView: View {
 
         switch settings.searchSortMethod {
         case .alphabetical:
-            sortedItems = items.sorted { $0.name.en < $1.name.en }
+            sortedItems = items.sorted { $0.name < $1.name }
         case .ilvl:
             sortedItems = items.sorted { $0.ilvl ?? 1 < $1.ilvl ?? 1 }
         case .patch:
             sortedItems = items.sorted { $0.patchId < $1.patchId }
         default:
-            sortedItems = items.sorted { $0.name.en < $1.name.en }
+            sortedItems = items.sorted { $0.name < $1.name }
         }
 
         return settings.searchAscending ? sortedItems : sortedItems.reversed()
@@ -50,7 +65,7 @@ struct SearchView: View {
 
         switch settings.searchSortMethod {
         case .alphabetical:
-            sortedRecipes = recipes.sorted { $0.resultName.en < $1.resultName.en }
+            sortedRecipes = recipes.sorted { $0.resultName < $1.resultName }
         case .ilvl:
             sortedRecipes = recipes.sorted { $0.resultIlvl < $1.resultIlvl }
         case .patch:
@@ -70,11 +85,11 @@ struct SearchView: View {
                 HStack(spacing: 8) {
                     // Pick items or recipes
                     Picker(AppStrings.Search.pickerPrompt, selection: $settings.searchType) {
-                        Text(SearchType.items.rawValue)
+                        Text(AppStrings.General.items)
                             .tag(SearchType.items)
-                        Text(SearchType.recipes.rawValue)
+                        Text(AppStrings.General.recipes)
                             .tag(SearchType.recipes)
-                        Text(SearchType.gathering.rawValue)
+                        Text(AppStrings.General.gathering)
                             .tag(SearchType.gathering)
                         // TODO: Add Leves
                     }
@@ -126,6 +141,7 @@ struct SearchView: View {
                         }
                     }
                 }
+                .contentMargins(.top, 8)
             }
             .navigationTitle(AppStrings.Navigation.search)
             .navigationBarTitleDisplayMode(.inline)
@@ -134,19 +150,23 @@ struct SearchView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Menu {
                         Picker(AppStrings.User.sortMethod, selection: $settings.searchSortMethod) {
-                            ForEach(SortMethod.allCases, id: \.rawValue) { method in
-                                Text(method.rawValue)
-                                    .tag(method)
-                            }
+                            Text(AppStrings.SortMethod.alphabetical)
+                                .tag(SortMethod.alphabetical)
+                            Text(AppStrings.SortMethod.ilvl)
+                                .tag(SortMethod.ilvl)
+                            Text(AppStrings.SortMethod.patch)
+                                .tag(SortMethod.patch)
+                            Text(AppStrings.SortMethod.rlvl)
+                                .tag(SortMethod.rlvl)
                         }
                         Picker(AppStrings.User.sortOrder, selection: $settings.searchAscending) {
-                            Text("Ascending")
+                            Text(AppStrings.Search.ascending)
                                 .tag(true)
-                            Text("Descending")
+                            Text(AppStrings.Search.descending)
                                 .tag(false)
                         }
                     } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                        Label(AppStrings.General.sort, systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)
                     }
                 }
@@ -156,9 +176,11 @@ struct SearchView: View {
             text: $debouncer.searchText,
             isPresented: $isSearching,
             placement: .toolbar,
-            prompt: AppStrings.Search.searchFieldPrompt + settings.searchType.rawValue.lowercased()
-        )
+            prompt: promptText)
         .autocorrectionDisabled()
+        .onDisappear {
+            isSearching = false
+        }
         .onReceive(debouncer.searchTextPublisher) { searchText in
             fetchItems(searchText: searchText)
             fetchRecipes(searchText: searchText)

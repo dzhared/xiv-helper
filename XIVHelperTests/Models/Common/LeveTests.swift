@@ -15,7 +15,7 @@ final class LeveTests: XCTestCase {
             leve: 5,
             amount: 3,
             lvl: 50,
-            name: LocalizedString(en: "Leve"),
+            name: LocalizedString(en: "Leve EN", ja: "Leve JA", de: "Leve DE", fr: "Leve FR"),
             classJob: 23
         )
     }

@@ -29,8 +29,12 @@ struct ParameterGrid: View {
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
             ForEach(parameters, id: \.0) { name, value in
-                Text("\(name): **\(value)**")
-                    .multilineTextAlignment(.leading)
+                Text(AttributedString(
+                    format: AppStrings.General.textAndBoldText,
+                    name,
+                    value
+                ))
+                .multilineTextAlignment(.leading)
             }
         }
     }
@@ -72,11 +76,11 @@ struct ParameterGrid: View {
     init(recipe: Recipe) {
         self.forceOneColumn = false
         self.parameters = [
-            ("Recipe Level", String(recipe.recipeLevel)),
-            ("Progress", String(recipe.progress)),
-            ("Durability", String(recipe.durability)),
-            ("Quality", String(recipe.quality)),
-            ("Yields", String(recipe.yields))
+            (AppStrings.Parameter.recipeLevel, String(recipe.recipeLevel)),
+            (AppStrings.Parameter.progress, String(recipe.progress)),
+            (AppStrings.Parameter.durability, String(recipe.durability)),
+            (AppStrings.Parameter.quality, String(recipe.quality)),
+            (AppStrings.Parameter.yields, String(recipe.yields))
         ]
         .filter { $0.1 != "0" }
     }

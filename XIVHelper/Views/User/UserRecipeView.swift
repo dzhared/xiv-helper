@@ -61,7 +61,7 @@ struct UserRecipeView: View {
                             }
                         }
                     } else {
-                        ForEach(userRecipesSorted, id: \.id) { userRecipe in
+                        ForEach(userRecipesSorted) { userRecipe in
                             NavigationLink {
                                 RecipeDetailView(recipe: userRecipe.recipe)
                             } label: {
@@ -77,10 +77,9 @@ struct UserRecipeView: View {
                         }
                     }
                 }
-                .safeAreaInset(edge: .bottom) {
-                    Spacer()
-                        .frame(height: 64)
-                }
+                .contentMargins(.top, 8)
+                .safeAreaPadding(.bottom, 64)
+
                 if !userRecipes.isEmpty {
                     NavigationLink {
                         ShoppingListView()
@@ -97,7 +96,7 @@ struct UserRecipeView: View {
                 isPresented: $isShowingConfirmationDialog,
                 titleVisibility: .visible
             ) {
-                Button("Yes", role: .destructive) {
+                Button(AppStrings.General.yes, role: .destructive) {
                     withAnimation {
                         try? context.delete(model: UserRecipe.self)
                     }
@@ -110,19 +109,23 @@ struct UserRecipeView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Menu {
                         Picker(AppStrings.User.sortMethod, selection: $settings.userSortMethod) {
-                            ForEach(SortMethod.allCases, id: \.rawValue) { method in
-                                Text(method.rawValue)
-                                    .tag(method)
-                            }
+                            Text(AppStrings.SortMethod.alphabetical)
+                                .tag(SortMethod.alphabetical)
+                            Text(AppStrings.SortMethod.ilvl)
+                                .tag(SortMethod.ilvl)
+                            Text(AppStrings.SortMethod.patch)
+                                .tag(SortMethod.patch)
+                            Text(AppStrings.SortMethod.rlvl)
+                                .tag(SortMethod.rlvl)
                         }
                         Picker(AppStrings.User.sortOrder, selection: $settings.userAscending) {
-                            Text("Ascending")
+                            Text(AppStrings.Search.ascending)
                                 .tag(true)
-                            Text("Descending")
+                            Text(AppStrings.Search.descending)
                                 .tag(false)
                         }
                     } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                        Label(AppStrings.General.sort, systemImage: "arrow.up.arrow.down")
                             .labelStyle(.titleAndIcon)
                     }
                 }

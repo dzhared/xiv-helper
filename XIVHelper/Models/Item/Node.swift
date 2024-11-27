@@ -83,7 +83,7 @@ struct Node: Codable, Identifiable, Equatable {
         y: 27.01,
         z: 0,
         map: 17,
-        mapName: LocalizedString(en: "Eastern La Noscea"),
+        mapName: LocalizedString(en: "Eastern La Noscea", ja: "東ラノシア", de: "Östliches La Noscea", fr: "Noscea orientale"),
         hiddenItems: [10099, 10335],
         name: LocalizedString(en: "Bloodshore", ja: "ブラッドショア", de: "Rotgischt", fr: "Rives sanglantes", ko: "핏빛해안", zh: "鲜血滨"),
         patch: 2

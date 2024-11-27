@@ -259,11 +259,16 @@ extension Recipe {
         durability: 80,
         expert: false,
         ingredients: [
-            Ingredient(id: 27841, ingredientItemIcon: "/i/025000/025351_hr1.png", name: LocalizedString(en: "Upland Wheat Flour"), quantity: 2),
-            Ingredient(id: 27968, ingredientItemIcon: "/i/022000/022678_hr1.png", name: LocalizedString(en: "Highland Spring Water"), quantity: 3),
-            Ingredient(id: 19907, ingredientItemIcon: "/i/022000/022617_hr1.png", name: LocalizedString(en: "Ala Mhigan Salt Crystal"), quantity: 1),
-            Ingredient(id: 8, ingredientItemIcon: "/i/020000/020007_hr1.png", name: LocalizedString(en: "Fire Crystal"), quantity: 7),
-            Ingredient(id: 13, ingredientItemIcon: "/i/020000/020008_hr1.png", name: LocalizedString(en: "Water Crystal"), quantity: 6),
+            Ingredient(
+                id: 27841,
+                ingredientItemIcon: "/i/025000/025351_hr1.png",
+                name: LocalizedString(en: "Upland Wheat Flour", ja: "Test JA", de: "Test DE", fr: "Test FR"),
+                quantity: 2
+            ),
+            Ingredient(id: 27968, ingredientItemIcon: "/i/022000/022678_hr1.png", name: LocalizedString(en: "Highland Spring Water", ja: "Test JA", de: "Test DE", fr: "Test FR"), quantity: 3),
+            Ingredient(id: 19907, ingredientItemIcon: "/i/022000/022617_hr1.png", name: LocalizedString(en: "Ala Mhigan Salt Crystal", ja: "Test JA", de: "Test DE", fr: "Test FR"), quantity: 1),
+            Ingredient(id: 8, ingredientItemIcon: "/i/020000/020007_hr1.png", name: LocalizedString(en: "Fire Crystal", ja: "Test JA", de: "Test DE", fr: "Test FR"), quantity: 7),
+            Ingredient(id: 13, ingredientItemIcon: "/i/020000/020008_hr1.png", name: LocalizedString(en: "Water Crystal", ja: "Test JA", de: "Test DE", fr: "Test FR"), quantity: 6),
         ],
         masterbookId: 12244,
         masterbookItemIcon: "/i/026000/026156_hr1.png",

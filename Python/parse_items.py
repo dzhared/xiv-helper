@@ -28,26 +28,26 @@ for key in items_database_pages_json.keys():
     # The descriptin with HTML elements sanitized
     html_desc = i.get('description')
     desc = {
-        'en': clean_html(html_desc.get('en', '')),
-        'ja': clean_html(html_desc.get('ja', '')),
-        'de': clean_html(html_desc.get('de', '')),
-        'fr': clean_html(html_desc.get('fr', '')),
+        'en': clean_html(html_desc.get('en')),
+        'ja': clean_html(html_desc.get('ja')),
+        'de': clean_html(html_desc.get('de')),
+        'fr': clean_html(html_desc.get('fr')),
         'ko': clean_html(html_desc.get('ko', '')),
         'zh': clean_html(html_desc.get('zh', '')),
     }
 
     retrieved_name = i.get('name')
     name = {
-        'en': clean_html(retrieved_name.get('en', '')),
-        'ja': clean_html(retrieved_name.get('ja', '')),
-        'de': clean_html(retrieved_name.get('de', '')),
-        'fr': clean_html(retrieved_name.get('fr', '')),
+        'en': clean_html(retrieved_name.get('en')),
+        'ja': clean_html(retrieved_name.get('ja')),
+        'de': clean_html(retrieved_name.get('de')),
+        'fr': clean_html(retrieved_name.get('fr')),
         'ko': clean_html(retrieved_name.get('ko', '')),
         'zh': clean_html(retrieved_name.get('zh', '')),
     }
 
     # The URL for the image, in higher resolution
-    icon = str(i.get('icon', '/i/000000/000033.png')).replace('.png', '_hr1.png')
+    icon = str(i.get('icon')).replace('.png', '_hr1.png')
 
     # Recipes to craft the item
     recipes = []
@@ -101,10 +101,10 @@ for key in items_database_pages_json.keys():
             'amount': l.get('amount'),
             'lvl': l.get('lvl'),
             'name': {
-                'en': clean_html(leve_data.get('en', '')),
-                'ja': clean_html(leve_data.get('ja', '')),
-                'de': clean_html(leve_data.get('de', '')),
-                'fr': clean_html(leve_data.get('fr', ''))
+                'en': clean_html(leve_data.get('en')),
+                'ja': clean_html(leve_data.get('ja')),
+                'de': clean_html(leve_data.get('de')),
+                'fr': clean_html(leve_data.get('fr')),
             },
             'classJob': l.get('classJob')
         }
@@ -196,7 +196,7 @@ for key in items_database_pages_json.keys():
         'nodes': nodes,
 
         # ID of patch that the item was added in. `2` is initial release
-        'patchId': patch_dict.get(int(key)),
+        'patchId': patch_dict.get(int(key), 2),
 
         # Price to purchase the item from an NPC shop
         'price': i.get('price', None),
