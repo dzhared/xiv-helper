@@ -141,6 +141,7 @@ struct SearchView: View {
                         }
                     }
                 }
+                .contentMargins(.top, 8)
             }
             .navigationTitle(AppStrings.Navigation.search)
             .navigationBarTitleDisplayMode(.inline)

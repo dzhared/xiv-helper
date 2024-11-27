@@ -11,11 +11,11 @@ struct LocalizedString: Codable, Equatable {
         case .en:
             return en
         case .de:
-            return de ?? en
+            return de
         case .fr:
-            return fr ?? en
+            return fr
         case .ja:
-            return ja ?? en
+            return ja
         default:
             return en
         }
@@ -26,14 +26,14 @@ struct LocalizedString: Codable, Equatable {
     /// The English string.
     let en: String
 
-    /// The optional German string.
-    let de: String?
+    /// The German string.
+    let de: String
 
-    /// The optional French string.
-    let fr: String?
+    /// The French string.
+    let fr: String
 
-    /// The optional Japanese string.
-    let ja: String?
+    /// The Japanese string.
+    let ja: String
 
     /// The optional Korean string.
     private let ko: String?
@@ -45,9 +45,9 @@ struct LocalizedString: Codable, Equatable {
 
     init(
         en: String,
-        ja: String? = nil,
-        de: String? = nil,
-        fr: String? = nil,
+        ja: String,
+        de: String,
+        fr: String,
         ko: String? = nil,
         zh: String? = nil
     ) {
@@ -67,27 +67,18 @@ struct LocalizedString: Codable, Equatable {
 // MARK: Comparable
 
 extension LocalizedString: Comparable {
-    static func <(lhs: LocalizedString, rhs: LocalizedString) -> Bool {
+    static func < (lhs: LocalizedString, rhs: LocalizedString) -> Bool {
         switch GameLocale.localeForDevice() {
         case .de:
-            if let left = lhs.de, let right = rhs.de {
-                return left < right
-            }
+            return lhs.de < rhs.de
         case .en:
             return lhs.en < rhs.en
         case .fr:
-            if let left = lhs.fr, let right = rhs.fr {
-                return left < right
-            }
+            return lhs.fr < rhs.fr
         case .ja:
-            if let left = lhs.ja, let right = rhs.ja {
-                return left < right
-            }
+            return lhs.ja < rhs.ja
         default:
             return lhs.en < rhs.en
         }
-
-        // Default to comparing the English string.
-        return lhs.en < rhs.en
     }
 }

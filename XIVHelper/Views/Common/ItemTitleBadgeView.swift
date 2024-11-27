@@ -113,17 +113,28 @@ struct ItemTitleBadgeView: View {
 // MARK: Previews
 
 #if DEBUG
+@MainActor let view = ItemTitleBadgeView(
+    icon: URL(string: "https://xivapi.com/i/054000/054918_hr1.png")!,
+    ilvl: 115,
+    itemCategoryId: 40,
+    name: LocalizedString(
+        en: "Rainbow Ribbon of Fending",
+        ja: "レインボークロスリボン・オブ・ディフェンス",
+        de: "Regenbogen-Schleife der Verteidigung",
+        fr: "Ruban de protecteur en étoffe arc-en-ciel"
+    ),
+    classJobCategory: ClassJobCategory(id: 34),
+    patch: Patch(id: 19)
+)
+
+#Preview {
+    view
+}
+
 #Preview("In Context") {
     List {
         Section {
-            ItemTitleBadgeView(
-                icon: URL(string: "https://xivapi.com/i/054000/054918_hr1.png")!,
-                ilvl: 115,
-                itemCategoryId: 40,
-                name: LocalizedString(en: "Rainbow Ribbon of Fending"),
-                classJobCategory: ClassJobCategory(id: 34),
-                patch: Patch(id: 19)
-            )
+            view
         }
     }
 }

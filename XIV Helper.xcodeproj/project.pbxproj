@@ -70,12 +70,14 @@
 		7F7154EF2C2131C300F458B4 /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F7154F02C21335A00F458B4 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */; };
 		7F7154F12C21338A00F458B4 /* GameLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44022C20ECE4003F2AAB /* GameLocale.swift */; };
-		7F7DD89E2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0D5A82CE460D40088D19C /* xivhelper-2.4.0.store-shm */; };
-		7F7DD89F2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */; };
-		7F7DD8A02CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0D5A72CE460D40088D19C /* xivhelper-2.4.0.store-wal */; };
 		7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */; };
 		7F7DD8B22CEDA74200D7B7D8 /* AttributedString+Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */; };
 		7F9E23642CEEC35C00C974D7 /* String+LowercasedByLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */; };
+		7F9E237F2CF6DA5D00C974D7 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44002C20ECE4003F2AAB /* AppStrings.swift */; };
+		7F9E23802CF6DA7000C974D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
+		7F9E23842CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */; };
+		7F9E23852CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */; };
+		7F9E23862CF6DB4C00C974D7 /* xivhelper-2.5.0.store in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */; };
 		7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0992C29D468009B84C8 /* SwiftDataTests.swift */; };
 		7FACC09D2C29D523009B84C8 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */; };
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
@@ -172,6 +174,9 @@
 		7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Markdown.swift"; sourceTree = "<group>"; };
 		7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LowercasedByLocale.swift"; sourceTree = "<group>"; };
+		7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store"; sourceTree = "<group>"; };
+		7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store-shm"; sourceTree = "<group>"; };
+		7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */ = {isa = PBXFileReference; lastKnownFileType = text; path = "xivhelper-2.5.0.store-wal"; sourceTree = "<group>"; };
 		7FA846042C23F5580043006D /* XIV Helper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XIV Helper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA846062C23F5580043006D /* BaseParamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParamTests.swift; sourceTree = "<group>"; };
 		7FA846102C23F85A0043006D /* BonusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusTests.swift; sourceTree = "<group>"; };
@@ -341,6 +346,7 @@
 				7F41CDD22C2EFAB20040C80D /* xivhelper-2.2.0 */,
 				7FB2E2612C5EF59300720B28 /* xivhelper-2.3.0 */,
 				7FCBED3E2CE3C6C3003471AA /* xivhelper-2.4.0 */,
+				7F9E23672CF1707800C974D7 /* xivhelper-2.5.0 */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -351,8 +357,8 @@
 				7F1D44002C20ECE4003F2AAB /* AppStrings.swift */,
 				7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */,
 				7F1D44012C20ECE4003F2AAB /* Debouncer.swift */,
-				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F1D44022C20ECE4003F2AAB /* GameLocale.swift */,
+				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */,
 				7F1D44032C20ECE4003F2AAB /* ScalingImage.swift */,
 				7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */,
@@ -471,6 +477,16 @@
 				7F204A742C2367CA0047D2A0 /* recipe.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		7F9E23672CF1707800C974D7 /* xivhelper-2.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7F9E23812CF6DB4C00C974D7 /* xivhelper-2.5.0.store */,
+				7F9E23822CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm */,
+				7F9E23832CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal */,
+			);
+			path = "xivhelper-2.5.0";
 			sourceTree = "<group>";
 		};
 		7FA846052C23F5580043006D /* XIVHelperTests */ = {
@@ -746,6 +762,7 @@
 			files = (
 				7F7154CF2C212FD700F458B4 /* Assets.xcassets in Resources */,
 				7F204A762C2367CA0047D2A0 /* recipe.json in Resources */,
+				7F9E23802CF6DA7000C974D7 /* Assets.xcassets in Resources */,
 				7F204A772C2367CA0047D2A0 /* item.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,11 +778,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F7DD89E2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-shm in Resources */,
-				7F7DD89F2CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store in Resources */,
 				7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */,
-				7F7DD8A02CEC2EEB00D7B7D8 /* xivhelper-2.4.0.store-wal in Resources */,
 				7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */,
+				7F9E23842CF6DB4C00C974D7 /* xivhelper-2.5.0.store-wal in Resources */,
+				7F9E23852CF6DB4C00C974D7 /* xivhelper-2.5.0.store-shm in Resources */,
+				7F9E23862CF6DB4C00C974D7 /* xivhelper-2.5.0.store in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +805,7 @@
 				7F7154F02C21335A00F458B4 /* SettingsManager.swift in Sources */,
 				7F7154E22C2131B500F458B4 /* ClassJob.swift in Sources */,
 				7F7154E32C2131B500F458B4 /* ClassJobCategory.swift in Sources */,
+				7F9E237F2CF6DA5D00C974D7 /* AppStrings.swift in Sources */,
 				7F7154E42C2131B500F458B4 /* Bonus.swift in Sources */,
 				7F7154E52C2131B500F458B4 /* ItemCategory.swift in Sources */,
 				7F7154E62C2131B500F458B4 /* Leve.swift in Sources */,
@@ -968,7 +986,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.XIV-Helper-Tests";
@@ -992,7 +1010,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.XIV-Helper-Tests";
@@ -1153,7 +1171,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1189,7 +1207,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hoerr.jared.xiv-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

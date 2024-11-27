@@ -20,10 +20,10 @@ final class PatchTests: XCTestCase {
         patch = nil
     }
 
-    /// Patch `99`, the patch after 7.1, has not yet been added. This patch should
-    /// fail when that patch is released.
-    func testPatchDawntrailPatchNotReleased() {
-        let futurePatch = Patch(id: 99)
+    /// Patch `100`, the patch after 7.11, has not yet been added. This patch should fail when that
+    /// patch is released.
+    func testFuturePatchNotReleased() {
+        let futurePatch = Patch(id: 100)
         XCTAssertEqual(futurePatch.id, 2)
     }
 

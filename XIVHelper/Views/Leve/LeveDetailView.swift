@@ -26,7 +26,7 @@ struct LeveDetailView: View {
             leve: 5,
             amount: 3,
             lvl: 20,
-            name: LocalizedString(en: "A Stitch in Time"),
+            name: LocalizedString(en: "A Stitch in Time", ja: "製作依頼：エオルゼア風革手袋", de: "Ungeduldige Kunden", fr: "Fabrication : des gants dans le style occidental"),
             classJob: 9
         )
     )

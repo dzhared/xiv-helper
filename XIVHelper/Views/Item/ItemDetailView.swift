@@ -29,7 +29,7 @@ struct ItemDetailView: View {
             List {
                 if let item {
                     // Main item badge
-                    Section {
+                    Section(AppStrings.General.item) {
                         VStack(alignment: .leading) {
                             ItemTitleBadgeView(item: item)
                         }
@@ -95,19 +95,19 @@ struct ItemDetailView: View {
                     // Recipes
                     Section(AppStrings.General.recipes) {
                         if !item.recipes.isEmpty {
-                            ForEach(item.recipes, id: \.id) { recipe in
-                                let abbreviation = ClassJob(id: recipe.classJob).abbreviation
+                            ForEach(item.recipes) { recipe in
+                                let classJob = ClassJob(id: recipe.classJob)
                                 NavigationLink {
                                     RecipeDetailView(recipeID: recipe.id)
                                 } label: {
                                     HStack {
-                                        Image(abbreviation)
+                                        classJob.icon
                                             .resizable()
                                             .frame(width: 32, height: 32)
                                         Text(String(
                                             format: AppStrings.Item.levelAndType,
                                             recipe.lvl,
-                                            abbreviation
+                                            classJob.abbreviation
                                         ))
                                     }
                                 }
@@ -155,7 +155,6 @@ struct ItemDetailView: View {
                         Section(AppStrings.General.leves) {
                             ForEach(item.leves, id: \.leve) { leve in
                                 let classJobCategory = ClassJobCategory(id: leve.classJob)
-                                // TODO: Add LeveDetailView
                                 HStack {
                                     Image(classJobCategory.name)
                                         .resizable()
@@ -179,8 +178,8 @@ struct ItemDetailView: View {
             .navigationTitle(AppStrings.Navigation.itemDetail)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                if let item, item.canBeHq {
-                    // HQ toggle, if item can be HQ
+                if let item, item.canBeHq, (!item.statsMain.isEmpty || !item.statsSecondary.isEmpty) {
+                    // HQ toggle, if item can be HQ and has stats to display
                     ToolbarItem(placement: .primaryAction) {
                         Toggle(isOn: $settings.hq) {
                             Image(ImageResource.HQ)

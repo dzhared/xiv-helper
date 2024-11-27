@@ -23,10 +23,6 @@ final class SettingsManager: ObservableObject {
 
     /// The available settings in AppStorage.
     enum Keys {
-        enum Dawntrail: String, CaseIterable {
-            case enabled
-            case hasSeenWarning
-        }
         enum Item: String, CaseIterable {
             case hq
         }
@@ -102,9 +98,6 @@ final class SettingsManager: ObservableObject {
     /// Whether to search with case sensitivity.
     @AppStorage(Keys.Search.searchCaseSensitive.rawValue) var searchCaseSensitive: Bool = false
 
-    /// Which equipment ClassJob to search for.
-    @AppStorage(Keys.Search.searchEquipmentClass.rawValue) var searchEquipmentClass: AllClassJob = .all
-
     /// Whether the result is equippable.
     @AppStorage(Keys.Search.searchEquipmentOnly.rawValue) var searchEquipmentOnly: Bool = false
 
@@ -146,7 +139,6 @@ final class SettingsManager: ObservableObject {
     func resetSearchSettings() {
         searchAscending = true
         searchCaseSensitive = false
-        searchEquipmentClass = .all
         searchEquipmentOnly = false
         searchExpansion = .all
         searchHqOnly = false
@@ -188,68 +180,6 @@ enum SortMethod: String, CaseIterable {
     case ilvl
     case patch
     case rlvl
-}
-
-// MARK: AllClassJob
-
-/// All available ClassJobs, enumerated for settings purposes.
-enum AllClassJob: String, CaseIterable, LosslessStringConvertible {
-
-    /// Used to _not_ filter results.
-    case all = "All"
-
-    case gld = "GLD"
-    case pgl = "PGL"
-    case mrd = "MRD"
-    case lnc = "LNC"
-    case arc = "ARC"
-    case cnj = "CNJ"
-    case thm = "THM"
-    case crp = "CRP"
-    case bsm = "BSM"
-    case arm = "ARM"
-    case gsm = "GSM"
-    case ltw = "LTW"
-    case wvr = "WVR"
-    case alc = "ALC"
-    case cul = "CUL"
-    case min = "MIN"
-    case btn = "BTN"
-    case fsh = "FSH"
-    case pld = "PLD"
-    case mnk = "MNK"
-    case war = "WAR"
-    case drg = "DRG"
-    case brd = "BRD"
-    case whm = "WHM"
-    case blm = "BLM"
-    case acn = "ACN"
-    case smn = "SMN"
-    case sch = "SCH"
-    case rog = "ROG"
-    case nin = "NIN"
-    case mch = "MCH"
-    case drk = "DRK"
-    case ast = "AST"
-    case sam = "SAM"
-    case rdm = "RDM"
-    case blu = "BLU"
-    case gnb = "GNB"
-    case dnc = "DNC"
-    case rpr = "RPR"
-    case sge = "SGE"
-    case vpr = "VPR"
-    case pct = "PCT"
-
-    /// Initialize from a matching string value.
-    init?(_ description: String) {
-        self.init(rawValue: description)
-    }
-
-    /// The raw value for initialization.
-    var description: String {
-        self.rawValue
-    }
 }
 
 // MARK: AllItemCategory

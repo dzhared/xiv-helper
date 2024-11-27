@@ -45,7 +45,7 @@ struct RecipeDetailView: View {
                             ItemTitleBadgeView(recipe: recipe)
                         }
                         HStack {
-                            Image(recipe.classJob.abbreviation)
+                            recipe.classJob.icon
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 36)
@@ -84,7 +84,7 @@ struct RecipeDetailView: View {
 
                     // Ingredients list
                     Section(AppStrings.General.ingredients) {
-                        ForEach(recipe.ingredients, id: \.id) { ingredient in
+                        ForEach(recipe.ingredients) { ingredient in
                             NavigationLink {
                                 ItemDetailView(itemID: ingredient.id)
                             } label: {
@@ -93,6 +93,8 @@ struct RecipeDetailView: View {
                         }
                     }
                 }
+                .navigationTitle(AppStrings.Navigation.recipeDetail)
+                .navigationBarTitleDisplayMode(.inline)
                 .sheet(isPresented: $isShowingQuantitySelector) {
                     quantitySelector()
                         .presentationDetents([.height(200)])
@@ -102,8 +104,6 @@ struct RecipeDetailView: View {
                         addRecipeButton()
                     }
                 }
-                .navigationTitle(AppStrings.Navigation.recipeDetail)
-                .navigationBarTitleDisplayMode(.inline)
             }
         }
         .onAppear {

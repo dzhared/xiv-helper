@@ -35,7 +35,7 @@ final class SwiftDataTests: XCTestCase {
     @MainActor func testAllItems() throws {
         let descriptor = FetchDescriptor<Item>()
         items = try container.mainContext.fetch(descriptor)
-        XCTAssertEqual(items.count, 42_519)
+        XCTAssertEqual(items.count, 42_525)
 
         // Rendering any ItemDetailView, either from the item or its id, does not throw an error.
         for item in items {
@@ -78,5 +78,29 @@ final class SwiftDataTests: XCTestCase {
         let descriptor = FetchDescriptor<UserRecipe>()
         userRecipes = try container.mainContext.fetch(descriptor)
         XCTAssertEqual(userRecipes.count, 0)
+    }
+
+    @MainActor func testAllItemsHaveLocalizedNames() throws {
+        let descriptor = FetchDescriptor<Item>()
+        items = try container.mainContext.fetch(descriptor)
+        XCTAssertEqual(items.count, 42_525)
+        for item in items {
+            XCTAssertNotEqual(item.name.en, "")
+            XCTAssertNotEqual(item.name.de, "")
+            XCTAssertNotEqual(item.name.fr, "")
+            XCTAssertNotEqual(item.name.ja, "")
+        }
+    }
+
+    /// All recipes in the
+    @MainActor func testAllRecipesHaveLocalizedNames() throws {
+        let descriptor = FetchDescriptor<Recipe>()
+        recipes = try container.mainContext.fetch(descriptor)
+        XCTAssertEqual(recipes.count, 11803)
+        for recipe in recipes {
+            XCTAssertNotEqual(recipe.resultName.de, "")
+            XCTAssertNotEqual(recipe.resultName.fr, "")
+            XCTAssertNotEqual(recipe.resultName.ja, "")
+        }
     }
 }

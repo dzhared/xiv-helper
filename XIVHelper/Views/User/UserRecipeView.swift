@@ -61,7 +61,7 @@ struct UserRecipeView: View {
                             }
                         }
                     } else {
-                        ForEach(userRecipesSorted, id: \.id) { userRecipe in
+                        ForEach(userRecipesSorted) { userRecipe in
                             NavigationLink {
                                 RecipeDetailView(recipe: userRecipe.recipe)
                             } label: {
@@ -77,10 +77,9 @@ struct UserRecipeView: View {
                         }
                     }
                 }
-                .safeAreaInset(edge: .bottom) {
-                    Spacer()
-                        .frame(height: 64)
-                }
+                .contentMargins(.top, 8)
+                .safeAreaPadding(.bottom, 64)
+
                 if !userRecipes.isEmpty {
                     NavigationLink {
                         ShoppingListView()

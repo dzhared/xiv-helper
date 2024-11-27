@@ -1,7 +1,7 @@
 import Foundation
 
 /// The data for a given Lodestone News article.
-struct LodestoneNewsArticle: Codable, Equatable, Sendable {
+struct LodestoneNewsArticle: Codable, Equatable, Identifiable, Sendable {
 
     // MARK: Properties
 

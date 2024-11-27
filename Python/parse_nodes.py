@@ -1,10 +1,28 @@
-from json_writing import clean_html, load_json_file
+from json_writing import clean_html, load_json_file, write_json_to_file
 
 nodes_json = load_json_file('nodes.json')
 nodes_database_pages_json = load_json_file('nodes-database-pages.json')
 map_entries_json = load_json_file('map-entries.json')
+places_json = load_json_file('places.json')
 
 map_name_dict = {entry['id']: entry['name'] for entry in map_entries_json}
+
+dict_by_en = {}
+for key in places_json:
+    # Get the localized names of a place.
+    places = places_json.get(key)
+    # Retrieve just the English name. This will be used as a key.
+    en = str(places.get('en'))
+    # If the entry is blank, skip it.
+    if len(en) == 0:
+        continue
+    # Convert to a dictionary where the English name is the key, and it contains the localized name.
+    dict_by_en[en] = {
+        'en': places.get('en'),
+        'fr': places.get('fr'),
+        'de': places.get('de'),
+        'ja': places.get('ja'),
+    }
 
 def parse_nodes():
     nodes = []
@@ -13,15 +31,23 @@ def parse_nodes():
         try:
             n = nodes_database_pages_json[key]
             map = int(n.get('map'))
+            map_name_en = map_name_dict.get(map)
+            map_names = dict_by_en.get(map_name_en)
+            map_name = {
+                'en': map_names.get('en'),
+                'de': map_names.get('de'),
+                'fr': map_names.get('fr'),
+                'ja': map_names.get('ja'),
+            }
 
             new_node = {
                 'id': int(n.get('id')),
-                'items': nodes_json.get(key, {}).get('items', []),
-                'limited': bool(n.get('limited', False)),
+                'items': nodes_json.get(key).get('items', []),
+                'limited': bool(n.get('limited')),
                 'level': int(n.get('level')),
                 'type': int(n.get('type', 0)),
-                'legendary': bool(n.get('legendary', False)),
-                'ephemeral': bool(n.get('ephemeral', False)),
+                'legendary': bool(n.get('legendary')),
+                'ephemeral': bool(n.get('ephemeral')),
                 'spawns': n.get('spawns', []),
                 'duration': int(n.get('duration', 0)),
                 'zoneId': int(n.get('zoneid')),
@@ -30,17 +56,13 @@ def parse_nodes():
                 'y': float(n.get('y')),
                 'z': float(n.get('z', 0)),
                 'map': map,
-                'mapName': {
-                    'en': map_name_dict.get(map, '')
-                },
-                'hiddenItems': nodes_json.get(key, {}).get('hiddenItems', []),
+                'mapName': map_name,
+                'hiddenItems': nodes_json.get(key).get('hiddenItems', []),
                 'name': {
                     'en': clean_html(n.get('en')),
-                    'ja': clean_html(n.get('ja', '')),
-                    'de': clean_html(n.get('de', '')),
-                    'fr': clean_html(n.get('fr', '')),
-                    'ko': clean_html(n.get('ko', '')),
-                    'zh': clean_html(n.get('zh', ''))
+                    'ja': clean_html(n.get('ja')),
+                    'de': clean_html(n.get('de')),
+                    'fr': clean_html(n.get('fr')),
                 },
                 'patch': int(n.get('patch', 2))
             }
@@ -67,5 +89,6 @@ def nodes_dict():
     
     return nodes_dict
 
-dict = nodes_dict()
-print(dict)
+if __name__ == '__main__':
+    dict = nodes_dict()
+    write_json_to_file(dict, 'test.json')

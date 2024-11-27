@@ -16,7 +16,7 @@ struct LodestoneNewsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(allArticles, id: \.id) {
+                ForEach(allArticles) {
                     newsCard(article: $0)
                 }
                 if allArticles.isEmpty {
@@ -56,7 +56,7 @@ struct LodestoneNewsView: View {
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
                 ProgressView()
-                    .frame(width: 188, height: 720)
+                    .frame(width: 360, height: 90)
             }
             VStack(alignment: .leading) {
                 Text(article.title)
@@ -106,7 +106,20 @@ struct LodestoneNewsView: View {
 
     /// Attempt to load the articles.
     private func getLodestoneNews(completion: @escaping @Sendable ([LodestoneNewsArticle]) -> Void) {
-        let url = URL(string: "https://na.lodestonenews.com/news/topics")!
+        let url: URL = {
+            switch GameLocale.localeForDevice() {
+            case .en:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=en")!
+            case .de:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=de")!
+            case .fr:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=fr")!
+            case .ja:
+                return URL(string: "https://lodestonenews.com/news/topics?locale=jp")!
+            default:
+                return URL(string: "https://lodestonenews.com/news/topics")!
+            }
+        }()
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

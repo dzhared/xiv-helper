@@ -2,7 +2,7 @@ import Foundation
 
 /// Used in a `Recipe` to determine how many of an item is needed. Does not initialize an entire
 /// `Item` object for more responsive performance.
-struct Ingredient: Codable, Equatable {
+struct Ingredient: Codable, Equatable, Identifiable {
 
     // MARK: Properties
 
