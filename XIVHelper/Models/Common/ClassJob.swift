@@ -195,7 +195,7 @@ struct ClassJob: Codable, Equatable {
         case 40: return Image(.SGE)
         case 41: return Image(.VPR)
         case 42: return Image(.PCT)
-        default: return Image(ImageResource.EXP)
+        default: return Image("EXP")
         }
     }
 }
