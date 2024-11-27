@@ -117,7 +117,7 @@ struct ItemDetailView: View {
         if let item, let gcReward = item.gcReward {
             Section(AppStrings.General.expertDelivery) {
                 HStack(spacing: 8) {
-                    ScalingImage(.gcSeal)
+                    ScalingImage(ImageResource.gcSeal)
                     Text(String(format: AppStrings.Item.seals, gcReward))
                 }
             }
@@ -215,20 +215,20 @@ struct ItemDetailView: View {
 
     /// The Supply section for the item.
     @ViewBuilder private func sectionSupply() -> some View {
-        if let item, let supply = item.supply {
+        if let item, let supply = item.supply, supply.amount > 0 {
             Section(String(
                 format: AppStrings.Item.grandCompanyQuantity,
                 supply.amount
             )) {
                 HStack(spacing: 16) {
-                    ScalingImage(.gcSeal)
+                    ScalingImage(ImageResource.gcSeal)
                     Text(String(
                         format: AppStrings.Item.seals,
                         settings.hq ? supply.sealsHq : supply.seals
                     ))
                 }
                 HStack(spacing: 16) {
-                    ScalingImage(.EXP)
+                    ScalingImage(ImageResource.EXP)
                     Text(String(
                         format: AppStrings.Item.xp,
                         settings.hq ? supply.xpHq : supply.xp

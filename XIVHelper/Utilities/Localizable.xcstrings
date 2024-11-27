@@ -311,6 +311,12 @@
             "state" : "translated",
             "value" : "Objet"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイテム"
+          }
         }
       }
     },

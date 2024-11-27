@@ -64,6 +64,6 @@ struct ScalingImage: View {
 
 #if DEBUG
 #Preview {
-    ScalingImage(.HQ)
+    ScalingImage(ImageResource.HQ)
 }
 #endif
