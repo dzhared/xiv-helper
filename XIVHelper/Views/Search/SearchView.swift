@@ -175,7 +175,7 @@ struct SearchView: View {
         .searchable(
             text: $debouncer.searchText,
             isPresented: $isSearching,
-            placement: .toolbar,
+            placement: .navigationBarDrawer,
             prompt: promptText)
         .autocorrectionDisabled()
         .onDisappear {
