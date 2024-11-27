@@ -219,16 +219,18 @@ struct ItemDetailView: View {
             Section {
                 HStack(spacing: 16) {
                     ScalingImage(ImageResource.gcSeal)
+                    let seals = settings.hq ? supply.sealsHq : supply.seals
                     Text(String(
                         format: AppStrings.Item.seals,
-                        settings.hq ? supply.sealsHq : supply.seals
+                        seals
                     ))
                 }
                 HStack(spacing: 16) {
                     ScalingImage(ImageResource.EXP)
+                    let xp = settings.hq ? supply.xpHq : supply.xp
                     Text(String(
                         format: AppStrings.Item.xp,
-                        settings.hq ? supply.xpHq : supply.xp
+                        xp
                     ))
                 }
             } header: {
