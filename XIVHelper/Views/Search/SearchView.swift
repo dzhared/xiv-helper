@@ -191,16 +191,35 @@ struct SearchView: View {
 
     /// Fetches the items that match the search text, and assigns them to `items`.
     private func fetchItems(searchText: String) {
-        var descriptor: FetchDescriptor<Item> = {
-            if settings.searchType == .gathering {
+        let isGatheringOnly = settings.searchType == .gathering
+
+        var descriptor: FetchDescriptor<Item>
+        descriptor = {
+            switch GameLocale.localeForDevice() {
+            case .en:
                 return FetchDescriptor<Item>(predicate: #Predicate<Item> {
                     $0.name.en.localizedStandardContains(searchText) &&
-                    ($0.canBeGathered ?? false)
+                    (!isGatheringOnly || $0.canBeGathered ?? false)
                 })
-            }
-            else {
+            case .de:
                 return FetchDescriptor<Item>(predicate: #Predicate<Item> {
-                    $0.name.en.localizedStandardContains(searchText)
+                    $0.name.de.localizedStandardContains(searchText) &&
+                    (!isGatheringOnly || $0.canBeGathered ?? false)
+                })
+            case .fr:
+                return FetchDescriptor<Item>(predicate: #Predicate<Item> {
+                    $0.name.fr.localizedStandardContains(searchText) &&
+                    (!isGatheringOnly || $0.canBeGathered ?? false)
+                })
+            case .ja:
+                return FetchDescriptor<Item>(predicate: #Predicate<Item> {
+                    $0.name.ja.localizedStandardContains(searchText) &&
+                    (!isGatheringOnly || $0.canBeGathered ?? false)
+                })
+            default:
+                return FetchDescriptor<Item>(predicate: #Predicate<Item> {
+                    $0.name.en.localizedStandardContains(searchText) &&
+                    (!isGatheringOnly || $0.canBeGathered ?? false)
                 })
             }
         }()
@@ -213,16 +232,32 @@ struct SearchView: View {
 
     /// Fetches the recipes that match the search text, and assigns them to `recipes`.
     private func fetchRecipes(searchText: String) {
-        var descriptor = FetchDescriptor<Recipe>(
-            predicate: #Predicate<Recipe> {
-                $0.resultName.en.localizedStandardContains(searchText)
-            },
-            sortBy: [
-                SortDescriptor(\Recipe.recipeLevel, order: .reverse)
-            ]
-        )
+        var descriptor: FetchDescriptor<Recipe>
+        descriptor = {
+            switch GameLocale.localeForDevice() {
+            case .en:
+                return FetchDescriptor<Recipe>(predicate: #Predicate<Recipe> {
+                    $0.resultName.en.localizedStandardContains(searchText)
+                })
+            case .de:
+                return FetchDescriptor<Recipe>(predicate: #Predicate<Recipe> {
+                    $0.resultName.de.localizedStandardContains(searchText)
+                })
+            case .fr:
+                return FetchDescriptor<Recipe>(predicate: #Predicate<Recipe> {
+                    $0.resultName.fr.localizedStandardContains(searchText)
+                })
+            case .ja:
+                return FetchDescriptor<Recipe>(predicate: #Predicate<Recipe> {
+                    $0.resultName.ja.localizedStandardContains(searchText)
+                })
+            default:
+                return FetchDescriptor<Recipe>(predicate: #Predicate<Recipe> {
+                    $0.resultName.en.localizedStandardContains(searchText)
+                })
+            }
+        }()
         descriptor.fetchLimit = settings.searchResultsLimit
-
         let fetchedRecipes = try? context.fetch(descriptor)
         withAnimation(.easeIn) {
             recipes = fetchedRecipes ?? []
