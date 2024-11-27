@@ -218,11 +218,11 @@ struct ItemDetailView: View {
         if let item, let supply = item.supply, supply.amount > 0 {
             let sealsText: String = String(
                 format: AppStrings.Item.seals,
-                settings.hq ? supply.sealsHq : supply.seals
+                10
             )
             let xpString = String(
                 format: AppStrings.Item.xp,
-                settings.hq ? supply.xpHq : supply.xp
+                5
             )
 
             Section(String(AppStrings.Item.grandCompanyQuantity)) {

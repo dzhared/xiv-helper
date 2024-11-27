@@ -1187,25 +1187,25 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Staatliche Gesellschaften"
+            "value" : "Staatliche Gesellschaften (%lld erforderlich)"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Grand Company"
+            "value" : "Grand Company (%lld Required)"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Grande compagnie"
+            "value" : "Grande compagnie (%lld requis)"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "グランドカンパニー"
+            "value" : "グランドカンパニー（%lld必要）"
           }
         }
       }
