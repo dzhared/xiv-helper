@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		7F1D441F2C20ECE4003F2AAB /* ParameterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43E32C20ECE4003F2AAB /* ParameterGridView.swift */; };
 		7F1D44202C20ECE4003F2AAB /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43E52C20ECE4003F2AAB /* InfoView.swift */; };
 		7F1D44212C20ECE4003F2AAB /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43E72C20ECE4003F2AAB /* ItemDetailView.swift */; };
-		7F1D44222C20ECE4003F2AAB /* LeveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43E92C20ECE4003F2AAB /* LeveDetailView.swift */; };
 		7F1D44232C20ECE4003F2AAB /* LodestoneNewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EB2C20ECE4003F2AAB /* LodestoneNewsArticleView.swift */; };
 		7F1D44242C20ECE4003F2AAB /* LodestoneNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EC2C20ECE4003F2AAB /* LodestoneNewsView.swift */; };
 		7F1D44252C20ECE4003F2AAB /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D43EE2C20ECE4003F2AAB /* RecipeDetailView.swift */; };
@@ -39,12 +38,27 @@
 		7F1D443F2C20ECE4003F2AAB /* Supply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44102C20ECE4003F2AAB /* Supply.swift */; };
 		7F1D44402C20ECE4003F2AAB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44122C20ECE4003F2AAB /* Item.swift */; };
 		7F1D44412C20ECE4003F2AAB /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44132C20ECE4003F2AAB /* Stat.swift */; };
-		7F1D44422C20ECE4003F2AAB /* LodestoneNewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44152C20ECE4003F2AAB /* LodestoneNewsArticle.swift */; };
+		7F1D44422C20ECE4003F2AAB /* LodestoneNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44152C20ECE4003F2AAB /* LodestoneNews.swift */; };
 		7F1D44432C20ECE4003F2AAB /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44172C20ECE4003F2AAB /* Ingredient.swift */; };
 		7F1D44442C20ECE4003F2AAB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44182C20ECE4003F2AAB /* Recipe.swift */; };
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
+		7F2224332CF941E200492405 /* LodestoneNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224322CF941E200492405 /* LodestoneNewsTests.swift */; };
+		7F2224352CF9480E00492405 /* LodestoneNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224342CF9480E00492405 /* LodestoneNewsResponse.swift */; };
+		7F2224362CF9480E00492405 /* LodestoneNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224342CF9480E00492405 /* LodestoneNewsResponse.swift */; };
+		7F2224382CF9484C00492405 /* LodestoneNewsDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224372CF9484C00492405 /* LodestoneNewsDeveloper.swift */; };
+		7F2224392CF9484C00492405 /* LodestoneNewsDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224372CF9484C00492405 /* LodestoneNewsDeveloper.swift */; };
+		7F22243B2CF9486000492405 /* LodestoneNewsMaintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22243A2CF9486000492405 /* LodestoneNewsMaintenance.swift */; };
+		7F22243C2CF9486000492405 /* LodestoneNewsMaintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22243A2CF9486000492405 /* LodestoneNewsMaintenance.swift */; };
+		7F22243E2CF9486F00492405 /* LodestoneNewsNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22243D2CF9486F00492405 /* LodestoneNewsNotice.swift */; };
+		7F22243F2CF9486F00492405 /* LodestoneNewsNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F22243D2CF9486F00492405 /* LodestoneNewsNotice.swift */; };
+		7F2224412CF9488000492405 /* LodestoneNewsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224402CF9488000492405 /* LodestoneNewsStatus.swift */; };
+		7F2224422CF9488000492405 /* LodestoneNewsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224402CF9488000492405 /* LodestoneNewsStatus.swift */; };
+		7F2224442CF9488E00492405 /* LodestoneNewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224432CF9488E00492405 /* LodestoneNewsTopic.swift */; };
+		7F2224452CF9488E00492405 /* LodestoneNewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224432CF9488E00492405 /* LodestoneNewsTopic.swift */; };
+		7F2224472CF948A300492405 /* LodestoneNewsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224462CF948A300492405 /* LodestoneNewsUpdate.swift */; };
+		7F2224482CF948A300492405 /* LodestoneNewsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224462CF948A300492405 /* LodestoneNewsUpdate.swift */; };
 		7F44DF0D2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF0E2C292D04003E51AC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0C2C292D04003E51AC /* Node.swift */; };
 		7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44DF0F2C292D54003E51AC /* ItemNodesView.swift */; };
@@ -72,6 +86,9 @@
 		7F7154F12C21338A00F458B4 /* GameLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44022C20ECE4003F2AAB /* GameLocale.swift */; };
 		7F7DD8AF2CED314A00D7B7D8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */; };
 		7F7DD8B22CEDA74200D7B7D8 /* AttributedString+Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */; };
+		7F83C6AD2CF936EE00138CB8 /* LodestoneNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44152C20ECE4003F2AAB /* LodestoneNews.swift */; };
+		7F83C6B02CF9373A00138CB8 /* LodestoneNewsSampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F83C6AF2CF9373A00138CB8 /* LodestoneNewsSampleResponse.json */; };
+		7F83C6B32CF93B3A00138CB8 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7154D92C21312200F458B4 /* Bundle-Decodable.swift */; };
 		7F9E23642CEEC35C00C974D7 /* String+LowercasedByLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */; };
 		7F9E237F2CF6DA5D00C974D7 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44002C20ECE4003F2AAB /* AppStrings.swift */; };
 		7F9E23802CF6DA7000C974D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
@@ -97,7 +114,6 @@
 		7FFEF6352C28AE3E00E0A733 /* ClassJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846132C23FA630043006D /* ClassJobTests.swift */; };
 		7FFEF6362C28AE4100E0A733 /* StatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462C2C2525340043006D /* StatTests.swift */; };
 		7FFEF6372C28AE4100E0A733 /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462A2C24C6040043006D /* ItemTests.swift */; };
-		7FFEF6382C28AE4500E0A733 /* LodestoneNewsArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8462F2C25263C0043006D /* LodestoneNewsArticleTests.swift */; };
 		7FFEF6392C28AE4500E0A733 /* UserRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846372C252A220043006D /* UserRecipeTests.swift */; };
 		7FFEF63A2C28AE4500E0A733 /* IngredientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846322C25277A0043006D /* IngredientTests.swift */; };
 		7FFEF63B2C28AE4500E0A733 /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846342C2528DB0043006D /* RecipeTests.swift */; };
@@ -122,7 +138,6 @@
 		7F1D43E32C20ECE4003F2AAB /* ParameterGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterGridView.swift; sourceTree = "<group>"; };
 		7F1D43E52C20ECE4003F2AAB /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		7F1D43E72C20ECE4003F2AAB /* ItemDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
-		7F1D43E92C20ECE4003F2AAB /* LeveDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeveDetailView.swift; sourceTree = "<group>"; };
 		7F1D43EB2C20ECE4003F2AAB /* LodestoneNewsArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodestoneNewsArticleView.swift; sourceTree = "<group>"; };
 		7F1D43EC2C20ECE4003F2AAB /* LodestoneNewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodestoneNewsView.swift; sourceTree = "<group>"; };
 		7F1D43EE2C20ECE4003F2AAB /* RecipeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -150,7 +165,7 @@
 		7F1D44102C20ECE4003F2AAB /* Supply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supply.swift; sourceTree = "<group>"; };
 		7F1D44122C20ECE4003F2AAB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7F1D44132C20ECE4003F2AAB /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
-		7F1D44152C20ECE4003F2AAB /* LodestoneNewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodestoneNewsArticle.swift; sourceTree = "<group>"; };
+		7F1D44152C20ECE4003F2AAB /* LodestoneNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodestoneNews.swift; sourceTree = "<group>"; };
 		7F1D44172C20ECE4003F2AAB /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		7F1D44182C20ECE4003F2AAB /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecipe.swift; sourceTree = "<group>"; };
@@ -159,6 +174,14 @@
 		7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store-shm"; sourceTree = "<group>"; };
 		7F204A792C2369060047D2A0 /* xivhelper-2.0.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.0.0.store-wal"; sourceTree = "<group>"; };
 		7F204A7A2C2369060047D2A0 /* xivhelper-2.0.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store"; sourceTree = "<group>"; };
+		7F2224322CF941E200492405 /* LodestoneNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsTests.swift; sourceTree = "<group>"; };
+		7F2224342CF9480E00492405 /* LodestoneNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsResponse.swift; sourceTree = "<group>"; };
+		7F2224372CF9484C00492405 /* LodestoneNewsDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsDeveloper.swift; sourceTree = "<group>"; };
+		7F22243A2CF9486000492405 /* LodestoneNewsMaintenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsMaintenance.swift; sourceTree = "<group>"; };
+		7F22243D2CF9486F00492405 /* LodestoneNewsNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsNotice.swift; sourceTree = "<group>"; };
+		7F2224402CF9488000492405 /* LodestoneNewsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsStatus.swift; sourceTree = "<group>"; };
+		7F2224432CF9488E00492405 /* LodestoneNewsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsTopic.swift; sourceTree = "<group>"; };
+		7F2224462CF948A300492405 /* LodestoneNewsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsUpdate.swift; sourceTree = "<group>"; };
 		7F41CDCF2C2EFAB20040C80D /* xivhelper-2.2.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.2.0.store"; sourceTree = "<group>"; };
 		7F41CDD02C2EFAB20040C80D /* xivhelper-2.2.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.2.0.store-shm"; sourceTree = "<group>"; };
 		7F41CDD12C2EFAB20040C80D /* xivhelper-2.2.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.2.0.store-wal"; sourceTree = "<group>"; };
@@ -173,6 +196,7 @@
 		7F7154D92C21312200F458B4 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7F7DD8B12CEDA74200D7B7D8 /* AttributedString+Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Markdown.swift"; sourceTree = "<group>"; };
+		7F83C6AF2CF9373A00138CB8 /* LodestoneNewsSampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LodestoneNewsSampleResponse.json; sourceTree = "<group>"; };
 		7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LowercasedByLocale.swift"; sourceTree = "<group>"; };
 		7F9E23872CF7C71F00C974D7 /* xivhelper-2.5.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store"; sourceTree = "<group>"; };
 		7F9E23882CF7C71F00C974D7 /* xivhelper-2.5.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.5.0.store-shm"; sourceTree = "<group>"; };
@@ -190,7 +214,6 @@
 		7FA846272C24C55F0043006D /* SupplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplyTests.swift; sourceTree = "<group>"; };
 		7FA8462A2C24C6040043006D /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		7FA8462C2C2525340043006D /* StatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTests.swift; sourceTree = "<group>"; };
-		7FA8462F2C25263C0043006D /* LodestoneNewsArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodestoneNewsArticleTests.swift; sourceTree = "<group>"; };
 		7FA846322C25277A0043006D /* IngredientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTests.swift; sourceTree = "<group>"; };
 		7FA846342C2528DB0043006D /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
 		7FA846372C252A220043006D /* UserRecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeTests.swift; sourceTree = "<group>"; };
@@ -262,14 +285,6 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
-		7F1D43EA2C20ECE4003F2AAB /* Leve */ = {
-			isa = PBXGroup;
-			children = (
-				7F1D43E92C20ECE4003F2AAB /* LeveDetailView.swift */,
-			);
-			path = Leve;
-			sourceTree = "<group>";
-		};
 		7F1D43ED2C20ECE4003F2AAB /* LodestoneNews */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +341,6 @@
 				7F1D43E42C20ECE4003F2AAB /* Common */,
 				7F1D43E62C20ECE4003F2AAB /* Info */,
 				7F1D43E82C20ECE4003F2AAB /* Item */,
-				7F1D43EA2C20ECE4003F2AAB /* Leve */,
 				7F1D43ED2C20ECE4003F2AAB /* LodestoneNews */,
 				7F1D43EF2C20ECE4003F2AAB /* Recipe */,
 				7F1D43F22C20ECE4003F2AAB /* Search */,
@@ -397,7 +411,14 @@
 		7F1D44162C20ECE4003F2AAB /* LodestoneNews */ = {
 			isa = PBXGroup;
 			children = (
-				7F1D44152C20ECE4003F2AAB /* LodestoneNewsArticle.swift */,
+				7F1D44152C20ECE4003F2AAB /* LodestoneNews.swift */,
+				7F2224342CF9480E00492405 /* LodestoneNewsResponse.swift */,
+				7F2224372CF9484C00492405 /* LodestoneNewsDeveloper.swift */,
+				7F22243A2CF9486000492405 /* LodestoneNewsMaintenance.swift */,
+				7F22243D2CF9486F00492405 /* LodestoneNewsNotice.swift */,
+				7F2224402CF9488000492405 /* LodestoneNewsStatus.swift */,
+				7F2224432CF9488E00492405 /* LodestoneNewsTopic.swift */,
+				7F2224462CF948A300492405 /* LodestoneNewsUpdate.swift */,
 			);
 			path = LodestoneNews;
 			sourceTree = "<group>";
@@ -479,6 +500,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		7F83C6AE2CF9370C00138CB8 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7F83C6AF2CF9373A00138CB8 /* LodestoneNewsSampleResponse.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		7F9E23672CF1707800C974D7 /* xivhelper-2.5.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,10 +521,11 @@
 		7FA846052C23F5580043006D /* XIVHelperTests */ = {
 			isa = PBXGroup;
 			children = (
+				7F83C6AE2CF9370C00138CB8 /* JSON */,
 				7FACC0A32C29D812009B84C8 /* Database */,
-				7FA846202C2409240043006D /* Utilities */,
 				7FA8460D2C23F5820043006D /* Models */,
 				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
+				7FA846202C2409240043006D /* Utilities */,
 			);
 			path = XIVHelperTests;
 			sourceTree = "<group>";
@@ -550,7 +580,7 @@
 		7FA8462E2C2526220043006D /* LodestoneNews */ = {
 			isa = PBXGroup;
 			children = (
-				7FA8462F2C25263C0043006D /* LodestoneNewsArticleTests.swift */,
+				7F2224322CF941E200492405 /* LodestoneNewsTests.swift */,
 			);
 			path = LodestoneNews;
 			sourceTree = "<group>";
@@ -733,7 +763,6 @@
 				};
 			};
 			buildConfigurationList = 7FF52B0E29BFA21C00B7BF58 /* Build configuration list for PBXProject "XIV Helper" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -744,6 +773,7 @@
 				Base,
 			);
 			mainGroup = 7FF52B0A29BFA21C00B7BF58;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 7FF52B1429BFA21C00B7BF58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -771,6 +801,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F83C6B02CF9373A00138CB8 /* LodestoneNewsSampleResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,23 +857,32 @@
 				7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */,
 				7FFEF62D2C28AE3E00E0A733 /* ClassJobCategoryTests.swift in Sources */,
 				7FFEF62E2C28AE3E00E0A733 /* SupplyTests.swift in Sources */,
+				7F2224332CF941E200492405 /* LodestoneNewsTests.swift in Sources */,
 				7FFEF62F2C28AE3E00E0A733 /* LeveTests.swift in Sources */,
 				7FFEF6302C28AE3E00E0A733 /* PatchTests.swift in Sources */,
 				7FFEF6312C28AE3E00E0A733 /* LocalizedStringTests.swift in Sources */,
 				7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */,
 				7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */,
+				7F2224412CF9488000492405 /* LodestoneNewsStatus.swift in Sources */,
 				7FFEF6362C28AE4100E0A733 /* StatTests.swift in Sources */,
+				7F2224452CF9488E00492405 /* LodestoneNewsTopic.swift in Sources */,
+				7F83C6B32CF93B3A00138CB8 /* Bundle-Decodable.swift in Sources */,
 				7FFEF6372C28AE4100E0A733 /* ItemTests.swift in Sources */,
 				7FFEF6322C28AE3E00E0A733 /* ItemCategoryTests.swift in Sources */,
 				7FFEF6332C28AE3E00E0A733 /* BaseParamTests.swift in Sources */,
 				7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */,
 				7FFEF6342C28AE3E00E0A733 /* ItemRecipeTests.swift in Sources */,
-				7FFEF6382C28AE4500E0A733 /* LodestoneNewsArticleTests.swift in Sources */,
+				7F2224392CF9484C00492405 /* LodestoneNewsDeveloper.swift in Sources */,
 				7FFEF6392C28AE4500E0A733 /* UserRecipeTests.swift in Sources */,
+				7F83C6AD2CF936EE00138CB8 /* LodestoneNews.swift in Sources */,
 				7FFEF63A2C28AE4500E0A733 /* IngredientTests.swift in Sources */,
+				7F2224482CF948A300492405 /* LodestoneNewsUpdate.swift in Sources */,
 				7FFEF63B2C28AE4500E0A733 /* RecipeTests.swift in Sources */,
 				7F44DF1E2C2931FF003E51AC /* NodeTests.swift in Sources */,
 				7FFEF6352C28AE3E00E0A733 /* ClassJobTests.swift in Sources */,
+				7F22243B2CF9486000492405 /* LodestoneNewsMaintenance.swift in Sources */,
+				7F22243F2CF9486F00492405 /* LodestoneNewsNotice.swift in Sources */,
+				7F2224362CF9480E00492405 /* LodestoneNewsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,12 +893,13 @@
 				7F1D44302C20ECE4003F2AAB /* AppStrings.swift in Sources */,
 				7F44DF102C292D54003E51AC /* ItemNodesView.swift in Sources */,
 				7F1D442A2C20ECE4003F2AAB /* UserRecipeView.swift in Sources */,
+				7F2224442CF9488E00492405 /* LodestoneNewsTopic.swift in Sources */,
 				7F1D44402C20ECE4003F2AAB /* Item.swift in Sources */,
 				7F7DD8B22CEDA74200D7B7D8 /* AttributedString+Markdown.swift in Sources */,
 				7F1D44312C20ECE4003F2AAB /* Debouncer.swift in Sources */,
 				7F1D44212C20ECE4003F2AAB /* ItemDetailView.swift in Sources */,
 				7F1D442F2C20ECE4003F2AAB /* SwiftDataAppContainer.swift in Sources */,
-				7F1D44422C20ECE4003F2AAB /* LodestoneNewsArticle.swift in Sources */,
+				7F1D44422C20ECE4003F2AAB /* LodestoneNews.swift in Sources */,
 				7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */,
 				7F1D44372C20ECE4003F2AAB /* Bonus.swift in Sources */,
 				7F1D44362C20ECE4003F2AAB /* BaseParam.swift in Sources */,
@@ -866,12 +907,14 @@
 				7F1D442B2C20ECE4003F2AAB /* ContentView.swift in Sources */,
 				7F1D443B2C20ECE4003F2AAB /* ItemRecipe.swift in Sources */,
 				7F1D44252C20ECE4003F2AAB /* RecipeDetailView.swift in Sources */,
+				7F2224472CF948A300492405 /* LodestoneNewsUpdate.swift in Sources */,
 				7F1D441F2C20ECE4003F2AAB /* ParameterGridView.swift in Sources */,
 				7F1D44272C20ECE4003F2AAB /* SearchView.swift in Sources */,
 				7F1D44242C20ECE4003F2AAB /* LodestoneNewsView.swift in Sources */,
 				7F1D44232C20ECE4003F2AAB /* LodestoneNewsArticleView.swift in Sources */,
 				7F44DF0D2C292D04003E51AC /* Node.swift in Sources */,
 				7F1D44412C20ECE4003F2AAB /* Stat.swift in Sources */,
+				7F22243C2CF9486000492405 /* LodestoneNewsMaintenance.swift in Sources */,
 				7F1D443D2C20ECE4003F2AAB /* LocalizedString.swift in Sources */,
 				7F1D44392C20ECE4003F2AAB /* ClassJobCategory.swift in Sources */,
 				7F1D44292C20ECE4003F2AAB /* SplashScreenView.swift in Sources */,
@@ -879,13 +922,16 @@
 				7F1D44282C20ECE4003F2AAB /* ShoppingListView.swift in Sources */,
 				7F1D443E2C20ECE4003F2AAB /* Patch.swift in Sources */,
 				7F1D44322C20ECE4003F2AAB /* GameLocale.swift in Sources */,
+				7F2224352CF9480E00492405 /* LodestoneNewsResponse.swift in Sources */,
 				7F9E23642CEEC35C00C974D7 /* String+LowercasedByLocale.swift in Sources */,
 				7F1D443F2C20ECE4003F2AAB /* Supply.swift in Sources */,
 				7F1D441E2C20ECE4003F2AAB /* ListBadgeView.swift in Sources */,
+				7F22243E2CF9486F00492405 /* LodestoneNewsNotice.swift in Sources */,
 				7F1D443A2C20ECE4003F2AAB /* ItemCategory.swift in Sources */,
+				7F2224382CF9484C00492405 /* LodestoneNewsDeveloper.swift in Sources */,
 				7F1D44202C20ECE4003F2AAB /* InfoView.swift in Sources */,
+				7F2224422CF9488000492405 /* LodestoneNewsStatus.swift in Sources */,
 				7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */,
-				7F1D44222C20ECE4003F2AAB /* LeveDetailView.swift in Sources */,
 				7F1D44332C20ECE4003F2AAB /* ScalingImage.swift in Sources */,
 				7F1D44342C20ECE4003F2AAB /* SettingsManager.swift in Sources */,
 				7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */,
@@ -1180,7 +1226,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1216,7 +1262,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

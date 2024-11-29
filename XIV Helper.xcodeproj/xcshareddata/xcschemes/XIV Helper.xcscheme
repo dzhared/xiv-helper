@@ -38,6 +38,11 @@
                BlueprintName = "XIV Helper Tests"
                ReferencedContainer = "container:XIV Helper.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LodestoneNewsArticleTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
