@@ -91,7 +91,6 @@ struct SearchView: View {
                             .tag(SearchType.recipes)
                         Text(AppStrings.General.gathering)
                             .tag(SearchType.gathering)
-                        // TODO: Add Leves
                     }
                     .pickerStyle(.segmented)
                 }
@@ -176,7 +175,8 @@ struct SearchView: View {
             text: $debouncer.searchText,
             isPresented: $isSearching,
             placement: .navigationBarDrawer,
-            prompt: promptText)
+            prompt: promptText
+        )
         .autocorrectionDisabled()
         .onDisappear {
             isSearching = false

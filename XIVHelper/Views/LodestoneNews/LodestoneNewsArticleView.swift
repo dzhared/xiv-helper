@@ -6,7 +6,7 @@ struct LodestoneNewsArticleView: View {
     // MARK: Properties
 
     /// The article to be displayed.
-    let article: LodestoneNewsArticle
+    let article: any LodestoneNews
 
     /// The URL to the full article.
     private var url: URL {
@@ -16,22 +16,26 @@ struct LodestoneNewsArticleView: View {
     // MARK: Body
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                AsyncImage(url: URL(string: article.image)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    ProgressView()
+                if let image = article.image {
+                    AsyncImage(url: URL(string: image)) {
+                        $0
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        ProgressView()
+                    }
                 }
                 ScrollView {
                     VStack(alignment: .leading) {
                         Text(article.title)
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                        Divider()
-                        Text(article.description)
+                        if let description = article.description {
+                            Divider()
+                            Text(description)
+                        }
                     }
                 }
                 .padding(.horizontal)
@@ -57,7 +61,7 @@ struct LodestoneNewsArticleView: View {
 // MARK: Previews
 
 #if DEBUG
-#Preview("Article") {
-    LodestoneNewsArticleView(article: .example)
+#Preview("Topic") {
+    LodestoneNewsArticleView(article: LodestoneNewsTopic.example)
 }
 #endif

@@ -108,7 +108,7 @@ final class SettingsManager: ObservableObject {
     @AppStorage(Keys.Search.searchHqOnly.rawValue) var searchHqOnly: Bool = false
 
     /// The number of results to show.
-    @AppStorage(Keys.Search.searchResultsLimit.rawValue) var searchResultsLimit: Int = 50
+    @AppStorage(Keys.Search.searchResultsLimit.rawValue) var searchResultsLimit: Int = 100
 
     /// How to sort the search results list.
     @AppStorage(Keys.Search.searchSortMethod.rawValue) var searchSortMethod: SortMethod = .alphabetical
@@ -142,7 +142,7 @@ final class SettingsManager: ObservableObject {
         searchEquipmentOnly = false
         searchExpansion = .all
         searchHqOnly = false
-        searchResultsLimit = 50
+        searchResultsLimit = 100
         searchSortMethod = .alphabetical
         searchType = .items
 
