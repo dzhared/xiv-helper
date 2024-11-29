@@ -100,6 +100,7 @@
 		7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACC0A42C29D915009B84C8 /* MigrationTests.swift */; };
 		7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */; };
 		7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */; };
+		7FC932052CF9848700DA8480 /* TaskSleep+Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC932042CF9848700DA8480 /* TaskSleep+Seconds.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846102C23F85A0043006D /* BonusTests.swift */; };
@@ -227,6 +228,7 @@
 		7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListBuilderTests.swift; sourceTree = "<group>"; };
 		7FC0D5A72CE460D40088D19C /* xivhelper-2.4.0.store-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xivhelper-2.4.0.store-wal"; sourceTree = "<group>"; };
 		7FC0D5A82CE460D40088D19C /* xivhelper-2.4.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.4.0.store-shm"; sourceTree = "<group>"; };
+		7FC932042CF9848700DA8480 /* TaskSleep+Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskSleep+Seconds.swift"; sourceTree = "<group>"; };
 		7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.4.0.store"; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				7F1D44032C20ECE4003F2AAB /* ScalingImage.swift */,
 				7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */,
 				7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */,
+				7FC932042CF9848700DA8480 /* TaskSleep+Seconds.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -927,6 +930,7 @@
 				7F1D443F2C20ECE4003F2AAB /* Supply.swift in Sources */,
 				7F1D441E2C20ECE4003F2AAB /* ListBadgeView.swift in Sources */,
 				7F22243E2CF9486F00492405 /* LodestoneNewsNotice.swift in Sources */,
+				7FC932052CF9848700DA8480 /* TaskSleep+Seconds.swift in Sources */,
 				7F1D443A2C20ECE4003F2AAB /* ItemCategory.swift in Sources */,
 				7F2224382CF9484C00492405 /* LodestoneNewsDeveloper.swift in Sources */,
 				7F1D44202C20ECE4003F2AAB /* InfoView.swift in Sources */,
