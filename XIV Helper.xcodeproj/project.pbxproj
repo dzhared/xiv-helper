@@ -43,6 +43,7 @@
 		7F1D44442C20ECE4003F2AAB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D44182C20ECE4003F2AAB /* Recipe.swift */; };
 		7F1D44452C20ECE4003F2AAB /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */; };
 		7F1F28E32CFCD18800A80513 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7F1F28E22CFCD18800A80513 /* CachedAsyncImage */; };
+		7F1F28E52CFCD3E000A80513 /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F28E42CFCD3E000A80513 /* SettingsManagerTests.swift */; };
 		7F204A762C2367CA0047D2A0 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A742C2367CA0047D2A0 /* recipe.json */; };
 		7F204A772C2367CA0047D2A0 /* item.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F204A752C2367CA0047D2A0 /* item.json */; };
 		7F2224332CF941E200492405 /* LodestoneNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2224322CF941E200492405 /* LodestoneNewsTests.swift */; };
@@ -171,6 +172,7 @@
 		7F1D44172C20ECE4003F2AAB /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		7F1D44182C20ECE4003F2AAB /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7F1D441A2C20ECE4003F2AAB /* UserRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecipe.swift; sourceTree = "<group>"; };
+		7F1F28E42CFCD3E000A80513 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
 		7F204A742C2367CA0047D2A0 /* recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
 		7F204A752C2367CA0047D2A0 /* item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item.json; sourceTree = "<group>"; };
 		7F204A782C2369060047D2A0 /* xivhelper-2.0.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.0.0.store-shm"; sourceTree = "<group>"; };
@@ -526,10 +528,10 @@
 		7FA846052C23F5580043006D /* XIVHelperTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
 				7F83C6AE2CF9370C00138CB8 /* JSON */,
 				7FACC0A32C29D812009B84C8 /* Database */,
 				7FA8460D2C23F5820043006D /* Models */,
-				7FACC09C2C29D523009B84C8 /* PreviewContainer.swift */,
 				7FA846202C2409240043006D /* Utilities */,
 			);
 			path = XIVHelperTests;
@@ -568,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */,
+				7F1F28E42CFCD3E000A80513 /* SettingsManagerTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */,
 				7FFEF62D2C28AE3E00E0A733 /* ClassJobCategoryTests.swift in Sources */,
 				7FFEF62E2C28AE3E00E0A733 /* SupplyTests.swift in Sources */,
+				7F1F28E52CFCD3E000A80513 /* SettingsManagerTests.swift in Sources */,
 				7F2224332CF941E200492405 /* LodestoneNewsTests.swift in Sources */,
 				7FFEF62F2C28AE3E00E0A733 /* LeveTests.swift in Sources */,
 				7FFEF6302C28AE3E00E0A733 /* PatchTests.swift in Sources */,

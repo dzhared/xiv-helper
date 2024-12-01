@@ -69,18 +69,35 @@ final class SettingsManager: ObservableObject {
         }
     }
 
+    // MARK: General
+
+    /// The name of the current database store. Updated upon instantiating new database store.
+    @AppStorage(Keys.General.currentStoreName.rawValue) var currentStoreName: String = "xivhelper-2.0.0"
+
+    /// The language locale, defaulting to `en`.
+    @AppStorage(Keys.General.locale.rawValue) var locale: GameLocale = .en
+
     // MARK: Item
 
     /// Whether to show the HQ version of items.
     @AppStorage(Keys.Item.hq.rawValue) var hq: Bool = true
 
-    // MARK: General
+    // MARK: Items Search
 
-    /// The language locale, defaulting to `en`.
-    @AppStorage(Keys.General.locale.rawValue) var locale: GameLocale = .en
+    /// Whether to search for items that are craftable only.
+    @AppStorage(Keys.Search.Item.searchItemCraftableOnly.rawValue) var searchItemCraftableOnly: Bool = false
 
-    /// The name of the current database store. Updated upon instantiating new database store.
-    @AppStorage(Keys.General.currentStoreName.rawValue) var currentStoreName: String = "xivhelper-2.0.0"
+    /// Whether to filter the item search by Search Category.
+    @AppStorage(Keys.Search.Item.searchItemFilterByCategory.rawValue) var searchItemFilterByCategory: Bool = false
+
+    /// Which SearchCategory to search for.
+    @AppStorage(Keys.Search.Item.searchItemFilterCategory.rawValue) var searchItemFilterCategory: AllItemCategory = .all
+
+    /// Whether to search for tradable items only.
+    @AppStorage(Keys.Search.Item.searchItemTradableOnly.rawValue) var searchItemTradableOnly: Bool = false
+
+    /// Whether to search for unique items only.
+    @AppStorage(Keys.Search.Item.searchItemUniqueOnly.rawValue) var searchItemUniqueOnly: Bool = false
 
     // MARK: User
 
@@ -93,7 +110,7 @@ final class SettingsManager: ObservableObject {
     // MARK: Search
 
     /// Whether the search results sort order is ascending.
-    @AppStorage(Keys.Search.searchAscending.rawValue) var searchAscending: Bool = true
+    @AppStorage(Keys.Search.searchAscending.rawValue) var searchAscending: Bool = false
 
     /// Whether to search with case sensitivity.
     @AppStorage(Keys.Search.searchCaseSensitive.rawValue) var searchCaseSensitive: Bool = false
@@ -111,47 +128,10 @@ final class SettingsManager: ObservableObject {
     @AppStorage(Keys.Search.searchResultsLimit.rawValue) var searchResultsLimit: Int = 100
 
     /// How to sort the search results list.
-    @AppStorage(Keys.Search.searchSortMethod.rawValue) var searchSortMethod: SortMethod = .alphabetical
+    @AppStorage(Keys.Search.searchSortMethod.rawValue) var searchSortMethod: SortMethod = .ilvl
 
     /// The type of object to search for.
     @AppStorage(Keys.Search.searchType.rawValue) var searchType: SearchType = .items
-
-    // MARK: Items Search
-
-    /// Whether to search for items that are craftable only.
-    @AppStorage(Keys.Search.Item.searchItemCraftableOnly.rawValue) var searchItemCraftableOnly: Bool = false
-
-    /// Whether to filter the item search by Search Category.
-    @AppStorage(Keys.Search.Item.searchItemFilterByCategory.rawValue) var searchItemFilterByCategory: Bool = false
-
-    /// Which SearchCategory to search for.
-    @AppStorage(Keys.Search.Item.searchItemFilterCategory.rawValue) var searchItemFilterCategory: AllSearchCategory = .all
-
-    /// Whether to search for tradable items only.
-    @AppStorage(Keys.Search.Item.searchItemTradableOnly.rawValue) var searchItemTradableOnly: Bool = false
-
-    /// Whether to search for unique items only.
-    @AppStorage(Keys.Search.Item.searchItemUniqueOnly.rawValue) var searchItemUniqueOnly: Bool = false
-
-    // MARK: Recipes Search
-
-    /// Resets the Search settings to their defaults.
-    func resetSearchSettings() {
-        searchAscending = true
-        searchCaseSensitive = false
-        searchEquipmentOnly = false
-        searchExpansion = .all
-        searchHqOnly = false
-        searchResultsLimit = 100
-        searchSortMethod = .alphabetical
-        searchType = .items
-
-        searchItemCraftableOnly = false
-        searchItemFilterByCategory = false
-        searchItemFilterCategory = .all
-        searchItemTradableOnly = false
-        searchItemUniqueOnly = false
-    }
 
     // MARK: Shopping List
 
@@ -159,33 +139,48 @@ final class SettingsManager: ObservableObject {
     /// Ingots in the shopping list, this setting will instead replace those with the constituent
     /// ingredients needed for the two Iron Ingots.
     @AppStorage(Keys.ShoppingList.baseMaterials.rawValue) var baseMaterials: Bool = false
+
+    // MARK: Private Methods
+
+    /// Resets the settings to their defaults. Does _not_ reset selectedTab or currentStoreName.
+    func resetSettings() {
+        // Item
+        hq = true
+
+        // General
+        locale = .en
+
+        // User
+        userAscending = true
+        userSortMethod = .alphabetical
+
+        // Search
+        searchAscending = false
+        searchCaseSensitive = false
+        searchEquipmentOnly = false
+        searchExpansion = .all
+        searchResultsLimit = 100
+        searchSortMethod = .ilvl
+        searchType = .items
+
+        // Items Search
+        searchItemCraftableOnly = false
+        searchItemFilterByCategory = false
+        searchItemFilterCategory = .all
+        searchItemTradableOnly = false
+        searchItemUniqueOnly = false
+
+        // Shopping List
+        baseMaterials = false
+    }
 }
 
 // MARK: - Enums
 
-// MARK: SearchType
-
-/// The available objects the user can search for.
-enum SearchType: String {
-    case gathering
-    case items
-    case recipes
-}
-
-// MARK: SortMethod
-
-/// The methods of sorting search results or items.
-enum SortMethod: String, CaseIterable {
-    case alphabetical
-    case ilvl
-    case patch
-    case rlvl
-}
-
 // MARK: AllItemCategory
 
 /// All available SearchCategory, enumerated for settings purposes.
-enum AllSearchCategory: String, CaseIterable, LosslessStringConvertible {
+enum AllItemCategory: String, CaseIterable, LosslessStringConvertible {
 
     /// Used to _not_ filter results.
     case all = "All"
@@ -331,6 +326,25 @@ enum Expansion: String, CaseIterable, LosslessStringConvertible {
     var description: String {
         self.rawValue
     }
+}
+
+// MARK: SearchType
+
+/// The available objects the user can search for.
+enum SearchType: String {
+    case gathering
+    case items
+    case recipes
+}
+
+// MARK: SortMethod
+
+/// The methods of sorting search results or items.
+enum SortMethod: String, CaseIterable {
+    case alphabetical
+    case ilvl
+    case patch
+    case rlvl
 }
 
 // MARK: FetchDescriptor Builder

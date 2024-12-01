@@ -24,8 +24,8 @@ final class UserRecipeTests: XCTestCase {
         userRecipe = nil
     }
 
-    /// The `UserRecipe` inserts and fetches from the model context as expected.
-    /// It cannot be encoded/decoded because of the `@Attribute(.unique)` wrapper on `recipe`.
+    /// The `UserRecipe` inserts and fetches from the model context as expected. It cannot be
+    /// encoded/decoded because of the `@Attribute(.unique)` wrapper on `recipe`.
     @MainActor func testUserRecipeFetch() throws {
         container.mainContext.insert(userRecipe)
         let retrieved = try container.mainContext.fetch(FetchDescriptor<UserRecipe>())
