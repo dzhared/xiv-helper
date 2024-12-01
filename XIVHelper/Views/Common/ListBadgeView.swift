@@ -1,4 +1,5 @@
 import SwiftUI
+import CachedAsyncImage
 
 /// Displays basic information of an item, ingredient, recipe, etc. Used for lists and navigation.
 struct ListBadgeView: View {
@@ -21,7 +22,7 @@ struct ListBadgeView: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: icon, scale: 2) { image in
+            CachedAsyncImage(url: icon, scale: 2) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()

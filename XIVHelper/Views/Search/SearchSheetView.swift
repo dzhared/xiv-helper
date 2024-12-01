@@ -94,7 +94,7 @@ struct SearchSheetView: View {
                         //     Toggle("Filter by Item Type", isOn: $settings.searchItemFilterByCategory)
                         //     if settings.searchItemFilterByCategory {
                         //         Picker("Item Category", selection: $settings.searchItemFilterCategory) {
-                        //             ForEach(AllSearchCategory.allCases, id: \.rawValue) { category in
+                        //             ForEach(AllItemCategory.allCases, id: \.rawValue) { category in
                         //                 Text(category.rawValue)
                         //                     .tag(category)
                         //             }

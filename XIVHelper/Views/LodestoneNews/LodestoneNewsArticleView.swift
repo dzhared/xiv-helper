@@ -1,4 +1,5 @@
 import SwiftUI
+import CachedAsyncImage
 
 /// A view to display an individual Lodestone News article.
 struct LodestoneNewsArticleView: View {
@@ -19,7 +20,7 @@ struct LodestoneNewsArticleView: View {
         NavigationStack {
             VStack {
                 if let image = article.image {
-                    AsyncImage(url: URL(string: image)) {
+                    CachedAsyncImage(url: URL(string: image)) {
                         $0
                             .resizable()
                             .aspectRatio(contentMode: .fit)

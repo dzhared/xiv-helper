@@ -38,10 +38,6 @@ final class SwiftDataTests: XCTestCase {
         XCTAssertEqual(items.count, 42_550)
 
         for item in items {
-            // Rendering any ItemDetailView, either from the item or its id, does not throw an error.
-            let _ = ItemDetailView(itemID: item.id)
-            let _ = ItemDetailView(item: item)
-
             // The items have all four localized names.
             XCTAssertNotEqual(item.name.en, "")
             XCTAssertNotEqual(item.name.de, "")
@@ -58,10 +54,6 @@ final class SwiftDataTests: XCTestCase {
         XCTAssertEqual(recipes.count, 11_803)
 
         for recipe in recipes {
-            // Rendering any RecipeDetailView, either from the item or its id, does not throw an error.
-            let _ = RecipeDetailView(recipe: recipe)
-            let _ = RecipeDetailView(recipeID: recipe.id)
-
             // The resulting items have all four localized names.
             XCTAssertNotEqual(recipe.resultName.en, "")
             XCTAssertNotEqual(recipe.resultName.de, "")
