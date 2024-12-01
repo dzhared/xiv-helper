@@ -103,6 +103,8 @@
 		7FB2E25E2C5EE17000720B28 /* IngredientsListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */; };
 		7FB2E2602C5EE78300720B28 /* IngredientsListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */; };
 		7FC932052CF9848700DA8480 /* TaskSleep+Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC932042CF9848700DA8480 /* TaskSleep+Seconds.swift */; };
+		7FF0FF4D2CFCEC5E00AA5D0D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0FF4C2CFCEC5E00AA5D0D /* NetworkManager.swift */; };
+		7FF0FF4F2CFCEED100AA5D0D /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0FF4E2CFCEED100AA5D0D /* NetworkManagerTests.swift */; };
 		7FF52B1729BFA21C00B7BF58 /* XIVHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */; };
 		7FF52B1B29BFA21D00B7BF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */; };
 		7FFEF62C2C28AE3E00E0A733 /* BonusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA846102C23F85A0043006D /* BonusTests.swift */; };
@@ -233,6 +235,8 @@
 		7FC0D5A82CE460D40088D19C /* xivhelper-2.4.0.store-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.4.0.store-shm"; sourceTree = "<group>"; };
 		7FC932042CF9848700DA8480 /* TaskSleep+Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskSleep+Seconds.swift"; sourceTree = "<group>"; };
 		7FCBED452CE3CD06003471AA /* xivhelper-2.4.0.store */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xivhelper-2.4.0.store"; sourceTree = "<group>"; };
+		7FF0FF4C2CFCEC5E00AA5D0D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7FF0FF4E2CFCEED100AA5D0D /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7FF52B1329BFA21C00B7BF58 /* XIV Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XIV Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF52B1629BFA21C00B7BF58 /* XIVHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIVHelperApp.swift; sourceTree = "<group>"; };
 		7FF52B1A29BFA21D00B7BF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -380,6 +384,7 @@
 				7F1D44022C20ECE4003F2AAB /* GameLocale.swift */,
 				7FB2E25D2C5EE17000720B28 /* IngredientsListBuilder.swift */,
 				7F7DD8AE2CED314A00D7B7D8 /* Localizable.xcstrings */,
+				7FF0FF4C2CFCEC5E00AA5D0D /* NetworkManager.swift */,
 				7F1D44032C20ECE4003F2AAB /* ScalingImage.swift */,
 				7F1D44042C20ECE4003F2AAB /* SettingsManager.swift */,
 				7F9E23632CEEC35C00C974D7 /* String+LowercasedByLocale.swift */,
@@ -570,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB2E25F2C5EE78300720B28 /* IngredientsListBuilderTests.swift */,
+				7FF0FF4E2CFCEED100AA5D0D /* NetworkManagerTests.swift */,
 				7F1F28E42CFCD3E000A80513 /* SettingsManagerTests.swift */,
 			);
 			path = Utilities;
@@ -876,6 +882,7 @@
 				7FACC09B2C29D471009B84C8 /* SwiftDataTests.swift in Sources */,
 				7FACC0A62C29DD79009B84C8 /* MigrationTests.swift in Sources */,
 				7F2224412CF9488000492405 /* LodestoneNewsStatus.swift in Sources */,
+				7FF0FF4F2CFCEED100AA5D0D /* NetworkManagerTests.swift in Sources */,
 				7FFEF6362C28AE4100E0A733 /* StatTests.swift in Sources */,
 				7F2224452CF9488E00492405 /* LodestoneNewsTopic.swift in Sources */,
 				7F83C6B32CF93B3A00138CB8 /* Bundle-Decodable.swift in Sources */,
@@ -924,6 +931,7 @@
 				7F1D44272C20ECE4003F2AAB /* SearchView.swift in Sources */,
 				7F1D44242C20ECE4003F2AAB /* LodestoneNewsView.swift in Sources */,
 				7F1D44232C20ECE4003F2AAB /* LodestoneNewsArticleView.swift in Sources */,
+				7FF0FF4D2CFCEC5E00AA5D0D /* NetworkManager.swift in Sources */,
 				7F44DF0D2C292D04003E51AC /* Node.swift in Sources */,
 				7F1D44412C20ECE4003F2AAB /* Stat.swift in Sources */,
 				7F22243C2CF9486000492405 /* LodestoneNewsMaintenance.swift in Sources */,

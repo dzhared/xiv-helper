@@ -50,10 +50,8 @@ struct LodestoneNewsView: View {
                     }
                     if articlesToDisplay.isEmpty {
                         Button {
-                            getLodestoneNews { response in
-                                Task { @MainActor in
-                                    self.response = response
-                                }
+                            Task { @MainActor in
+                                self.response = await fetchLodestoneNews()
                             }
                         } label: {
                             retryCard()
@@ -67,10 +65,8 @@ struct LodestoneNewsView: View {
         }
         .onAppear {
             if articlesToDisplay.isEmpty {
-                getLodestoneNews { response in
-                    Task { @MainActor in
-                        self.response = response
-                    }
+                Task { @MainActor in
+                    self.response = await fetchLodestoneNews()
                 }
             }
         }
@@ -146,56 +142,33 @@ struct LodestoneNewsView: View {
     // MARK: Private Methods
 
     /// Attempt to load the articles.
-    @MainActor private func getLodestoneNews(completion: @escaping @Sendable (LodestoneNewsResponse) -> Void) {
-        let url: URL = {
-            switch GameLocale.localeForDevice() {
-            case .en:
-                return URL(string: "https://lodestonenews.com/news/all?locale=en")!
-            case .de:
-                return URL(string: "https://lodestonenews.com/news/all?locale=de")!
-            case .fr:
-                return URL(string: "https://lodestonenews.com/news/all?locale=fr")!
-            case .ja:
-                return URL(string: "https://lodestonenews.com/news/all?locale=jp")!
-            default:
-                return URL(string: "https://lodestonenews.com/news/all")!
-            }
-        }()
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let session = URLSession.shared
-
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error {
-                print("Error while retrieving articles: \(error)")
-                Task { @MainActor in
-                    completion(.empty)
-                }
-                return
-            }
-            guard let data else {
-                print("Error while retrieving articles: received invalid data")
-                Task { @MainActor in
-                    completion(.empty)
-                }
-                return
-            }
-            do {
-                // Decode JSON into articles
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                let decoded = try decoder.decode(LodestoneNewsResponse.self, from: data)
-                Task { @MainActor in
-                    completion(decoded)
-                }
-            } catch {
-                print("Error decoding JSON.")
-            }
+    ///
+    /// - Returns: The `LodestoneNewsResponse` containing the retrieved articles.
+    ///
+    @MainActor private func fetchLodestoneNews() async -> LodestoneNewsResponse {
+        var baseUrl = "https://lodestonenews.com/news/all"
+        switch GameLocale.localeForDevice() {
+        case .en: baseUrl.append("?locale=en")
+        case .de: baseUrl.append("?locale=de")
+        case .fr: baseUrl.append("?locale=fr")
+        case .ja: baseUrl.append("?locale=jp")
+        default: break
         }
-        task.resume()
+
+        guard let url = URL(string: baseUrl) else {
+            return .empty
+        }
+
+        do {
+            return try await NetworkManager.shared.fetch(
+                url: url,
+                httpMethod: .get,
+                responseType: LodestoneNewsResponse.self
+            )
+        } catch {
+            print("Failed to retrieve Lodestone News: \(error)")
+            return .empty
+        }
     }
 }
 
