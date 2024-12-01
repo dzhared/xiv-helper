@@ -1,4 +1,5 @@
 import SwiftUI
+import CachedAsyncImage
 
 /// Contains the icon, name and type of an item. Used in multiple views.
 struct ItemTitleBadgeView: View {
@@ -33,7 +34,7 @@ struct ItemTitleBadgeView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .center) {
-                AsyncImage(url: icon, scale: 1.5) { image in
+                CachedAsyncImage(url: icon, scale: 1.5) { image in
                     image
                         .resizable()
                         .scaledToFit()

@@ -1,4 +1,5 @@
 import SwiftUI
+import CachedAsyncImage
 
 /// The view displaying Lodestone News articles.
 struct LodestoneNewsView: View {
@@ -81,7 +82,7 @@ struct LodestoneNewsView: View {
     @ViewBuilder func newsCard(article: any LodestoneNews) -> some View {
         VStack {
             if let image = article.image {
-                AsyncImage(url: URL(string: image)) {
+                CachedAsyncImage(url: URL(string: image)) {
                     $0
                         .resizable()
                         .aspectRatio(contentMode: .fit)
